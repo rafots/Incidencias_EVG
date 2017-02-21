@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS profesores(
   correo VARCHAR(60) NOT NULL,
   nombre VARCHAR(50) NOT NULL,
   pass VARCHAR(255) NOT NULL,
-  tipo CHAR(1) NOT NULL,
+  tipo CHAR(4) NOT NULL,
   baja_temporal BIT NOT NULL
 );
 
@@ -79,7 +79,6 @@ CREATE TABLE IF NOT EXISTS incidencias(
   CONSTRAINT fk_incidencias_alumno FOREIGN KEY (nia) REFERENCES alumnos(nia),
   CONSTRAINT fk_incidencias_tipo FOREIGN KEY (idTipo) REFERENCES tipo_Incidencias(idTipo),
   CONSTRAINT fk_incidencias_profesor FOREIGN KEY (usuario) REFERENCES profesores(idUsuario),
-  CONSTRAINT fk_incidencias_asignatura FOREIGN KEY (codAsignatura) REFERENCES asignaturas(codAsignatura),
   CONSTRAINT fk_incidencias_hora FOREIGN KEY (idHora) REFERENCES horas(idHora)
 );
 
@@ -100,7 +99,7 @@ CREATE TABLE IF NOT EXISTS anotaciones(
   userCreacion CHAR(1) NOT NULL ,
   leida BIT(1) NOT NULL,
   CONSTRAINT anotaciones_1 FOREIGN KEY (tipoAnotacion)
-  REFERENCES tipos_anotaciones_etapas (tipoAnotacion),
+  REFERENCES tipos_Anotaciones (tipoAnotacion),
   CONSTRAINT anotaciones_2 FOREIGN KEY (nia) REFERENCES alumnos(nia)
 );
 
