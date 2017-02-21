@@ -122,6 +122,7 @@ CREATE TABLE IF NOT EXISTS sanciones(
   CONSTRAINT fk_tipo_sancion_sanciones FOREIGN KEY (tipoSancion) REFERENCES tipo_sancion(tipoSancion)
 );
 
+
 /* TABLA 16 - TIPO_SANCION_INCIDENCIAS*/
 CREATE TABLE IF NOT EXISTS tipo_sancion_incidencias(
   tipoSancion TINYINT UNSIGNED NOT NULL,
