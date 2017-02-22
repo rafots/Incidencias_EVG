@@ -11,7 +11,10 @@ CREATE TABLE IF NOT EXISTS profesores(
   correo VARCHAR(60) NOT NULL,
   nombre VARCHAR(50) NOT NULL,
   pass VARCHAR(255) NOT NULL,
-  tipo CHAR(4) NOT NULL,
+  profesor BIT NOT NULL,
+  gestor BIT NOT NULL,
+  tutor BIT NOT NULL,
+  coordinador BIT NOT NULL,
   baja_temporal BIT NOT NULL
 );
 
@@ -36,6 +39,7 @@ CREATE TABLE  IF NOT EXISTS alumnos(
   nia CHAR (7) PRIMARY KEY,
   nombreCompleto VARCHAR(50) NOT NULL,
   telefono VARCHAR(9) NOT NULL,
+  sexo CHAR(1) NOT NULL,
   idSeccion CHAR(6) NOT NULL ,
   CONSTRAINT fk_secciones_alumnos  FOREIGN KEY (idSeccion) REFERENCES secciones(idSeccion)
 );
@@ -76,7 +80,8 @@ CREATE TABLE IF NOT EXISTS incidencias(
   descripcion VARCHAR(300) NOT NULL,
   leidaT BIT NOT NULL,
   leidaC BIT NOT NULL,
-  gestionada BIT NOT NULL,
+  archivadaT BIT NOT NULL,
+  archivadaC BIT NOT NULL,
   CONSTRAINT fk_incidencias_alumno FOREIGN KEY (nia) REFERENCES alumnos(nia),
   CONSTRAINT fk_incidencias_tipo FOREIGN KEY (idTipo) REFERENCES tipo_Incidencias(idTipo),
   CONSTRAINT fk_incidencias_profesor FOREIGN KEY (usuario) REFERENCES profesores(idUsuario),
