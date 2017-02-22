@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS profesores(
   correo VARCHAR(60) NOT NULL,
   nombre VARCHAR(50) NOT NULL,
   pass VARCHAR(255) NOT NULL,
-  tipo CHAR(1) NOT NULL,
+  tipo CHAR(4) NOT NULL,
   baja_temporal BIT NOT NULL
 );
 
@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS secciones(
 CREATE TABLE  IF NOT EXISTS alumnos(
   nia CHAR (7) PRIMARY KEY,
   nombreCompleto VARCHAR(50) NOT NULL,
+  telefono VARCHAR(9) NOT NULL,
   idSeccion CHAR(6) NOT NULL ,
   CONSTRAINT fk_secciones_alumnos  FOREIGN KEY (idSeccion) REFERENCES secciones(idSeccion)
 );
@@ -79,7 +80,6 @@ CREATE TABLE IF NOT EXISTS incidencias(
   CONSTRAINT fk_incidencias_alumno FOREIGN KEY (nia) REFERENCES alumnos(nia),
   CONSTRAINT fk_incidencias_tipo FOREIGN KEY (idTipo) REFERENCES tipo_Incidencias(idTipo),
   CONSTRAINT fk_incidencias_profesor FOREIGN KEY (usuario) REFERENCES profesores(idUsuario),
-  CONSTRAINT fk_incidencias_asignatura FOREIGN KEY (codAsignatura) REFERENCES asignaturas(codAsignatura),
   CONSTRAINT fk_incidencias_hora FOREIGN KEY (idHora) REFERENCES horas(idHora)
 );
 
@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS anotaciones(
   userCreacion CHAR(1) NOT NULL ,
   leida BIT(1) NOT NULL,
   CONSTRAINT anotaciones_1 FOREIGN KEY (tipoAnotacion)
-  REFERENCES tipos_anotaciones_etapas (tipoAnotacion),
+  REFERENCES tipos_Anotaciones (tipoAnotacion),
   CONSTRAINT anotaciones_2 FOREIGN KEY (nia) REFERENCES alumnos(nia)
 );
 
@@ -118,8 +118,11 @@ CREATE TABLE IF NOT EXISTS sanciones(
   fecha_inicio DATE NOT NULL,
   fecha_fin DATE,
   observacion VARCHAR(300) NOT NULL,
+  motivo VARCHAR(20) NOT NULL,
+  ultima_sancion TINYINT UNSIGNED NOT NULL,
   CONSTRAINT fk_incidencias_sanciones FOREIGN KEY (idIncidencia) REFERENCES incidencias(idIncidencia),
-  CONSTRAINT fk_tipo_sancion_sanciones FOREIGN KEY (tipoSancion) REFERENCES tipo_sancion(tipoSancion)
+  CONSTRAINT fk_tipo_sancion_sanciones FOREIGN KEY (tipoSancion) REFERENCES tipo_sancion(tipoSancion),
+  CONSTRAINT fk_motivo_sancion FOREIGN KEY (motivo) REFERENCES motivo(idMotivo)
 );
 
 /* TABLA 16 - TIPO_SANCION_INCIDENCIAS*/
@@ -137,5 +140,10 @@ CREATE TABLE IF NOT EXISTS gestion(
   nombre VARCHAR(20) NOT NULL,
   pass VARCHAR(255) NOT NULL,
   tipo CHAR(1) NOT NULL
+);
 
+/* TABLA 18-MOTIVO*/
+CREATE TABLE IF NOT EXISTS motivo(
+  idMotivo TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+  motivo VARCHAR(20) NOT NULL
 );
