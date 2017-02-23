@@ -10,7 +10,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <form name="importar" method="post" action="subirArchivo.php" enctype="multipart/form-data" >
+        <form name="importar" method="post" action="recorrerArchivo.php" enctype="multipart/form-data" >
             <input id="file" type="file" name="file"/>
             <input type='submit' name='enviar'  value="Importar"  />
             <input type="hidden" value="upload" name="action" />

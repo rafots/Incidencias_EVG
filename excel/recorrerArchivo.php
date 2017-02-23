@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
     <?php
         //require './Procedimientos/procs.php';
-        require './simplexlsx.class.php';
+        require 'simplexlsx.class.php';
 
         //$obj = new procedimientos();
         //$obj->Conectar();       
@@ -14,38 +14,13 @@ and open the template in the editor.
         //if ($action == "upload") { //Comprueba le hemos dado al boton importar
               //$descriptor= fopen($_FILES["file"]["tmp_name"],'r+');
               //$file = $_FILES['file']['name']; 
-              $clas = new SimpleXLSX("contacto.xlsx"); // Con esto directamente le pasamos el archivo que queremos abrir
+              $clas = new SimpleXLSX("dd.xlsx"); // Con esto directamente le pasamos el archivo que queremos abrir
               $tabla = $clas->rows();  // Nos da tidas las filas del Excel
             foreach($tabla as $indice)
             {
 
                 echo $indice[0];
-                echo '&nbsp';
-                echo '&nbsp';
-                echo '&nbsp';
-                echo $indice[1];
-                echo '&nbsp';
-                echo '&nbsp';
-                echo '&nbsp';
-                echo $indice[2];
-                echo '&nbsp';
-                echo '&nbsp';
-                echo '&nbsp';
-                echo $indice[3];
-                echo '&nbsp';
-                echo '&nbsp';
-                echo '&nbsp';
-                echo $indice[4];
-                echo '&nbsp';
-                echo '&nbsp';
-                echo '&nbsp';
-                echo $indice[5];
-                echo '<br>';
-                echo '<br>';
-                echo '<br>';
-                echo '<br>';
-                echo '<br>';
-                echo '<br>';
+
             }
 
                /*
@@ -66,6 +41,5 @@ and open the template in the editor.
                   */
                 
           // }
-      
-    ?>
+
 
