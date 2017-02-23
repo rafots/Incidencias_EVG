@@ -34,6 +34,7 @@ CREATE TABLE IF NOT EXISTS secciones(
   CONSTRAINT fk_tutores_secciones FOREIGN KEY (tutor) REFERENCES profesores(idUsuario)
 );
 
+
 /* TABLA 4-ALUMNOS */
 CREATE TABLE  IF NOT EXISTS alumnos(
   nia CHAR (7) PRIMARY KEY,
