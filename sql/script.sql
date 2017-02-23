@@ -31,7 +31,9 @@ CREATE TABLE IF NOT EXISTS secciones(
   idSeccion CHAR(6) NOT NULL PRIMARY KEY,
   nombre VARCHAR(60) NOT NULL,
   tutor TINYINT UNSIGNED NOT NULL,
-  CONSTRAINT fk_tutores_secciones FOREIGN KEY (tutor) REFERENCES profesores(idUsuario)
+  codEtapa CHAR(5) NOT NULL,
+  CONSTRAINT fk_tutores_secciones FOREIGN KEY (tutor) REFERENCES profesores(idUsuario),
+  CONSTRAINT fk_etapas_secciones FOREIGN KEY (codEtapa) REFERENCES etapas(codEtapa)
 );
 
 
@@ -105,6 +107,7 @@ CREATE TABLE IF NOT EXISTS anotaciones(
   hora_Registro DATETIME NOT NULL,
   userCreacion CHAR(1) NOT NULL ,
   leida BOOLEAN NOT NULL,
+  verProfesores BOOLEAN NULL,
   CONSTRAINT anotaciones_1 FOREIGN KEY (tipoAnotacion)
   REFERENCES tipos_Anotaciones (tipoAnotacion),
   CONSTRAINT anotaciones_2 FOREIGN KEY (nia) REFERENCES alumnos(nia)
