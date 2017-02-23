@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS profesores_seccion(
 );
 
 /*Tabla 6- tipos_incidencias*/
-CREATE TABLE tipo_Incidencias(
+CREATE TABLE IF NOT EXISTS tipo_Incidencias(
   idTipo tinyint UNSIGNED PRIMARY KEY,
   nombre varchar(30) NOT NULL,
   codEtapa CHAR(5) NOT NULL,
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS incidencias(
 );
 
 /*Tabla 11-tipos_Anotaciones*/
-CREATE TABLE tipos_Anotaciones(
+CREATE TABLE IF NOT EXISTS tipos_Anotaciones(
   tipoAnotacion TINYINT PRIMARY KEY,
   nombre varchar(40) NOT NULL,
   codEtapa CHAR(5) NOT NULL,
