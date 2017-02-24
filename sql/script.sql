@@ -1,8 +1,8 @@
 /* 20/02/2017 */
 
 
-CREATE DATABASE IF NOT EXISTS IncidenciasEVG;
-USE  IncidenciasEVG;
+CREATE DATABASE IF NOT EXISTS magentoe_IncidenciasEVG;
+USE  magentoe_IncidenciasEVG;
 
 /* TABLA 1 - PROFESORES*/
 CREATE TABLE IF NOT EXISTS profesores(
