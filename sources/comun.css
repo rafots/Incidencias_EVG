@@ -1,0 +1,15 @@
+body{
+    position: relative!important;
+    width: 100%!important;
+    height: 100%;
+}
+.caja
+{
+    background-color: white;
+
+}
+#contenedor
+{
+    position: relative!important;
+    top: 45%!important;
+}
