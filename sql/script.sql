@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS incidencias(
   leidaC BOOLEAN NOT NULL DEFAULT FALSE ,
   archivadaT BOOLEAN NOT NULL DEFAULT FALSE ,
   archivadaC BOOLEAN NOT NULL DEFAULT FALSE ,
-  CONSTRAINT fk_incidencias_alumno FOREIGN KEY (nia) REFERENCES alumnos(nia),
+  CONSTRAINT fk_incidencias_alumno FOREIGN KEY (nia) REFERENCES alumnos(nia) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT fk_incidencias_tipo FOREIGN KEY (idTipo) REFERENCES  tipo_Incidencias(idTipo),
   CONSTRAINT fk_incidencias_profesor FOREIGN KEY (usuario) REFERENCES profesores(idUsuario),
   CONSTRAINT fk_incidencias_hora FOREIGN KEY (idHora) REFERENCES horas(idHora)
@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS anotaciones(
   verProfesores BOOLEAN NULL DEFAULT FALSE ,
   CONSTRAINT anotaciones_1 FOREIGN KEY (tipoAnotacion)
   REFERENCES tipos_Anotaciones (tipoAnotacion),
-  CONSTRAINT anotaciones_2 FOREIGN KEY (nia) REFERENCES alumnos(nia)
+  CONSTRAINT anotaciones_2 FOREIGN KEY (nia) REFERENCES alumnos(nia) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 /* TABLA 14 - TIPO_SANCION*/

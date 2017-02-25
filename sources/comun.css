@@ -1,8 +1,21 @@
 body{
+    margin: 0;
+    background-image: url("../imagenes/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /*
+    *
+    * Todo el codigo de arriba es lo que estaba en el de bootstrap.css, ya que
+    * como el fondo es comun para todas las paginas pues lo pongo aquí.
+    *
+    */
+
     position: relative!important;
     width: 100%!important;
     height: 100%;
 }
+
 .caja
 {
     background-color: white;
@@ -12,4 +25,47 @@ body{
 {
     position: relative!important;
     top: 45%!important;
+}
+
+.vertical-align{
+    display: flex;
+    align-items: center;
+}
+
+.img-center{
+    margin: 0 auto;
+}
+
+/*
+* Clase hecha para los botones del menu de navegación de la izquierda
+*/
+.menu-buttons{
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/*
+* ID para el texto "central" de la cabecera
+*/
+#title-cdi {
+    font-size: 36px;
+}
+
+@media only screen and (max-width: 1200px) {
+    #title-cdi {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #title-cdi {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .vertical-align{
+        display: inline;
+    }
 }
