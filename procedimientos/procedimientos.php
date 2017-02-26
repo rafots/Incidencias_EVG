@@ -27,7 +27,7 @@ class procedimientos
     }
     public function consultasPreparadas($query)
     {
-        $this->conexion->prepare($query);
+        return $this->conexion->prepare($query);
     }
     public function devolverFilas()
     {
@@ -43,7 +43,7 @@ class procedimientos
     }
     public function cerrarConexion()
     {
-        $this->conexion->close;
+        return $this->conexion->close();
     }
 
 

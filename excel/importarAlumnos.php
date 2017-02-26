@@ -9,6 +9,21 @@ $tabla = $clas->rows();  // Nos da tidas las filas del Excel
 foreach ($tabla as $indice => $valor){
 
     $query="INSERT INTO alumnos
-                   VALUES ('".$valor[2]."','".$valor[0]."','".$valor[3]."','".$valor[4]."','".$valor[1]."')";
-    $obj->consultas($query);
+                   VALUES (?,?,?,?,?)";
+
+    $sentencia = $obj->consultasPreparadas($query);
+    $sentencia->bind_param('sssss', $nia,$nombreCompleto,$telefono,$sexo,$idSeccion );
+
+    $nia = $valor[2];
+    $nombreCompleto = $valor[0];
+    $telefono = $valor[3];
+    $sexo = $valor[4];
+    $idSeccion = $valor[1];
+
+    $sentencia->execute();
+    $sentencia->close();
+
+
+
 }
+$obj->cerrarConexion();
