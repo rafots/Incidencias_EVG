@@ -19,14 +19,26 @@ body{
 .caja
 {
     background-color: white;
+    height: 100%;
 
+}
+.articulo
+{
+    border: 1px solid black;
+    min-height: 100%;
 }
 #contenedor
 {
     position: relative!important;
-    top: 45%!important;
+    top: 35%;
+    left: 20%;
+    background-color: white;
 }
-
+.espacios
+{
+    margin-top: 20px;
+    margin-right: 20px;
+}
 .vertical-align{
     display: flex;
     align-items: center;
