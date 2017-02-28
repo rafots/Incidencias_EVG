@@ -8,6 +8,7 @@
  */
 
     require 'simplexlsx.class.php';
+    require '../procedimientos/procedimientos.php';
 
     function randomPassword() {
         $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
@@ -23,7 +24,8 @@
     $xlsx = new SimpleXLSX("usuarios.xlsx"); // Con esto directamente le pasamos el archivo que queremos abrir
     $tabla = $xlsx->rows();  // Nos da tidas las filas del Excel
 
-    $conn = new mysqli('localhost','root','','magentoe_incidenciasevg');
+    $obj = new procedimientos();
+    $obj->conectar();
 
     foreach($tabla as $indice){
 
@@ -31,7 +33,7 @@
 
         $sql = "INSERT INTO profesores (usuario, correo, nombre, pass) VALUES (?, ?, ?, ?)";
 
-        $stmt = $conn->prepare($sql);
+        $stmt = $obj->consultasPreparadas($sql);
         $stmt->bind_param("ssss", $user, $email, $name, $passwd);
 
         $user = substr($indice[0], 0, strpos($indice[0],'@'));
@@ -40,7 +42,7 @@
         $passwd = password_hash($pw, PASSWORD_DEFAULT);
 
         //if($email != 'NOMBRE' || $email != '' || $email != ' ')
-        $stmt->execute();
+            $stmt->execute();
 
         /*
         echo $indice[0];

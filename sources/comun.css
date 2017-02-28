@@ -64,6 +64,10 @@ body{
     font-size: 36px;
 }
 
+.buttons-separator{
+    margin: 20px 0px;
+}
+
 @media only screen and (max-width: 1200px) {
     #title-cdi {
         font-size: 30px;
