@@ -19,49 +19,49 @@ if(isset($_SESSION['coordinador']))
 <body>
 
 <div class="container caja">
-    <!-- CABECERA -->
-    <header>
-        <div class="row vertical-align text-center">
-            <div class="col-md-6 col-sm-6">
-                <img class="img-responsive img-center" src="../imagenes/logotipo.png"/>
+        <!-- CABECERA -->
+        <header>
+            <div class="row vertical-align text-center">
+                <div class="col-md-6 col-sm-6">
+                    <img class="img-responsive img-center" src="../imagenes/logotipo.png"/>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div id="title-cdi">CONTROL DE INCIDENCIAS</div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <button class=" btn btn-primary btn-success">P</button>
+                    <button class=" btn btn-primary btn-success" disabled="disabled">C</button>
+                </div>
             </div>
-            <div class="col-md-3 col-sm-3">
-                <div id="title-cdi">CONTROL DE INCIDENCIAS</div>
-            </div>
-            <div class="col-md-3 col-sm-3">
-                <button class=" btn btn-primary btn-success">P</button>
-                <button class=" btn btn-primary btn-success" disabled="disabled">C</button>
-            </div>
-        </div>
-    </header>
-    <!-- /CABECERA -->
+        </header>
+        <!-- /CABECERA -->
 
-    <!-- CUERPO DE LA PÁGINA -->
-    <div class="row">
-        <aside class="col-md-3">
-            <!--
-            *
-            * Estos botones son simplemente de ejemplo
-            *
-            -->
-            <a href="#" class="btn btn-success menu-buttons" role="button">Incidencias destacables</a>
-            <a href="#" class="btn btn-success menu-buttons" role="button">Historial alumnos</a>
-            <a href="#" class="btn btn-success menu-buttons" role="button">Aula de convivencia</a>
-            <a href="#" class="btn btn-success menu-buttons" role="button">Tipos Incidencias</a>
-            <a href="#" class="btn btn-success menu-buttons" role="button">Cerrar sesión</a>
-        </aside>
-        <article class="col-md-9 articulo">
-            Hola<br>
-            Hola<br>
-            Hola<br>
-            Hola<br>
-            Hola<br>
-            Hola<br>
-            Hola<br>
-        </article>
+        <!-- CUERPO DE LA PÁGINA -->
+        <div class="row">
+            <aside class="col-md-3">
+                <!--
+                *
+                * Estos botones son simplemente de ejemplo
+                *
+                -->
+                <a href="#" class="btn btn-success menu-buttons" role="button">Incidencias destacables</a>
+                <a href="#" class="btn btn-success menu-buttons" role="button">Historial alumnos</a>
+                <a href="#" class="btn btn-success menu-buttons" role="button">Aula de convivencia</a>
+                <a href="#" class="btn btn-success menu-buttons" role="button">Tipos Incidencias</a>
+                <a href="#" class="btn btn-success menu-buttons" role="button">Cerrar sesión</a>
+            </aside>
+            <article class="col-md-9 articulo">
+                Hola<br>
+                Hola<br>
+                Hola<br>
+                Hola<br>
+                Hola<br>
+                Hola<br>
+                Hola<br>
+            </article>
+        </div>
+        <!-- /CUERPO DE LA PÁGINA -->
     </div>
-    <!-- /CUERPO DE LA PÁGINA -->
-</div>
 
 </body>
 </html>

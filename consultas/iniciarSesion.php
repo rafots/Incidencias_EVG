@@ -10,18 +10,18 @@ session_start();
 
     $obj = new procedimientos();
     $obj->conectar();
-    $query = "SELECT usuario,nombre,profesor,gestor,tutor,coordinador FROM incidenciasevg.profesores WHERE usuario = ? AND pass = ? ";
+    $query = "SELECT usuario,profesor,gestor,tutor,coordinador FROM incidenciasevg.profesores WHERE usuario = ? AND pass = ? ";
     $sentencia = $obj->consultasPreparadas($query);
     $sentencia->bind_param('ss', $user, $pass);
     $user = $_POST["user"];
     $pass = $_POST["pass"];
     $sentencia->execute();
-    $sentencia->bind_result($user,$profesor,$gestor,$tutor,$coordinador);
+    $sentencia->bind_result($usuario,$profesor,$gestor,$tutor,$coordinador);
     $sentencia->fetch();
 
     if($coordinador == 1)
     {
-        $_SESSION['usuario']=$user;
+        $_SESSION['usuario']=$usuario;
         $_SESSION['coordinador']=$coordinador;
         $_SESSION['profesor']=$profesor;
         header('Location: ../paginas/coordinador.php');
@@ -32,6 +32,8 @@ session_start();
             header('Location: ../paginas/tutor.php');
         }
         else
+            if($profesor == 1)
             header('Location: ../paginas/profesor.php');
+
 
     $sentencia->close();
