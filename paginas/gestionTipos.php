@@ -53,7 +53,7 @@ if(isset($_SESSION['coordinador']))
             <article class="col-md-9 articulo">
                 <ul>
                     <li><a href="addTipoInc.php">Añadir tipos de incidencias</a></li>
-                    <li><a href="#">Modificar tipos de incidencias</a></li>
+                    <li><a href="">Modificar tipos de incidencias</a></li>
                 </ul>
             </article>
         </div>
