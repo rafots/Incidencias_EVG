@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d578d95-4bd8-491a-8a20-89d7a2bda1b8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consultas/conAltaTipoAnotacion.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/paginas/addTipoAnotacion.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consultas/conAltaTipoSancion.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/paginas/addTipoSancion.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paginas/gestionTipos.php" afterPath="$PROJECT_DIR$/paginas/gestionTipos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultas/conAltaTipoAnotacion.php" afterPath="$PROJECT_DIR$/consultas/conAltaTipoAnotacion.php" />
     </list>
     <ignored path="Incidencias_EVG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,8 +46,8 @@
             <file leaf-file-name="altaTipoIncidencia.php" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/consultas/altaTipoIncidencia.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="0">
-                    <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="2" />
+                  <state relative-caret-position="544">
+                    <caret line="32" column="61" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="32" selection-end-column="61" />
                     <folding>
                       <marker date="1488402977694" expanded="true" signature="255:328" ph="SELECT idUsu... profesores" />
                       <marker date="1488402977694" expanded="true" signature="434:480" ph="SELECT codEt... etapas" />
@@ -121,23 +121,46 @@
       <file leaf-file-name="addTipoAnotacion.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/paginas/addTipoAnotacion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="56" column="51" lean-forward="false" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="conAltaTipoAnotacion.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="conAltaTipoAnotacion.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/consultas/conAltaTipoAnotacion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+            <state relative-caret-position="34">
+              <caret line="2" column="39" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="2" selection-end-column="39" />
               <folding>
-                <marker date="1488404383796" expanded="true" signature="255:328" ph="SELECT idUsu... profesores" />
-                <marker date="1488404383796" expanded="true" signature="434:480" ph="SELECT codEt... etapas" />
-                <marker date="1488404383796" expanded="true" signature="637:681" ph="INSERT INTO tipos_anotaciones... " />
-                <marker date="1488404383796" expanded="true" signature="757:800" ph="SELECT tipoA... tipos_anotaciones" />
+                <marker date="1488404531533" expanded="true" signature="255:328" ph="SELECT idUsu... profesores" />
+                <marker date="1488404531533" expanded="true" signature="434:480" ph="SELECT codEt... etapas" />
+                <marker date="1488404531533" expanded="true" signature="637:681" ph="INSERT INTO tipos_anotaciones... " />
+                <marker date="1488404531533" expanded="true" signature="757:800" ph="SELECT tipoA... tipos_anotaciones" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addTipoSancion.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/paginas/addTipoSancion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conAltaTipoSancion.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/consultas/conAltaTipoSancion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="39" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="2" selection-end-column="39" />
+              <folding>
+                <marker date="1488404878518" expanded="true" signature="245:282" ph="INSERT INTO tipo_sancion... " />
+                <marker date="1488404878518" expanded="true" signature="372:408" ph="SELECT tipoS... tipo_sancion" />
               </folding>
             </state>
           </provider>
@@ -211,6 +234,8 @@
         <option value="$PROJECT_DIR$/paginas/gestionTipos.php" />
         <option value="$PROJECT_DIR$/paginas/addTipoAnotacion.php" />
         <option value="$PROJECT_DIR$/consultas/conAltaTipoAnotacion.php" />
+        <option value="$PROJECT_DIR$/paginas/addTipoSancion.php" />
+        <option value="$PROJECT_DIR$/consultas/conAltaTipoSancion.php" />
       </list>
     </option>
   </component>
@@ -467,7 +492,7 @@
       <workItem from="1488377338170" duration="2308000" />
       <workItem from="1488386186968" duration="883000" />
       <workItem from="1488387737409" duration="3034000" />
-      <workItem from="1488394403092" duration="5975000" />
+      <workItem from="1488394403092" duration="6452000" />
     </task>
     <task id="LOCAL-00002" summary="UPDATE FILES index.html, bootstrap.css, comun.css, script.sql&#10;ADD FILES import_users.php, usuarios.xlsx, logotipo.png, menu_estructure.html">
       <created>1488051390265</created>
@@ -511,11 +536,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488403186185</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="ADD: Alta de tipos de incidencias ya funcionable">
+      <created>1488404449186</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1488404449186</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55974000" />
+    <option name="totallyTimeSpent" value="56451000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -590,27 +622,14 @@
     <MESSAGE value="UPDATE: COORDINADOR" />
     <MESSAGE value="UPDATE: El alta de tipos de incidencias funciona" />
     <MESSAGE value="ADD: Alta de tipos de incidencias ya funcionable" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD: Alta de tipos de incidencias ya funcionable" />
+    <MESSAGE value="ADD: Alta de tipos de sanciones ya funcionable" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD: Alta de tipos de sanciones ya funcionable" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/plantilla/menu_estructure.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/comun.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="70" column="1" lean-forward="false" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sql/script.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -937,21 +956,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consultas/altaTipoIncidencia.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="2" />
-          <folding>
-            <marker date="1488402977694" expanded="true" signature="255:328" ph="SELECT idUsu... profesores" />
-            <marker date="1488402977694" expanded="true" signature="434:480" ph="SELECT codEt... etapas" />
-            <marker date="1488402977694" expanded="true" signature="434:502" ph="SELECT codEt... etapas" />
-            <marker date="1488402977694" expanded="true" signature="434:504" ph="SELECT codEt... etapas" />
-            <marker date="1488402977694" expanded="true" signature="637:680" ph="INSERT INTO tipo_incidencias... " />
-            <marker date="1488402977694" expanded="true" signature="756:791" ph="SELECT * FRO... tipo_incidencias" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/paginas/gestionTipos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="507">
@@ -977,21 +981,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/paginas/addTipoAnotacion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="56" column="51" lean-forward="false" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="74" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultas/altaTipoIncidencia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="61" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="32" selection-end-column="61" />
+          <folding>
+            <marker date="1488402977694" expanded="true" signature="255:328" ph="SELECT idUsu... profesores" />
+            <marker date="1488402977694" expanded="true" signature="434:480" ph="SELECT codEt... etapas" />
+            <marker date="1488402977694" expanded="true" signature="434:502" ph="SELECT codEt... etapas" />
+            <marker date="1488402977694" expanded="true" signature="434:504" ph="SELECT codEt... etapas" />
+            <marker date="1488402977694" expanded="true" signature="637:680" ph="INSERT INTO tipo_incidencias... " />
+            <marker date="1488402977694" expanded="true" signature="756:791" ph="SELECT * FRO... tipo_incidencias" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/consultas/conAltaTipoAnotacion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+        <state relative-caret-position="34">
+          <caret line="2" column="39" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="2" selection-end-column="39" />
           <folding>
-            <marker date="1488404383796" expanded="true" signature="255:328" ph="SELECT idUsu... profesores" />
-            <marker date="1488404383796" expanded="true" signature="434:480" ph="SELECT codEt... etapas" />
-            <marker date="1488404383796" expanded="true" signature="637:681" ph="INSERT INTO tipos_anotaciones... " />
-            <marker date="1488404383796" expanded="true" signature="757:800" ph="SELECT tipoA... tipos_anotaciones" />
+            <marker date="1488404531533" expanded="true" signature="255:328" ph="SELECT idUsu... profesores" />
+            <marker date="1488404531533" expanded="true" signature="434:480" ph="SELECT codEt... etapas" />
+            <marker date="1488404531533" expanded="true" signature="637:681" ph="INSERT INTO tipos_anotaciones... " />
+            <marker date="1488404531533" expanded="true" signature="757:800" ph="SELECT tipoA... tipos_anotaciones" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paginas/addTipoSancion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultas/conAltaTipoSancion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="39" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="2" selection-end-column="39" />
+          <folding>
+            <marker date="1488404878518" expanded="true" signature="245:282" ph="INSERT INTO tipo_sancion... " />
+            <marker date="1488404878518" expanded="true" signature="372:408" ph="SELECT tipoS... tipo_sancion" />
           </folding>
         </state>
       </provider>
