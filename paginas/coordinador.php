@@ -29,8 +29,20 @@ if(isset($_SESSION['coordinador']))
                     <div id="title-cdi">CONTROL DE INCIDENCIAS</div>
                 </div>
                 <div class="col-md-3 col-sm-3">
-                    <button class=" btn btn-primary btn-success">P</button>
-                    <button class=" btn btn-primary btn-success" disabled="disabled">C</button>
+                ';
+                    if(isset($_SESSION['tutor']))
+                    {
+                        echo '<a class=" btn btn-primary btn-success" href="tutor.php">T</a>';
+                    }
+                    if(isset($_SESSION['profesor']))
+                    {
+                        echo '<a class=" btn btn-primary btn-success" href="profesor.php">P</a>';
+                    }
+                    if(isset($_SESSION['coordinador']))
+                    {
+                        echo '<a class=" btn btn-primary btn-success disabled">C</a>';
+                    }
+                    echo '
                 </div>
             </div>
         </header>

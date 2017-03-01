@@ -19,21 +19,35 @@ session_start();
     $sentencia->bind_result($usuario,$profesor,$gestor,$tutor,$coordinador);
     $sentencia->fetch();
 
-    if($coordinador == 1)
+    if($coordinador == 1 && $tutor==1)
     {
         $_SESSION['usuario']=$usuario;
         $_SESSION['coordinador']=$coordinador;
+        $_SESSION['tutor']=$tutor;
         $_SESSION['profesor']=$profesor;
         header('Location: ../paginas/coordinador.php');
     }
     else
+        if($coordinador == 1 && $tutor==0)
+        {
+            $_SESSION['usuario']=$usuario;
+            $_SESSION['coordinador']=$coordinador;
+            $_SESSION['profesor']=$profesor;
+            header('Location: ../paginas/coordinador.php');
+        }
+        else
         if($tutor == 1)
         {
+            $_SESSION['usuario']=$usuario;
+            $_SESSION['tutor']=$tutor;
+            $_SESSION['profesor']=$profesor;
             header('Location: ../paginas/tutor.php');
         }
         else
             if($profesor == 1)
-            header('Location: ../paginas/profesor.php');
-
-
+            {
+                $_SESSION['usuario']=$usuario;
+                $_SESSION['profesor']=$profesor;
+                header('Location: ../paginas/profesor.php');
+            }
     $sentencia->close();
