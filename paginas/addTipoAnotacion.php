@@ -60,7 +60,7 @@ if(!isset($_SESSION['coordinador']) || $_SESSION['coordinador']!=1) {
                 <?php
                 if(isset($_GET["consulta"]) && $_GET["consulta"]=='ok')
                 {
-                    echo '<p>Se ha introducido con exito el tipo de incidencia.</p>';
+                    echo '<p>Se ha introducido con exito el tipo de anotacion.</p>';
                 }
                 ?>
                 <input type="submit" name="enviar" value="Añadir tipo">
