@@ -51,13 +51,10 @@ if(isset($_SESSION['coordinador']))
                 <a href="#" class="btn btn-success menu-buttons" role="button">Cerrar sesión</a>
             </aside>
             <article class="col-md-9 articulo">
-                Hola<br>
-                Hola<br>
-                Hola<br>
-                Hola<br>
-                Hola<br>
-                Hola<br>
-                Hola<br>
+                <ul>
+                    <li><a href="#">Añadir tipos de incidencias</a></li>
+                    <li><a href="#">Modificar tipos de incidencias</a></li>
+                </ul>
             </article>
         </div>
         <!-- /CUERPO DE LA PÁGINA -->
