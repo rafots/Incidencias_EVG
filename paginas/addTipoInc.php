@@ -27,7 +27,7 @@
                     <img class="img-responsive img-center" src="../imagenes/logotipo.png"/>
                 </div>
                 <div class="col-md-3 col-sm-3">
-                    <div id="title-cdi">ALTA INCIDENCIAS</div>
+                    <div id="title-cdi">CONTROL DE INCIDENCIAS</div>
                 </div>
                 <div class="col-md-3 col-sm-3">
                     <button class=" btn btn-primary btn-success">P</button>
@@ -59,22 +59,19 @@
                     <label>Nombre</label>
                     <input type="name" name="nombreTipo"/>
                     <label>Etapa</label>
-                    <select name="etapa">
- 
-                        <?php
-                            $objBBDD = new procedimientos();
-                            $objBBDD->conectar();
-                            $consulta_etapas = "SELECT codEtapa, nombre FROM etapas";
-                            $objBBDD->consultas($consulta_etapas);
-                            while($fila=$objBBDD->devolverFilas())
-                            {
-                                echo '<option value="'.$fila["codEtapa"].'">'.$fila["nombreEtapa"].'</option>';
-                            }
-                        ?>
-                    </select>
+                    <?php
+                        $obj = new procedimientos();
+                        $obj->conectar();
+                        $consulta="SELECT idUsuario from profesores WHERE usuario=?";
+                        $stmt=$obj->consultasPreparadas($consulta);
+                        $stmt->bind_param('s',$_SESSION["usuario"]);
+                        $stmt->execute();
+                        $stmt->bind_result($idUsuario);
+                        echo $idUsuario;
+                    ?>
                     <input type="submit" name="enviar" value="Añadir tipo">
                 </form>
-                <a href="../gestionTipos.php">Volver</a>
+                <a href="gestionTipos.php">Volver</a>
             </article>
         </div>
         <!-- /CUERPO DE LA PÁGINA -->
