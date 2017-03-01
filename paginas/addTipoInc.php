@@ -1,10 +1,11 @@
 <?php
-session_start();
-if(isset($_SESSION['coordinador']))
-{
+    session_start();
+    require '../procedimientos/procedimientos.php';
+    if(!isset($_SESSION['coordinador']) || $_SESSION['coordinador']!=1) {
+        echo 'Acceso prohibido';
 
-
-    echo'
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,20 +30,8 @@ if(isset($_SESSION['coordinador']))
                     <div id="title-cdi">CONTROL DE INCIDENCIAS</div>
                 </div>
                 <div class="col-md-3 col-sm-3">
-                ';
-                    if(isset($_SESSION['tutor']))
-                    {
-                        echo '<a class=" btn btn-primary btn-success" href="tutor.php">T</a>';
-                    }
-                    if(isset($_SESSION['profesor']))
-                    {
-                        echo '<a class=" btn btn-primary btn-success" href="profesor.php">P</a>';
-                    }
-                    if(isset($_SESSION['coordinador']))
-                    {
-                        echo '<a class=" btn btn-primary btn-success disabled">C</a>';
-                    }
-                    echo '
+                    <button class=" btn btn-primary btn-success">P</button>
+                    <button class=" btn btn-primary btn-success" disabled="disabled">C</button>
                 </div>
             </div>
         </header>
@@ -63,13 +52,26 @@ if(isset($_SESSION['coordinador']))
                 <a href="#" class="btn btn-success menu-buttons" role="button">Cerrar sesión</a>
             </aside>
             <article class="col-md-9 articulo">
-                Hola<br>
-                Hola<br>
-                Hola<br>
-                Hola<br>
-                Hola<br>
-                Hola<br>
-                Hola<br>
+                
+                <form method="post">
+                    <label>Codigo de tipo</label>
+                    <input type="name" name="codTipo"/>
+                    <label>Nombre</label>
+                    <input type="name" name="nombreTipo"/>
+                    <label>Etapa</label>
+                    <?php
+                        $obj = new procedimientos();
+                        $obj->conectar();
+                        $consulta="SELECT idUsuario from profesores WHERE usuario=?";
+                        $stmt=$obj->consultasPreparadas($consulta);
+                        $stmt->bind_param('s',$_SESSION["usuario"]);
+                        $stmt->execute();
+                        $stmt->bind_result($idUsuario);
+                        echo $idUsuario;
+                    ?>
+                    <input type="submit" name="enviar" value="Añadir tipo">
+                </form>
+                <a href="gestionTipos.php">Volver</a>
             </article>
         </div>
         <!-- /CUERPO DE LA PÁGINA -->
@@ -77,9 +79,4 @@ if(isset($_SESSION['coordinador']))
 
 </body>
 </html>
-';
-}
-else
-{
-    echo 'Acceso prohibido';
-}
+

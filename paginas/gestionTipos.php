@@ -29,20 +29,8 @@ if(isset($_SESSION['coordinador']))
                     <div id="title-cdi">CONTROL DE INCIDENCIAS</div>
                 </div>
                 <div class="col-md-3 col-sm-3">
-                ';
-                    if(isset($_SESSION['tutor']))
-                    {
-                        echo '<a class=" btn btn-primary btn-success" href="tutor.php">T</a>';
-                    }
-                    if(isset($_SESSION['profesor']))
-                    {
-                        echo '<a class=" btn btn-primary btn-success" href="profesor.php">P</a>';
-                    }
-                    if(isset($_SESSION['coordinador']))
-                    {
-                        echo '<a class=" btn btn-primary btn-success disabled">C</a>';
-                    }
-                    echo '
+                    <button class=" btn btn-primary btn-success">P</button>
+                    <button class=" btn btn-primary btn-success" disabled="disabled">C</button>
                 </div>
             </div>
         </header>
@@ -63,13 +51,10 @@ if(isset($_SESSION['coordinador']))
                 <a href="#" class="btn btn-success menu-buttons" role="button">Cerrar sesión</a>
             </aside>
             <article class="col-md-9 articulo">
-                Hola<br>
-                Hola<br>
-                Hola<br>
-                Hola<br>
-                Hola<br>
-                Hola<br>
-                Hola<br>
+                <ul>
+                    <li><a href="addTipoInc.php">Añadir tipos de incidencias</a></li>
+                    <li><a href="#">Modificar tipos de incidencias</a></li>
+                </ul>
             </article>
         </div>
         <!-- /CUERPO DE LA PÁGINA -->
