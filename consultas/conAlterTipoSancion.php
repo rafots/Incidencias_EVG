@@ -2,9 +2,9 @@
     require "../conexion/conexion.php";
     $conexion = new conexion();
     $conectar = new mysqli($conexion->getServer(),$conexion->getUser(),$conexion->getPass(),$conexion->getDb());
-    $consulta_modificar=("UPDATE tipo_incidencias SET nombre='".$_GET["texto"]."' WHERE idTipo=".$_GET["cod"]."");
+    $consulta_modificar=("UPDATE tipo_sancion SET nombre='".$_GET["texto"]."' WHERE tipoSancion=".$_GET["cod"]."");
     $resultado_modificar=$conectar->query($consulta_modificar);
     echo $_GET["texto"];
     echo $_GET["cod"];
-    header("Location: ../paginas/alterTipoIncidencia.php?funciona=si");
+    header("Location: ../paginas/alterTipoSancion.php?funciona=si");
 ?>
