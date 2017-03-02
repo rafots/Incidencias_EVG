@@ -6,5 +6,5 @@
     $resultado_modificar=$conectar->query($consulta_modificar);
     echo $_GET["texto"];
     echo $_GET["cod"];
-    header("Location: ../paginas/alterTipoSancion.php?funciona=si");
+    header("Location: ../paginas/alterTipoSancion.php?modificar=si");
 ?>

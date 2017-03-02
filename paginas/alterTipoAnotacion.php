@@ -1,10 +1,10 @@
 <?php
-    session_start();
-    require '../procedimientos/procedimientos.php';
-    $conexion = new conexion();
-    $conectar = new mysqli($conexion->getServer(),$conexion->getUser(),$conexion->getPass(),$conexion->getDb());
-    if(!isset($_SESSION['coordinador']) || $_SESSION['coordinador']!=1) {
-        echo 'Acceso prohibido';
+session_start();
+require '../procedimientos/procedimientos.php';
+$conexion = new conexion();
+$conectar = new mysqli($conexion->getServer(),$conexion->getUser(),$conexion->getPass(),$conexion->getDb());
+if(!isset($_SESSION['coordinador']) || $_SESSION['coordinador']!=1) {
+    echo 'Acceso prohibido';
 
 }
 ?>
@@ -57,47 +57,46 @@
 
                 <h3>Tipos de incidencias</h3>
                 <?php
-                $consulta="SELECT idUsuario from profesores WHERE usuario='".$_SESSION["usuario"]."'";
-                $resultado=$conectar->query($consulta);
-                $fila=$resultado->fetch_array();
+                    $consulta="SELECT idUsuario from profesores WHERE usuario='".$_SESSION["usuario"]."'";
+                    $resultado=$conectar->query($consulta);
+                    $fila=$resultado->fetch_array();
 
-                $consulta_etapa="SELECT codEtapa FROM etapas where coordinador=".$fila["idUsuario"].";";
-                $resultado_etapa=$conectar->query($consulta_etapa);
-                $fila_etapa=$resultado_etapa->fetch_array();
+                    $consulta_etapa="SELECT codEtapa FROM etapas where coordinador=".$fila["idUsuario"].";";
+                    $resultado_etapa=$conectar->query($consulta_etapa);
+                    $fila_etapa=$resultado_etapa->fetch_array();
 
-                $consulta_tabla="SELECT * FROM tipo_sancion";
-                $resultado_tabla=$conectar->query($consulta_tabla);
-                echo '<table>';
-                if($fila_tabla=$resultado_tabla->fetch_array())
-                {
-                    if(empty($fila_tabla))
+                    $consulta_tabla="SELECT * FROM tipos_anotaciones WHERE codEtapa='".$fila_etapa["codEtapa"]."'";
+                    $resultado_tabla=$conectar->query($consulta_tabla);
+                    echo '<table>';
+                    if($fila_tabla=$resultado_tabla->fetch_array())
                     {
-                        echo '<tr>';
-                        echo '<td colspan="2">No se encuentran tipos de sanciones</td>';
-                        echo '</tr>';
-                    }
-                    echo '<tr>';
-                    echo '<td>'.$fila_tabla["nombre"].'</td>';
-                    echo '<td><a href="alterTipoSancionForm.php?modificar=si&codAntiguo='.$fila_tabla["tipoSancion"].'&nombreAntiguo='.$fila_tabla["nombre"].'">Modificar</a></td>';
-                    echo '</tr>';
-
-                    if(!empty($fila_tabla))
-                    {
-                        while($fila_tabla=$resultado_tabla->fetch_array())
+                        if(empty($fila_tabla))
                         {
                             echo '<tr>';
-                            echo '<td>'.$fila_tabla["nombre"].'</td>';
-                            echo '<td><a href="alterTipoSancionForm.php.php?modificar=si&codAntiguo='.$fila_tabla["tipoSancion"].'&nombreAntiguo='.$fila_tabla["nombre"].'">Modificar</a></td>';
+                            echo '<td colspan="2">No se encuentran tipos de sanciones</td>';
                             echo '</tr>';
                         }
-                    }
-                }
-                echo '</table>';
-                if(isset($_GET["modificar"]))
-                {
-                    echo '<p>Se ha modificado el tipo de sancion con exito</p>';
-                }
+                        echo '<tr>';
+                        echo '<td>'.$fila_tabla["nombre"].'</td>';
+                        echo '<td><a href="alterTipoAnotacionForm.php?modificar=si&codAntiguo='.$fila_tabla["tipoAnotacion"].'&nombreAntiguo='.$fila_tabla["nombre"].'">Modificar</a></td>';
+                        echo '</tr>';
 
+                        if(!empty($fila_tabla))
+                        {
+                            while($fila_tabla=$resultado_tabla->fetch_array())
+                            {
+                                echo '<tr>';
+                                echo '<td>'.$fila_tabla["nombre"].'</td>';
+                                echo '<td><a href="alterTipoAnotacionForm.php?modificar=si&codAntiguo='.$fila_tabla["tipoAnotacion"].'&nombreAntiguo='.$fila_tabla["nombre"].'">Modificar</a></td>';
+                                echo '</tr>';
+                            }
+                        }
+                    }
+                    echo '</table>';
+                    if(isset($_GET["modificar"]))
+                    {
+                        echo '<p>Se ha modificado el tipo de anotacion con exito</p>';
+                    }
                 ?>
             </article>
         </div>

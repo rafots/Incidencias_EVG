@@ -62,7 +62,7 @@ if(!isset($_SESSION['coordinador']) || $_SESSION['coordinador']!=1) {
 
                 <?php
                 echo '<div>';
-                echo '<form method="get" action="../consultas/conAlterTipoSancion.php">';
+                echo '<form method="get" action="../consultas/conAlterTipoAnotacion.php">';
                 echo '<label>Nombre de tipo de incidencia</label>';
                 echo '<div>';
                 echo '<input type="text" name="cod" value="'.$_GET["codAntiguo"].'" id="ocultar">';
