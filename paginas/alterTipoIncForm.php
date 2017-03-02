@@ -55,34 +55,16 @@
         </aside>
         <article class="col-md-9 articulo">
 
-            <h3>Tipos de incidencias</h3>
-            <?php
-                $consulta="SELECT idUsuario from profesores WHERE usuario='".$_SESSION["usuario"]."'";
-                $resultado=$conectar->query($consulta);
-                $fila=$resultado->fetch_array();
+                <?php
+                    echo '<form method="get" action="../consultas/conAlterTipoIncidencia.php">';
+                    echo '<label>Nombre de tipo de incidencia</label>';
+                    echo '<input type="text" name="cod" value="'.$_GET["codAntiguo"].'">';
+                    echo '<input type="text" name="texto" value="'.$_GET["nombreAntiguo"].'">';
 
-                $consulta_etapa="SELECT codEtapa FROM etapas where coordinador=".$fila["idUsuario"].";";
-                $resultado_etapa=$conectar->query($consulta_etapa);
-                $fila_etapa=$resultado_etapa->fetch_array();
+                ?>
+                <input type="submit" value="Modificar">
+            </form>
 
-                $consulta_tabla="SELECT * FROM tipo_incidencias";
-                $resultado_tabla=$conectar->query($consulta_tabla);
-                echo '<table>';
-                if($fila_tabla=$resultado_tabla->fetch_array())
-                {
-                    echo '<tr>';
-                    echo '<td>'.$fila_tabla["nombre"].'</td>';
-                    echo '<td><a href="alterTipoIncForm.php?modificar=si&codAntiguo='.$fila_tabla["idTipo"].'&nombreAntiguo='.$fila_tabla["nombre"].'">Modificar</a></td>';
-                    echo '</tr>';
-                    while($fila_tabla=$resultado_tabla->fetch_array())
-                    {
-                        echo '<tr>';
-                        echo '<td>'.$fila_tabla["nombre"].'</td>';
-                        echo '<td><a href="alterTipoIncForm.php?modificar=si&codAntiguo='.$fila_tabla["idTipo"].'&nombreAntiguo='.$fila_tabla["nombre"].'">Modificar</a></td>';
-                        echo '</tr>';
-                    }
-                }
-            ?>
         </article>
     </div>
     <!-- /CUERPO DE LA PÁGINA -->
