@@ -23,7 +23,5 @@ foreach ($tabla as $indice => $valor){
     $sentencia->execute();
     $sentencia->close();
 
-
-
 }
 $obj->cerrarConexion();

@@ -53,21 +53,15 @@
             </aside>
             <article class="col-md-9 articulo">
                 
-                <form method="post">
-                    <label>Codigo de tipo</label>
-                    <input type="name" name="codTipo"/>
-                    <label>Nombre</label>
-                    <input type="name" name="nombreTipo"/>
-                    <label>Etapa</label>
+                <form method="post" action="../consultas/altaTipoIncidencia.php">
+                    <label>Nombre del tipo de incidencia</label>
+                    <input type="text" name="nombreTipo"/>
+                    <!--<label>Etapa</label>-->
                     <?php
-                        $obj = new procedimientos();
-                        $obj->conectar();
-                        $consulta="SELECT idUsuario from profesores WHERE usuario=?";
-                        $stmt=$obj->consultasPreparadas($consulta);
-                        $stmt->bind_param('s',$_SESSION["usuario"]);
-                        $stmt->execute();
-                        $stmt->bind_result($idUsuario);
-                        echo $idUsuario;
+                        if(isset($_GET["consulta"]) && $_GET["consulta"]=='ok')
+                        {
+                            echo '<p>Se ha introducido con exito el tipo de incidencia.</p>';
+                        }
                     ?>
                     <input type="submit" name="enviar" value="Añadir tipo">
                 </form>
