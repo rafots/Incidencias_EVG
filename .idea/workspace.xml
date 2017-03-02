@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d578d95-4bd8-491a-8a20-89d7a2bda1b8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consultas/conAlterTipoIncidencia.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/paginas/alterTipoIncForm.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultas/conAlterTipoIncidencia.php" afterPath="$PROJECT_DIR$/consultas/conAlterTipoIncidencia.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paginas/alterTipoInc.php" afterPath="$PROJECT_DIR$/paginas/alterTipoInc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sources/comun.css" afterPath="$PROJECT_DIR$/sources/comun.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paginas/alterTipoIncForm.php" afterPath="$PROJECT_DIR$/paginas/alterTipoIncForm.php" />
     </list>
     <ignored path="Incidencias_EVG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,10 +36,10 @@
       <file leaf-file-name="alterTipoIncForm.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/paginas/alterTipoIncForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="60" column="87" lean-forward="false" selection-start-line="60" selection-start-column="87" selection-end-line="60" selection-end-column="87" />
+            <state relative-caret-position="27">
+              <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
               <folding>
-                <marker date="1488443511847" expanded="true" signature="2434:2462" ph="..." />
+                <marker date="1488444357520" expanded="true" signature="2579:2607" ph="..." />
               </folding>
             </state>
           </provider>
@@ -49,8 +48,8 @@
       <file leaf-file-name="comun.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sources/comun.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+            <state relative-caret-position="231">
+              <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -59,15 +58,29 @@
       <file leaf-file-name="conAlterTipoIncidencia.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/consultas/conAlterTipoIncidencia.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+            <state relative-caret-position="51">
+              <caret line="3" column="112" lean-forward="false" selection-start-line="3" selection-start-column="112" selection-end-line="3" selection-end-column="112" />
               <folding>
-                <marker date="1488443272028" expanded="true" signature="217:253" ph="UPDATE tipo_... " />
-                <marker date="1488443272028" expanded="true" signature="217:272" ph="UPDATE tipo_... " />
-                <marker date="1488443272028" expanded="true" signature="217:286" ph="UPDATE tipo_... " />
-                <marker date="1488443272028" expanded="true" signature="217:303" ph="UPDATE tipo_... " />
-                <marker date="1488443272028" expanded="true" signature="217:304" ph="UPDATE tipo_... " />
-                <marker date="1488443272028" expanded="true" signature="217:420" ph="UPDATE tipo_... " />
+                <marker date="1488443935376" expanded="true" signature="217:253" ph="UPDATE tipo_... " />
+                <marker date="1488443935376" expanded="true" signature="217:272" ph="UPDATE tipo_... " />
+                <marker date="1488443935376" expanded="true" signature="217:286" ph="UPDATE tipo_... " />
+                <marker date="1488443935376" expanded="true" signature="217:303" ph="UPDATE tipo_... " />
+                <marker date="1488443935376" expanded="true" signature="217:304" ph="UPDATE tipo_... " />
+                <marker date="1488443935376" expanded="true" signature="217:421" ph="UPDATE tipo_... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="alterTipoInc.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/paginas/alterTipoInc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="87" column="81" lean-forward="false" selection-start-line="87" selection-start-column="81" selection-end-line="87" selection-end-column="81" />
+              <folding>
+                <marker date="1488443722472" expanded="true" signature="2406:2479" ph="SELECT idUsu... profesores" />
+                <marker date="1488443722472" expanded="true" signature="2621:2667" ph="SELECT codEt... etapas" />
+                <marker date="1488443722472" expanded="true" signature="2856:2886" ph="SELECT * FRO... tipo_incidencias" />
               </folding>
             </state>
           </provider>
@@ -148,10 +161,10 @@
         <option value="$PROJECT_DIR$/conexion/conexion.php" />
         <option value="$PROJECT_DIR$/paginas/gestion_tipos_incidencias/addTipoInc.php" />
         <option value="$PROJECT_DIR$/paginas/gestion_tipos_incidencias/sacarEtapas.php" />
+        <option value="$PROJECT_DIR$/sources/comun.css" />
         <option value="$PROJECT_DIR$/paginas/alterTipoInc.php" />
         <option value="$PROJECT_DIR$/consultas/conAlterTipoIncidencia.php" />
         <option value="$PROJECT_DIR$/paginas/alterTipoIncForm.php" />
-        <option value="$PROJECT_DIR$/sources/comun.css" />
       </list>
     </option>
   </component>
@@ -441,7 +454,7 @@
       <workItem from="1488291552254" duration="7600000" />
       <workItem from="1488360442587" duration="1225000" />
       <workItem from="1488362852989" duration="3201000" />
-      <workItem from="1488439445866" duration="3444000" />
+      <workItem from="1488439445866" duration="4363000" />
     </task>
     <task id="LOCAL-00002" summary="UPDATE FILES index.html, bootstrap.css, comun.css, script.sql&#10;ADD FILES import_users.php, usuarios.xlsx, logotipo.png, menu_estructure.html">
       <created>1488051390265</created>
@@ -478,11 +491,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488363133953</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="UPDATE: Modificacion de los tipos de incidencias ya funcionable">
+      <created>1488443567016</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1488443567016</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44209000" />
+    <option name="totallyTimeSpent" value="45128000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -555,7 +575,8 @@
     <MESSAGE value="UPDATE FILES index.html, bootstrap.css, comun.css, script.sql&#10;ADD FILES import_users.php, usuarios.xlsx, logotipo.png, menu_estructure.html" />
     <MESSAGE value="ADD DISENIOS" />
     <MESSAGE value="UPDATE: coordinador.php ADD: gestionTipos.php y profesor.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: coordinador.php ADD: gestionTipos.php y profesor.php" />
+    <MESSAGE value="UPDATE: Modificacion de los tipos de incidencias ya funcionable" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: Modificacion de los tipos de incidencias ya funcionable" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -800,6 +821,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-39719">
           <caret line="272" column="21" lean-forward="false" selection-start-line="272" selection-start-column="21" selection-end-line="272" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -898,18 +920,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/paginas/alterTipoInc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="74" column="171" lean-forward="false" selection-start-line="74" selection-start-column="171" selection-end-line="74" selection-end-column="171" />
-          <folding>
-            <marker date="1488442477797" expanded="true" signature="2406:2479" ph="SELECT idUsu... profesores" />
-            <marker date="1488442477797" expanded="true" signature="2621:2667" ph="SELECT codEt... etapas" />
-            <marker date="1488442477797" expanded="true" signature="2856:2886" ph="SELECT * FRO... tipo_incidencias" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/paginas/gestionTipos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -941,35 +951,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/paginas/alterTipoInc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="87" column="81" lean-forward="false" selection-start-line="87" selection-start-column="81" selection-end-line="87" selection-end-column="81" />
+          <folding>
+            <marker date="1488443722472" expanded="true" signature="2406:2479" ph="SELECT idUsu... profesores" />
+            <marker date="1488443722472" expanded="true" signature="2621:2667" ph="SELECT codEt... etapas" />
+            <marker date="1488443722472" expanded="true" signature="2856:2886" ph="SELECT * FRO... tipo_incidencias" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/consultas/conAlterTipoIncidencia.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        <state relative-caret-position="51">
+          <caret line="3" column="112" lean-forward="false" selection-start-line="3" selection-start-column="112" selection-end-line="3" selection-end-column="112" />
           <folding>
-            <marker date="1488443272028" expanded="true" signature="217:253" ph="UPDATE tipo_... " />
-            <marker date="1488443272028" expanded="true" signature="217:272" ph="UPDATE tipo_... " />
-            <marker date="1488443272028" expanded="true" signature="217:286" ph="UPDATE tipo_... " />
-            <marker date="1488443272028" expanded="true" signature="217:303" ph="UPDATE tipo_... " />
-            <marker date="1488443272028" expanded="true" signature="217:304" ph="UPDATE tipo_... " />
-            <marker date="1488443272028" expanded="true" signature="217:420" ph="UPDATE tipo_... " />
+            <marker date="1488443935376" expanded="true" signature="217:253" ph="UPDATE tipo_... " />
+            <marker date="1488443935376" expanded="true" signature="217:272" ph="UPDATE tipo_... " />
+            <marker date="1488443935376" expanded="true" signature="217:286" ph="UPDATE tipo_... " />
+            <marker date="1488443935376" expanded="true" signature="217:303" ph="UPDATE tipo_... " />
+            <marker date="1488443935376" expanded="true" signature="217:304" ph="UPDATE tipo_... " />
+            <marker date="1488443935376" expanded="true" signature="217:421" ph="UPDATE tipo_... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/comun.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+        <state relative-caret-position="231">
+          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/paginas/alterTipoIncForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="60" column="87" lean-forward="false" selection-start-line="60" selection-start-column="87" selection-end-line="60" selection-end-column="87" />
+        <state relative-caret-position="27">
+          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding>
-            <marker date="1488443511847" expanded="true" signature="2434:2462" ph="..." />
+            <marker date="1488444357520" expanded="true" signature="2579:2607" ph="..." />
           </folding>
         </state>
       </provider>

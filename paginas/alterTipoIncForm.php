@@ -18,6 +18,11 @@
     <link type="text/css" href="../sources/comun.css" rel="stylesheet">
     <script type="text/javascript" src="../sources/bootstrap.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#ocultar").hide();
+        });
+    </script>
 </head>
 <body>
 
@@ -56,13 +61,17 @@
         <article class="col-md-9 articulo">
 
                 <?php
+                    echo '<div>';
                     echo '<form method="get" action="../consultas/conAlterTipoIncidencia.php">';
                     echo '<label>Nombre de tipo de incidencia</label>';
-                    echo '<input type="text" name="cod" value="'.$_GET["codAntiguo"].'">';
+                    echo '<div>';
+                    echo '<input type="text" name="cod" value="'.$_GET["codAntiguo"].'" id="ocultar">';
                     echo '<input type="text" name="texto" value="'.$_GET["nombreAntiguo"].'">';
+                    echo '</div>';
+                    echo '</div>';
 
                 ?>
-                <input type="submit" value="Modificar">
+                <input type="submit" value="Modificar" class="buttons-separator"/>
             </form>
 
         </article>

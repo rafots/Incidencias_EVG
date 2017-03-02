@@ -82,6 +82,11 @@
                         echo '</tr>';
                     }
                 }
+
+                if(isset($_GET["modificar"]))
+                {
+                    echo '<p>Se ha modificado el tipo de incidencia con exito</p>';
+                }
             ?>
         </article>
     </div>
