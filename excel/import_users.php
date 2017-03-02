@@ -33,7 +33,7 @@
     foreach($tabla as $indice){
 
         $pw = randomPassword();
-
+        echo $pw.'<br/>';
         $sql = "INSERT INTO profesores (usuario, correo, nombre, pass) VALUES (?, ?, ?, ?)";
 
         $stmt = $obj->consultasPreparadas($sql);
