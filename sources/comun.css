@@ -15,7 +15,11 @@ body{
     width: 100%!important;
     height: 100%;
 }
-
+.menuP
+{
+    position: relative;
+    top: 20%;
+}
 .caja
 {
     background-color: white;
