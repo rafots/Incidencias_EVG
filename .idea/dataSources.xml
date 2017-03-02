@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="incidenciasevg@localhost" uuid="de1967da-c8a4-40dc-b9b8-74eaa088804c">
+    <data-source source="LOCAL" name="magentoe_incidenciasevg@localhost" uuid="602a6b07-695b-480a-ad65-dc87d0be33e7">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/incidenciasevg</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/magentoe_incidenciasevg</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />
