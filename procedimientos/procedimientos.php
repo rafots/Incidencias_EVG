@@ -46,6 +46,4 @@ class procedimientos
         return $this->conexion->close();
     }
 
-
-
 }
