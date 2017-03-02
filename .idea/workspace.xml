@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d578d95-4bd8-491a-8a20-89d7a2bda1b8" name="Default" comment="ADD: Modificar tipo sancion funcionable">
+    <list default="true" id="2d578d95-4bd8-491a-8a20-89d7a2bda1b8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Incidencias_EVG.iws" />
@@ -481,7 +481,7 @@
       <workItem from="1488463078221" duration="7625000" />
       <workItem from="1488491139221" duration="831000" />
       <workItem from="1488492989692" duration="25000" />
-      <workItem from="1488493028736" duration="25000" />
+      <workItem from="1488493028736" duration="46000" />
     </task>
     <task id="LOCAL-00002" summary="UPDATE FILES index.html, bootstrap.css, comun.css, script.sql&#10;ADD FILES import_users.php, usuarios.xlsx, logotipo.png, menu_estructure.html">
       <created>1488051390265</created>
@@ -539,11 +539,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488491254367</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ADD: ultimasIncidencias">
+      <created>1488493068635</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1488493068635</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56958000" />
+    <option name="totallyTimeSpent" value="56979000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -618,7 +625,8 @@
     <MESSAGE value="UPDATE: COORDINADOR" />
     <MESSAGE value="UPDATE: MENU COORDINADOR" />
     <MESSAGE value="ADD: Modificar tipo sancion funcionable" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD: Modificar tipo sancion funcionable" />
+    <MESSAGE value="ADD: ultimasIncidencias" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD: ultimasIncidencias" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
