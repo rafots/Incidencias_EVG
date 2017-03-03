@@ -49,7 +49,7 @@ if(isset($_SESSION['coordinador']))
             </div>
         </header>
         <!-- /CABECERA -->
-            <hr>
+
         <!-- CUERPO DE LA PÁGINA -->
         
     <div class="container "  >

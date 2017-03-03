@@ -10,18 +10,18 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Panel</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link type="text/css" href="../sources/bootstrap.css" rel="stylesheet">
-    <link type="text/css" href="../sources/comun.css" rel="stylesheet">
-    <script type="text/javascript" src="../sources/bootstrap.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Panel</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link type="text/css" href="../sources/bootstrap.css" rel="stylesheet">
+        <link type="text/css" href="../sources/comun.css" rel="stylesheet">
+        <script type="text/javascript" src="../sources/bootstrap.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+    <body>
 
-<div class="container caja">
+    <div class="container caja">
         <!-- CABECERA -->
         <header>
             <div class="row vertical-align text-center">
@@ -56,9 +56,8 @@
             <article class="col-md-9 articulo">
 
                 <h3>Tipos de incidencias</h3>
-                <div>
-                    <h4>Tipos de incidencias disponibles</h4>
-                    <?php
+                <?php
+
                     $consulta="SELECT idUsuario from profesores WHERE usuario='".$_SESSION["usuario"]."'";
                     $resultado=$conectar->query($consulta);
                     $fila=$resultado->fetch_array();
@@ -67,54 +66,53 @@
                     $resultado_etapa=$conectar->query($consulta_etapa);
                     $fila_etapa=$resultado_etapa->fetch_array();
 
-                    $consulta_tabla="SELECT * FROM tipo_incidencias";
-                    $resultado_tabla=$conectar->query($consulta_tabla);
+                    $consulta="SELECT tipo_sancion_incidencias.tipoSancion, tipo_sancion.nombre AS SANCION, tipo_sancion_incidencias.idTipo, tipo_incidencias.nombre AS INCIDENCIA
+                                FROM tipo_sancion_incidencias
+                                    INNER JOIN tipo_incidencias
+                                        ON tipo_incidencias.idTipo=tipo_sancion_incidencias.idTipo
+                                    INNER JOIN tipo_sancion
+                                        ON tipo_sancion.tipoSancion=tipo_sancion_incidencias.tipoSancion
+                            WHERE tipo_incidencias.codEtapa='".$fila_etapa["codEtapa"]."'";
+
+                    $resultado=$conectar->query($consulta);
                     echo '<table>';
-                    if($fila_tabla=$resultado_tabla->fetch_array())
+                    if($fila_tabla=$resultado->fetch_array())
                     {
-                        echo '<tr>';
-                        echo '<td>'.$fila_tabla["nombre"].'</td>';
-                        echo '<td><a href="alterTipoIncForm.php?modificar=si&codAntiguo='.$fila_tabla["idTipo"].'&nombreAntiguo='.$fila_tabla["nombre"].'">Modificar</a></td>';
-                        echo '</tr>';
-                        while($fila_tabla=$resultado_tabla->fetch_array())
+                        if(empty($fila_tabla))
                         {
                             echo '<tr>';
-                            echo '<td>'.$fila_tabla["nombre"].'</td>';
-                            echo '<td><a href="alterTipoIncForm.php?modificar=si&codAntiguo='.$fila_tabla["idTipo"].'&nombreAntiguo='.$fila_tabla["nombre"].'">Modificar</a></td>';
+                            echo '<td colspan="2">No se encuentran tipos de sanciones</td>';
                             echo '</tr>';
                         }
-                    }
+                        echo '<tr>';
+                        echo '<td>'.$fila_tabla["SANCION"].'</td>';
+                        echo '<td>'.$fila_tabla["INCIDENCIA"].'</td>';
+                        echo '<td><a href="alterTipoSancionIncForm.php?sancionAnt="'.$fila_tabla["SANCION"].'">Modificar</a></td>';
+                        echo '</tr>';
 
-                    if(isset($_GET["modificar"]))
-                    {
-                        echo '<p>Se ha modificado el tipo de incidencia con exito</p>';
+                        if(!empty($fila_tabla))
+                        {
+                            while($fila_tabla=$resultado->fetch_array())
+                            {
+                                echo '<tr>';
+                                echo '<td>'.$fila_tabla["SANCION"].'</td>';
+                                echo '<td>'.$fila_tabla["INCIDENCIA"].'</td>';
+                                echo '<td><a href="alterTipoSancionIncForm.php?sancionAnt="'.$fila_tabla["SANCION"].'">Modificar</a></td>';
+                                echo '</tr>';
+                            }
+                        }
                     }
                     echo '</table>';
-                    ?>
-                </div>
-                <div>
-                    <h4>Añadir tipo de incidencia</h4>
-                    <form method="post" action="../consultas/altaTipoIncidencia.php">
-                        <label>Nombre del tipo de incidencia</label>
-                        <input type="text" name="nombreTipo"/>
-                        <!--<label>Etapa</label>-->
-                        <?php
-                        if(isset($_GET["consulta"]) && $_GET["consulta"]=='ok')
-                        {
-                            echo '<p>Se ha introducido con exito el tipo de incidencia.</p>';
-                        }
-                        ?>
-                        <input type="submit" name="enviar" value="Añadir tipo">
-                    </form>
-                    <a href="gestionTipos.php">Volver</a>
-                </div>
+                    if(isset($_GET["modificar"]))
+                    {
+                        echo '<p>Se ha modificado el tipo de sancion con exito</p>';
+                    }
 
-
+                ?>
             </article>
         </div>
         <!-- /CUERPO DE LA PÁGINA -->
     </div>
 
-</body>
+    </body>
 </html>
-

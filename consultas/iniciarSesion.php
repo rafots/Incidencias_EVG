@@ -45,10 +45,11 @@ session_start();
                 header('Location: ../paginas/tutor.php');
             }
             else
+                if($profesor == 1)
+                {
                     $_SESSION['usuario']=$usuario;
                     $_SESSION['profesor']=$profesor;
                     header('Location: ../paginas/profesor.php');
-
-
+                }
     }
     $sentencia->close();
