@@ -1,10 +1,12 @@
 <?php
-session_start();
-require '../procedimientos/procedimientos.php';
-if(!isset($_SESSION['coordinador']) || $_SESSION['coordinador']!=1) {
-    echo 'Acceso prohibido';
+    session_start();
+    require '../procedimientos/procedimientos.php';
+    $conexion = new conexion();
+    $conectar = new mysqli($conexion->getServer(),$conexion->getUser(),$conexion->getPass(),$conexion->getDb());
+    if(!isset($_SESSION['coordinador']) || $_SESSION['coordinador']!=1) {
+        echo 'Acceso prohibido';
 
-}
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,20 +54,77 @@ if(!isset($_SESSION['coordinador']) || $_SESSION['coordinador']!=1) {
             <a href="#" class="btn btn-success menu-buttons" role="button">Cerrar sesión</a>
         </aside>
         <article class="col-md-9 articulo">
-
-            <form method="post" action="../consultas/conAltaTipoAnotacion.php">
-                <label>Nombre del tipo de anotacion</label>
-                <input type="text" name="nombreTipo"/>
-                <!--<label>Etapa</label>-->
+            <h3>Tipos de anotaciones</h3>
+            <div>
+                <h4>Tipos de anotaciones disponibles</h4>
                 <?php
-                if(isset($_GET["consulta"]) && $_GET["consulta"]=='ok')
-                {
-                    echo '<p>Se ha introducido con exito el tipo de anotacion.</p>';
-                }
+                    $consulta="SELECT idUsuario from profesores WHERE usuario='".$_SESSION["usuario"]."'";
+                    $resultado=$conectar->query($consulta);
+                    $fila=$resultado->fetch_array();
+
+                    $consulta_etapa="SELECT codEtapa FROM etapas where coordinador=".$fila["idUsuario"].";";
+                    $resultado_etapa=$conectar->query($consulta_etapa);
+                    $fila_etapa=$resultado_etapa->fetch_array();
+
+                    $consulta_tabla="SELECT * FROM tipos_anotaciones WHERE codEtapa='".$fila_etapa["codEtapa"]."'";
+                    $resultado_tabla=$conectar->query($consulta_tabla);
+                    echo '<table>';
+                    if($fila_tabla=$resultado_tabla->fetch_array())
+                    {
+                        if(empty($fila_tabla))
+                        {
+                            echo '<tr>';
+                            echo '<td colspan="2">No se encuentran tipos de sanciones</td>';
+                            echo '</tr>';
+                        }
+                        echo '<tr>';
+                        echo '<td>'.$fila_tabla["nombre"].'</td>';
+                        echo '<td><a href="alterTipoAnotacionForm.php?modificar=si&codAntiguo='.$fila_tabla["tipoAnotacion"].'&nombreAntiguo='.$fila_tabla["nombre"].'">Modificar</a></td>';
+                        echo '</tr>';
+
+                        if(!empty($fila_tabla))
+                        {
+                            while($fila_tabla=$resultado_tabla->fetch_array())
+                            {
+                                echo '<tr>';
+                                echo '<td>'.$fila_tabla["nombre"].'</td>';
+                                echo '<td><a href="alterTipoAnotacionForm.php?modificar=si&codAntiguo='.$fila_tabla["tipoAnotacion"].'&nombreAntiguo='.$fila_tabla["nombre"].'">Modificar</a></td>';
+                                echo '</tr>';
+                            }
+                        }
+                    }
+                    else
+                    {
+                        echo '<tr>';
+                        echo '<td>No se encuentran tipos de anotaciones</td>';
+                        echo '</tr>';
+                    }
+                    echo '</table>';
+                    if(isset($_GET["modificar"]))
+                    {
+                        echo '<p>Se ha modificado el tipo de anotacion con exito</p>';
+                    }
+
                 ?>
-                <input type="submit" name="enviar" value="Añadir tipo">
-            </form>
-            <a href="gestionTipos.php">Volver</a>
+
+            </div>
+            <div>
+                <h4>Añadir tipo de anotacion</h4>
+                <form method="post" action="../consultas/conAltaTipoAnotacion.php">
+                    <label>Nombre del tipo de anotacion</label>
+                    <input type="text" name="nombreTipo"/>
+                    <!--<label>Etapa</label>-->
+                    <?php
+                    if(isset($_GET["consulta"]) && $_GET["consulta"]=='ok')
+                    {
+                        echo '<p>Se ha introducido con exito el tipo de anotacion.</p>';
+                    }
+                    ?>
+                    <input type="submit" name="enviar" value="Añadir tipo">
+                </form>
+                <a href="gestionTipos.php">Volver</a>
+            </div>
+
         </article>
     </div>
     <!-- /CUERPO DE LA PÁGINA -->

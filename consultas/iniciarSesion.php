@@ -10,44 +10,46 @@ session_start();
 
     $obj = new procedimientos();
     $obj->conectar();
-    $query = "SELECT usuario,profesor,gestor,tutor,coordinador FROM magentoe_incidenciasevg.profesores WHERE usuario = ? AND pass = ? ";
+    $query = "SELECT usuario,pass,profesor,gestor,tutor,coordinador FROM incidenciasevg.profesores WHERE usuario = ?";
     $sentencia = $obj->consultasPreparadas($query);
-    $sentencia->bind_param('ss', $user, $pass);
+    $sentencia->bind_param('s', $user);
     $user = $_POST["user"];
-    $pass = $_POST["pass"];
     $sentencia->execute();
-    $sentencia->bind_result($usuario,$profesor,$gestor,$tutor,$coordinador);
+    $sentencia->bind_result($usuario,$pass,$profesor,$gestor,$tutor,$coordinador);
     $sentencia->fetch();
-
-    if($coordinador == 1 && $tutor==1)
+    if (password_verify($_POST["pass"], $pass))
     {
-        $_SESSION['usuario']=$usuario;
-        $_SESSION['coordinador']=$coordinador;
-        $_SESSION['tutor']=$tutor;
-        $_SESSION['profesor']=$profesor;
-        header('Location: ../paginas/coordinador.php');
-    }
-    else
-        if($coordinador == 1 && $tutor==0)
+
+        if($coordinador == 1 && $tutor==1)
         {
             $_SESSION['usuario']=$usuario;
             $_SESSION['coordinador']=$coordinador;
+            $_SESSION['tutor']=$tutor;
             $_SESSION['profesor']=$profesor;
             header('Location: ../paginas/coordinador.php');
         }
         else
-        if($tutor == 1)
-        {
-            $_SESSION['usuario']=$usuario;
-            $_SESSION['tutor']=$tutor;
-            $_SESSION['profesor']=$profesor;
-            header('Location: ../paginas/tutor.php');
-        }
-        else
-            if($profesor == 1)
+            if($coordinador == 1 && $tutor==0)
             {
                 $_SESSION['usuario']=$usuario;
+                $_SESSION['coordinador']=$coordinador;
                 $_SESSION['profesor']=$profesor;
-                header('Location: ../paginas/profesor.php');
+                header('Location: ../paginas/coordinador.php');
             }
+            else
+            if($tutor == 1)
+            {
+                $_SESSION['usuario']=$usuario;
+                $_SESSION['tutor']=$tutor;
+                $_SESSION['profesor']=$profesor;
+                header('Location: ../paginas/tutor.php');
+            }
+            else
+                if($profesor == 1)
+                {
+                    $_SESSION['usuario']=$usuario;
+                    $_SESSION['profesor']=$profesor;
+                    header('Location: ../paginas/profesor.php');
+                }
+    }
     $sentencia->close();

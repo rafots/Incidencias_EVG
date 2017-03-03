@@ -127,7 +127,7 @@ CREATE TABLE IF NOT EXISTS motivo(
 
 /* TABLA 15 - SANCIONES*/
 CREATE TABLE IF NOT EXISTS sanciones(
-  idSancion SMALLINT UNSIGNED NOT NULL PRIMARY KEY,
+  idSancion SMALLINT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
   idIncidencia SMALLINT UNSIGNED NOT NULL,
   tipoSancion TINYINT  UNSIGNED NOT NULL,
   fecha_inicio DATE NOT NULL,
@@ -135,7 +135,7 @@ CREATE TABLE IF NOT EXISTS sanciones(
   observacion VARCHAR(300) NOT NULL,
   idMotivo TINYINT UNSIGNED NOT NULL,
   ultima_sancion TINYINT UNSIGNED NOT NULL,
-  CONSTRAINT fk_incidencias_sanciones FOREIGN KEY (idIncidencia) REFERENCES incidencias(idIncidencia),
+  CONSTRAINT fk_incidencias_sanciones FOREIGN KEY (idIncidencia) REFERENCES incidencias(idIncidencia) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT fk_tipo_sancion_sanciones FOREIGN KEY (tipoSancion) REFERENCES tipo_sancion(tipoSancion),
   CONSTRAINT fk_motivo_sancion FOREIGN KEY (idMotivo) REFERENCES motivo(idMotivo)
 );

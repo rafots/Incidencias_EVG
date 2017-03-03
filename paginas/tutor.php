@@ -28,7 +28,7 @@ if(!isset($_SESSION["usuario"])){
                         <img class='img-responsive img-center' src='../imagenes/logotipo.png'/>
                     </div>
                     <div class='col-md-3 col-sm-3'>
-                        <div id='title-cdi'>Panel Tutor</div>
+                        <div id='title-cdi'>CONTROL DE INCIDENCIAS</div>
                     </div>
                     <div class='col-md-3 col-sm-3'>";
                         if(isset($_SESSION["tutor"])){
@@ -47,7 +47,7 @@ if(!isset($_SESSION["usuario"])){
             
             <div class='row'>
                 <aside class='col-md-3'>
-                    <a href='#' class='btn btn-success menu-buttons' role='button'>Ultimas incidencias</a>
+                    <a href='ultimasIncidenciasTutor.php' class='btn btn-success menu-buttons' role='button'>Ultimas incidencias</a>
                     <a href='#' class='btn btn-success menu-buttons' role='button'>Buscar incidencias</a>
                     <a href='#' class='btn btn-success menu-buttons' role='button'>Añadir anotacion</a>
                     <a href='#' class='btn btn-success menu-buttons buttons-separator' role='button'>Cerrar Sesion</a>

@@ -11,7 +11,7 @@ class conexion
     private $server = "localhost";
     private $user = "root";
     private $pass = "";
-    private $db = "magentoe_incidenciasevg";
+    private $db = "incidenciasevg";
 
     /**
      * @return string
