@@ -15,7 +15,7 @@ if(isset($_SESSION['coordinador'])){
 }
 
 function coordinador($opc){
-    require_once 'procedimientos.php';
+    require_once '../procedimientos/procedimientos.php';
     $bd = new conexion();
     $objeto = new procedimientos();
     $objeto->conectar();
@@ -27,7 +27,7 @@ function coordinador($opc){
 }
 
 function tutor($opc){
-    require_once 'procedimientos.php';
+    require_once '../procedimientos/procedimientos.php';
     $bd = new conexion();
     $objeto = new procedimientos();
     $objeto->conectar();

@@ -12,7 +12,7 @@ if(isset($_SESSION['coordinador'])){
 }
 
 function coordinador(){
-    require_once 'procedimientos.php';
+    require_once '../procedimientos/procedimientos.php';
     $bd = new conexion();
     $objeto = new procedimientos();
     $objeto->conectar();
@@ -32,7 +32,7 @@ function visualizar($objeto){
 }
 
 function tutor(){
-    require_once 'procedimientos.php';
+    require_once '../procedimientos/procedimientos.php';
     $bd = new conexion();
     $objeto = new procedimientos();
     $servidor = $bd->getServer();
