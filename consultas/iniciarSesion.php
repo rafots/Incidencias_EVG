@@ -10,7 +10,7 @@ session_start();
 
     $obj = new procedimientos();
     $obj->conectar();
-    $query = "SELECT usuario,pass,profesor,gestor,tutor,coordinador FROM incidenciasevg.profesores WHERE usuario = ?";
+    $query = "SELECT usuario,pass,profesor,gestor,tutor,coordinador FROM magentoe_incidenciasevg.profesores WHERE usuario = ?";
     $sentencia = $obj->consultasPreparadas($query);
     $sentencia->bind_param('s', $user);
     $user = $_POST["user"];
@@ -19,7 +19,6 @@ session_start();
     $sentencia->fetch();
     if (password_verify($_POST["pass"], $pass))
     {
-
         if($coordinador == 1 && $tutor==1)
         {
             $_SESSION['usuario']=$usuario;
@@ -45,11 +44,9 @@ session_start();
                 header('Location: ../paginas/tutor.php');
             }
             else
-                if($profesor == 1)
-                {
                     $_SESSION['usuario']=$usuario;
                     $_SESSION['profesor']=$profesor;
                     header('Location: ../paginas/profesor.php');
-                }
+
     }
     $sentencia->close();

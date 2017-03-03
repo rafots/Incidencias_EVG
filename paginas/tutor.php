@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: 2DAW03
- * Date: 02/03/2017
- * Time: 8:54
- */
+
 session_start();
 if(!isset($_SESSION["usuario"])){
     echo "Acceso prohibido";

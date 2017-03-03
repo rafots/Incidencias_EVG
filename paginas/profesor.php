@@ -28,9 +28,17 @@ if(isset($_SESSION['profesor']))
             <div class="col-md-3 col-sm-3">
                 <div id="title-cdi">PROFESOR</div>
             </div>
-            <div class="col-md-3 col-sm-3">
-                <button class=" btn btn-primary btn-success" disabled="disabled">P</button>
-                <button class=" btn btn-primary btn-success">C</button>
+            <div class="col-md-3 col-sm-3">';
+                if(isset($_SESSION["tutor"])){
+                            echo "<a class='btn btn-primary btn-success' href='tutor.php'>T</a>";
+                        }
+                        if(isset($_SESSION["coordinador"])){
+                            echo "<a class='btn btn-primary btn-success' href='coordinador.php'>C</a>";
+                        }
+                        if(isset($_SESSION["profesor"])) {
+                            echo "<a class='btn btn-primary btn-success disabled' href='profesor.php'>P</a>";
+                        }
+                        echo '
             </div>
         </div>
     </header>

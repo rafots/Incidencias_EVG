@@ -31,7 +31,7 @@ class procedimientos
     }
     public function devolverFilas()
     {
-        $this->resultado->fetch_array();
+        return $this->resultado->fetch_array();
     }
     public function filasAfectadas()
     {
