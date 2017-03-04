@@ -18,6 +18,11 @@
         <link type="text/css" href="../sources/comun.css" rel="stylesheet">
         <script type="text/javascript" src="../sources/bootstrap.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".ocultar").hide();
+            });
+        </script>
     </head>
     <body>
 
@@ -56,8 +61,12 @@
             <article class="col-md-9 articulo">
 
                 <h3>Cambiar tipo de sancion y incidencia</h3>
-                <form method="get" action="">
+                <form method="get" action="../consultas/conAlterTipoSancionIncidencia.php">
                     <div>
+                        <?php
+                            echo '<input type="text" name="sancionAnt" value="'.$_GET["sancionAnt"].'" class="ocultar"/>';
+                            echo '<input type="text" name="incAntiguo" value="'.$_GET["incAntiguo"].'" class="ocultar"/>';
+                        ?>
                         <label>Tipo sancion</label>
                         <select name="tipoSancionNuevo">
                             <?php
