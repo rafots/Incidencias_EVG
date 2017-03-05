@@ -49,7 +49,7 @@ if(isset($_SESSION['coordinador']))
             </div>
         </header>
         <!-- /CABECERA -->
-
+        <hr>
         <!-- CUERPO DE LA PÁGINA -->
         
     <div class="container "  >
@@ -102,7 +102,7 @@ if(isset($_SESSION['coordinador']))
                                 <table class="table">
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Poner anotaciones</a>
+                                            <a href="crearanotaciones.php">Poner anotaciones</a>
                                         </td>
                                     </tr>
                                     <tr>

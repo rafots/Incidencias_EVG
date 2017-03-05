@@ -52,4 +52,7 @@ session_start();
                     header('Location: ../paginas/profesor.php');
                 }
     }
+    else{
+        header('Location: ../paginas/inicioSesion.php');
+    }
     $sentencia->close();

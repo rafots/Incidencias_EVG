@@ -4,17 +4,19 @@ if(isset($_SESSION['profesor']))
 {
 
 
-    echo'
+echo'
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <meta charset="UTF-8">
-    <title>Panel Profesor</title>
+    <title>Panel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link type="text/css" href="../sources/bootstrap.css" rel="stylesheet">
     <link type="text/css" href="../sources/comun.css" rel="stylesheet">
     <script type="text/javascript" src="../sources/bootstrap.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -26,34 +28,83 @@ if(isset($_SESSION['profesor']))
                 <img class="img-responsive img-center" src="../imagenes/logotipo.png"/>
             </div>
             <div class="col-md-3 col-sm-3">
-                <div id="title-cdi">PROFESOR</div>
+                <div id="title-cdi">CONTROL DE INCIDENCIAS</div>
             </div>
             <div class="col-md-3 col-sm-3">
-                <button class=" btn btn-primary btn-success" disabled="disabled">P</button>
-                <button class=" btn btn-primary btn-success">C</button>
+                ';
+                if(isset($_SESSION['tutor']))
+                {
+                echo '<a class=" btn btn-primary btn-success" href="tutor.php">T</a>';
+                }
+                if(isset($_SESSION['profesor']))
+                {
+                echo '<a class=" btn btn-primary btn-success disabled" ">P</a>';
+                }
+                if(isset($_SESSION['coordinador']))
+                {
+                echo '<a class=" btn btn-primary btn-success " href="coordinador.php">C</a>';
+                }
+                echo '
             </div>
         </div>
     </header>
     <!-- /CABECERA -->
-
+    <hr>
     <!-- CUERPO DE LA PÁGINA -->
-    <div class="row">
-        <aside class="col-md-3">
-            <!--
-            *
-            * Estos botones son simplemente de ejemplo
-            *
-            -->
-            <a href="#" class="btn btn-success menu-buttons" role="button">Inicio</a>
-            <a href="#" class="btn btn-success menu-buttons" role="button">Crear incidencia</a>
-            <a href="#" class="btn btn-success menu-buttons" role="button">Cerrar sesión</a>
-        </aside>
-        <article class="col-md-9 articulo">
-            <p>Conectado como profesor. Para meter incidencias, pulsa el boton de "Crear incidencia"</p>
-        </article>
+
+    <div class="container "  >
+        <div class="row " >
+            <div class="col-sm-3 col-md-3 " >
+                <div class="panel-group " id="accordion" >
+                    <div class="panel panel-default">
+                        <div class="panel-heading" >
+                            <h4 class="panel-title ">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-book text-success"></span>Incidencias</a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <a href="http://www.jquery2dotnet.com">Crear Incidencia</a>
+                                        </td>
+                                    </tr>  
+                                </table>
+                            </div>
+                        </div>
+                    </div>          
+                 
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-folder-open text-success">
+                            </span>Gestiones</a>
+                            </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <a href="http://www.jquery2dotnet.com">Ver Incidencias</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="http://www.jquery2dotnet.com">Cerrar Sesión</a>
+                                        </td>
+                                    </tr> 
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-    <!-- /CUERPO DE LA PÁGINA -->
-</div>
 
 </body>
 </html>
@@ -61,5 +112,5 @@ if(isset($_SESSION['profesor']))
 }
 else
 {
-    echo 'Acceso prohibido';
+echo 'Acceso prohibido';
 }
