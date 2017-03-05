@@ -10,7 +10,7 @@ session_start();
 
     $obj = new procedimientos();
     $obj->conectar();
-    $query = "SELECT usuario,pass,profesor,gestor,tutor,coordinador FROM incidenciasevg.profesores WHERE usuario = ?";
+    $query = "SELECT usuario,pass,profesor,gestor,tutor,coordinador FROM magentoe_incidenciasevg.profesores WHERE usuario = ?";
     $sentencia = $obj->consultasPreparadas($query);
     $sentencia->bind_param('s', $user);
     $user = $_POST["user"];

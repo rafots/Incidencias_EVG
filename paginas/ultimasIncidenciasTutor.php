@@ -1,16 +1,7 @@
 <?php
     session_start();
     require_once "../procedimientos/procedimientos.php";
-
-    $conexion = new Procedimientos();
-    $conexion->conectar();
-
-    $sql = "SELECT alumnos.nombreCompleto, tipo_incidencias.nombre AS nombreINC, profesores.nombre AS nombrePROF FROM incidencias 
-                INNER JOIN alumnos ON (alumnos.nia = incidencias.nia)
-                INNER JOIN tipo_incidencias ON (tipo_incidencias.idTipo=incidencias.idTipo) 
-                INNER JOIN profesores ON (profesores.idUsuario=incidencias.usuario) 
-                WHERE fecha_ocurrencia <= CURRENT_DATE LIMIT 10";
-    $conexion->consultas($sql);
+    require_once "../consultas/ultimasIncidencias.php";
 
     if(!isset($_SESSION["usuario"])){
         echo "Acceso prohibido";
@@ -54,27 +45,29 @@
             <div class='row'>
                 <aside class='col-md-3'>
                     <a href='#' class='btn btn-success menu-buttons' role='button'>Ultimas incidencias</a>
-                    <a href='#' class='btn btn-success menu-buttons' role='button'>Buscar incidencias</a>
-                    <a href='#' class='btn btn-success menu-buttons' role='button'>Añadir anotacion</a>
-                    <a href='#' class='btn btn-success menu-buttons buttons-separator' role='button'>Cerrar Sesion</a>
+                    <a href='buscarIncidencia.php' class='btn btn-success menu-buttons' role='button'>Buscar incidencias</a>
+                    <a href='crearanotaciones.php' class='btn btn-success menu-buttons' role='button'>Añadir anotacion</a>
+                    <a href='cerrarSession.php' class='btn btn-success menu-buttons buttons-separator' role='button'>Cerrar Sesion</a>
                 </aside>
                 <article class='col-md-9 articulo'>";
-                        echo "<table border='1'>
+                        echo "<table class='table table-striped'>
                                 <tr>
-                                    <td>Nombre del Alumnno</td>
-                                    <td>Tipo de incidencia</td>
-                                    <td>Profesor</td>
+                                    <td class='text-center'>Nombre del Alumnno</td>
+                                    <td class='text-center'>Tipo de incidencia</td>
+                                    <td class='text-center'>Profesor</td>
+                                    <td></td>
                                 </tr>
                                 <tr>";
                                     while($fila = $conexion->devolverFilas()){
                                       echo "
-                                       <td>".$fila["nombreCompleto"]."</td>
-                                       <td>".$fila["nombreINC"]."</td>
-                                       <td>".$fila["nombrePROF"]."</td>
-                                       <td><button class='glyphicon glyphicon-eye-open' aria-hidden='true'></td>
-                                       <td><button class='glyphicon glyphicon-save' aria-hidden='true'></td>";
+                                       <td class='text-center'>".$fila["nombreCompleto"]."</td>
+                                       <td class='text-center'>".$fila["nombreINC"]."</td>
+                                       <td class='text-center'>".$fila["nombrePROF"]."</td>
+                                       <td><a href='verIncidencia.php?codigo=".$fila["idIncidencia"]."' class='btn btn-primary'><span class='glyphicon glyphicon-eye-open'></span></a></td>
+                                       <!--<td><a href='#' class='btn btn-primary'><span class='glyphicon glyphicon-folder-open'></span></a></td>-->";
                                     }
-                                echo "</tr>
+                                echo "
+                                </tr>
                               </table>";
         echo "
                 </article>

@@ -48,9 +48,9 @@ if(!isset($_SESSION["usuario"])){
             <div class='row'>
                 <aside class='col-md-3'>
                     <a href='ultimasIncidenciasTutor.php' class='btn btn-success menu-buttons' role='button'>Ultimas incidencias</a>
-                    <a href='#' class='btn btn-success menu-buttons' role='button'>Buscar incidencias</a>
-                    <a href='#' class='btn btn-success menu-buttons' role='button'>Añadir anotacion</a>
-                    <a href='#' class='btn btn-success menu-buttons buttons-separator' role='button'>Cerrar Sesion</a>
+                    <a href='buscarIncidencia.php' class='btn btn-success menu-buttons' role='button'>Buscar incidencias</a>
+                    <a href='crearanotaciones.php' class='btn btn-success menu-buttons' role='button'>Añadir anotacion</a>
+                    <a href='cerrarSession.php' class='btn btn-success menu-buttons buttons-separator' role='button'>Cerrar Sesion</a>
                 </aside>
                 <article class='col-md-9 articulo'>
                     Hola<br>
