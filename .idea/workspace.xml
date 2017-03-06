@@ -692,11 +692,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488835358088</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="ADD formNewSancion">
+      <created>1488839445007</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1488839445007</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95807000" />
+    <option name="totallyTimeSpent" value="95858000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -772,7 +779,8 @@
     <MESSAGE value="UPDATE: MENU COORDINADOR" />
     <MESSAGE value="UPDATE: INICIO DE SESION" />
     <MESSAGE value="ADD formulario y proceso para creación de usuario" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD formulario y proceso para creación de usuario" />
+    <MESSAGE value="ADD formNewSancion" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD formNewSancion" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
