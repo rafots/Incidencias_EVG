@@ -1,69 +1,185 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: 2DAW03
- * Date: 02/03/2017
- * Time: 8:54
- */
+
 session_start();
-if(!isset($_SESSION["usuario"])){
+if(!isset($_SESSION["tutor"])){
     echo "Acceso prohibido";
+
 }else{
-    echo "
+    echo '
      <!DOCTYPE html>
+     <html lang="en">
      <head>
-        <meta charset='UTF-8'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <meta charset="UTF-8">
         <title>Panel Tutor</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
-        <link type='text/css' href='../sources/bootstrap.css' rel='stylesheet'>
-        <link type='text/css' href='../sources/comun.css' rel='stylesheet'>
-        <script type='text/javascript' src='../sources/bootstrap.js'></script>
-        <script type='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link type="text/css" href="../sources/bootstrap.css" rel="stylesheet">
+        <link type="text/css" href="../sources/comun.css" rel="stylesheet">
+        <script type="text/javascript" src="../sources/bootstrap.js"></script>
+        
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        
      </head>
      <body>
-        <div class='container caja'>
+        <div class="container caja">
             <header>
-                <div class='row vertical-align text-center'>
-                    <div class='col-md-6 col-sm-6'>
-                        <img class='img-responsive img-center' src='../imagenes/logotipo.png'/>
+                <div class="row vertical-align text-center">
+                    <div class="col-md-6 col-sm-6">
+                        <img class="img-responsive img-center" src="../imagenes/logotipo.png"/>
                     </div>
-                    <div class='col-md-3 col-sm-3'>
-                        <div id='title-cdi'>CONTROL DE INCIDENCIAS</div>
+                    <div class="col-md-3 col-sm-3">
+                        <div id="title-cdi">CONTROL DE INCIDENCIAS</div>
                     </div>
-                    <div class='col-md-3 col-sm-3'>";
+                    <div class="col-md-3 col-sm-3">';
                         if(isset($_SESSION["tutor"])){
-                            echo "<a class='btn btn-primary btn-success disabled'>T</a>";
-                        }
-                        if(isset($_SESSION["coordinador"])){
-                            echo "<a class='btn btn-primary btn-success' href='coordinador.php'>C</a>";
+                            echo '<a class="btn btn-primary btn-success disabled">T</a>';
                         }
                         if(isset($_SESSION["profesor"])) {
-                            echo "<a class='btn btn-primary btn-success' href='profesor.php'>P</a>";
+                            echo '<a class="btn btn-primary btn-success" href="profesor.php">P</a>';
                         }
-    echo "
+                        if(isset($_SESSION["coordinador"])){
+                            echo '<a class="btn btn-primary btn-success" href="coordinador.php">C</a>';
+                        }
+
+    echo '
                     </div>
                 </div>
             </header>
             
-            <div class='row'>
-                <aside class='col-md-3'>
-                    <a href='ultimasIncidenciasTutor.php' class='btn btn-success menu-buttons' role='button'>Ultimas incidencias</a>
-                    <a href='buscarIncidencia.php' class='btn btn-success menu-buttons' role='button'>Buscar incidencias</a>
-                    <a href='crearanotaciones.php' class='btn btn-success menu-buttons' role='button'>Añadir anotacion</a>
-                    <a href='cerrarSession.php' class='btn btn-success menu-buttons buttons-separator' role='button'>Cerrar Sesion</a>
-                </aside>
-                <article class='col-md-9 articulo'>
-                    Hola<br>
-                    Hola<br>
-                    Hola<br>
-                    Hola<br>
-                    Hola<br>
-                    Hola<br>
-                    Hola<br>
-                </article>
+            <hr>
+            
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 col-md-3">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-book text-success"></span>Incidencias</a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <a href="http://www.jquery2dotnet.com">Aula de convivencia</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="http://www.jquery2dotnet.com">Partes educativos</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="http://www.jquery2dotnet.com">Por alumnos</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                           <a href="http://www.jquery2dotnet.com">No tramitadas</a>
+                                            <span class="badge">42</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-pencil text-success">
+                            </span>Anotaciones</a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <a id="crearanotaciones">Poner anotaciones</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="http://www.jquery2dotnet.com">Visualizar anotaciones</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-copy text-success">
+                            </span>Sanciones</a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <a href="http://www.jquery2dotnet.com">Poner sanción</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="http://www.jquery2dotnet.com">Visualizar sanciones</a> <span class="label label-info">5</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-folder-open text-success">
+                            </span>Gestiones</a>
+                            </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <a href="http://www.jquery2dotnet.com">Tipos de Incidencias</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="http://www.jquery2dotnet.com">Tipos de Sanciones</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            </span><a href="http://www.jquery2dotnet.com">Motivos de Sanción</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="http://www.jquery2dotnet.com">Tipos de Anotaciones</a>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8 col-md-8" id="cuerpo">
+    
             </div>
         </div>
+    </div>
      </body>
-    ";
+</html>
+    ';
 }
 ?>
