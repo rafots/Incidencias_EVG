@@ -9,6 +9,7 @@ if(isset($_SESSION['coordinador']))
 <html lang="en">
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="../sources/ajax.js"></script>
     <meta charset="UTF-8">
     <title>Panel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -102,7 +103,7 @@ if(isset($_SESSION['coordinador']))
                                 <table class="table">
                                     <tr>
                                         <td>
-                                            <a href="crearanotaciones.php">Poner anotaciones</a>
+                                            <a id="crearanotaciones">Poner anotaciones</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -176,9 +177,12 @@ if(isset($_SESSION['coordinador']))
                     </div>
                 </div>
             </div>
-
+            <div class="col-sm-8 col-md-8" id="cuerpo">
+    
+            </div>
         </div>
     </div>
+    
 
 </body>
 </html>
