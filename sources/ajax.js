@@ -7,4 +7,39 @@ $(document).ready(function(){
         e.preventDefault();
         $("#cuerpo").load("crearanotaciones.php");
     });
+
+    $('#anotaciones').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("anotaciones.php");
+    });
+
+    $('#anotacionesmostrar').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("anotacionesmostrar.php");
+    });
+
+    $('#misanotaciones').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("misanotaciones.php");
+    });
+
+    $('#misanotacionesmostrar').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("misanotacionesmostrar.php");
+    });
+
+    $('#eliminaranotaciones').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("eliminaranotaciones.php");
+    });
+
+    $('#modificaranotaciones').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("modificaranotaciones.php");
+    });
+
+
+
+
+
 });

@@ -19,7 +19,6 @@ session_start();
     $sentencia->fetch();
     if (password_verify($_POST["pass"], $pass))
     {
-
         if($coordinador == 1 && $tutor==1)
         {
             $_SESSION['usuario']=$usuario;

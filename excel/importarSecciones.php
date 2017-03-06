@@ -6,12 +6,8 @@ $xlsx = new SimpleXLSX("curso.xlsx");
 $tabla = $xlsx->rows();
 
 //Realizamos la conexion con la base de datos
-$bd = new conexion();
+
 $objeto = new procedimientos();
-$servidor = $bd->getServer();
-$usuario = $bd->getUser();
-$contrasenia = $bd->getPass();
-$baseDatos = $bd->getDb();
 $objeto->conectar();
 //Recorremos las filas del documento Excel y las asignamos a variables
 $consulta="INSERT INTO secciones VALUES (?,?,?,?)";
