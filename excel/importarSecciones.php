@@ -1,5 +1,5 @@
 <?php
-require_once 'procedimientos.php';
+require_once '../procedimientos/procedimientos.php';
 require_once 'simplexlsx.class.php';
 extract($_POST);
 $xlsx = new SimpleXLSX("curso.xlsx");

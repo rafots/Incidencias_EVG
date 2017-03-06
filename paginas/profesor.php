@@ -67,7 +67,7 @@ echo'
                                 <table class="table">
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Crear Incidencia</a>
+                                            <a href="addIncidencia.php">Crear Incidencia</a>
                                         </td>
                                     </tr>  
                                 </table>

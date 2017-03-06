@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 /**
  * Created by PhpStorm.
@@ -7,8 +6,10 @@
  * Time: 20:06
  */
 
+    require '../sources/fpdf/fpdf.php';
     require 'simplexlsx.class.php';
     require '../procedimientos/procedimientos.php';
+
 
     /*
      * Funcion para generar contraseña aleatoria
@@ -30,12 +31,22 @@
     $obj = new procedimientos();
     $obj->conectar();
 
+    $pdf = new FPDF();
+    $pdf->AddPage();
+    $pdf->SetFont('Arial','B',20);
+    $pdf->Cell(80,9,utf8_decode("Lista de usuarios añadidos"));
+    $pdf->Ln();
+    $pdf->SetFont('Arial','I',16);
+    $pdf->Ln();
+    $pdf->Cell(40,9,'Usuario',1);
+    $pdf->Cell(40,9,utf8_decode('Contraseña'),1);
+    $pdf->Ln();
+
     foreach($tabla as $indice){
 
         $pw = randomPassword();
-        echo $pw.'<br/>';
         $sql = "INSERT INTO profesores (usuario, correo, nombre, pass) VALUES (?, ?, ?, ?)";
-
+        utf8_decode($pw);
         $stmt = $obj->consultasPreparadas($sql);
         $stmt->bind_param("ssss", $user, $email, $name, $passwd);
 
@@ -44,18 +55,16 @@
         $name = $indice[1];
         $passwd = password_hash($pw, PASSWORD_DEFAULT);
 
+        $pdf->Cell(40,9,utf8_decode($user),1);
+        $pdf->Cell(40,9,$pw,1);
+        $pdf->Ln();
+
         $stmt->execute();
-
-        $mensaje = 'Buenos dias, le informamos de que usted acaba de ser registrado en la aplicación para el control de incidencias
-        del centro Escuela Virgen de Guadalupe con nombre de usuario '.$user.' y contraseña '.$pw.'. Si tiene algun problema para 
-        iniciar sesión o cualquier otro motivo, pongase en contacto con el administrador';
-
-        if(!mail($indice[0], 'Contraseña Incidencias EVG', $pw))
-            echo 'Mensaje enviado';
-
     }
 
     $stmt->close();
     $obj->cerrarConexion();
+    $pdf->Output();
+
 
 ?>
