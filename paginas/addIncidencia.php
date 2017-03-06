@@ -2,8 +2,8 @@
     if(isset($_SESSION['profesor']))
     {
         require "../procedimientos/procedimientos.php";
-        $conexion = new conexion();
-        $conectar = new mysqli($conexion->getServer(),$conexion->getUser(),$conexion->getPass(),$conexion->getDb());
+        $conexion = new procedimientos();
+        $conexion->conectar();
         echo '<div class="col-sm-9 col-md-9 ">';
         echo '<h3>Añadir incidencia</h3>';
         echo '<form method="post" action="../consultas/conAddIncidencia.php">';

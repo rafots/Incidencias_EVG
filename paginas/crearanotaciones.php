@@ -43,22 +43,30 @@
                         $minutos=date("i");
                         $segundos=date("s");
                         $fecha="".$anyo."-".$mes."-".$dia." "."".$hora.":".$minutos.":".$segundos."";
-                        echo'<article class="col-md-9 articulo">';
-                        echo' <form action="crearanotaciones.php" method="post" ">
+
+                        echo' <form action="crearanotaciones.php" method="post" ">';
+                            echo'<div class="form-group">
                                     <label>NumeroAnotacion</label>
-                                    <input type="text" name="numInc">
+                                    <input type="text" name="numInc" class="form-control">
+                                    </div>
+                                    <div class="form-group">
                                     <label>Tipo al que pertenece</label>';
                                     $consulta="Select * from tipos_anotaciones";
                                     $objeto->consultas($consulta);
-                                    echo'<select name="tipo">';
+                                    echo'<select name="tipo" class="form-control">';
                                     while($fila=$objeto->devolverfilas()){
                                         echo'<option value="'.$fila["tipoAnotacion"].'">'.$fila["nombre"].'</option>';
                                     }
-                               echo'</select><br/>
-                                    <label>NIA</label>
-                                    <input type="text" name="nia">
+
+                               echo'</select></div>
+                                    <div class="form-group">
+                                        <label>NIA</label>
+                                        <input type="text" name="nia" class="form-control">
+                                    </div>
+                                    <div class="form-group">
                                     <label>Habilitar Profesores</label>
                                     <input type="checkbox" name="profesores">
+                                    </div>
                                     <input type="submit" name="boton" value="Crear anotacion">';
                         if(isset($_POST["boton"])){
                             $cero=0;
