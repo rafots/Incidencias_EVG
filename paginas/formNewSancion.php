@@ -1,50 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sanciones</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link type="text/css" href="../sources/bootstrap.css" rel="stylesheet">
-    <link type="text/css" href="../sources/comun.css" rel="stylesheet">
-    <script type="text/javascript" src="../sources/bootstrap.js"></script>
-    <script type="text/javascript" src="../sources/comun.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-</head>
-<body>
-    <div class="container caja">
-        <!-- CABECERA -->
-        <header>
-            <div class="row vertical-align text-center">
-                <div class="col-md-6 col-sm-6">
-                    <img class="img-responsive img-center" src="../imagenes/logotipo.png"/>
-                </div>
-                <div class="col-md-3 col-sm-3">
-                    <div id="title-cdi">CONTROL DE INCIDENCIAS</div>
-                </div>
-                <div class="col-md-3 col-sm-3">
-                    <!-- Aquí hirían los botones para cambiar de un usuario a otro, esto sería con php -->
-                </div>
-            </div>
-        </header>
-        <!-- /CABECERA -->
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Jorge Luis
+ * Date: 06/03/2017
+ * Time: 22:55
+ */
 
-        <!-- CUERPO DE LA PÁGINA -->
-        <div class="row">
-            <aside class="col-md-3 col-sm-3">
-                <!--
-                *
-                * Estos botones son simplemente de ejemplo
-                *
-                -->
-                <a href="#" class="btn btn-success menu-buttons" role="button">Incidencias destacables</a>
-                <a href="#" class="btn btn-success menu-buttons" role="button">Historial alumnos</a>
-                <a href="#" class="btn btn-success menu-buttons" role="button">Aula de convivencia</a>
-                <a href="#" class="btn btn-success menu-buttons" role="button">Tipos Incidencias</a>
-                <a href="#" class="btn btn-success menu-buttons buttons-separator" role="button">Cerrar sesión</a>
-            </aside>
-            <article class="col-md-9 col-sm-9">
+session_start();
+if(!isset($_SESSION['usuario']))
+    header('Location: iniciarSesion.php');
+else{
 
-                <form class="form-horizontal" method="post" action="#">
+    require '../procedimientos/procedimientos.php';
+
+    $obj = new procedimientos();
+    $obj->conectar();
+
+    $sql_sanction_type = "SELECT * FROM tipo_sancion";
+
+    $obj->consultas($sql_sanction_type);
+    
+    echo '
+        
+        <form class="form-horizontal" method="post" action="#">
                     <div class="row">
                         <div class="col-md-6 col-sm-12">
 
@@ -55,9 +33,11 @@
                                         <option selected="selected"> Elige un tipo de sanción </option>
                                     </select>
                                 </div>
-                            </div>
+                            </div>';
 
-                            <div class="form-group">
+    
+
+    echo '                        <div class="form-group">
                                 <label for="reason-type" class="col-md-4 control-label">Motivo</label>
                                 <div class="col-sm-8">
                                     <select id="reason-type" name="reason-type" class="form-control">
@@ -87,15 +67,14 @@
                     </div>
 
                     <textarea class="form-control" rows="5" name="observations" placeholder="Observaciones de la sanción"></textarea>
-
+                    
                     <input type="submit" class="btn btn-success" name="new-sanction" value="Crear sanción" />
 
-
                 </form>
+        
+    ';
+    
+}
 
-            </article>
-        </div>
-        <!-- /CUERPO DE LA PÁGINA -->
-    </div>
-</body>
-</html>
+
+?>

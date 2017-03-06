@@ -61,6 +61,8 @@ else{
      * La siguiente función enviar el correo
      */
     //mail($_POST["email"], 'Registro Incidencias EVG', $mensaje);
+    
+    $obj->cerrarConexion();
 
 }
 

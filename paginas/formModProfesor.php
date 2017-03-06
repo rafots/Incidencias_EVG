@@ -89,6 +89,6 @@
             echo '<h2><small>Error: No hay datos</small></h2>';
         }
         
-
+        $obj->cerrarConexion();
     }
 ?>

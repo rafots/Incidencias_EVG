@@ -32,6 +32,8 @@
 
         $obj->consultas($sql);
         
+        $obj->cerrarConexion();
+        
     }
 
 ?>
