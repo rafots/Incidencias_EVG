@@ -2,8 +2,121 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d578d95-4bd8-491a-8a20-89d7a2bda1b8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/calligra.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/calligra.z" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/FAQ.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/changelog.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/__construct.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/acceptpagebreak.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/addfont.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/addlink.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/addpage.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/aliasnbpages.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/cell.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/close.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/error.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/footer.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/getpageheight.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/getpagewidth.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/getstringwidth.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/getx.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/gety.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/header.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/image.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/index.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/line.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/link.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/ln.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/multicell.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/output.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/pageno.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/rect.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/setauthor.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/setautopagebreak.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/setcompression.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/setcreator.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/setdisplaymode.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/setdrawcolor.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/setfillcolor.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/setfont.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/setfontsize.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/setkeywords.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/setleftmargin.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/setlinewidth.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/setlink.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/setmargins.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/setrightmargin.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/setsubject.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/settextcolor.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/settitle.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/settopmargin.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/setx.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/setxy.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/sety.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/text.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/doc/write.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/font/courier.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/font/courierb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/font/courierbi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/font/courieri.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/font/helvetica.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/font/helveticab.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/font/helveticabi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/font/helveticai.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/font/symbol.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/font/times.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/font/timesb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/font/timesbi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/font/timesi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/font/zapfdingbats.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/fpdf.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/fpdf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/install.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/license.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/cp1250.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/cp1251.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/cp1252.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/cp1253.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/cp1254.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/cp1255.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/cp1257.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/cp1258.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/cp874.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/iso-8859-1.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/iso-8859-11.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/iso-8859-15.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/iso-8859-16.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/iso-8859-2.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/iso-8859-4.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/iso-8859-5.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/iso-8859-7.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/iso-8859-9.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/koi8-r.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/koi8-u.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/makefont.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/makefont/ttfparser.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/20k_c1.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/20k_c2.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/calligra.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/index.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/makefont.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/paises.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/tuto1.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/tuto1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/tuto2.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/tuto2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/tuto3.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/tuto3.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/tuto4.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/tuto4.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/tuto5.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/tuto5.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/tuto6.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/tuto6.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/tuto7.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sources/fpdf/tutorial/tuto7.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel/import_users.php" afterPath="$PROJECT_DIR$/excel/import_users.php" />
     </list>
     <ignored path="Incidencias_EVG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -250,6 +363,112 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Incidencias_EVG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Incidencias_EVG" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fpdf" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Incidencias_EVG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Incidencias_EVG" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fpdf" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tutorial" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Incidencias_EVG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Incidencias_EVG" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fpdf" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="makefont" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Incidencias_EVG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Incidencias_EVG" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fpdf" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="font" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Incidencias_EVG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Incidencias_EVG" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fpdf" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doc" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -518,7 +737,7 @@
       <workItem from="1488719848801" duration="1214000" />
       <workItem from="1488731423310" duration="2382000" />
       <workItem from="1488788015968" duration="5612000" />
-      <workItem from="1488794429681" duration="4637000" />
+      <workItem from="1488794429681" duration="5205000" />
     </task>
     <task id="LOCAL-00002" summary="UPDATE FILES index.html, bootstrap.css, comun.css, script.sql&#10;ADD FILES import_users.php, usuarios.xlsx, logotipo.png, menu_estructure.html">
       <created>1488051390265</created>
@@ -590,11 +809,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488797033912</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="UPDATE: El PDF de import_users.php ya coge el formato UTF-8">
+      <created>1488800998274</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1488800998274</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83821000" />
+    <option name="totallyTimeSpent" value="84389000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -607,9 +833,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1444" height="876" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23410405" sideWeight="0.73146296" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23410405" sideWeight="0.73146296" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25572005" sideWeight="0.11199422" order="11" side_tool="true" content_ui="tabs" />
@@ -671,7 +897,8 @@
     <MESSAGE value="UPDATE: INICIO DE SESION" />
     <MESSAGE value="UPDATE: Gestiones de tipos y alta de incidencias para que sean compatibles con AJAX" />
     <MESSAGE value="UPDATE: Importar usuarios desde Excel devolvera un archivo en PDF" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: Importar usuarios desde Excel devolvera un archivo en PDF" />
+    <MESSAGE value="UPDATE: El PDF de import_users.php ya coge el formato UTF-8" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: El PDF de import_users.php ya coge el formato UTF-8" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
