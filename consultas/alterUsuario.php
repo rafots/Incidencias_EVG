@@ -10,21 +10,28 @@
      * Proceso para modificar usuarios
      */
 
-    require '../procedimientos/procedimientos.php';
+    session_start();
+    if(!isset($_SESSION['usuario']) && !$_SESSION['gestor' ]&& !$_GET['id'])
+        header('Location: iniciarSesion.php');
+    else{
 
-    $obj = new procedimientos();
-    $obj->conectar();
+        require '../procedimientos/procedimientos.php';
 
-    function boolean($value){
-        if(isset($value))
-            return true;
-        else
-            return false;
-    }
+        $obj = new procedimientos();
+        $obj->conectar();
 
-    $sql = "UPDATE profesores SET usuario='".$_POST['user']."', correo='".$_POST['email']."', nombre='".$_POST['name']."', 
+        function boolean($value){
+            if(isset($value))
+                return true;
+            else
+                return false;
+        }
+
+        $sql = "UPDATE profesores SET usuario='".$_POST['user']."', correo='".$_POST['email']."', nombre='".$_POST['name']."', 
         gestor=".boolean($_POST['gestor']).", baja_temporal=".boolean($_POST['baja_temporal']);
-    
-    $obj->consultas($sql);
+
+        $obj->consultas($sql);
+        
+    }
 
 ?>
