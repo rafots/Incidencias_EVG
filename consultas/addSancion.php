@@ -22,17 +22,17 @@
     }
 
     /*
-     * Como este proceso saldrá automaticamente con Ajax cuando se vaya a crear
-     * una incidencia nueva, la creación de la sanción se realizará después de
-     * crear la incidencia. Para ello se ultilizará la siguiente variable para
-     * recoger la id de la incidencia.
+     * Este proceso estára dentro de los detalles de la incidencia, por lo tanto se le pasará por URL la
+     * id de la incidencia.
      */
-    $incidencia = $obj->ultimoId();
+    $incidencia = $_GET['incidencia'];
 
 
     $sql = "INSERT INTO sanciones (idIncidencia, tipoSancion, fecha_inicio, fecha_fin, observacion, idMotivo)
         VALUES (".$incidencia.", ".$_POST['sanction-type'].", ".$_POST['initial-date'].", ".fecha_final($_POST['end-date']).", '".$_POST['observations'].",' ".$_POST['reason-type'].")";
 
     $obj->consultas($sql);
+
+    $obj->cerrarConexion();
 
 ?>

@@ -22,11 +22,11 @@
         $obj = new procedimientos();
         $obj->consultas($sql);
 
-        if($this->conexion->num_rows > 0){
+        if($obj->numFilas() > 0){
 
             $row = $obj->devolverFilas();
 
-            echo '<form class="form-horizontal" method="post" action="alterUsuario.php">
+            echo '<form class="form-horizontal" method="post" action="../consultas/alterUsuario.php">
                         <div class="form-group">
                             <label for="user" class="col-md-4 col-sm-4 control-label">Id del Usuario</label>
                             <div class="col-md-7 col-sm-8">

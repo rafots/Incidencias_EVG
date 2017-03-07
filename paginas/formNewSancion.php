@@ -15,10 +15,6 @@ else{
 
     $obj = new procedimientos();
     $obj->conectar();
-
-    $sql_sanction_type = "SELECT * FROM tipo_sancion";
-
-    $obj->consultas($sql_sanction_type);
     
     echo '
         
@@ -30,19 +26,55 @@ else{
                                 <label for="sanction-type" class="col-md-4 control-label">Tipo de sanción</label>
                                 <div class="col-sm-8">
                                     <select id="sanction-type" name="sanction-type" class="form-control">
-                                        <option selected="selected"> Elige un tipo de sanción </option>
+                                        <option selected="selected" value=""> Elige un tipo de sanción </option>';
+
+    /*
+     * Extraigo los datos de tipo sancion y lo cargo en un select
+     */
+    $sql_sanction_type = "SELECT * FROM tipo_sancion";
+
+    $obj->consultas($sql_sanction_type);
+
+    if($obj->numFilas() > 0){
+
+        while($row = $obj->devolverFilas()){
+
+            echo '<option value="'.$row["tipoSancion"].'"> '.$row["nombre"].' </option>';
+
+        }
+
+    }
+
+    echo'
                                     </select>
                                 </div>
-                            </div>';
-
-    
-
-    echo '                        <div class="form-group">
+                            </div>
+                            <div class="form-group">
                                 <label for="reason-type" class="col-md-4 control-label">Motivo</label>
                                 <div class="col-sm-8">
                                     <select id="reason-type" name="reason-type" class="form-control">
-                                        <option selected="selected"> Elige un motivo </option>
-                                    </select>
+                                        <option selected="selected"> Elige un motivo </option>';
+
+    /*
+     * Extraigo los datos de motivo y lo cargo en un select
+     */
+    $sql_reason = "SELECT * FROM motivo";
+
+    $obj->consultas($sql_reason);
+
+    if($obj->numFilas() > 0){
+
+        while($row = $obj->devolverFilas()){
+
+            echo '<option value="'.$row["idMotivo"].'"> '.$row["motivo"].' </option>';
+
+        }
+
+    }
+
+
+
+    echo '                                </select>
                                 </div>
                             </div>
 
@@ -73,7 +105,9 @@ else{
                 </form>
         
     ';
-    
+
+    $obj->cerrarConexion();
+
 }
 
 

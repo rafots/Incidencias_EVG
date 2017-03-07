@@ -13,7 +13,7 @@ else{
     
   echo '
   
-  <form class="form-horizontal" method="post" action="newUsuario.php">
+  <form class="form-horizontal" method="post" action="../consultas/newUsuario.php">
     <div class="form-group">
         <label for="user" class="col-md-4 col-sm-4 control-label">Usuario</label>
         <div class="col-md-7 col-sm-8">
