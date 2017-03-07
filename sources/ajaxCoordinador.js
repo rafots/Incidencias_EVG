@@ -8,6 +8,17 @@ $(document).ready(function(){
         $("#cuerpo").load("../paginas/addTipoInc.php");
     });
 
+    $('#tipoAnotaciones').on("click",function(e){
+       e.preventDefault();
+       $("#cuerpo").load("../paginas/addTipoAnotacion.php");
+    });
+
+    $('#alterTipoInc').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("../paginas/alterTipoIncidencia.php");
+    });
+
+
 
 
 

@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $consulta="SELECT idUsuario from profesores WHERE usuario='".$_SESSION["usuario"]."'";
     $resultado=$conectar->query($consulta);
     $fila=$resultado->fetch_array();
@@ -9,15 +10,15 @@
 
     $consulta_tabla="SELECT * FROM tipos_anotaciones WHERE codEtapa='".$fila_etapa["codEtapa"]."'";
     $resultado_tabla=$conectar->query($consulta_tabla);
-    echo '<table>';
+
     if($fila_tabla=$resultado_tabla->fetch_array())
     {
-        if(empty($fila_tabla))
-        {
-            echo '<tr>';
-            echo '<td colspan="2">No se encuentran tipos de sanciones</td>';
-            echo '</tr>';
-        }
+        echo '<table class="table table-striped">';
+        echo '<thead>';
+        echo '<th>Nombre</th>';
+        echo '<th>Operacion</th>';
+        echo '<thead>';
+        echo '<tbody>';
         echo '<tr>';
         echo '<td>'.$fila_tabla["nombre"].'</td>';
         echo '<td><a href="alterTipoAnotacionForm.php?modificar=si&codAntiguo='.$fila_tabla["tipoAnotacion"].'&nombreAntiguo='.$fila_tabla["nombre"].'">Modificar</a></td>';
@@ -33,16 +34,12 @@
                 echo '</tr>';
             }
         }
+        echo '</tbody>';
+        echo '</table>';
     }
     else
     {
-        echo '<tr>';
-        echo '<td>No se encuentran tipos de anotaciones</td>';
-        echo '</tr>';
+        echo '<p>No hay tipos de anotaciones</p>';
     }
-    echo '</table>';
-    if(isset($_GET["modificar"]))
-    {
-        echo '<p>Se ha modificado el tipo de anotacion con exito</p>';
-    }
+
 ?>
