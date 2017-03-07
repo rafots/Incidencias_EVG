@@ -10,7 +10,7 @@ if(!isset($_SESSION["tutor"])){
      <html lang="en">
      <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
+        <script src="../sources/ajaxTutor.js" type="text/javascript"></script>
         <meta charset="UTF-8">
         <title>Panel Tutor</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -56,7 +56,7 @@ if(!isset($_SESSION["tutor"])){
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-book text-success"></span>Incidencias</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-book text-success"></span> Incidencias</a>
                             </h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in">
@@ -74,12 +74,12 @@ if(!isset($_SESSION["tutor"])){
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Por alumnos</a>
+                                            <a id="incidenciasAlumnos">Por alumnos</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                           <a href="http://www.jquery2dotnet.com">No tramitadas</a>
+                                           <a id="ultimasIncidencias">No tramitadas</a>
                                             <span class="badge">42</span>
                                         </td>
                                     </tr>
@@ -90,8 +90,7 @@ if(!isset($_SESSION["tutor"])){
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-pencil text-success">
-                            </span>Anotaciones</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-pencil text-success"></span> Anotaciones</a>
                             </h4>
                         </div>
                         <div id="collapseTwo" class="panel-collapse collapse">
@@ -114,8 +113,7 @@ if(!isset($_SESSION["tutor"])){
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-copy text-success">
-                            </span>Sanciones</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-copy text-success"></span> Sanciones</a>
                             </h4>
                         </div>
                         <div id="collapseThree" class="panel-collapse collapse">
@@ -139,36 +137,8 @@ if(!isset($_SESSION["tutor"])){
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-folder-open text-success">
-                            </span>Gestiones</a>
+                                <a data-toggle="collapse" href="#cerrarSesion"><span class="glyphicon glyphicon-log-out text-success"></span> Cerrar sesion</a>
                             </h4>
-                        </div>
-                        <div id="collapseFour" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <table class="table">
-                                    <tr>
-                                        <td>
-                                            <a href="http://www.jquery2dotnet.com">Tipos de Incidencias</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="http://www.jquery2dotnet.com">Tipos de Sanciones</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            </span><a href="http://www.jquery2dotnet.com">Motivos de Sanción</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="http://www.jquery2dotnet.com">Tipos de Anotaciones</a>
-                                        </td>
-                                    </tr>
-
-                                </table>
-                            </div>
                         </div>
                     </div>
                 </div>

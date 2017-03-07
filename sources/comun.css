@@ -91,3 +91,7 @@ body{
      border: 1px solid #DFDFDF;
      min-height: 375px;
  }
+
+textarea{
+    resize: none;
+}
