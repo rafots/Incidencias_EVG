@@ -162,12 +162,12 @@ if(isset($_SESSION['coordinador']))
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="#" id="">Tipos de Sanciones</a>
+                                            <a href="#" id="tipoSancion">Tipos de Sanciones</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            </span><a href="http://www.jquery2dotnet.com">Motivos de Sanción</a>
+                                            </span><a href="#" id="tipoSancionInc">Motivos de Sanción</a>
                                         </td>
                                     </tr>
                                     <tr>

@@ -5,18 +5,26 @@ $(document).ready(function(){
 
     $('#tipoInc').on("click",function(e){
         e.preventDefault();
-        $("#cuerpo").load("../paginas/addTipoInc.php");
+        $("#cuerpo").load("addTipoInc.php");
     });
 
     $('#tipoAnotaciones').on("click",function(e){
        e.preventDefault();
-       $("#cuerpo").load("../paginas/addTipoAnotacion.php");
+       $("#cuerpo").load("addTipoAnotacion.php");
     });
 
-    $('#alterTipoInc').on("click",function(e){
+    $('#tipoSancion').on("click",function(e){
         e.preventDefault();
-        $("#cuerpo").load("../paginas/alterTipoIncidencia.php");
+        $("#cuerpo").load("addTipoSancion.php");
     });
+
+    $('#tipoSancionInc').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("addTipoSancionIncidencia.php");
+    });
+
+
+
 
 
 

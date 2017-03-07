@@ -16,20 +16,19 @@
                         WHERE tipo_incidencias.codEtapa='".$fila_etapa["codEtapa"]."'";
 
     $resultado=$conectar->query($consulta);
-    echo '<table>';
+
     if($fila_tabla=$resultado->fetch_array())
     {
-        if(empty($fila_tabla))
-        {
-            echo '<tr>';
-            echo '<td colspan="2">No se encuentran tipos de sanciones</td>';
-            echo '</tr>';
-        }
+
+        echo '<table class="table table-striped">';
+        echo '<thead>';
         echo '<tr>';
-        echo '<td>Tipo sancion</td>';
-        echo '<td>Tipo incidencia</td>';
-        echo '<td></td>';
+        echo '<th>Tipo sancion</th>';
+        echo '<th>Tipo incidencia</th>';
+        echo '<th>Operaciones</th>';
         echo '</tr>';
+        echo '</thead>';
+        echo '<tbody>';
         echo '<tr>';
         echo '<td>'.$fila_tabla["SANCION"].'</td>';
         echo '<td>'.$fila_tabla["INCIDENCIA"].'</td>';
@@ -47,8 +46,10 @@
                 echo '</tr>';
             }
         }
+        echo '</tbody>';
+        echo '</table>';
     }
-    echo '</table>';
+
     if(isset($_GET["modificar"]))
     {
         echo '<p>Se ha modificado el tipo de sancion con exito</p>';

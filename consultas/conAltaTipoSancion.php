@@ -21,5 +21,5 @@
         $stmt->bind_param('is',$cp,$_POST["nombreTipo"]);
     }
     $stmt->execute();
-    header("Location: ../paginas/addTipoSancion.php?consulta=ok");
+    header("Location: ../paginas/coordinador.php");
 ?>

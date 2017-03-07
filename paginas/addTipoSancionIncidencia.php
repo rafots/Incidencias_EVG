@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require '../procedimientos/procedimientos.php';
     $conexion = new conexion();
     $conectar = new mysqli($conexion->getServer(),$conexion->getUser(),$conexion->getPass(),$conexion->getDb());
@@ -11,24 +12,29 @@
         echo '
             <div>
                 <h4>Tipos de sanciones por incidencias disponibles</h4>
-                <?php
+                ';
                     require "../consultas/listadoTipoSancionInc.php";
-                ?>
+                echo '
             </div>
             <div>
                 <form method="post" action="../consultas/conAltaTipoSancionIncidencia.php">
-                    <label>Selecciona el tipo de sancion</label>
-                    <select name="tipoSancion">
-                        <?php
-                            require "../consultas/addTipoSancionIncidencia/listadoTipoSancion.php";
-                        ?>
-                    </select>
-                    <label>Selecciona el tipo de sancion</label>
-                    <select name="tipoIncidencia">
-                        <?php
-                            require "../consultas/addIncidencia/listadoTipoInc.php";
-                        ?>
-                    </select>
+                    <div>
+                        <label>Selecciona el tipo de sancion</label>
+                        <select name="tipoSancion">
+                            ';
+                                require "../consultas/addTipoSancionIncidencia/listadoTipoSancion.php";
+                            echo '
+                        </select>
+                    </div>
+                    <div>
+                        <label>Selecciona el tipo de incidencia</label>
+                        <select name="tipoIncidencia">
+                           ';
+                                require "../consultas/addIncidencia/listadoTipoInc.php";
+                            echo '
+                        </select>
+                    </div>
+                    
                     <!--<label>Etapa</label>-->
                     ';
                     if(isset($_GET["consulta"]) && $_GET["consulta"]=='ok')
@@ -38,7 +44,7 @@
                     echo '
                     <input type="submit" name="enviar" value="Añadir tipo">
                 </form>
-                <a href="gestionTipos.php">Volver</a>
+                <a href="coordinador.php">Volver</a>
             </div>
         ';
     }
