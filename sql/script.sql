@@ -61,6 +61,7 @@ CREATE TABLE IF NOT EXISTS tipo_Incidencias(
   idTipo tinyint UNSIGNED PRIMARY KEY,
   nombre varchar(30) NOT NULL,
   codEtapa CHAR(5) NOT NULL,
+  gestiona CHAR(1) NOT NULL,
   CONSTRAINT fk_tipos_incidencias FOREIGN KEY (codEtapa) REFERENCES etapas(codEtapa)
 );
 
