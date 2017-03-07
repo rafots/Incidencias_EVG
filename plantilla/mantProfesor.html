@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mantenimiento profesor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link type="text/css" href="../sources/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="../sources/comun.css" rel="stylesheet">
+    <script type="text/javascript" src="../sources/bootstrap.js"></script>
+    <script type="text/javascript" src="../sources/comun.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="container caja">
+    <!-- CABECERA -->
+    <header>
+        <div class="row vertical-align text-center">
+            <div class="col-md-6 col-sm-6">
+                <img class="img-responsive img-center" src="../imagenes/logotipo.png"/>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <div id="title-cdi">CONTROL DE INCIDENCIAS</div>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <!-- Aquí hirían los botones para cambiar de un usuario a otro, esto sería con php -->
+            </div>
+        </div>
+    </header>
+    <!-- /CABECERA -->
+
+    <!-- CUERPO DE LA PÁGINA -->
+    <div class="row">
+        <aside class="col-md-3">
+            <!--
+            *
+            * Estos botones son simplemente de ejemplo
+            *
+            -->
+            <a href="#" class="btn btn-success menu-buttons" role="button">Incidencias destacables</a>
+            <a href="#" class="btn btn-success menu-buttons" role="button">Historial alumnos</a>
+            <a href="#" class="btn btn-success menu-buttons" role="button">Aula de convivencia</a>
+            <a href="#" class="btn btn-success menu-buttons" role="button">Tipos Incidencias</a>
+            <a href="#" class="btn btn-success menu-buttons" role="button">Cerrar sesión</a>
+        </aside>
+        <article class="col-md-9">
+            <form class="form-horizontal" method="post" action="#">
+                <div class="form-group">
+                    <label for="user" class="col-md-4 col-sm-4 control-label">Usuario</label>
+                    <div class="col-md-7 col-sm-8">
+                        <input type="text" class="form-control" name="user" id="user"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-md-4 col-sm-4 control-label">Correo Electrónico</label>
+                    <div class="col-md-7 col-sm-8">
+                        <input type="text" class="form-control" name="email" id="email"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="col-md-4 col-sm-4 control-label">Nombre completo</label>
+                    <div class="col-md-7 col-sm-8">
+                        <input type="text" class="form-control" name="name" id="name"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-4 col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="gestor" checked/> Gestor
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-4 col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="b_temp" checked/> Baja temporal
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-4 col-sm-10">
+                        <input type="submit" class="btn btn-success" name="mod_user" id="mod_user"/>
+                    </div>
+                </div>
+
+            </form>
+        </article>
+    </div>
+    <!-- /CUERPO DE LA PÁGINA -->
+</div>
+</body>
+</html>

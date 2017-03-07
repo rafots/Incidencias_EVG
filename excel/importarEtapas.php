@@ -20,6 +20,7 @@
 
         $resultado->execute();
         $resultado->close();
+        echo $conexion->errores();
 
     }
 

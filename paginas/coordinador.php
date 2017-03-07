@@ -9,6 +9,7 @@ if(isset($_SESSION['coordinador']))
 <html lang="en">
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="../sources/ajax.js"></script>
     <meta charset="UTF-8">
     <title>Panel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -49,7 +50,7 @@ if(isset($_SESSION['coordinador']))
             </div>
         </header>
         <!-- /CABECERA -->
-
+        <hr>
         <!-- CUERPO DE LA PÁGINA -->
         
     <div class="container "  >
@@ -102,12 +103,17 @@ if(isset($_SESSION['coordinador']))
                                 <table class="table">
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Poner anotaciones</a>
+                                            <a id="crearanotaciones">Poner anotaciones</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Visualizar anotaciones</a>
+                                            <a id="anotaciones">Visualizar anotaciones</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a id="misanotaciones">Mis anotaciones</a>
                                         </td>
                                     </tr>
                                 </table>
@@ -176,9 +182,12 @@ if(isset($_SESSION['coordinador']))
                     </div>
                 </div>
             </div>
-
+            <div class="col-sm-8 col-md-8 " id="cuerpo">
+    
+            </div>
         </div>
     </div>
+    
 
 </body>
 </html>
