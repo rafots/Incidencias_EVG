@@ -16,7 +16,7 @@ if(isset($_SESSION['coordinador']))
     <link type="text/css" href="../sources/bootstrap.css" rel="stylesheet">
     <link type="text/css" href="../sources/comun.css" rel="stylesheet">
     <script type="text/javascript" src="../sources/bootstrap.js"></script>
-    
+    <script type="text/javascript" src="../sources/ajaxCoordinador.js"></script>
      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
@@ -157,7 +157,7 @@ if(isset($_SESSION['coordinador']))
                                 <table class="table">
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Tipos de Incidencias</a>
+                                            <a href="#" id="tipoInc">Tipos de Incidencias</a>
                                         </td>
                                     </tr>
                                     <tr>
