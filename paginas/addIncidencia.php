@@ -4,7 +4,7 @@
     $conectar= new mysqli ($conexion->getServer(),$conexion->getUser(),$conexion->getPass(),$conexion->getDb());
     echo '<div>';
         echo '<h3>Añadir incidencia</h3>';
-        echo '<form method="post" action="">';
+        echo '<form method="post" action="../consultas/conAddIncidencia.php">';
         echo '<div>';
         echo '<label>Alumno</label>';
         echo '<select name="nia">';

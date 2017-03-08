@@ -191,17 +191,28 @@ if(isset($_SESSION['coordinador']))
             <div class="col-sm-8 col-md-8 " id="cuerpo">
                 <div>
                     <form method="get" action="../consultas/conAlterTipoIncidencia.php">
-                    <label>Nombre de tipo de incidencia</label>
+                    <input type="hidden" name="cod" value="'.$_GET["codAntiguo"].'">
                     <div>
-                       <input type="hidden" name="cod" value="'.$_GET["codAntiguo"].'">
+                       <label>Nombre de tipo de incidencia</label>
+                       
                        <input type="text" name="texto" value="'.$_GET["nombreAntiguo"].'">
                     </div>
                          <div>
-                             <label>¿Quien gestiona esta incidencia?</label>
-                             <select name="gestiona">
-                             <option value="T">Tutor</option>
-                             <option value="C">Coordinador</option>
-                             </select>
+                             <label>¿Quien gestiona esta incidencia?</label>';
+
+                            if($_GET["gestionaAnt"]=="T"){
+                                echo '<input type="radio" name="gestiona" value="T" checked="checked"/>Tutor';
+                                echo '<input type="radio" name="gestiona" value="C"/>Coordinador';
+                            }
+                            else
+                            {
+                                echo '<input type="radio" name="gestiona" value="T"/>Tutor';
+                                echo '<input type="radio" name="gestiona" value="C" checked="checked"/>Coordinador';
+                            }
+                             echo' 
+                             <div>
+                                <input type="submit" value="Modificar tipo de incidencia"/>
+                             </div>
                          </div>
                      </div>
                 </div>

@@ -26,4 +26,5 @@
 
     $consulta_modificar="UPDATE tipo_sancion_incidencias SET tipoSancion=".$_GET["tipoSancionNuevo"].",idTipo=".$_GET["tipoIncidenciaNuevo"]." WHERE tipoSancion=".$fila_tipo_sanc["tipoSancion"]." AND idTipo=".$fila_tipo_inc["idTipo"].";";
     $resultado_modificar=$conectar->query($consulta_modificar);
+    header("../paginas/coordinador.php");
 ?>

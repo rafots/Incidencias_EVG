@@ -32,7 +32,7 @@
             echo 'Coordinador';
         }
         echo '</td>';
-        echo '<td><a href="../paginas/alterTipoIncForm.php?codAntiguo='.$fila_tabla["idTipo"].'&nombreAntiguo='.$fila_tabla["idTipo"].'">Modificar</a></td>';
+        echo '<td><a href="../paginas/alterTipoIncForm.php?codAntiguo='.$fila_tabla["idTipo"].'&nombreAntiguo='.$fila_tabla["nombre"].'&gestionaAnt='.$fila_tabla["gestiona"].'">Modificar</a></td>';
 
         echo '</tr>';
         while($fila_tabla=$resultado_tabla->fetch_array())
@@ -49,7 +49,7 @@
                 echo 'Coordinador';
             }
             echo '</td>';
-            echo '<td><a href="../paginas/alterTipoIncForm.php?codAntiguo='.$fila_tabla["idTipo"].'&nombreAntiguo='.$fila_tabla["idTipo"].'">Modificar</a></td>';
+            echo '<td><a href="../paginas/alterTipoIncForm.php?codAntiguo='.$fila_tabla["idTipo"].'&nombreAntiguo='.$fila_tabla["nombre"].'&gestionaAnt='.$fila_tabla["gestiona"].'">Modificar</a></td>';
             echo '</tr>';
         }
         echo '</tbody>';
