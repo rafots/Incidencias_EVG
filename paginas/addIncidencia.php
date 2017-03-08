@@ -1,12 +1,10 @@
 <?php
-    if(isset($_SESSION['profesor']))
-    {
-        require "../procedimientos/procedimientos.php";
-        $conexion = new procedimientos();
-        $conexion->conectar();
-        echo '<div>';
+    require "../procedimientos/procedimientos.php";
+    $conexion = new conexion();
+    $conectar= new mysqli ($conexion->getServer(),$conexion->getUser(),$conexion->getPass(),$conexion->getDb());
+    echo '<div>';
         echo '<h3>Añadir incidencia</h3>';
-        echo '<form method="post" action="../consultas/conAddIncidencia.php">';
+        echo '<form method="post" action="">';
         echo '<div>';
         echo '<label>Alumno</label>';
         echo '<select name="nia">';
@@ -41,9 +39,5 @@
         echo '<input type="submit" value="Enviar incidencia"/>';
         echo '</div>';
         echo '</form>';
-        echo '</div>';
-}
-else
-{
-    echo 'Acceso prohibido';
-}
+    echo '</div>';
+?>

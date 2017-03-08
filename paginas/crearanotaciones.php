@@ -44,7 +44,7 @@
                         $segundos=date("s");
                         $fecha="".$anyo."-".$mes."-".$dia." "."".$hora.":".$minutos.":".$segundos."";
 
-                        echo' <form action="crearanotaciones.php" method="post" ">';
+                        echo' <form action="coordinador.php" method="post" ">';
                             echo'<div class="form-group">
                                     <label>NumeroAnotacion</label>
                                     <input type="text" name="numInc" class="form-control">
