@@ -31,7 +31,7 @@
             echo 'Coordinador';
         }
         echo '</td>';
-        echo '<td><a href="#" class="alterTipoInc">Modificar</a></td>';
+        echo '<td><a href="#" id="alterTipoInc">Modificar</a></td>';
         echo '</tr>';
         while($fila_tabla=$resultado_tabla->fetch_array())
         {
@@ -47,7 +47,7 @@
                 echo 'Coordinador';
             }
             echo '</td>';
-            echo '<td><a href="#" class="alterTipoInc">Modificar</a></td>';
+            echo '<td><a href="#" id="alterTipoInc">Modificar</a></td>';
             echo '</tr>';
         }
         echo '</tbody>';

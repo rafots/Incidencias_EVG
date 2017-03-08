@@ -15,6 +15,7 @@ echo'
     <link type="text/css" href="../sources/bootstrap.css" rel="stylesheet">
     <link type="text/css" href="../sources/comun.css" rel="stylesheet">
     <script type="text/javascript" src="../sources/bootstrap.js"></script>
+    <script type="text/javascript" src="../sources/ajaxProfesor.js"></script>
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
@@ -67,7 +68,7 @@ echo'
                                 <table class="table">
                                     <tr>
                                         <td>
-                                            <a href="" id="addInc">Crear Incidencia</a>
+                                            <a href="#" id="addInc">Crear Incidencia</a>
                                         </td>
                                     </tr>  
                                 </table>
@@ -101,6 +102,9 @@ echo'
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-sm-8 col-md-8 " id="cuerpo">
+    
             </div>
 
         </div>

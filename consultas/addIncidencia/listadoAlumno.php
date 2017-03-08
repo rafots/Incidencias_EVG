@@ -1,4 +1,5 @@
 <?php
+
     $consulta_alumnos="SELECT * FROM alumnos";
     $resultado_alumnos=$conectar->query($consulta_alumnos);
     while($fila_alumnos=$resultado_alumnos->fetch_array()){

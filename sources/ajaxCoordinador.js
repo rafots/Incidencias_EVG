@@ -23,6 +23,13 @@ $(document).ready(function(){
         $("#cuerpo").load("addTipoSancionIncidencia.php");
     });
 
+    $('#cuerpo alterTipoInc').on("click",function(e){
+        e.preventDefault();
+        alert("me cago en la puta");
+    });
+
+
+
 
 
 
