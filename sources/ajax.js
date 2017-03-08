@@ -3,10 +3,12 @@
  */
 $(document).ready(function(){
 
+
     $('#crearanotaciones').on("click",function(e){
         e.preventDefault();
         $("#cuerpo").load("crearanotaciones.php");
     });
+
 
     $('#anotaciones').on("click",function(e){
         e.preventDefault();

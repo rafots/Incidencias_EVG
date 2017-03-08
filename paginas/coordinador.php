@@ -60,17 +60,26 @@ if(isset($_SESSION['coordinador']))
                     <div class="panel panel-default">
                         <div class="panel-heading" >
                             <h4 class="panel-title ">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-book text-success"></span>Incidencias</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-book text-success"></span>Incidencias no tramitadas</a>
                             </h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in">
                             <div class="panel-body">
                                 <table class="table">
+                                ';
+                                if($_SESSION['codEtapa']=='ESO')
+                                {
+                                    echo'
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Aula de convivencia</a>
+                                            <a id="aulaconvivencia">Aula de convivencia</a>
                                         </td>
-                                    </tr>
+                                    </tr>';
+                                }
+
+                                echo'
+
+                                    
                                     <tr>
                                         <td>
                                             <a href="http://www.jquery2dotnet.com">Partes educativos</a>
