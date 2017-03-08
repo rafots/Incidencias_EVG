@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="magentoe_incidenciasevg@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="magentoe_incidenciasevg">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="dbwordpress"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="phpmyadmin"/>
+    <schema id="8" parent="1" name="pruebaexamen"/>
+    <schema id="9" parent="1" name="pruebas"/>
+    <schema id="10" parent="1" name="test"/>
+    <schema id="11" parent="1" name="wesped"/>
+    <schema id="12" parent="1" name="wespedv2"/>
+    <table id="13" parent="2" name="alumnos"/>
+    <table id="14" parent="2" name="anotaciones"/>
+    <table id="15" parent="2" name="etapas"/>
+    <table id="16" parent="2" name="gestion"/>
+    <table id="17" parent="2" name="horas"/>
+    <table id="18" parent="2" name="incidencias"/>
+    <table id="19" parent="2" name="motivo"/>
+    <table id="20" parent="2" name="profesores"/>
+    <table id="21" parent="2" name="profesores_seccion"/>
+    <table id="22" parent="2" name="sanciones"/>
+    <table id="23" parent="2" name="secciones"/>
+    <table id="24" parent="2" name="tipo_incidencias"/>
+    <table id="25" parent="2" name="tipo_sancion"/>
+    <table id="26" parent="2" name="tipo_sancion_incidencias"/>
+    <table id="27" parent="2" name="tipos_anotaciones"/>
+    <column id="28" parent="13" name="nia">
+      <Position>1</Position>
+      <DataType>char(7)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="13" name="nombreCompleto">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="13" name="telefono">
+      <Position>3</Position>
+      <DataType>varchar(9)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="13" name="sexo">
+      <Position>4</Position>
+      <DataType>char(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="13" name="idSeccion">
+      <Position>5</Position>
+      <DataType>char(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="13" name="numPartes">
+      <Position>6</Position>
+      <DataType>tinyint(4)|0</DataType>
+    </column>
+    <index id="34" parent="13" name="fk_secciones_alumnos">
+      <ColNames>idSeccion</ColNames>
+    </index>
+    <index id="35" parent="13" name="numPartes">
+      <ColNames>numPartes</ColNames>
+    </index>
+    <key id="36" parent="13" name="PRIMARY">
+      <ColNames>nia</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="37" parent="13" name="fk_secciones_alumnos">
+      <ColNames>idSeccion</ColNames>
+      <RefSchemaName>magentoe_incidenciasevg</RefSchemaName>
+      <RefTableName>secciones</RefTableName>
+      <RefColNames>idSeccion</RefColNames>
+    </foreign-key>
+    <column id="38" parent="14" name="numAnotacion">
+      <Position>1</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="14" name="tipoAnotacion">
+      <Position>2</Position>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="14" name="nia">
+      <Position>3</Position>
+      <DataType>char(7)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="14" name="hora_Registro">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="14" name="userCreacion">
+      <Position>5</Position>
+      <DataType>char(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="14" name="leida">
+      <Position>6</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="44" parent="14" name="verProfesores">
+      <Position>7</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="45" parent="14" name="anotaciones_1">
+      <ColNames>tipoAnotacion</ColNames>
+    </index>
+    <index id="46" parent="14" name="anotaciones_2">
+      <ColNames>nia</ColNames>
+    </index>
+    <key id="47" parent="14" name="PRIMARY">
+      <ColNames>numAnotacion</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="48" parent="14" name="anotaciones_1">
+      <ColNames>tipoAnotacion</ColNames>
+      <RefSchemaName>magentoe_incidenciasevg</RefSchemaName>
+      <RefTableName>tipos_anotaciones</RefTableName>
+      <RefColNames>tipoAnotacion</RefColNames>
+    </foreign-key>
+    <foreign-key id="49" parent="14" name="anotaciones_2">
+      <ColNames>nia</ColNames>
+      <RefSchemaName>magentoe_incidenciasevg</RefSchemaName>
+      <RefTableName>alumnos</RefTableName>
+      <RefColNames>nia</RefColNames>
+      <OnUpdate>update</OnUpdate>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <column id="50" parent="15" name="codEtapa">
+      <Position>1</Position>
+      <DataType>char(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="15" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="52" parent="15" name="coordinador">
+      <Position>3</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="53" parent="15" name="fk_etapas_profesores">
+      <ColNames>coordinador</ColNames>
+    </index>
+    <key id="54" parent="15" name="PRIMARY">
+      <ColNames>codEtapa</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="55" parent="15" name="fk_etapas_profesores">
+      <ColNames>coordinador</ColNames>
+      <RefSchemaName>magentoe_incidenciasevg</RefSchemaName>
+      <RefTableName>profesores</RefTableName>
+      <RefColNames>idUsuario</RefColNames>
+    </foreign-key>
+    <column id="56" parent="16" name="idUsuario">
+      <Position>1</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="16" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="16" name="pass">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="59" parent="16" name="PRIMARY">
+      <ColNames>idUsuario</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="60" parent="17" name="idHora">
+      <Position>1</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="61" parent="17" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="62" parent="17" name="PRIMARY">
+      <ColNames>idHora</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="63" parent="18" name="idIncidencia">
+      <Position>1</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="64" parent="18" name="nia">
+      <Position>2</Position>
+      <DataType>char(7)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="18" name="idTipo">
+      <Position>3</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="66" parent="18" name="usuario">
+      <Position>4</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="18" name="codAsignatura">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="68" parent="18" name="idHora">
+      <Position>6</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="18" name="fecha_ocurrencia">
+      <Position>7</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="18" name="fecha_registro">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="71" parent="18" name="descripcion">
+      <Position>9</Position>
+      <DataType>varchar(300)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="72" parent="18" name="leidaT">
+      <Position>10</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="73" parent="18" name="leidaC">
+      <Position>11</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="74" parent="18" name="archivadaT">
+      <Position>12</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="75" parent="18" name="archivadaC">
+      <Position>13</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="76" parent="18" name="fk_incidencias_alumno">
+      <ColNames>nia</ColNames>
+    </index>
+    <index id="77" parent="18" name="fk_incidencias_hora">
+      <ColNames>idHora</ColNames>
+    </index>
+    <index id="78" parent="18" name="fk_incidencias_profesor">
+      <ColNames>usuario</ColNames>
+    </index>
+    <index id="79" parent="18" name="fk_incidencias_tipo">
+      <ColNames>idTipo</ColNames>
+    </index>
+    <key id="80" parent="18" name="PRIMARY">
+      <ColNames>idIncidencia</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="81" parent="18" name="fk_incidencias_alumno">
+      <ColNames>nia</ColNames>
+      <RefSchemaName>magentoe_incidenciasevg</RefSchemaName>
+      <RefTableName>alumnos</RefTableName>
+      <RefColNames>nia</RefColNames>
+      <OnUpdate>update</OnUpdate>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <foreign-key id="82" parent="18" name="fk_incidencias_tipo">
+      <ColNames>idTipo</ColNames>
+      <RefSchemaName>magentoe_incidenciasevg</RefSchemaName>
+      <RefTableName>tipo_incidencias</RefTableName>
+      <RefColNames>idTipo</RefColNames>
+    </foreign-key>
+    <foreign-key id="83" parent="18" name="fk_incidencias_profesor">
+      <ColNames>usuario</ColNames>
+      <RefSchemaName>magentoe_incidenciasevg</RefSchemaName>
+      <RefTableName>profesores</RefTableName>
+      <RefColNames>idUsuario</RefColNames>
+    </foreign-key>
+    <foreign-key id="84" parent="18" name="fk_incidencias_hora">
+      <ColNames>idHora</ColNames>
+      <RefSchemaName>magentoe_incidenciasevg</RefSchemaName>
+      <RefTableName>horas</RefTableName>
+      <RefColNames>idHora</RefColNames>
+    </foreign-key>
+    <column id="85" parent="19" name="idMotivo">
+      <Position>1</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="86" parent="19" name="motivo">
+      <Position>2</Position>
+      <DataType>varchar(40)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="87" parent="19" name="PRIMARY">
+      <ColNames>idMotivo</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="88" parent="20" name="idUsuario">
+      <Position>1</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="89" parent="20" name="usuario">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="90" parent="20" name="correo">
+      <Position>3</Position>
+      <DataType>varchar(60)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="91" parent="20" name="nombre">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="92" parent="20" name="pass">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="93" parent="20" name="profesor">
+      <Position>6</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="94" parent="20" name="gestor">
+      <Position>7</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="95" parent="20" name="tutor">
+      <Position>8</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="96" parent="20" name="coordinador">
+      <Position>9</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="97" parent="20" name="baja_temporal">
+      <Position>10</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="98" parent="20" name="usuario">
+      <ColNames>usuario</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="99" parent="20" name="PRIMARY">
+      <ColNames>idUsuario</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="100" parent="20" name="usuario">
+      <ColNames>usuario</ColNames>
+      <UnderlyingIndexName>usuario</UnderlyingIndexName>
+    </key>
+    <column id="101" parent="21" name="profesor">
+      <Position>1</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="102" parent="21" name="idSeccion">
+      <Position>2</Position>
+      <DataType>char(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="103" parent="21" name="fk_seccion_prof_secc">
+      <ColNames>idSeccion</ColNames>
+    </index>
+    <key id="104" parent="21" name="PRIMARY">
+      <ColNames>profesor
+idSeccion</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="105" parent="21" name="fk_profesor_prof_secc">
+      <ColNames>profesor</ColNames>
+      <RefSchemaName>magentoe_incidenciasevg</RefSchemaName>
+      <RefTableName>profesores</RefTableName>
+      <RefColNames>idUsuario</RefColNames>
+    </foreign-key>
+    <foreign-key id="106" parent="21" name="fk_seccion_prof_secc">
+      <ColNames>idSeccion</ColNames>
+      <RefSchemaName>magentoe_incidenciasevg</RefSchemaName>
+      <RefTableName>secciones</RefTableName>
+      <RefColNames>idSeccion</RefColNames>
+    </foreign-key>
+    <column id="107" parent="22" name="idSancion">
+      <Position>1</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="108" parent="22" name="idIncidencia">
+      <Position>2</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="109" parent="22" name="tipoSancion">
+      <Position>3</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="110" parent="22" name="fecha_inicio">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="111" parent="22" name="fecha_fin">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="112" parent="22" name="observacion">
+      <Position>6</Position>
+      <DataType>varchar(300)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="113" parent="22" name="idMotivo">
+      <Position>7</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="114" parent="22" name="fk_incidencias_sanciones">
+      <ColNames>idIncidencia</ColNames>
+    </index>
+    <index id="115" parent="22" name="fk_motivo_sancion">
+      <ColNames>idMotivo</ColNames>
+    </index>
+    <index id="116" parent="22" name="fk_tipo_sancion_sanciones">
+      <ColNames>tipoSancion</ColNames>
+    </index>
+    <key id="117" parent="22" name="PRIMARY">
+      <ColNames>idSancion</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="118" parent="22" name="fk_incidencias_sanciones">
+      <ColNames>idIncidencia</ColNames>
+      <RefSchemaName>magentoe_incidenciasevg</RefSchemaName>
+      <RefTableName>incidencias</RefTableName>
+      <RefColNames>idIncidencia</RefColNames>
+      <OnUpdate>update</OnUpdate>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <foreign-key id="119" parent="22" name="fk_tipo_sancion_sanciones">
+      <ColNames>tipoSancion</ColNames>
+      <RefSchemaName>magentoe_incidenciasevg</RefSchemaName>
+      <RefTableName>tipo_sancion</RefTableName>
+      <RefColNames>tipoSancion</RefColNames>
+    </foreign-key>
+    <foreign-key id="120" parent="22" name="fk_motivo_sancion">
+      <ColNames>idMotivo</ColNames>
+      <RefSchemaName>magentoe_incidenciasevg</RefSchemaName>
+      <RefTableName>motivo</RefTableName>
+      <RefColNames>idMotivo</RefColNames>
+    </foreign-key>
+    <column id="121" parent="23" name="idSeccion">
+      <Position>1</Position>
+      <DataType>char(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="122" parent="23" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(60)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="123" parent="23" name="tutor">
+      <Position>3</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="124" parent="23" name="codEtapa">
+      <Position>4</Position>
+      <DataType>char(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="125" parent="23" name="fk_etapas_secciones">
+      <ColNames>codEtapa</ColNames>
+    </index>
+    <index id="126" parent="23" name="fk_tutores_secciones">
+      <ColNames>tutor</ColNames>
+    </index>
+    <key id="127" parent="23" name="PRIMARY">
+      <ColNames>idSeccion</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="128" parent="23" name="fk_tutores_secciones">
+      <ColNames>tutor</ColNames>
+      <RefSchemaName>magentoe_incidenciasevg</RefSchemaName>
+      <RefTableName>profesores</RefTableName>
+      <RefColNames>idUsuario</RefColNames>
+    </foreign-key>
+    <foreign-key id="129" parent="23" name="fk_etapas_secciones">
+      <ColNames>codEtapa</ColNames>
+      <RefSchemaName>magentoe_incidenciasevg</RefSchemaName>
+      <RefTableName>etapas</RefTableName>
+      <RefColNames>codEtapa</RefColNames>
+    </foreign-key>
+    <column id="130" parent="24" name="idTipo">
+      <Position>1</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="131" parent="24" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="132" parent="24" name="gestiona">
+      <Position>3</Position>
+      <DataType>char(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="133" parent="24" name="codEtapa">
+      <Position>4</Position>
+      <DataType>char(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="134" parent="24" name="fk_tipos_incidencias">
+      <ColNames>codEtapa</ColNames>
+    </index>
+    <key id="135" parent="24" name="PRIMARY">
+      <ColNames>idTipo</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="136" parent="24" name="fk_tipos_incidencias">
+      <ColNames>codEtapa</ColNames>
+      <RefSchemaName>magentoe_incidenciasevg</RefSchemaName>
+      <RefTableName>etapas</RefTableName>
+      <RefColNames>codEtapa</RefColNames>
+    </foreign-key>
+    <column id="137" parent="25" name="tipoSancion">
+      <Position>1</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="138" parent="25" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="139" parent="25" name="PRIMARY">
+      <ColNames>tipoSancion</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="140" parent="26" name="tipoSancion">
+      <Position>1</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="141" parent="26" name="idTipo">
+      <Position>2</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="142" parent="26" name="fk_tipo_sancion_incidencias_2">
+      <ColNames>idTipo</ColNames>
+    </index>
+    <key id="143" parent="26" name="PRIMARY">
+      <ColNames>tipoSancion
+idTipo</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="144" parent="26" name="fk_tipo_sancion_incidencias_1">
+      <ColNames>tipoSancion</ColNames>
+      <RefSchemaName>magentoe_incidenciasevg</RefSchemaName>
+      <RefTableName>tipo_sancion</RefTableName>
+      <RefColNames>tipoSancion</RefColNames>
+    </foreign-key>
+    <foreign-key id="145" parent="26" name="fk_tipo_sancion_incidencias_2">
+      <ColNames>idTipo</ColNames>
+      <RefSchemaName>magentoe_incidenciasevg</RefSchemaName>
+      <RefTableName>tipo_incidencias</RefTableName>
+      <RefColNames>idTipo</RefColNames>
+    </foreign-key>
+    <column id="146" parent="27" name="tipoAnotacion">
+      <Position>1</Position>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="147" parent="27" name="nombre">
+      <Position>2</Position>
+      <DataType>varchar(40)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="148" parent="27" name="codEtapa">
+      <Position>3</Position>
+      <DataType>char(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="149" parent="27" name="fk_tipos_Anotaciones">
+      <ColNames>codEtapa</ColNames>
+    </index>
+    <key id="150" parent="27" name="PRIMARY">
+      <ColNames>tipoAnotacion</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="151" parent="27" name="fk_tipos_Anotaciones">
+      <ColNames>codEtapa</ColNames>
+      <RefSchemaName>magentoe_incidenciasevg</RefSchemaName>
+      <RefTableName>etapas</RefTableName>
+      <RefColNames>codEtapa</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
