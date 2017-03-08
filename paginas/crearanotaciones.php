@@ -59,6 +59,7 @@ require_once "validaranotaciones.php";
                                 $prof = 1;
                             $query = "Insert into anotaciones VALUES (" . $_POST["numInc"] . "," . $_POST["tipo"] . ",'" . $_POST["nia"] . "','" . $fecha . "','" . $opc . "', " . $cero . "," . $prof . ")";
                             $objeto->consultas($query);
+                            echo $query;
                         }
     }
 
