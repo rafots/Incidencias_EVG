@@ -11,8 +11,11 @@
     $consulta_etapa="SELECT codEtapa FROM etapas where coordinador=".$fila["idUsuario"].";";
     $resultado_etapa=$conectar->query($consulta_etapa);
     $fila_etapa=$resultado_etapa->fetch_array();
-
-    $consulta_alta_tipo="INSERT INTO tipo_incidencias VALUES (?,?,?);";
+    if($_POST["gestiona"]=="T" || $_POST["gestiona"]=="C")
+    {
+        $gestiona=$_POST["gestiona"];
+    }
+    $consulta_alta_tipo="INSERT INTO tipo_incidencias VALUES (?,?,?,?);";
     $stmt=$conectar->prepare($consulta_alta_tipo);
     $consulta_tipos="SELECT idTipo FROM tipo_incidencias";
     $resultado_tipos=$conectar->query($consulta_tipos);
@@ -23,12 +26,13 @@
             $cp++;
         }
         $cp++;
-        $stmt->bind_param('iss',$cp,$_POST["nombreTipo"],$fila_etapa["codEtapa"]);
+        $stmt->bind_param('isss',$cp,$_POST["nombreTipo"],$fila_etapa["codEtapa"],$gestiona);
     }
     else
     {
-        $stmt->bind_param('iss',$cp,$_POST["nombreTipo"],$fila_etapa["codEtapa"]);
+        $stmt->bind_param('isss',$cp,$_POST["nombreTipo"],$fila_etapa["codEtapa"],$gestiona);
     }
+    echo $consulta_alta_tipo;
     $stmt->execute();
-    header("Location:../paginas/addTipoInc.php?consulta=ok");
+    header("Location: ../paginas/coordinador.php")
 ?>

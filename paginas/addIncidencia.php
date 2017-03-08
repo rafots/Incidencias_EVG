@@ -4,7 +4,7 @@
         require "../procedimientos/procedimientos.php";
         $conexion = new procedimientos();
         $conexion->conectar();
-        echo '<div class="col-sm-9 col-md-9 ">';
+        echo '<div>';
         echo '<h3>Añadir incidencia</h3>';
         echo '<form method="post" action="../consultas/conAddIncidencia.php">';
         echo '<div>';

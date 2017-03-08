@@ -30,5 +30,5 @@
         $stmt->bind_param('iss',$cp,$_POST["nombreTipo"],$fila_etapa["codEtapa"]);
     }
     $stmt->execute();
-    header("Location:../paginas/addTipoAnotacion.php?consulta=ok");
+    header("Location: ../paginas/coordinador.php");
 ?>

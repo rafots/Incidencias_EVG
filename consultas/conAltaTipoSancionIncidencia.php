@@ -8,6 +8,6 @@
     $stmt->bind_param('ii',$_POST["tipoSancion"],$_POST["tipoIncidencia"]);
 
     $stmt->execute();
-    header("Location:../paginas/addTipoSancionIncidencia.php?consulta=ok");
+    header("Location:../paginas/coordinador.php");
 
 ?>

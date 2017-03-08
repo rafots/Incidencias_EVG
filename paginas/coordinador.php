@@ -16,7 +16,7 @@ if(isset($_SESSION['coordinador']))
     <link type="text/css" href="../sources/bootstrap.css" rel="stylesheet">
     <link type="text/css" href="../sources/comun.css" rel="stylesheet">
     <script type="text/javascript" src="../sources/bootstrap.js"></script>
-    
+    <script type="text/javascript" src="../sources/ajaxCoordinador.js"></script>
      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
@@ -60,17 +60,26 @@ if(isset($_SESSION['coordinador']))
                     <div class="panel panel-default">
                         <div class="panel-heading" >
                             <h4 class="panel-title ">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-book text-success"></span>Incidencias</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-book text-success"></span>Incidencias no tramitadas</a>
                             </h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in">
                             <div class="panel-body">
                                 <table class="table">
+                                ';
+                                if($_SESSION['codEtapa']=='ESO')
+                                {
+                                    echo'
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Aula de convivencia</a>
+                                            <a id="aulaconvivencia">Aula de convivencia</a>
                                         </td>
-                                    </tr>
+                                    </tr>';
+                                }
+
+                                echo'
+
+                                    
                                     <tr>
                                         <td>
                                             <a href="http://www.jquery2dotnet.com">Partes educativos</a>
@@ -157,22 +166,22 @@ if(isset($_SESSION['coordinador']))
                                 <table class="table">
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Tipos de Incidencias</a>
+                                            <a href="#" id="tipoInc">Tipos de Incidencias</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Tipos de Sanciones</a>
+                                            <a href="#" id="tipoSancion">Tipos de Sanciones</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            </span><a href="http://www.jquery2dotnet.com">Motivos de Sanción</a>
+                                            </span><a href="#" id="tipoSancionInc">Motivos de Sanción</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Tipos de Anotaciones</a>
+                                            <a href="#" id="tipoAnotaciones">Tipos de Anotaciones</a>
                                         </td>
                                     </tr>
 

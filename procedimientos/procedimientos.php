@@ -56,4 +56,9 @@ class procedimientos
     {
         return $this->conexion->insert_id;
     }
+
+    public function numFilas()
+    {
+        return $this->resultado->num_rows;
+    }
 }

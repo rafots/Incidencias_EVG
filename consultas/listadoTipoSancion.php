@@ -9,9 +9,15 @@
 
     $consulta_tabla="SELECT * FROM tipo_sancion";
     $resultado_tabla=$conectar->query($consulta_tabla);
-    echo '<table>';
+
     if($fila_tabla=$resultado_tabla->fetch_array())
     {
+        echo '<table class="table table-striped">';
+        echo '<thead>';
+        echo '<th>Tipo de sancion</th>';
+        echo '<th>Operacion</th>';
+        echo '</thead>';
+        echo '<tbody>';
         echo '<tr>';
         echo '<td>'.$fila_tabla["nombre"].'</td>';
         echo '<td><a href="alterTipoSancionForm.php?modificar=si&codAntiguo='.$fila_tabla["tipoSancion"].'&nombreAntiguo='.$fila_tabla["nombre"].'">Modificar</a></td>';
@@ -23,18 +29,18 @@
             {
                 echo '<tr>';
                 echo '<td>'.$fila_tabla["nombre"].'</td>';
-                echo '<td><a href="alterTipoSancionForm.php.php?modificar=si&codAntiguo='.$fila_tabla["tipoSancion"].'&nombreAntiguo='.$fila_tabla["nombre"].'">Modificar</a></td>';
+                echo '<td><a href="alterTipoSancionForm.php?modificar=si&codAntiguo='.$fila_tabla["tipoSancion"].'&nombreAntiguo='.$fila_tabla["nombre"].'">Modificar</a></td>';
                 echo '</tr>';
             }
         }
+        echo '</tbody>';
+        echo '</table>';
     }
     else
     {
-        echo '<tr>';
-        echo '<td colspan="2">No hay tipos de sanciones disponibles</td>';
-        echo '</tr>';
+        echo '<p>No hay tipos de sanciones disponibles</p>';
     }
-    echo '</table>';
+
     if(isset($_GET["modificar"]))
     {
         echo '<p>Se ha modificado el tipo de sancion con exito</p>';

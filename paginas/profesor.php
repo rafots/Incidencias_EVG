@@ -67,7 +67,7 @@ echo'
                                 <table class="table">
                                     <tr>
                                         <td>
-                                            <a href="addIncidencia.php">Crear Incidencia</a>
+                                            <a href="" id="addInc">Crear Incidencia</a>
                                         </td>
                                     </tr>  
                                 </table>

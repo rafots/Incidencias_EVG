@@ -9,25 +9,60 @@
 
     $consulta_tabla="SELECT * FROM tipo_incidencias";
     $resultado_tabla=$conectar->query($consulta_tabla);
-    echo '<table>';
+
     if($fila_tabla=$resultado_tabla->fetch_array())
     {
+        echo '<table class="table table-striped">';
+        echo '<thead>';
+        echo '<th>Nombre</th>';
+        echo '<th>¿Quien gestiona?</th>';
+        echo '<th>Operacion</th>';
+        echo '<thead>';
+        echo '<tbody>';
         echo '<tr>';
         echo '<td>'.$fila_tabla["nombre"].'</td>';
-        echo '<td><a href="alterTipoIncForm.php?modificar=si&codAntiguo='.$fila_tabla["idTipo"].'&nombreAntiguo='.$fila_tabla["nombre"].'">Modificar</a></td>';
+        echo '<td>';
+        if($fila_tabla["gestiona"]=="T")
+        {
+            echo 'Tutor';
+        }
+        else
+        {
+            echo 'Coordinador';
+        }
+        echo '</td>';
+        echo '<td><a href="#" class="alterTipoInc">Modificar</a></td>';
         echo '</tr>';
         while($fila_tabla=$resultado_tabla->fetch_array())
         {
             echo '<tr>';
             echo '<td>'.$fila_tabla["nombre"].'</td>';
-            echo '<td><a href="alterTipoIncForm.php?modificar=si&codAntiguo='.$fila_tabla["idTipo"].'&nombreAntiguo='.$fila_tabla["nombre"].'">Modificar</a></td>';
+            echo '<td>';
+            if($fila_tabla["gestiona"]=="T")
+            {
+                echo 'Tutor';
+            }
+            else
+            {
+                echo 'Coordinador';
+            }
+            echo '</td>';
+            echo '<td><a href="#" class="alterTipoInc">Modificar</a></td>';
             echo '</tr>';
         }
+        echo '</tbody>';
+        echo '</table>';
+
     }
+    else
+    {
+        echo '<p class="bg-danger">No existe ningun tipo de incidencia</p>';
+    }
+
 
     if(isset($_GET["modificar"]))
     {
         echo '<p>Se ha modificado el tipo de incidencia con exito</p>';
     }
-    echo '</table>';
+
 ?>

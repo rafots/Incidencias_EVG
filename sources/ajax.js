@@ -3,10 +3,17 @@
  */
 $(document).ready(function(){
 
+
+    $('#aulaconvivencia').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("aulaConvivenciaCoord.php");
+    });
+
     $('#crearanotaciones').on("click",function(e){
         e.preventDefault();
         $("#cuerpo").load("crearanotaciones.php");
     });
+
 
     $('#anotaciones').on("click",function(e){
         e.preventDefault();
