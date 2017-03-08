@@ -363,6 +363,7 @@ INSERT INTO `tipos_anotaciones` (`tipoAnotacion`, `nombre`, `codEtapa`) VALUES
 CREATE TABLE `tipo_incidencias` (
   `idTipo` tinyint(3) UNSIGNED NOT NULL,
   `nombre` varchar(30) NOT NULL,
+  `gestiona` char(1) NOT NULL
   `codEtapa` char(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -370,16 +371,16 @@ CREATE TABLE `tipo_incidencias` (
 -- Volcado de datos para la tabla `tipo_incidencias`
 --
 
-INSERT INTO `tipo_incidencias` (`idTipo`, `nombre`, `codEtapa`) VALUES
-(1, 'Aula de convivencia', 'ESO'),
-(2, 'Parte disciplinario', 'CFGS'),
-(3, 'Apercibimiento escrito', 'CFGS'),
-(4, 'No uniforme', 'BAC'),
-(5, 'No uniforme', 'ESO'),
-(6, 'Enfermedad', 'CFGS'),
-(7, 'Enfermedad', 'ESO'),
-(8, 'Expulsión al pasillo', 'ESO'),
-(9, 'Expulsión al pasillo', 'CFGS');
+INSERT INTO `tipo_incidencias` (`idTipo`, `nombre`, `gestiona`, `codEtapa`) VALUES
+(1, 'Aula de convivencia', 'C', 'ESO'),
+(2, 'Parte disciplinario', 'C', 'CFGS'),
+(3, 'Apercibimiento escrito', 'C', 'CFGS'),
+(4, 'No uniforme', 'T', 'BAC'),
+(5, 'No uniforme', 'T', 'ESO'),
+(6, 'Enfermedad', 'T', 'CFGS'),
+(7, 'Enfermedad', 'T', 'ESO'),
+(8, 'Expulsión al pasillo', 'T', 'ESO'),
+(9, 'Expulsión al pasillo', 'T', 'CFGS');
 
 -- --------------------------------------------------------
 

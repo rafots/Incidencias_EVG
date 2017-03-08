@@ -2,11 +2,7 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="magentoe_incidenciasevg@localhost" uuid="602a6b07-695b-480a-ad65-dc87d0be33e7">
-      <database-info product="MySQL" version="5.5.5-10.1.16-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
-        <extra-name-characters>#@</extra-name-characters>
-        <identifier-quote-string>`</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
       <resolve-scope>magentoe_incidenciasevg:</resolve-scope>

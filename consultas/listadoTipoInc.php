@@ -12,6 +12,7 @@
 
     if($fila_tabla=$resultado_tabla->fetch_array())
     {
+        echo '<form>';
         echo '<table class="table table-striped">';
         echo '<thead>';
         echo '<th>Nombre</th>';
@@ -31,7 +32,8 @@
             echo 'Coordinador';
         }
         echo '</td>';
-        echo '<td><a href="#" id="alterTipoInc">Modificar</a></td>';
+        echo '<td><a href="../paginas/alterTipoIncForm.php?codAntiguo='.$fila_tabla["idTipo"].'&nombreAntiguo='.$fila_tabla["idTipo"].'">Modificar</a></td>';
+
         echo '</tr>';
         while($fila_tabla=$resultado_tabla->fetch_array())
         {
@@ -47,11 +49,12 @@
                 echo 'Coordinador';
             }
             echo '</td>';
-            echo '<td><a href="#" id="alterTipoInc">Modificar</a></td>';
+            echo '<td><a href="../paginas/alterTipoIncForm.php?codAntiguo='.$fila_tabla["idTipo"].'&nombreAntiguo='.$fila_tabla["idTipo"].'">Modificar</a></td>';
             echo '</tr>';
         }
         echo '</tbody>';
         echo '</table>';
+        echo '</form>';
 
     }
     else
