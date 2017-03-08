@@ -38,7 +38,7 @@ function visualizar($objeto,$opc){
 
 
             echo'<h4>Modificar</h4>';
-            echo'<form action="modificaranotaciones.php" method="post">';
+            echo '<form action="modificaranotaciones.php" method="post">';
             echo'<label>Tipo al que pertenece</label>';
             $consulta="Select * from tipos_anotaciones";
             $objeto->consultas($consulta);

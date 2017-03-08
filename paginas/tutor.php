@@ -93,7 +93,12 @@ if(!isset($_SESSION["tutor"])){
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Visualizar anotaciones</a>
+                                            <a id="anotaciones">Visualizar anotaciones</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a id="misanotaciones">Mis anotaciones</a>
                                         </td>
                                     </tr>
                                 </table>

@@ -14,7 +14,6 @@ $(document).ready(function(){
         $("#cuerpo").load("crearanotaciones.php");
     });
 
-
     $('#anotaciones').on("click",function(e){
         e.preventDefault();
         $("#cuerpo").load("anotaciones.php");
@@ -44,8 +43,6 @@ $(document).ready(function(){
         e.preventDefault();
         $("#cuerpo").load("modificaranotaciones.php");
     });
-
-
 
 
 

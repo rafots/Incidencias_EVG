@@ -6,4 +6,9 @@ $(document).ready(function(){
         e.preventDefault();
         $("#cuerpo").load("addIncidencia.php");
     });
+
+    $('#anotaciones').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("anotaciones.php");
+    });
 });

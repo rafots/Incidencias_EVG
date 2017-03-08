@@ -13,4 +13,20 @@ $(document).ready(function(){
         e.preventDefault();
         $('#cuerpo').load("ultimasIncidenciasTutor.php");
     });
+
+    $('#crearanotaciones').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("crearanotaciones.php");
+    });
+
+    $('#anotaciones').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("anotaciones.php");
+    });
+
+    $('#misanotaciones').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("misanotaciones.php");
+    });
+
 });

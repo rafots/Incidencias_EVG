@@ -1,47 +1,27 @@
 <?php
-    session_start();
-    $opc;
-    if(isset($_SESSION['coordinador'])){
-        $opc="c";
-        coordinador($opc);
-    }else{
-        if(isset($_SESSION['tutor'])){
-            $opc="t";
-            tutor($opc);
-        }else{
-            session_destroy();
-            echo 'no tienes permiso para acceder a esta pagina';
-        }
-    }
+    require_once "validaranotaciones.php";
 
-    function coordinador($opc){
-        require_once '../procedimientos/procedimientos.php';
-        $bd = new conexion();
-        $objeto = new procedimientos();
-        $objeto->conectar();
-        $consulta="Select numAnotacion,tipos_Anotaciones.nombre as tipoAnotaciones,anotaciones.nia as anotacion,leida,verProfesores,nombreCompleto from anotaciones inner join tipos_Anotaciones on anotaciones.tipoAnotacion=tipos_anotaciones.tipoAnotacion inner JOIN alumnos on anotaciones.nia = alumnos.nia WHERE userCreacion LIKE 't'";
-        $objeto->consultas($consulta);
-        $i=0;
+    function coordinador(){
+
+        require "../consultas/consultaanotaciontutor.php";
 
         visualizar($objeto);
     }
 
-    function tutor($opc){
-        require_once '../procedimientos/procedimientos.php';
-        $bd = new conexion();
-        $objeto = new procedimientos();
-        $objeto->conectar();
-        $consulta="Select numAnotacion,tipos_Anotaciones.nombre as tipoAnotaciones,anotaciones.nia as anotacion,leida,verProfesores,nombreCompleto from anotaciones inner join tipos_Anotaciones on anotaciones.tipoAnotacion=tipos_anotaciones.tipoAnotacion inner JOIN alumnos on anotaciones.nia = alumnos.nia WHERE userCreacion LIKE 'c'";
-        $objeto->consultas($consulta);
-        $i=0;
+    function tutor(){
+        require_once "../consultas/consultaanotacioncoordinador.php";
+        visualizar($objeto);
+    }
 
+    function profesor(){
+        require_once "../consultas/consultaanotacionprofesor.php";
         visualizar($objeto);
     }
 
     function visualizar($objeto){
 
         echo' <h4>Anotaciones</h4>';
-        while($fila=$objeto->devolverFilas()) {
+        while($fila=$objeto->devolverfilas()) {
             echo '<h7>Tipo de anotacion:' . $fila["numAnotacion"] . '</h7>';
             echo '<br/>';
             echo '<h7>Descripcion de la anotacion:' . $fila["tipoAnotaciones"] . '</h7>';
@@ -50,9 +30,11 @@
             echo '<br/>';
             echo '<h7>Nombre del Alumno:' . $fila["nombreCompleto"] . '</h7>';
             echo '<br/>';
-            echo '<a id="anotacionesmostrar" href="anotacionesmostrar.php?numAnotacion=' . $fila["numAnotacion"] . '">Ver la anotacion en detalle</a>';
+            echo '<a id="anotacionesmostrar">Ver la anotacion en detalle</a>';
             echo '<br/><br/>';
         }
     }
+    
+
 
 ?>
