@@ -87,13 +87,7 @@ if(isset($_SESSION['coordinador']))
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Por alumnos</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                           <a href="http://www.jquery2dotnet.com">No tramitadas</a>
-                                            <span class="badge">42</span>
+                                            <a href="http://www.jquery2dotnet.com">Otras</a>
                                         </td>
                                     </tr>
                                 </table>
