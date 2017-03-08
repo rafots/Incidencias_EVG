@@ -363,7 +363,7 @@ INSERT INTO `tipos_anotaciones` (`tipoAnotacion`, `nombre`, `codEtapa`) VALUES
 CREATE TABLE `tipo_incidencias` (
   `idTipo` tinyint(3) UNSIGNED NOT NULL,
   `nombre` varchar(30) NOT NULL,
-  `gestiona` char(1) NOT NULL
+  `gestiona` char(1) NOT NULL,
   `codEtapa` char(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

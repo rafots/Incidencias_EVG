@@ -8,7 +8,7 @@ if(!isset($_SESSION["usuario"])){
 }else{
     echo "
     <article class='col-sd-7 articulo'>
-        <form action='#' method='post'>
+        <form action='tutor.php' method='post'>
             <div class='form-group'>
                 <label for='alumno'>Alumno:</label>
                     <select name='nombreAlumno' id='alumno' class='form-control'>";

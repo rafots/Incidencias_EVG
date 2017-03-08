@@ -64,16 +64,6 @@ if(!isset($_SESSION["tutor"])){
                                 <table class="table">
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Aula de convivencia</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="http://www.jquery2dotnet.com">Partes educativos</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
                                             <a id="incidenciasAlumnos">Por alumnos</a>
                                         </td>
                                     </tr>
