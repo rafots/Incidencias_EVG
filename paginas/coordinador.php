@@ -89,7 +89,7 @@ if(isset($_SESSION['coordinador']))
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Otras</a>
+                                            <a href="#" id="otras">Otras</a>
                                         </td>
                                     </tr>
                                 </table>
