@@ -32,10 +32,20 @@ else{
      * Extraigo todos los alumnos de la etapa del coordinador
      */
 
-    $sql_student = "SELECT alumnos.nia AS nia, alumnos.nombreCompleto AS alumno
+    if($_SESSION["activa"]=='c'){
+
+        $sql_student = "SELECT alumnos.nia AS nia, alumnos.nombreCompleto AS alumno
         FROM alumnos INNER JOIN secciones ON alumnos.idSeccion = secciones.idSeccion
         INNER JOIN etapas ON secciones.codEtapa = etapas.codEtapa
         WHERE etapas.codEtapa = '".$_SESSION["codEtapa"]."'";
+
+    }else{
+
+        $sql_student = "SELECT alumnos.nia AS nia, alumnos.nombreCompleto AS alumno
+        FROM alumnos INNER JOIN secciones ON alumnos.idSeccion = secciones.idSeccion
+        WHERE secciones.idSeccion = '".$_SESSION["idSeccion"]."'";
+
+    }
 
     $obj->consultas($sql_student);
 
