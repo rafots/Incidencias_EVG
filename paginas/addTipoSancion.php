@@ -11,6 +11,7 @@
                         require "../consultas/listadoTipoSancion.php";
                     echo '
                 </div>
+                <hr/>
                 <div>
                     <h4>Añadir nuevo tipo de sancion</h4>
                     <form method="post" action="../consultas/conAltaTipoSancion.php">

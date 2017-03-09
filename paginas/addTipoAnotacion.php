@@ -13,6 +13,7 @@
 
         echo '
             </div>
+            <hr/>
             <div>
                 <h4>Añadir tipo de anotacion</h4>
                 <form method="post" action="../consultas/conAltaTipoAnotacion.php">

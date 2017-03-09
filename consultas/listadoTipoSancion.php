@@ -38,7 +38,7 @@
     }
     else
     {
-        echo '<p>No hay tipos de sanciones disponibles</p>';
+        echo '<p class="bg-danger">No hay tipos de sanciones por incidencias disponibles</p>';
     }
 
     if(isset($_GET["modificar"]))

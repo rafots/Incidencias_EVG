@@ -38,7 +38,7 @@
     }
     else
     {
-        echo '<p>No hay tipos de anotaciones</p>';
+        echo '<p class="bg-danger">No hay tipos de anotaciones</p>';
     }
 
 ?>

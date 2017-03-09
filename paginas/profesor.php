@@ -96,7 +96,7 @@ echo'
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Ver Incidencias</a>
+                                            <a href="#" id="verInc">Ver Incidencias</a>
                                         </td>
                                     </tr>
                                     <tr>

@@ -12,7 +12,6 @@
 
     if($fila_tabla=$resultado_tabla->fetch_array())
     {
-        echo '<form>';
         echo '<table class="table table-striped">';
         echo '<thead>';
         echo '<th>Nombre</th>';
@@ -54,7 +53,6 @@
         }
         echo '</tbody>';
         echo '</table>';
-        echo '</form>';
 
     }
     else
