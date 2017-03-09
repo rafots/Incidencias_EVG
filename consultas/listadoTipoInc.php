@@ -7,7 +7,7 @@
     $resultado_etapa=$conectar->query($consulta_etapa);
     $fila_etapa=$resultado_etapa->fetch_array();
 
-    $consulta_tabla="SELECT * FROM tipo_incidencias";
+    $consulta_tabla="SELECT * FROM tipo_incidencias WHERE codEtapa='".$fila_etapa["codEtapa"]."'";
     $resultado_tabla=$conectar->query($consulta_tabla);
 
     if($fila_tabla=$resultado_tabla->fetch_array())

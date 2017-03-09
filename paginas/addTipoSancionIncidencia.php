@@ -42,7 +42,7 @@
                         echo '<p>Se ha introducido con exito el tipo de sancion por incidencia.</p>';
                     }
                     echo '
-                    <input type="submit" name="enviar" value="Añadir tipo">
+                    <input type="submit" name="enviar" value="Añadir tipo" class="btn btn-primary buttons-separator">
                 </form>
                 <a href="coordinador.php">Volver</a>
             </div>

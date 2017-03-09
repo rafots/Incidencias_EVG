@@ -1,17 +1,16 @@
 <?php
-    session_start();
     $consulta="SELECT idUsuario from profesores WHERE usuario='".$_SESSION["usuario"]."'";
-    $resultado=$conectar->query($consulta);
-    $fila=$resultado->fetch_array();
+    $conexion->consultas($consulta);
+    $fila=$conexion->devolverFilas();
 
     $consulta_etapa="SELECT codEtapa FROM etapas where coordinador=".$fila["idUsuario"].";";
-    $resultado_etapa=$conectar->query($consulta_etapa);
-    $fila_etapa=$resultado_etapa->fetch_array();
+    $conexion->consultas($consulta_etapa);
+    $fila_etapa=$conexion->devolverFilas();
 
     $consulta_tabla="SELECT * FROM tipos_anotaciones WHERE codEtapa='".$fila_etapa["codEtapa"]."'";
-    $resultado_tabla=$conectar->query($consulta_tabla);
+    $conexion->consultas($consulta_tabla);
 
-    if($fila_tabla=$resultado_tabla->fetch_array())
+    if($fila_tabla=$conexion->devolverFilas())
     {
         echo '<table class="table table-striped">';
         echo '<thead>';
@@ -26,7 +25,7 @@
 
         if(!empty($fila_tabla))
         {
-            while($fila_tabla=$resultado_tabla->fetch_array())
+            while($fila_tabla=$conexion->devolverFilas())
             {
                 echo '<tr>';
                 echo '<td>'.$fila_tabla["nombre"].'</td>';

@@ -189,18 +189,18 @@ if(isset($_SESSION['coordinador']))
             </div>
             <div class="col-sm-8 col-md-8 " id="cuerpo">
                ';
-    echo '<div>';
-    echo '<form method="get" action="../consultas/conAlterTipoSancion.php">';
-    echo '<label>Nombre de tipo de anotacion</label>';
-    echo '<div>';
-    echo '<input type="text" name="cod" value="'.$_GET["codAntiguo"].'" id="ocultar">';
-    echo '<input type="text" name="texto" value="'.$_GET["nombreAntiguo"].'">';
-    echo '</div>';
-    echo '<div>';
-    echo '<input type="submit" name="texto" value="Modificar tipo de anotacion">';
-    echo '</div>';
-    echo '</div>';
-    echo'
+                echo '<div>';
+                echo '<form method="get" action="../consultas/conAlterTipoAnotacion.php">';
+                echo '<label>Nombre de tipo de anotacion</label>';
+                echo '<div>';
+                echo '<input type="hidden" name="cod" value="'.$_GET["codAntiguo"].'">';
+                echo '<input type="text" name="texto" value="'.$_GET["nombreAntiguo"].'">';
+                echo '</div>';
+                echo '<div>';
+                echo '<input type="submit" value="Modificar tipo de anotacion">';
+                echo '</div>';
+                echo '</div>';
+                echo'
             </div>
         </div>
     </div>

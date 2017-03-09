@@ -1,10 +1,10 @@
 <?php
-
+    session_start();
     require '../procedimientos/procedimientos.php';
-    $conexion = new conexion();
-    $conectar = new mysqli($conexion->getServer(),$conexion->getUser(),$conexion->getPass(),$conexion->getDb());
 
-        echo '<h3>Tipos de anotaciones</h3>
+
+        require "../consultas/sacarEtapa.php";
+        echo '<h3>Tipos de anotaciones de la etapa '.$fila_etapa["nombre"].'</h3>
             <div>
                 <h4>Tipos de anotaciones disponibles</h4>
                 ';
@@ -17,10 +17,10 @@
                 <h4>Añadir tipo de anotacion</h4>
                 <form method="post" action="../consultas/conAltaTipoAnotacion.php">
                     <label>Nombre del tipo de anotacion</label>
-                    <input type="text" name="nombreTipo"/>
+                    <input type="text" name="nombreTipo" class="form-control" id="exampleInputName2"/>
                     <!--<label>Etapa</label>-->
                     
-                    <input type="submit" name="enviar" value="Añadir tipo">
+                    <input type="submit" name="enviar" value="Añadir tipo de incidencia" class="btn btn-primary buttons-separator">
                 </form>
                 <a href="gestionTipos.php">Volver</a>
             </div>

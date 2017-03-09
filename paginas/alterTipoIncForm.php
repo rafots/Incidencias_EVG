@@ -201,13 +201,13 @@ if(isset($_SESSION['coordinador']))
                              <label>¿Quien gestiona esta incidencia?</label>';
 
                             if($_GET["gestionaAnt"]=="T"){
-                                echo '<input type="radio" name="gestiona" value="T" checked="checked"/>Tutor';
-                                echo '<input type="radio" name="gestiona" value="C"/>Coordinador';
+                                echo '<input type="radio" name="gestiona" value="T" checked="checked" class="checkbox-inline"/>Tutor';
+                                echo '<input type="radio" name="gestiona" value="C" class="checkbox-inline"/>Coordinador';
                             }
                             else
                             {
-                                echo '<input type="radio" name="gestiona" value="T"/>Tutor';
-                                echo '<input type="radio" name="gestiona" value="C" checked="checked"/>Coordinador';
+                                echo '<input type="radio" name="gestiona" value="T" class="checkbox-inline"/>Tutor';
+                                echo '<input type="radio" name="gestiona" value="C" checked="checked" class="checkbox-inline"/>Coordinador';
                             }
                              echo' 
                              <div>
