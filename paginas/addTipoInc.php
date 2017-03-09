@@ -25,7 +25,7 @@
                     <form method="post" action="../consultas/altaTipoIncidencia.php">
                         <div>
                         <label>Nombre del tipo de incidencia</label>
-                        <input type="text" name="nombreTipo" class="form-control" id="exampleInputName2"/>
+                        <input type="text" name="nombreTipo" class="form-control" id="exampleInputName2" required="required"/>
                         ';
                         if(isset($_GET["consulta"]) && $_GET["consulta"]=='ok')
                         {
