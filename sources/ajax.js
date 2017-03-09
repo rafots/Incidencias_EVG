@@ -119,6 +119,10 @@ $(document).ready(function(){
         $("#cuerpo").load("modificaranotaciones.php");
     });
 
+    $('#formulario').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("crearanotaciones.php");
+    });
 
 
 });
