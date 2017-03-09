@@ -8,6 +8,53 @@ $(document).ready(function(){
         e.preventDefault();
         $("#cuerpo").load("aulaConvivenciaCoord.php");
     });
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').focus()
+    })
+    $('#clases').on("change",function(e){
+        e.preventDefault();
+
+        var selectedValue = this.value;
+        var parametros = {
+            "idSeccion" : selectedValue
+        };
+        //make the ajax call
+        $.ajax({
+            url: '../consultas/consultarAlumnos.php',
+            type: 'GET',
+            data: parametros,
+            success: function(parametros) {
+                $('#alumnos').remove();
+                $('#ajaxx').append(parametros);
+
+            }
+        });
+
+    });
+    $('#alumnos').on("change",function(e){
+        e.preventDefault();
+
+        var selectedValue = this.value;
+        var parametros = {
+            "nia" : selectedValue
+        };
+        //make the ajax call
+        $.ajax({
+            url: '../consultas/consultarIncidenciasAlumnos.php',
+            type: 'GET',
+            data: parametros,
+            success: function(parametros) {
+                $('#inciAlum').empty();
+                $('#inciAlum').append(parametros);
+
+            }
+        });
+
+    });
+    $('#parteseducativos').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("partesEducativosCoord.php");
+    });
 
     $('#crearanotaciones').on("click",function(e){
         e.preventDefault();
@@ -22,6 +69,10 @@ $(document).ready(function(){
     $('#anotacionesmostrar').on("click",function(e){
         e.preventDefault();
         $("#cuerpo").load("anotacionesmostrar.php");
+    });
+    $('#consultaralumno').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("../consultas/consultarClases.php");
     });
 
     $('#misanotaciones').on("click",function(e){

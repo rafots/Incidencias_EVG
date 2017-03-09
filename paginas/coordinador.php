@@ -84,7 +84,7 @@ if(isset($_SESSION['coordinador']))
                                     
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Partes educativos</a>
+                                            <a id="parteseducativos" href="http://www.jquery2dotnet.com">Partes educativos</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -92,6 +92,34 @@ if(isset($_SESSION['coordinador']))
                                             <a href="http://www.jquery2dotnet.com">Otras</a>
                                         </td>
                                     </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" >
+                            <h4 class="panel-title ">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive"><span class="glyphicon glyphicon-book text-success"></span>Consultas</a>
+                            </h4>
+                        </div>
+                        <div id="collapseFive" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <table class="table">
+                                ';
+                                    echo'
+                                    <tr>
+                                        <td>
+                                            <a id="consultaralumno">Por alumno</a>
+                                        </td>
+                                    </tr>';
+
+                                echo'         
+                                    <tr>
+                                        <td>
+                                            <a href="http://www.jquery2dotnet.com">Acumulacion partes educativos</a>
+                                        </td>
+                                    </tr>
+
                                 </table>
                             </div>
                         </div>
@@ -137,12 +165,12 @@ if(isset($_SESSION['coordinador']))
                                 <table class="table">
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Poner sanción</a>
+                                            <a href="http://www.jquery2dotnet.com">7ª hora</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Visualizar sanciones</a> <span class="label label-info">5</span>
+                                            <a href="http://www.jquery2dotnet.com">Aula de convivencia</a> <span class="label label-info">5</span>
                                         </td>
                                     </tr>
                                     <tr>
@@ -184,6 +212,7 @@ if(isset($_SESSION['coordinador']))
                                 </table>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>

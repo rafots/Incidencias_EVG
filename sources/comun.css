@@ -57,7 +57,10 @@ body{
     margin-bottom: 5px;
     text-align: left;
 }
-
+#cerrarSesion
+{
+    margin-top: 10px!important;
+}
 /*
 * ID para el texto "central" de la cabecera
 */

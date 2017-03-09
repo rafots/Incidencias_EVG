@@ -15,7 +15,7 @@ $query = "SELECT t1.*,t2.nombreCompleto,t3.nombre AS hora,t4.nombre AS profe
     	ON t1.idHora = t3.idHora
     INNER JOIN profesores t4
     	ON t1.usuario = t4.idUsuario
-	WHERE `idTipo` = 1 AND `archivadaC` = 0";
+	WHERE `idTipo` = 2 AND `archivadaC` = 0";
 $obj->consultas($query);
 echo '<div class="table-responsive">';
 echo '<table class="table table-hover">';
