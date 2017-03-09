@@ -29,7 +29,7 @@
         echo '</div>';
         echo '<div>';
         echo '<label>Fecha de la incidencia</label>';
-        echo '<input type="text" name="fecha_incidencia"/>';
+        echo '<input type="date" name="fecha_incidencia"/>';
         echo '</div>';
         echo '<div>';
         echo '<label>Descripción de la incidencia</label>';

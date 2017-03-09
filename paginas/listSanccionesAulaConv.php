@@ -25,7 +25,7 @@ else {
 
     $today = date("Y-m-d");
 
-    $sql = "SELECT sanciones.idSancion AS 'ID', incidencias.nia AS 'Alumno', incidencias.usuario AS 'Profesor', incidencias.codAsignatura AS 'Asignatura' 
+    $sql = "SELECT sanciones.idSancion AS 'ID', alumnos.nombreCompleto AS 'Alumno', profesores.nombre AS 'Profesor', incidencias.codAsignatura AS 'Asignatura' 
         FROM sanciones INNER JOIN incidencias ON sanciones.idIncidencia = incidencias.idIncidencia 
         INNER JOIN alumnos ON alumnos.nia = incidencias.nia 
         INNER JOIN profesores ON profesores.idUsuario = incidencias.usuario 
@@ -67,6 +67,8 @@ else {
         }
         echo '</tbody>';
         echo '</table>';
+
+
 
     }else{
         echo '<h1><small>Actualmente no hay sanciones de "Aula de convivencia" para el día de hoy</small></h1>';
