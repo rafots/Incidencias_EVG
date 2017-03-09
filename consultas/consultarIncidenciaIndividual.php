@@ -6,9 +6,7 @@
  * Time: 1:24
  */
 require '../procedimientos/procedimientos.php';
-echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>';
-echo '<script type="text/javascript" src="../sources/ajax.js"></script>';
-echo '<script type="text/javascript" src="../sources/bootstrap.js"></script>';
+require_once '../consultas/requires.php';
 $obj = new procedimientos();
 $obj->conectar();
 if(isset($_REQUEST['idIncidencia'])) {
@@ -20,7 +18,7 @@ if(isset($_REQUEST['idIncidencia'])) {
                     WHERE t1.idIncidencia = "' . $_REQUEST['idIncidencia'] . '"';
     $obj->consultas($query);
     $fila = $obj->devolverFilas();
-    echo '<table class="table table-bordered">';
+    echo '<table class="table table-bordered" id="contenidoAlumm">';
     echo '<tr><th>Tipo Incidencia</th><th>Profesor</th><th>Asignatura</th><th>Hora</th><th>Fecha</th><th>Descripción</th></tr>';
     echo '<tr>';
         echo '<td>'.$fila["nombre"].'</td>';

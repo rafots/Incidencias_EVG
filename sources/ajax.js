@@ -45,16 +45,17 @@ $(document).ready(function(){
             data: parametros,
             success: function(parametros) {
                 e.preventDefault();
-                $('#contenidoAlum').empty();
-                $('#contenidoAlum').append(parametros);
+                $('#contenidoAlumm').remove();
+                $('#cuerpo').append(parametros);
 
             }
         });
-        $('#cerrarModal').on("click",function(e){
-            $('#contenidoAlum').empty();
-        });
+
+
 
     });
+
+
     $('#alumnos').on("change",function(e){
         e.preventDefault();
 
@@ -69,6 +70,7 @@ $(document).ready(function(){
             data: parametros,
             success: function(parametros) {
                 $('#inciAlum').empty();
+                $('#contenidoAlumm').remove();
                 $('#inciAlum').append(parametros);
 
             }

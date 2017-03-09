@@ -7,8 +7,7 @@ session_start();
  * Time: 21:56
  */
 require '../procedimientos/procedimientos.php';
-echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>';
-echo '<script type="text/javascript" src="../sources/ajax.js"></script>';
+require_once '../consultas/requires.php';
 $obj = new procedimientos();
 $obj->conectar();
 $query = 'SELECT * FROM secciones WHERE secciones.codEtapa = "'.$_SESSION["codEtapa"].'"';
