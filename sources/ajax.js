@@ -40,7 +40,7 @@ $(document).ready(function(){
         };
         //make the ajax call
         $.ajax({
-            url: '../consultas/consultarIncidenciaIndividual.php',
+            url: '../paginas/buscarIncidencia.php',
             type: 'GET',
             data: parametros,
             success: function(parametros) {
@@ -121,6 +121,10 @@ $(document).ready(function(){
         $("#cuerpo").load("modificaranotaciones.php");
     });
 
+    $('#formulario').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("crearanotaciones.php");
+    });
 
 
 });

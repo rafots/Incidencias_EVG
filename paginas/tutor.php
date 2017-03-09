@@ -42,6 +42,10 @@ if(!isset($_SESSION["tutor"])){
                         if(isset($_SESSION["coordinador"])){
                             echo '<a class="btn btn-primary btn-success" href="coordinador.php">C</a>';
                         }
+                        echo '<br/>';
+                        echo $_SESSION['nombre'];
+                        echo '<br/>';
+                        echo 'Tutor de '.$_SESSION["idSeccion"].'';
 
     echo '
                     </div>
@@ -105,7 +109,8 @@ if(!isset($_SESSION["tutor"])){
                                 </table>
                             </div>
                         </div>
-                    </div>
+                    </div>';
+                    if($_SESSION["codEtapa"] != "ESO"){echo '
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
@@ -129,11 +134,13 @@ if(!isset($_SESSION["tutor"])){
                                 </table>
                             </div>
                         </div>
-                    </div>
+                    </div>';
+                    }
+                   echo '
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" href="#cerrarSesion"><span class="glyphicon glyphicon-log-out text-success"></span> Cerrar sesion</a>
+                                <a href="cerrarSession.php"><span class="glyphicon glyphicon-log-out text-success"></span> Cerrar sesion</a>
                             </h4>
                         </div>
                     </div>

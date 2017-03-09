@@ -1,9 +1,5 @@
 <?php
     require_once '../procedimientos/procedimientos.php';
-class consultadetalleanotacion{
-
-    function llamar()
-    {
         $objeto = new procedimientos();
         $objeto->conectar();
         if (isset($_GET["numAnotacion"]))
@@ -12,6 +8,5 @@ class consultadetalleanotacion{
         $objeto->consultas($consulta2);
         $consulta = "Select numAnotacion,tipos_Anotaciones.nombre as tipoAnotaciones,anotaciones.nia as anotacion,leida,verProfesores,nombreCompleto from anotaciones inner join tipos_Anotaciones on anotaciones.tipoAnotacion=tipos_anotaciones.tipoAnotacion inner JOIN alumnos on anotaciones.nia = alumnos.nia WHERE numAnotacion LIKE '" . $_SESSION["anot"] . "'";
         $objeto->consultas($consulta);
-    }
-}
+
 ?>

@@ -200,36 +200,37 @@ if(isset($_SESSION['coordinador']))
                             echo '<input type="hidden" name="incAntiguo" value="'.$_GET["incAntiguo"].'"/>';
                        echo '
                         <div>
-                        <label>Tipo sancion</label>
+                        <label>Para la incidencia, asignarle este tipo de sancion...</label>
                         <select name="tipoSancionNuevo">
                         ';
-                            $consulta_tipo_s="SELECT * FROM tipo_sancion";
+                            $consulta="SELECT idUsuario from profesores WHERE usuario='".$_SESSION["usuario"]."'";
+                            $resultado=$conectar->query($consulta);
+                            $fila=$resultado->fetch_array();
+
+                            $consulta_etapa="SELECT codEtapa FROM etapas where coordinador=".$fila["idUsuario"].";";
+                            $resultado_etapa=$conectar->query($consulta_etapa);
+                            $fila_etapa=$resultado_etapa->fetch_array();
+
+                            $consulta_tipo_s="SELECT * FROM tipo_incidencias WHERE codEtapa='".$fila_etapa["codEtapa"]."'";
                             $resultado_tipo_s=$conectar->query($consulta_tipo_s);
                             while($fila_tipo_s=$resultado_tipo_s->fetch_array())
                             {
-                                echo '<option value="'.$fila_tipo_s["tipoSancion"].'">'.$fila_tipo_s["nombre"].'</option>';
+                                echo '<option value="'.$fila_tipo_s["idTipo"].'">'.$fila_tipo_s["nombre"].'</option>';
                             }
                         echo '
                         </select>
                         </div>
                         <div>
-                            <label>Tipo incidencias de la etapa</label>
+                            <label>Para esta sancion, asignarle el siguiente tipo de Incidencia...</label>
                             <select name="tipoIncidenciaNuevo">
                             ';
-                                $consulta="SELECT idUsuario from profesores WHERE usuario='".$_SESSION["usuario"]."'";
-                                $resultado=$conectar->query($consulta);
-                                $fila=$resultado->fetch_array();
-
-                                $consulta_etapa="SELECT codEtapa FROM etapas where coordinador=".$fila["idUsuario"].";";
-                                $resultado_etapa=$conectar->query($consulta_etapa);
-                                $fila_etapa=$resultado_etapa->fetch_array();
-
-                                $consulta_tipo_s="SELECT * FROM tipo_incidencias WHERE codEtapa='".$fila_etapa["codEtapa"]."'";
+                                $consulta_tipo_s="SELECT * FROM tipo_sancion";
                                 $resultado_tipo_s=$conectar->query($consulta_tipo_s);
                                 while($fila_tipo_s=$resultado_tipo_s->fetch_array())
                                 {
-                                    echo '<option value="'.$fila_tipo_s["idTipo"].'">'.$fila_tipo_s["nombre"].'</option>';
+                                    echo '<option value="'.$fila_tipo_s["tipoSancion"].'">'.$fila_tipo_s["nombre"].'</option>';
                                 }
+
                                 echo '
                             </select>
                         </div>

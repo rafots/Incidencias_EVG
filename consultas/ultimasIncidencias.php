@@ -9,7 +9,7 @@ $sql = "SELECT *, idIncidencia, alumnos.nombreCompleto, tipo_incidencias.nombre 
                 INNER JOIN tipo_incidencias ON (tipo_incidencias.idTipo=incidencias.idTipo) 
                 INNER JOIN profesores ON (profesores.idUsuario=incidencias.usuario)
                 INNER JOIN horas ON (horas.idHora=incidencias.idHora)
-                WHERE fecha_ocurrencia <= CURRENT_DATE ORDER BY leidaT DESC";
+                WHERE fecha_ocurrencia <= CURRENT_DATE AND archivadaT = 0 ORDER BY leidaT ASC";
 
 $conexion->consultas($sql);
 

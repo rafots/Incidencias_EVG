@@ -1,6 +1,7 @@
 <?php
     require_once "validaranotaciones.php";
-
+echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>';
+echo '<script src="../sources/ajax.js" type="text/javascript"></script>';
     function coordinador(){
 
         require "../consultas/consultaanotaciontutor.php";

@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $consulta="SELECT idUsuario from profesores WHERE usuario='".$_SESSION["usuario"]."'";
     $resultado=$conectar->query($consulta);
     $fila=$resultado->fetch_array();

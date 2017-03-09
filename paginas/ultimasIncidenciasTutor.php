@@ -81,8 +81,8 @@
                                 </div>
                                 <div class='modal-footer'>
                                     <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
-                                    <a class='btn btn-default' data-dismiss='modal' href='leerIncidencia.php?codigo=".$fila["idIncidencia"]."'>Marcar como leida</a>
-                                    <a class='btn btn-default' data-dismiss='modal' href='archivarIncidencia.php?codigo=".$fila["idIncidencia"]."'>Archivar</a>
+                                    <a class='btn btn-default' href='leerIncidencia.php?codigo=".$fila["idIncidencia"]."'>Marcar como leida</a>
+                                    <a class='btn btn-default' href='archivarIncidencia.php?codigo=".$fila["idIncidencia"]."'>Archivar</a>
                                 </div>
                             </div>
                         </div>
