@@ -40,7 +40,7 @@ $(document).ready(function(){
         };
         //make the ajax call
         $.ajax({
-            url: '../paginas/buscarIncidencia.php',
+            url: '../consultas/consultarIncidenciaIndividual.php',
             type: 'GET',
             data: parametros,
             success: function(parametros) {
