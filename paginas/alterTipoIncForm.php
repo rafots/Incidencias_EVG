@@ -195,7 +195,7 @@ if(isset($_SESSION['coordinador']))
                     <div>
                        <label>Nombre de tipo de incidencia</label>
                        
-                       <input type="text" name="texto" value="'.$_GET["nombreAntiguo"].'">
+                       <input type="text" name="texto" required="required" value="'.$_GET["nombreAntiguo"].'">
                     </div>
                          <div>
                              <label>¿Quien gestiona esta incidencia?</label>';

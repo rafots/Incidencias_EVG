@@ -16,7 +16,7 @@
                     <h4>Añadir nuevo tipo de sancion</h4>
                     <form method="post" action="../consultas/conAltaTipoSancion.php">
                         <label>Nombre del tipo de sancion</label>
-                        <input type="text" name="nombreTipo" class="form-control" id="exampleInputName2"/>
+                        <input type="text" name="nombreTipo" required="required" class="form-control" id="exampleInputName2"/>
                         <!--<label>Etapa</label>-->
                         
                         

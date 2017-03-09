@@ -194,7 +194,7 @@ if(isset($_SESSION['coordinador']))
                 echo '<label>Nombre de tipo de anotacion</label>';
                 echo '<div>';
                 echo '<input type="hidden" name="cod" value="'.$_GET["codAntiguo"].'">';
-                echo '<input type="text" name="texto" value="'.$_GET["nombreAntiguo"].'">';
+                echo '<input type="text" name="texto" value="'.$_GET["nombreAntiguo"].'" required="required">';
                 echo '</div>';
                 echo '<div>';
                 echo '<input type="submit" value="Modificar tipo de anotacion">';
