@@ -169,6 +169,11 @@ if(isset($_SESSION['coordinador']))
                                 <table class="table">
                                     <tr>
                                         <td>
+                                            <a id="create_sanction">Crear sanción</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
                                             <a id="sanc_ult_hora">7ª hora</a>
                                         </td>
                                     </tr>
