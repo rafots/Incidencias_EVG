@@ -18,7 +18,7 @@ else{
     
     echo '
         
-        <form class="form-horizontal" method="post" action="#">
+        <form class="form-horizontal" method="post" action="../consultas/addSancion.php">
                     <div class="row">
                         <div class="col-md-6 col-sm-12">
 

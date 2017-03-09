@@ -27,6 +27,16 @@ $(document).ready(function(){
         alert("me cago en la puta");
     })
 
+    $('#sanc_ult_hora').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("listSanccionesUltimaHora.php");
+    })
+
+    $('#sanc_aula_convivencia').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("listSanccionesAulaConv.php");
+    })
+
 });
 
 

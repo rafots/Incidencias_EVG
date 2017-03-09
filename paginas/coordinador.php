@@ -165,12 +165,12 @@ if(isset($_SESSION['coordinador']))
                                 <table class="table">
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">7ª hora</a>
+                                            <a id="sanc_ult_hora">7ª hora</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Aula de convivencia</a> <span class="label label-info">5</span>
+                                            <a id="sanc_aula_convivencia">Aula de convivencia</a> <span class="label label-info">5</span>
                                         </td>
                                     </tr>
                                     <tr>

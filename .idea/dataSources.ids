@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="incidenciasevg@localhost" uuid="87b55b8f-e02c-408d-bd8a-a741ba679fc2">
+  <data-source name="magentoe_incidenciasevg@localhost" uuid="99bb06d7-c4d1-49ad-9a2c-2a9105bb831b">
     <database-info product="MySQL" version="5.6.26" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
     <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
-      <schema id="1" name="incidenciasevg"/>
+      <schema id="1" name="magentoe_incidenciasevg"/>
       <table id="2" parent="1" name="alumnos"/>
       <table id="3" parent="1" name="anotaciones"/>
       <table id="4" parent="1" name="etapas"/>
@@ -43,512 +43,529 @@
         <mandatory>1</mandatory>
         <data-type>char(6)</data-type>
       </column>
-      <index id="22" parent="2" name="fk_secciones_alumnos">
+      <column id="22" parent="2" name="numPartes">
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <index id="23" parent="2" name="fk_secciones_alumnos">
         <columns>idSeccion</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="23" parent="2" name="PRIMARY">
+      <index id="24" parent="2" name="numPartes">
+        <columns>numPartes</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="25" parent="2" name="PRIMARY">
         <columns>nia</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="24" parent="2" name="fk_secciones_alumnos">
+      <foreign-key id="26" parent="2" name="fk_secciones_alumnos">
         <columns>idSeccion</columns>
         <ref-key>~.secciones.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="25" parent="3" name="numAnotacion">
+      <column id="27" parent="3" name="numAnotacion">
         <mandatory>1</mandatory>
         <data-type>smallint(5) unsigned</data-type>
       </column>
-      <column id="26" parent="3" name="tipoAnotacion">
+      <column id="28" parent="3" name="tipoAnotacion">
         <mandatory>1</mandatory>
         <data-type>tinyint(4)</data-type>
       </column>
-      <column id="27" parent="3" name="nia">
+      <column id="29" parent="3" name="nia">
         <mandatory>1</mandatory>
         <data-type>char(7)</data-type>
       </column>
-      <column id="28" parent="3" name="hora_Registro">
+      <column id="30" parent="3" name="hora_Registro">
         <mandatory>1</mandatory>
         <data-type>datetime</data-type>
       </column>
-      <column id="29" parent="3" name="userCreacion">
+      <column id="31" parent="3" name="userCreacion">
         <mandatory>1</mandatory>
         <data-type>char(1)</data-type>
       </column>
-      <column id="30" parent="3" name="leida">
+      <column id="32" parent="3" name="leida">
         <mandatory>1</mandatory>
         <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="31" parent="3" name="verProfesores">
+      <column id="33" parent="3" name="verProfesores">
         <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <index id="32" parent="3" name="anotaciones_1">
+      <index id="34" parent="3" name="anotaciones_1">
         <columns>tipoAnotacion</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="33" parent="3" name="anotaciones_2">
+      <index id="35" parent="3" name="anotaciones_2">
         <columns>nia</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="34" parent="3" name="PRIMARY">
+      <key id="36" parent="3" name="PRIMARY">
         <columns>numAnotacion</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="35" parent="3" name="anotaciones_1">
+      <foreign-key id="37" parent="3" name="anotaciones_1">
         <columns>tipoAnotacion</columns>
         <ref-key>~.tipos_anotaciones.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="36" parent="3" name="anotaciones_2">
+      <foreign-key id="38" parent="3" name="anotaciones_2">
         <columns>nia</columns>
         <ref-key>~.alumnos.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="37" parent="4" name="codEtapa">
+      <column id="39" parent="4" name="codEtapa">
         <mandatory>1</mandatory>
         <data-type>char(5)</data-type>
       </column>
-      <column id="38" parent="4" name="nombre">
+      <column id="40" parent="4" name="nombre">
         <mandatory>1</mandatory>
         <data-type>varchar(30)</data-type>
       </column>
-      <column id="39" parent="4" name="coordinador">
+      <column id="41" parent="4" name="coordinador">
         <mandatory>1</mandatory>
         <data-type>tinyint(3) unsigned</data-type>
       </column>
-      <index id="40" parent="4" name="fk_etapas_profesores">
+      <index id="42" parent="4" name="fk_etapas_profesores">
         <columns>coordinador</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="41" parent="4" name="PRIMARY">
+      <key id="43" parent="4" name="PRIMARY">
         <columns>codEtapa</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="42" parent="4" name="fk_etapas_profesores">
+      <foreign-key id="44" parent="4" name="fk_etapas_profesores">
         <columns>coordinador</columns>
         <ref-key>~.profesores.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="43" parent="5" name="idUsuario">
+      <column id="45" parent="5" name="idUsuario">
         <mandatory>1</mandatory>
         <data-type>tinyint(3) unsigned</data-type>
       </column>
-      <column id="44" parent="5" name="nombre">
+      <column id="46" parent="5" name="nombre">
         <mandatory>1</mandatory>
         <data-type>varchar(20)</data-type>
       </column>
-      <column id="45" parent="5" name="pass">
+      <column id="47" parent="5" name="pass">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <key id="46" parent="5" name="PRIMARY">
+      <key id="48" parent="5" name="PRIMARY">
         <columns>idUsuario</columns>
         <primary>1</primary>
       </key>
-      <column id="47" parent="6" name="idHora">
+      <column id="49" parent="6" name="idHora">
         <mandatory>1</mandatory>
         <data-type>tinyint(3) unsigned</data-type>
       </column>
-      <column id="48" parent="6" name="nombre">
+      <column id="50" parent="6" name="nombre">
         <mandatory>1</mandatory>
         <data-type>varchar(20)</data-type>
       </column>
-      <key id="49" parent="6" name="PRIMARY">
+      <key id="51" parent="6" name="PRIMARY">
         <columns>idHora</columns>
         <primary>1</primary>
       </key>
-      <column id="50" parent="7" name="idIncidencia">
+      <column id="52" parent="7" name="idIncidencia">
         <mandatory>1</mandatory>
         <data-type>smallint(5) unsigned</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="51" parent="7" name="nia">
+      <column id="53" parent="7" name="nia">
         <mandatory>1</mandatory>
         <data-type>char(7)</data-type>
       </column>
-      <column id="52" parent="7" name="idTipo">
+      <column id="54" parent="7" name="idTipo">
         <mandatory>1</mandatory>
         <data-type>tinyint(3) unsigned</data-type>
       </column>
-      <column id="53" parent="7" name="usuario">
+      <column id="55" parent="7" name="usuario">
         <mandatory>1</mandatory>
         <data-type>tinyint(3) unsigned</data-type>
       </column>
-      <column id="54" parent="7" name="codAsignatura">
+      <column id="56" parent="7" name="codAsignatura">
         <data-type>varchar(30)</data-type>
       </column>
-      <column id="55" parent="7" name="idHora">
+      <column id="57" parent="7" name="idHora">
         <mandatory>1</mandatory>
         <data-type>tinyint(3) unsigned</data-type>
       </column>
-      <column id="56" parent="7" name="fecha_ocurrencia">
+      <column id="58" parent="7" name="fecha_ocurrencia">
         <mandatory>1</mandatory>
         <data-type>date</data-type>
       </column>
-      <column id="57" parent="7" name="fecha_registro">
+      <column id="59" parent="7" name="fecha_registro">
         <mandatory>1</mandatory>
         <data-type>datetime</data-type>
       </column>
-      <column id="58" parent="7" name="descripcion">
+      <column id="60" parent="7" name="descripcion">
         <mandatory>1</mandatory>
         <data-type>varchar(300)</data-type>
       </column>
-      <column id="59" parent="7" name="leidaT">
+      <column id="61" parent="7" name="leidaT">
         <mandatory>1</mandatory>
         <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="60" parent="7" name="leidaC">
+      <column id="62" parent="7" name="leidaC">
         <mandatory>1</mandatory>
         <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="61" parent="7" name="archivadaT">
+      <column id="63" parent="7" name="archivadaT">
         <mandatory>1</mandatory>
         <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="62" parent="7" name="archivadaC">
+      <column id="64" parent="7" name="archivadaC">
         <mandatory>1</mandatory>
         <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <index id="63" parent="7" name="fk_incidencias_alumno">
+      <index id="65" parent="7" name="fk_incidencias_alumno">
         <columns>nia</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="64" parent="7" name="fk_incidencias_hora">
+      <index id="66" parent="7" name="fk_incidencias_hora">
         <columns>idHora</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="65" parent="7" name="fk_incidencias_profesor">
+      <index id="67" parent="7" name="fk_incidencias_profesor">
         <columns>usuario</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="66" parent="7" name="fk_incidencias_tipo">
+      <index id="68" parent="7" name="fk_incidencias_tipo">
         <columns>idTipo</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="67" parent="7" name="PRIMARY">
+      <key id="69" parent="7" name="PRIMARY">
         <columns>idIncidencia</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="68" parent="7" name="fk_incidencias_alumno">
+      <foreign-key id="70" parent="7" name="fk_incidencias_alumno">
         <columns>nia</columns>
         <ref-key>~.alumnos.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="69" parent="7" name="fk_incidencias_hora">
+      <foreign-key id="71" parent="7" name="fk_incidencias_hora">
         <columns>idHora</columns>
         <ref-key>~.horas.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="70" parent="7" name="fk_incidencias_profesor">
+      <foreign-key id="72" parent="7" name="fk_incidencias_profesor">
         <columns>usuario</columns>
         <ref-key>~.profesores.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="71" parent="7" name="fk_incidencias_tipo">
+      <foreign-key id="73" parent="7" name="fk_incidencias_tipo">
         <columns>idTipo</columns>
         <ref-key>~.tipo_incidencias.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="72" parent="8" name="idMotivo">
+      <column id="74" parent="8" name="idMotivo">
         <mandatory>1</mandatory>
         <data-type>tinyint(3) unsigned</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="73" parent="8" name="motivo">
+      <column id="75" parent="8" name="motivo">
         <mandatory>1</mandatory>
-        <data-type>varchar(20)</data-type>
+        <data-type>varchar(40)</data-type>
       </column>
-      <key id="74" parent="8" name="PRIMARY">
+      <key id="76" parent="8" name="PRIMARY">
         <columns>idMotivo</columns>
         <primary>1</primary>
       </key>
-      <column id="75" parent="9" name="idUsuario">
+      <column id="77" parent="9" name="idUsuario">
         <mandatory>1</mandatory>
         <data-type>tinyint(3) unsigned</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="76" parent="9" name="usuario">
+      <column id="78" parent="9" name="usuario">
         <mandatory>1</mandatory>
         <data-type>varchar(20)</data-type>
       </column>
-      <column id="77" parent="9" name="correo">
+      <column id="79" parent="9" name="correo">
         <mandatory>1</mandatory>
         <data-type>varchar(60)</data-type>
       </column>
-      <column id="78" parent="9" name="nombre">
+      <column id="80" parent="9" name="nombre">
         <mandatory>1</mandatory>
         <data-type>varchar(50)</data-type>
       </column>
-      <column id="79" parent="9" name="pass">
+      <column id="81" parent="9" name="pass">
         <mandatory>1</mandatory>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="80" parent="9" name="profesor">
+      <column id="82" parent="9" name="profesor">
         <mandatory>1</mandatory>
         <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
       </column>
-      <column id="81" parent="9" name="gestor">
+      <column id="83" parent="9" name="gestor">
         <mandatory>1</mandatory>
         <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="82" parent="9" name="tutor">
+      <column id="84" parent="9" name="tutor">
         <mandatory>1</mandatory>
         <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="83" parent="9" name="coordinador">
+      <column id="85" parent="9" name="coordinador">
         <mandatory>1</mandatory>
         <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="84" parent="9" name="baja_temporal">
+      <column id="86" parent="9" name="baja_temporal">
         <mandatory>1</mandatory>
         <data-type>tinyint(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <index id="85" parent="9" name="usuario">
+      <index id="87" parent="9" name="usuario">
         <columns>usuario</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="86" parent="9" name="PRIMARY">
+      <key id="88" parent="9" name="PRIMARY">
         <columns>idUsuario</columns>
         <primary>1</primary>
       </key>
-      <key id="87" parent="9" name="usuario">
+      <key id="89" parent="9" name="usuario">
         <columns>usuario</columns>
         <underlying-index>usuario</underlying-index>
       </key>
-      <column id="88" parent="10" name="profesor">
+      <column id="90" parent="10" name="profesor">
         <mandatory>1</mandatory>
         <data-type>tinyint(3) unsigned</data-type>
-        <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="89" parent="10" name="idSeccion">
+      <column id="91" parent="10" name="idSeccion">
         <mandatory>1</mandatory>
         <data-type>char(5)</data-type>
-        <default-expression>&apos;&apos;</default-expression>
       </column>
-      <index id="90" parent="10" name="fk_seccion_prof_secc">
+      <index id="92" parent="10" name="fk_seccion_prof_secc">
         <columns>idSeccion</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="91" parent="10" name="PRIMARY">
+      <key id="93" parent="10" name="PRIMARY">
         <columns>profesor
 idSeccion</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="92" parent="10" name="fk_profesor_prof_secc">
+      <foreign-key id="94" parent="10" name="fk_profesor_prof_secc">
         <columns>profesor</columns>
         <ref-key>~.profesores.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="93" parent="10" name="fk_seccion_prof_secc">
+      <foreign-key id="95" parent="10" name="fk_seccion_prof_secc">
         <columns>idSeccion</columns>
         <ref-key>~.secciones.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="94" parent="11" name="idSancion">
+      <column id="96" parent="11" name="idSancion">
+        <mandatory>1</mandatory>
+        <data-type>smallint(5) unsigned</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="97" parent="11" name="idIncidencia">
         <mandatory>1</mandatory>
         <data-type>smallint(5) unsigned</data-type>
       </column>
-      <column id="95" parent="11" name="idIncidencia">
-        <mandatory>1</mandatory>
-        <data-type>smallint(5) unsigned</data-type>
-      </column>
-      <column id="96" parent="11" name="tipoSancion">
+      <column id="98" parent="11" name="tipoSancion">
         <mandatory>1</mandatory>
         <data-type>tinyint(3) unsigned</data-type>
       </column>
-      <column id="97" parent="11" name="fecha_inicio">
+      <column id="99" parent="11" name="fecha_inicio">
         <mandatory>1</mandatory>
         <data-type>date</data-type>
       </column>
-      <column id="98" parent="11" name="fecha_fin">
+      <column id="100" parent="11" name="fecha_fin">
         <data-type>date</data-type>
       </column>
-      <column id="99" parent="11" name="observacion">
+      <column id="101" parent="11" name="observacion">
         <mandatory>1</mandatory>
         <data-type>varchar(300)</data-type>
       </column>
-      <column id="100" parent="11" name="idMotivo">
+      <column id="102" parent="11" name="idMotivo">
         <mandatory>1</mandatory>
         <data-type>tinyint(3) unsigned</data-type>
       </column>
-      <column id="101" parent="11" name="ultima_sancion">
-        <mandatory>1</mandatory>
-        <data-type>tinyint(3) unsigned</data-type>
-      </column>
-      <index id="102" parent="11" name="fk_incidencias_sanciones">
+      <index id="103" parent="11" name="fk_incidencias_sanciones">
         <columns>idIncidencia</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="103" parent="11" name="fk_motivo_sancion">
+      <index id="104" parent="11" name="fk_motivo_sancion">
         <columns>idMotivo</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="104" parent="11" name="fk_tipo_sancion_sanciones">
+      <index id="105" parent="11" name="fk_tipo_sancion_sanciones">
         <columns>tipoSancion</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="105" parent="11" name="PRIMARY">
+      <key id="106" parent="11" name="PRIMARY">
         <columns>idSancion</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="106" parent="11" name="fk_incidencias_sanciones">
+      <foreign-key id="107" parent="11" name="fk_incidencias_sanciones">
         <columns>idIncidencia</columns>
         <ref-key>~.incidencias.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="107" parent="11" name="fk_motivo_sancion">
+      <foreign-key id="108" parent="11" name="fk_motivo_sancion">
         <columns>idMotivo</columns>
         <ref-key>~.motivo.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="108" parent="11" name="fk_tipo_sancion_sanciones">
+      <foreign-key id="109" parent="11" name="fk_tipo_sancion_sanciones">
         <columns>tipoSancion</columns>
         <ref-key>~.tipo_sancion.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="109" parent="12" name="idSeccion">
+      <column id="110" parent="12" name="idSeccion">
         <mandatory>1</mandatory>
         <data-type>char(6)</data-type>
       </column>
-      <column id="110" parent="12" name="nombre">
+      <column id="111" parent="12" name="nombre">
         <mandatory>1</mandatory>
         <data-type>varchar(60)</data-type>
       </column>
-      <column id="111" parent="12" name="tutor">
+      <column id="112" parent="12" name="tutor">
         <mandatory>1</mandatory>
         <data-type>tinyint(3) unsigned</data-type>
       </column>
-      <column id="112" parent="12" name="codEtapa">
+      <column id="113" parent="12" name="codEtapa">
         <mandatory>1</mandatory>
         <data-type>char(5)</data-type>
       </column>
-      <index id="113" parent="12" name="fk_etapas_secciones">
+      <index id="114" parent="12" name="fk_etapas_secciones">
         <columns>codEtapa</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="114" parent="12" name="fk_tutores_secciones">
+      <index id="115" parent="12" name="fk_tutores_secciones">
         <columns>tutor</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="115" parent="12" name="PRIMARY">
+      <key id="116" parent="12" name="PRIMARY">
         <columns>idSeccion</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="116" parent="12" name="fk_etapas_secciones">
+      <foreign-key id="117" parent="12" name="fk_etapas_secciones">
         <columns>codEtapa</columns>
         <ref-key>~.etapas.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="117" parent="12" name="fk_tutores_secciones">
+      <foreign-key id="118" parent="12" name="fk_tutores_secciones">
         <columns>tutor</columns>
         <ref-key>~.profesores.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="118" parent="13" name="idTipo">
+      <column id="119" parent="13" name="idTipo">
         <mandatory>1</mandatory>
         <data-type>tinyint(3) unsigned</data-type>
       </column>
-      <column id="119" parent="13" name="nombre">
+      <column id="120" parent="13" name="nombre">
         <mandatory>1</mandatory>
         <data-type>varchar(30)</data-type>
       </column>
-      <column id="120" parent="13" name="codEtapa">
+      <column id="121" parent="13" name="gestiona">
+        <mandatory>1</mandatory>
+        <data-type>char(1)</data-type>
+      </column>
+      <column id="122" parent="13" name="codEtapa">
         <mandatory>1</mandatory>
         <data-type>char(5)</data-type>
       </column>
-      <index id="121" parent="13" name="fk_tipos_incidencias">
+      <index id="123" parent="13" name="fk_tipos_incidencias">
         <columns>codEtapa</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="122" parent="13" name="PRIMARY">
+      <key id="124" parent="13" name="PRIMARY">
         <columns>idTipo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="123" parent="13" name="fk_tipos_incidencias">
+      <foreign-key id="125" parent="13" name="fk_tipos_incidencias">
         <columns>codEtapa</columns>
         <ref-key>~.etapas.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="124" parent="14" name="tipoSancion">
+      <column id="126" parent="14" name="tipoSancion">
         <mandatory>1</mandatory>
         <data-type>tinyint(3) unsigned</data-type>
       </column>
-      <column id="125" parent="14" name="nombre">
+      <column id="127" parent="14" name="nombre">
         <mandatory>1</mandatory>
         <data-type>varchar(20)</data-type>
       </column>
-      <key id="126" parent="14" name="PRIMARY">
+      <key id="128" parent="14" name="PRIMARY">
         <columns>tipoSancion</columns>
         <primary>1</primary>
       </key>
-      <column id="127" parent="15" name="tipoSancion">
+      <column id="129" parent="15" name="tipoSancion">
         <mandatory>1</mandatory>
         <data-type>tinyint(3) unsigned</data-type>
       </column>
-      <column id="128" parent="15" name="idTipo">
+      <column id="130" parent="15" name="idTipo">
         <mandatory>1</mandatory>
         <data-type>tinyint(3) unsigned</data-type>
       </column>
-      <index id="129" parent="15" name="fk_tipo_sancion_incidencias_2">
+      <index id="131" parent="15" name="fk_tipo_sancion_incidencias_2">
         <columns>idTipo</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="130" parent="15" name="PRIMARY">
+      <key id="132" parent="15" name="PRIMARY">
         <columns>tipoSancion
 idTipo</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="131" parent="15" name="fk_tipo_sancion_incidencias_1">
+      <foreign-key id="133" parent="15" name="fk_tipo_sancion_incidencias_1">
         <columns>tipoSancion</columns>
         <ref-key>~.tipo_sancion.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <foreign-key id="132" parent="15" name="fk_tipo_sancion_incidencias_2">
+      <foreign-key id="134" parent="15" name="fk_tipo_sancion_incidencias_2">
         <columns>idTipo</columns>
         <ref-key>~.tipo_incidencias.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="133" parent="16" name="tipoAnotacion">
+      <column id="135" parent="16" name="tipoAnotacion">
         <mandatory>1</mandatory>
         <data-type>tinyint(4)</data-type>
       </column>
-      <column id="134" parent="16" name="nombre">
+      <column id="136" parent="16" name="nombre">
         <mandatory>1</mandatory>
         <data-type>varchar(40)</data-type>
       </column>
-      <column id="135" parent="16" name="codEtapa">
+      <column id="137" parent="16" name="codEtapa">
         <mandatory>1</mandatory>
         <data-type>char(5)</data-type>
       </column>
-      <index id="136" parent="16" name="fk_tipos_Anotaciones">
+      <index id="138" parent="16" name="fk_tipos_Anotaciones">
         <columns>codEtapa</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="137" parent="16" name="PRIMARY">
+      <key id="139" parent="16" name="PRIMARY">
         <columns>tipoAnotacion</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="138" parent="16" name="fk_tipos_Anotaciones">
+      <foreign-key id="140" parent="16" name="fk_tipos_Anotaciones">
         <columns>codEtapa</columns>
         <ref-key>~.etapas.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>

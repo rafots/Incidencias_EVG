@@ -25,10 +25,10 @@
 
         $obj->consultas($sql);
 
-        if ($this->resultado->num_rows > 0) {
+        if ($obj->numFilas() > 0) {
 
             echo '<h2>PROFESORES</h2>';
-            echo '<table class="table table-striped">
+            echo '<table class="table table-striped table-responsive">
                 <thead>
                     <tr>
                         <th>Nombre</th>
@@ -39,11 +39,11 @@
                 <tbody>
                 ';
 
-            while ($row = $this->resultado->fetch_assoc()) {
+            while ($row = $obj->devolverFilas()) {
                 echo '<tr>';
                 echo '<td>' . $row['idUsuario'] . '</td>';
                 echo '<td>' . $row['nombre'] . '</td>';
-                echo '<td><a class="btn btn-success" href="formModProfesor.php?id='.$row["id"].'">"<span class="glyphicon glyphicon-cog"></span>Modificar</a></td>';
+                echo '<td><a class="btn btn-success" href="../paginas/formModProfesor.php?id='.$row["id"].'"><span class="glyphicon glyphicon-cog"></span>Modificar</a></td>';
                 echo '</tr>';
             }
             echo '</tbody>';
