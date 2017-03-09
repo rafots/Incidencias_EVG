@@ -79,7 +79,7 @@ INSERT INTO `alumnos` (`nia`, `nombreCompleto`, `telefono`, `sexo`, `idSeccion`,
 --
 
 CREATE TABLE `anotaciones` (
-  `numAnotacion` smallint(5) UNSIGNED NOT NULL,
+  `numAnotacion` smallint(5) UNSIGNED AUTO_INCREMENT NOT NULL,
   `tipoAnotacion` tinyint(4) NOT NULL,
   `nia` char(7) NOT NULL,
   `hora_Registro` datetime NOT NULL,

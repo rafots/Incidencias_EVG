@@ -30,8 +30,7 @@ require_once "validaranotaciones.php";
 
                         echo ' <form action="crearanotaciones.php" method="post" ">';
                             echo'<div class="form-group">
-                                    <label>NumeroAnotacion</label>
-                                    <input type="text" name="numInc" class="form-control">
+                                 
                                     </div>
                                     <div class="form-group">
                                     <label>Tipo al que pertenece</label>';
@@ -57,9 +56,10 @@ require_once "validaranotaciones.php";
                             $prof = 0;
                             if (isset($_POST["profesores"]))
                                 $prof = 1;
-                            $query = "Insert into anotaciones VALUES (" . $_POST["numInc"] . "," . $_POST["tipo"] . ",'" . $_POST["nia"] . "','" . $fecha . "','" . $opc . "', " . $cero . "," . $prof . ")";
+                            $query = "Insert into anotaciones VALUES ('DEFAULT'," . $_POST["tipo"] . ",'" . $_POST["nia"] . "','" . $fecha . "','" . $opc . "', " . $cero . "," . $prof . ")";
                             $objeto->consultas($query);
-                            echo $query;
+
+
                         }
     }
 

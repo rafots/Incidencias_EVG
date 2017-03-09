@@ -2,7 +2,7 @@
 session_start();
 if(isset($_SESSION['profesor']))
 {
-
+    $_SESSION["activa"]="p";
 
 echo'
 <!DOCTYPE html>

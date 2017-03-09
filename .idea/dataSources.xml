@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="magentoe_incidenciasevg@localhost" uuid="99bb06d7-c4d1-49ad-9a2c-2a9105bb831b">
+    <data-source source="LOCAL" name="magentoe_incidenciasevg@localhost" uuid="4148d614-078c-4c87-8f16-5858202d40a1">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>

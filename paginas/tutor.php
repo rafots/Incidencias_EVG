@@ -5,6 +5,7 @@ if(!isset($_SESSION["tutor"])){
     echo "Acceso prohibido";
 
 }else{
+    $_SESSION["activa"]="t";
     echo '
      <!DOCTYPE html>
      <html lang="en">
