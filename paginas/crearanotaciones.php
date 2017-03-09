@@ -1,8 +1,8 @@
 <?php
 require_once "validaranotaciones.php";
 
-echo'<script type="text/javascript" src="../sources/bootstrap.js"></script>
-     <script type="text/javascript" src="../sources/ajaxCoordinador.js"></script>';
+echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>';
+echo '<script type="text/javascript" src="../sources/ajax.js"></script>';
 
     function coordinador(){
         require_once '../procedimientos/procedimientos.php';
@@ -45,13 +45,14 @@ echo'<script type="text/javascript" src="../sources/bootstrap.js"></script>
                                         echo'<option value="'.$fila["tipoAnotacion"].'">'.$fila["nombre"].'</option>';
                                     }
                                     echo'</select>';
-
+                                    echo '<div class="col-md-12 text-center" id="easy2">';
                                     echo'<br/>
                                     <div class="form-group">
                                     <label>Habilitar Profesores</label>
                                     <input type="checkbox" name="profesores">
                                     </div>
                                     <input class="btn btn-success" type="submit" name="boton" value="Crear anotacion">';
+
                         if(isset($_POST["boton"])) {
 
                         }

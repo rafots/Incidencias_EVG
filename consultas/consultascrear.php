@@ -1,9 +1,10 @@
 <?php
 
 require_once "../procedimientos/procedimientos.php";
-
-$conexion = new procedimientos();
-$conexion->conectar();
+echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>';
+echo '<script type="text/javascript" src="../sources/ajax.js"></script>';
+$obj = new procedimientos();
+$obj->conectar();
 
 if(isset($_REQUEST['idSeccion'])) {
     $consultasecc="Select idSeccion,secciones.nombre from tipos_anotaciones
@@ -12,13 +13,12 @@ on tipos_anotaciones.codEtapa = etapas.codEtapa
 INNER join secciones
 ON etapas.codEtapa = secciones.codEtapa
 where tipoAnotacion= '".$_GET["idSeccion"]."'";
-    $objeto->consultas($consultasecc);
-    if($objeto->numFilas()>0){
+    $obj->consultas($consultasecc);
+    if($obj->numFilas()>0){
         echo '<div class="row">';
-        echo '<div class="col-md-12 text-center"><h2>Secciones</h2></div>';
-        echo '<div class="col-md-12 text-center">';
+        echo '<div class="col-md-12 text-center" id="desplegable2">';
         echo '<div class="form-group">';
-        echo '<select id="desplegable1">';
+        echo '<select class="form-control" >';
         echo '<option value>Seleccione una seccion</option>';
         while($fila = $obj->devolverFilas())
         {
@@ -27,8 +27,8 @@ where tipoAnotacion= '".$_GET["idSeccion"]."'";
         echo '</select>';
         echo '</div>';
         echo '</div>';
-        echo '<div class="col-md-12 text-center" id="secciones">';
     }
+
 
 }
 

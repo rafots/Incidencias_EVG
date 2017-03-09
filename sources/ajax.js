@@ -142,8 +142,9 @@ $(document).ready(function(){
             type: 'GET',
             data: parametros,
             success: function(parametros) {
-                $('#alumnos').remove();
-                $('#secciones').append(parametros);
+                $('#desplegable2').remove();
+                $('#easy2').append(parametros);
+                console.log('entra');
 
             }
         });
