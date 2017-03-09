@@ -24,18 +24,21 @@ session_start();
         {
             $_SESSION['usuario']=$usuario;
             $_SESSION['coordinador']=$coordinador;
-            $query = 'SELECT codEtapa FROM etapas t1 
+            $query = 'SELECT t1.codEtapa, t2.nombre, idSeccion FROM etapas t1 
 	                    INNER JOIN profesores t2 
-                            ON t1.coordinador = t2.idUsuario
+                            ON (t1.coordinador = t2.idUsuario)
+                            INNER JOIN secciones ON (secciones.tutor = t2.idUsuario)
                         WHERE t2.idUsuario = ? ';
 
             $sentencia = $obj->consultasPreparadas($query);
             $sentencia->bind_param('i',$_SESSION['idUsuario']);
             $_SESSION['idUsuario']=$idUsuario;
             $sentencia->execute();
-            $sentencia->bind_result($codEtapa);
+            $sentencia->bind_result($codEtapa, $nombre, $idSeccion);
             $sentencia->fetch();
             $_SESSION['codEtapa']=$codEtapa;
+            $_SESSION['idSeccion']=$idSeccion;
+            $_SESSION['nombre'] = $nombre;
             $_SESSION['tutor']=$tutor;
             $_SESSION['profesor']=$profesor;
             header('Location: ../paginas/coordinador.php');
@@ -45,17 +48,19 @@ session_start();
             {
                 $_SESSION['coordinador']=$coordinador;
                 $_SESSION['profesor']=$profesor;
-                $query = 'SELECT codEtapa FROM etapas t1 
+                $query = 'SELECT t1.codEtapa, idSeccion FROM etapas t1 
 	                    INNER JOIN profesores t2 
-                            ON t1.coordinador = t2.idUsuario
+                            ON (t1.coordinador = t2.idUsuario)
+                            INNER JOIN secciones ON(secciones.tutor = t2.idUsuario)
                         WHERE t2.idUsuario = ? ';
                 $sentencia = $obj->consultasPreparadas($query);
-                $sentencia->bind_param('i', $_SESSION['idUsuario']);
+                $sentencia->bind_param('i',$_SESSION['idUsuario']);
                 $_SESSION['idUsuario']=$idUsuario;
                 $sentencia->execute();
-                $sentencia->bind_result($codEtapa);
+                $sentencia->bind_result($codEtapa, $idSeccion);
                 $sentencia->fetch();
                 $_SESSION['codEtapa']=$codEtapa;
+                $_SESSION['idSeccion']=$idSeccion;
                 header('Location: ../paginas/coordinador.php');
             }
             else
@@ -63,14 +68,27 @@ session_start();
             {
                 $_SESSION['usuario']=$usuario;
                 $_SESSION['tutor']=$tutor;
+                $query = 'SELECT t1.codEtapa, idSeccion FROM etapas t1 
+	                    INNER JOIN profesores t2 
+                            ON (t1.coordinador = t2.idUsuario)
+                            INNER JOIN secciones ON(secciones.tutor = t2.idUsuario)
+                        WHERE t2.idUsuario = ? ';
+                $sentencia = $obj->consultasPreparadas($query);
+                $sentencia->bind_param('i',$_SESSION['idUsuario']);
+                $_SESSION['idUsuario']=$idUsuario;
+                $sentencia->execute();
+                $sentencia->bind_result($codEtapa, $idSeccion);
+                $sentencia->fetch();
+                $_SESSION['codEtapa']=$codEtapa;
+                $_SESSION['idSeccion']=$idSeccion;
                 $_SESSION['profesor']=$profesor;
                 header('Location: ../paginas/tutor.php');
             }
-            else
-                    $_SESSION['usuario']=$usuario;
-                    $_SESSION['profesor']=$profesor;
-                    header('Location: ../paginas/profesor.php');
-
+            else{
+                $_SESSION['usuario']=$usuario;
+                $_SESSION['profesor']=$profesor;
+                header('Location: ../paginas/profesor.php');
+            }
     }
     else{
         header('Location: ../paginas/inicioSesion.php');

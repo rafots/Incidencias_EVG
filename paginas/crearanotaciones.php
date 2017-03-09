@@ -50,7 +50,7 @@ require_once "validaranotaciones.php";
                                     <label>Habilitar Profesores</label>
                                     <input type="checkbox" name="profesores">
                                     </div>
-                                    <input type="submit" name="boton" value="Crear anotacion">';
+                                    <input class="btn btn-success" type="submit" name="boton" value="Crear anotacion">';
                         if(isset($_POST["boton"])) {
                             $cero = 0;
                             $prof = 0;

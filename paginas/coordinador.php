@@ -44,8 +44,12 @@ if(isset($_SESSION['coordinador']))
                     if(isset($_SESSION['coordinador']))
                     {
                         echo '<a class=" btn btn-primary btn-success disabled">C</a>';
-                        echo 'Coordinador de '.$_SESSION["codEtapa"].'';
+                        //echo 'Coordinador de '.$_SESSION["codEtapa"].'';
                     }
+                    echo '<br/>';
+                    echo $_SESSION['nombre'];
+                    echo '<br/>';
+                    echo 'Cordinador de '.$_SESSION["codEtapa"].'';
                     echo ' 
                     
                 </div>

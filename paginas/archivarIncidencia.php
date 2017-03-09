@@ -12,6 +12,6 @@ if(!isset($_SESSION["usuario"])){
     echo "Acceso Prohibido";
 }else{
     $conexion->consultas($sql);
-    //header("Location: ultimasIncidenciasTutor.php");
+    header("Location: tutor.php");
 }
 ?>
