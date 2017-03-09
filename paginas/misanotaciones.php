@@ -68,7 +68,6 @@ function visualizar($objeto){
                                 </div>
                                 <div class='modal-footer'>
                                     <button type='button' class='btn btn-default' data-dismiss='modal'>Cerrar</button>
-                                    <a class='btn btn-default' id='modificaranotaciones' href='modificaranotaciones.php?anot=".$fila["numAnotacion"]."'>Modificar</a>
                                     <a class='btn btn-default' href='eliminaranotaciones.php?anot=".$fila["numAnotacion"]."'>Eliminar</a>
                                 </div>
                             </div>

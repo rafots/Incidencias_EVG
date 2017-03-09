@@ -129,4 +129,27 @@ $(document).ready(function(){
     });
 
 
+    $('#desplegable1').on("change",function(e){
+        e.preventDefault();
+
+        var selectedValue = this.value;
+        var parametros = {
+            "idSeccion" : selectedValue
+        };
+        //make the ajax call
+        $.ajax({
+            url: '../consultas/consultascrear.php',
+            type: 'GET',
+            data: parametros,
+            success: function(parametros) {
+                $('#alumnos').remove();
+                $('#secciones').append(parametros);
+
+            }
+        });
+
+    });
+        $('#cerrarModal').on("click",function(e){
+            $('#contenidoAlum').empty();
+        });
 });

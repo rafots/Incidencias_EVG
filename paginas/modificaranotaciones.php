@@ -2,27 +2,23 @@
 
 require 'validaranotaciones.php';
 
-function coordinador($opc){
+function coordinador(){
     require_once '../procedimientos/procedimientos.php';
-    $bd = new conexion();
     $objeto = new procedimientos();
     $objeto->conectar();
-    $i=0;
 
-    visualizar($objeto,$opc);
+    visualizar($objeto);
 }
 
-function tutor($opc){
+function tutor(){
     require_once '../procedimientos/procedimientos.php';
-    $bd = new conexion();
     $objeto = new procedimientos();
     $objeto->conectar();
-    $i=0;
 
-    visualizar($objeto,$opc);
+    visualizar($objeto);
 }
 
-function visualizar($objeto,$opc){
+function visualizar($objeto){
 
 
             echo'<h4>Modificar</h4>';
@@ -48,8 +44,7 @@ function visualizar($objeto,$opc){
         if(isset($_POST["modificar"])){
             $query="Update anotaciones SET tipoAnotacion=".$_POST["tipo"].",verProfesores=".$_POST["opcion"]." where numAnotacion='".$_SESSION["anot"]."' ";
             $objeto->consultas($query);
-            echo $query;
-            echo'<script type="text/javascript"> alert("Modificado correctamente");</script>';
+            header('location:coordinador');
         }
 }
 
