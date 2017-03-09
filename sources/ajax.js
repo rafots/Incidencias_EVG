@@ -8,6 +8,10 @@ $(document).ready(function(){
         e.preventDefault();
         $("#cuerpo").load("aulaConvivenciaCoord.php");
     });
+    $('#parteDisciplinario').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("parteDisciplinario.php");
+    });
     $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').focus()
     })

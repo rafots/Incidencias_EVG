@@ -88,7 +88,7 @@ if(isset($_SESSION['coordinador']))
                                     
                                     <tr>
                                         <td>
-                                            <a id="parteseducativos" href="http://www.jquery2dotnet.com">Partes educativos</a>
+                                            <a id="parteseducativos" id="parteDisciplinario">Partes educativos</a>
                                         </td>
                                     </tr>
                                     <tr>
