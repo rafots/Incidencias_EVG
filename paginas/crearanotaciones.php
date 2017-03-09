@@ -58,7 +58,14 @@ require_once "validaranotaciones.php";
                                 $prof = 1;
                             $query = "Insert into anotaciones VALUES ('DEFAULT'," . $_POST["tipo"] . ",'" . $_POST["nia"] . "','" . $fecha . "','" . $opc . "', " . $cero . "," . $prof . ")";
                             $objeto->consultas($query);
-
+                            if($_SESSION["activa"]=="p")
+                                header('location: coordinador.php');
+                            else
+                                if($_SESSION["activa"]=="t")
+                                    header('location: tutor.php');
+                                else
+                                    if($_SESSION["activa"]=="p")
+                                        header('location: profesor.php');
 
                         }
     }

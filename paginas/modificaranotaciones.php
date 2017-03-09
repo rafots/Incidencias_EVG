@@ -1,18 +1,6 @@
 <?php
-session_start();
-$opc;
-if(isset($_SESSION['coordinador'])){
-    $opc="c";
-    coordinador($opc);
-}else{
-    if(isset($_SESSION['tutor'])){
-        $opc="t";
-        tutor($opc);
-    }else{
-        session_destroy();
-        echo 'no tienes permiso para acceder a esta pagina';
-    }
-}
+
+require 'validaranotaciones.php';
 
 function coordinador($opc){
     require_once '../procedimientos/procedimientos.php';

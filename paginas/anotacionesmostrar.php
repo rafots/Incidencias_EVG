@@ -1,17 +1,14 @@
 <?php
 require_once "validaranotaciones.php";
 
-echo 'HOLA';
 function coordinador(){
     require_once "consultadetalleanotacion.php";
-    $objeto=new consultadetalleanotacion();
-    visualizar($objeto->llamar());
+    visualizar($objeto);
 }
 
 function tutor(){
     require_once "consultadetalleanotacion.php";
-    $objeto=new consultadetalleanotacion();
-    visualizar($objeto->llamar());
+    visualizar($objeto);
 }
 
 function visualizar($objeto){

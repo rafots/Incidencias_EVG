@@ -1,4 +1,5 @@
 <?php
+
     require_once "validaranotaciones.php";
 
 function coordinador(){
@@ -8,7 +9,7 @@ function coordinador(){
 
 function visualizar($objeto){
 
-    $query="DELETE from anotaciones where numAnotacion=".$_GET["anot"]."";
+    $query="Update anotaciones SET leida=1 WHERE numAnotacion='".$_GET["anot"]."'";
     $objeto->consultas($query);
     header('Location: coordinador.php');
 }

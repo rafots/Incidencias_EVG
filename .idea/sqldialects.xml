@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/4148d614-078c-4c87-8f16-5858202d40a1/console.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/consultas/consultarIncidenciaIndividual.php" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/consultas/iniciarSesion.php" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/excel/importarAlumnos.php" dialect="MySQL" />
