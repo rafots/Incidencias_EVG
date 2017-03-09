@@ -45,6 +45,8 @@ echo'
                 {
                 echo '<a class=" btn btn-primary btn-success " href="coordinador.php">C</a>';
                 }
+                echo '<br/>';
+                echo $_SESSION['nombre'];
                 echo '
             </div>
         </div>
