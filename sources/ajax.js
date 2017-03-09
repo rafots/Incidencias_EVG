@@ -31,6 +31,30 @@ $(document).ready(function(){
         });
 
     });
+    $('#easy').on("click",function(e){
+        e.preventDefault();
+
+        var date = $('#alumm').find('tbody tr td:first').html();
+        var parametros = {
+            "idIncidencia" : date
+        };
+        //make the ajax call
+        $.ajax({
+            url: '../consultas/consultarIncidenciaIndividual.php',
+            type: 'GET',
+            data: parametros,
+            success: function(parametros) {
+                e.preventDefault();
+                $('#contenidoAlum').empty();
+                $('#contenidoAlum').append(parametros);
+
+            }
+        });
+        $('#cerrarModal').on("click",function(e){
+            $('#contenidoAlum').empty();
+        });
+
+    });
     $('#alumnos').on("change",function(e){
         e.preventDefault();
 
