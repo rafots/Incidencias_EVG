@@ -1,11 +1,6 @@
 <?php
 session_start();
-/**
- * Created by PhpStorm.
- * User: Rafa
- * Date: 26/02/2017
- * Time: 20:37
- */
+
     require '../procedimientos/procedimientos.php';
 
     $obj = new procedimientos();

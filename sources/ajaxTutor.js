@@ -29,6 +29,16 @@ $(document).ready(function(){
         $("#cuerpo").load("misanotaciones.php");
     });
 
+    $('#sancion').on("click", function(e){
+        e.preventDefault();
+        $("#cuerpo").load("formNewSancion.php");
+    });
+
+    $('#visualizarSancion').on("click", function(){
+        e.preventDefault();
+        $("#cuerpo").load("listSancionesMod.php");
+    });
+
     $('#botonBuscar').on("click",function(e){
         e.preventDefault();
 

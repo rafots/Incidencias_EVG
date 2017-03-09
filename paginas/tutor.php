@@ -122,12 +122,12 @@ if(!isset($_SESSION["tutor"])){
                                 <table class="table">
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Poner sanción</a>
+                                            <a id="sancion">Poner sanción</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Visualizar sanciones</a> <span class="label label-info">5</span>
+                                            <a id="visualizarSancion">Visualizar sanciones</a><span class="label label-info">5</span>
                                         </td>
                                     </tr>
                                     <tr>
