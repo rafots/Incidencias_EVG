@@ -1,17 +1,20 @@
 <?php
-
     session_start();
     if(isset($_SESSION['coordinador'])){
-        coordinador();
+                coordinador();
+
+
     }else{
         if(isset($_SESSION['tutor'])){
-            tutor();
+                    tutor();
         }else{
-            session_destroy();
             if(isset($_SESSION['profesor']))
-                profesor();
-            echo 'no tienes permiso para acceder a esta pagina';
+                    profesor();
+
+            else{
+                session_destroy();
+                echo 'no tienes permiso para acceder a esta pagina';
+            }
         }
     }
-
 ?>
