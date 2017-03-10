@@ -28,4 +28,19 @@ $(document).ready(function(){
 
     });
 
+    $("#borrar").on("click", function(e){
+        e.preventDefault();
+
+        var codEtapa = $("#borrar").val();
+        $.ajax({
+            type:"GET",
+            url: '../consultas/deleteEtapa.php?codEtapa='+codEtapa,
+            success: function(data) {
+                e.preventDefault();
+                $('#aniadir').html(data);
+            }
+        });
+
+    });
+
 });

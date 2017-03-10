@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "../procedimientos/procedimientos.php";
 
 $conexion = new procedimientos();
@@ -7,12 +8,14 @@ $conexion->conectar();
 $nombreCoordinador = $_POST["coordinador"];
 
 $sql = "SELECT idUsuario FROM profesores WHERE nombre = '".$nombreCoordinador."'";
-$idCoordinador = $conexion->consultas($sql);
+$conexion->consultas($sql);
+$fila = $conexion->devolverFilas();
+$idCoordinador = $fila["idUsuario"];
 
-$insertar = "INSERT INTO etapas VALUES('".$_POST["codEtapa"]."', '".$_POST["nombre"]."', '".$idCoordinador."')";
+$insertar = "INSERT INTO etapas VALUES('".$_POST["codEtapa"]."', '".$_POST["nombre"]."', ".$idCoordinador.")";
 $conexion->consultas($insertar);
 
-$modificarCoordinador = "UPDATE coordinador = 1 FROM profesores WHERE idUsuario = ".$idCoordinador."";
+$modificarCoordinador = "UPDATE profesores SET coordinador=1 WHERE idUsuario = ".$idCoordinador."";
 $conexion->conectar($modificarCoordinador);
 
-header("Location: gestor.php");
+header("Location: ../paginas/gestor.php");

@@ -9,7 +9,7 @@ if(!isset($_SESSION["gestor"])){
     echo "Acceso prohibido";
 }else{
     echo '
-    <form class="form-horizontal" action="../consultas/alterEtapa.php" method="POST">
+    <form action="../consultas/alterEtapa.php" method="POST">
         <div class="form-group">
             <label for="codEtapa">Codigo Etapa: </label>
             <input type="text" name="codEtapa" id="codEtapa" placeholder="'.$fila["codEtapa"].'">
@@ -27,7 +27,7 @@ if(!isset($_SESSION["gestor"])){
             </select>
         </div>
         <div class="form-group">
-            <input type="submit" name="boton" id="boton" value="Añadir" class="btn btn-success">
+            <input type="submit" name="boton" id="boton" value="Modificar" class="btn btn-success">
         </div>
     </form>';
 }
