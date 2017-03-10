@@ -27,7 +27,7 @@ echo ' <h4>Secciones</h4>';
             echo '<th>'.$fila["tutor"].'</th>';
             echo '<th>'.$fila["codEtapa"].'</th>';
             echo '<th><a href="../consultas/eliminarsecgestor.php?val='.$fila["idSeccion"].' ">Eliminar</a>';
-            echo '<th><a href="modificarsecgestor.php?val='.$fila["idSeccion"].'">Modificar</a>';
+            echo '<th><a href="#">Modificar</a>';
             echo '<tr/>';
 }
 
