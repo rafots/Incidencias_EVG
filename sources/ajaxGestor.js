@@ -13,6 +13,17 @@ $(document).ready(function(){
         $("#aniadir").load("addEtapa.php");
     });
 
+    $("#secciongestor").on("click", function(e){
+        e.preventDefault();
+        $("#cuerpo").load("seccionesgestor.php");
+    });
+
+    $("#aniadirSeccion").on("click", function(e){
+        e.preventDefault();
+        $("#aniadirsec").load("aniadirSeccion.php");
+    });
+
+
     $("#modificar").on("click", function(e){
         e.preventDefault();
 
