@@ -32,4 +32,6 @@ echo'
             </body>
             </html>
             ';
+
+$objeto->cerrarConexion();
 ?>

@@ -23,11 +23,6 @@ $(document).ready(function(){
         $("#aniadirsec").load("../consultas/aniadirSeccion.php");
     });
 
-    $("#aniadirSeccion2").on("click", function(e){
-        e.preventDefault();
-        $("#aniadirsec2").load("aniadirSeccion2.php");
-    });
-
 
     $("#modificar").on("click", function(e){
         e.preventDefault();

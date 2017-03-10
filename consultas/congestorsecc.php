@@ -14,7 +14,7 @@ echo ' <h4>Secciones</h4>';
         echo '<table class="table table-striped table-responsive text-center">';
         echo '<tr>
            <th>IdSeccion</th>
-           <th>Nombre</th>  
+           <th >Nombre</th>  
            <th>Tutor</th>
            <th>Etapas</th>
            <th> </th>
