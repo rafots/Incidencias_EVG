@@ -9,7 +9,7 @@
     require 'simplexlsx.class.php';
     require '../procedimientos/procedimientos.php';
 
-    $xlsx = new SimpleXLSX("user_section.xlsx"); // Con esto directamente le pasamos el archivo que queremos abrir
+    $xlsx = new SimpleXLSX("usu_secc.xlsx"); // Con esto directamente le pasamos el archivo que queremos abrir
     $tabla = $xlsx->rows();  // Nos da todas las filas del Excel
 
     $obj = new procedimientos();
@@ -29,7 +29,7 @@
 
         // extraigo el codigo del profesor
         $obj->consultas($extractUser);
-        $row = $this->resultado->fetch_array();
+        $row = $obj->devolverFilas();
 
         $stmt = $obj->consultasPreparadas($sql);
         $stmt->bind_param("is", $user, $section);
@@ -38,10 +38,9 @@
         $section = $indice[1];
 
         $stmt->execute();
+        $stmt->close();
 
     }
-
-    $stmt->close();
     $obj->cerrarConexion();
 
 ?>
