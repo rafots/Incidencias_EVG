@@ -3,21 +3,19 @@
 
 function coordinador(){
     require_once "../consultas/recogergeteliminar.php";
-    $objeto=new recogergeteliminar();
-    visualizar($objeto->llamar());
+    visualizar($objeto);
 }
 
 function visualizar($objeto){
 
-    $query="DELETE from anotaciones where numAnotacion=".$_SESSION["anot"]."";
+    $query="DELETE from anotaciones where numAnotacion=".$_GET["anot"]."";
     $objeto->consultas($query);
-    header('Location: misanotaciones.php');
+    header('Location: coordinador.php');
 }
 
 function tutor(){
     require_once "../consultas/recogergeteliminar.php";
-    $objeto=new recogergeteliminar();
-    visualizar($objeto->llamar());
+    visualizar($objeto);
 }
 
 ?>

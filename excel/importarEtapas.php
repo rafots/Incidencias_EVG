@@ -11,6 +11,8 @@
 
     foreach($tabla as $indice){
         $sql = "INSERT INTO etapas VALUES(?,?,?)";
+        $update_coor = "UPDATE profesores SET coordinador = TRUE WHERE idUsuario = ?";
+
         $resultado = $conexion->consultasPreparadas($sql);
         $resultado->bind_param('sss', $codigo, $nombre, $coordinador);
 
@@ -18,8 +20,16 @@
         $nombre = $indice[1];
         $coordinador = $indice[2];
 
+        $resultado_coor = $conexion->consultasPreparadas($update_coor);
+        $resultado_coor->bind_param('i', $coor);
+
+        $coor = $indice[2];
+
         $resultado->execute();
+        $resultado_coor->execute();
+
         $resultado->close();
+        $resultado_coor->close();
         echo $conexion->errores();
 
     }

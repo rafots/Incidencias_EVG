@@ -11,11 +11,13 @@
     {
         echo '
             <div>
+                <h3>Tipos de sanciones por incidencias</h3>
                 <h4>Tipos de sanciones por incidencias disponibles</h4>
                 ';
                     require "../consultas/listadoTipoSancionInc.php";
                 echo '
             </div>
+            <hr/>
             <div>
                 <form method="post" action="../consultas/conAltaTipoSancionIncidencia.php">
                     <div>

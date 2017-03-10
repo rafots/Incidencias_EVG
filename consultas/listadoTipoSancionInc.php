@@ -49,7 +49,10 @@
         echo '</tbody>';
         echo '</table>';
     }
-
+    else
+    {
+        echo '<p class="bg-danger">No hay tipos de sanciones disponibles</p>';
+    }
     if(isset($_GET["modificar"]))
     {
         echo '<p>Se ha modificado el tipo de sancion con exito</p>';

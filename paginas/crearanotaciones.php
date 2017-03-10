@@ -1,6 +1,9 @@
 <?php
 require_once "validaranotaciones.php";
 
+echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>';
+echo '<script type="text/javascript" src="../sources/ajax.js"></script>';
+
     function coordinador(){
         require_once '../procedimientos/procedimientos.php';
         $objeto = new procedimientos();
@@ -36,31 +39,24 @@ require_once "validaranotaciones.php";
                                     <label>Tipo al que pertenece</label>';
                                     $consulta="Select * from tipos_anotaciones";
                                     $objeto->consultas($consulta);
-                                    echo'<select name="tipo" class="form-control">';
+                                    echo'<select name="tipo" class="form-control" id="desplegable1">';
+                                    echo '<option value>Seleccione una seccion</option>';
                                     while($fila=$objeto->devolverfilas()){
                                         echo'<option value="'.$fila["tipoAnotacion"].'">'.$fila["nombre"].'</option>';
                                     }
-
-                               echo'</select></div>
-                                    <div class="form-group">
-                                        <label>NIA</label>
-                                        <input type="text" name="nia" class="form-control">
-                                    </div>
+                                    echo'</select>';
+                                    echo '<div class="col-md-12 text-center" id="easy2">';
+                                    echo'<br/>
                                     <div class="form-group">
                                     <label>Habilitar Profesores</label>
                                     <input type="checkbox" name="profesores">
                                     </div>
                                     <input class="btn btn-success" type="submit" name="boton" value="Crear anotacion">';
-                        if(isset($_POST["boton"])) {
-                            $cero = 0;
-                            $prof = 0;
-                            if (isset($_POST["profesores"]))
-                                $prof = 1;
-                            $query = "Insert into anotaciones VALUES ('DEFAULT'," . $_POST["tipo"] . ",'" . $_POST["nia"] . "','" . $fecha . "','" . $opc . "', " . $cero . "," . $prof . ")";
-                            $objeto->consultas($query);
 
+                        if(isset($_POST["boton"])) {
 
                         }
+                        echo'</form>';
     }
 
     ?>

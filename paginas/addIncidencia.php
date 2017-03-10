@@ -33,10 +33,10 @@
         echo '</div>';
         echo '<div>';
         echo '<label>Descripción de la incidencia</label>';
-        echo '<input type="text" name="descripcion" required="required" />';
+        echo '<textarea name="descripcion" required="required" class="form-control"/>';
         echo '</div>';
         echo '<div>';
-        echo '<input type="submit" value="Enviar incidencia"/>';
+        echo '<input type="submit" value="Enviar incidencia" class="buttons-separator"/>';
         echo '</div>';
         echo '</form>';
     echo '</div>';

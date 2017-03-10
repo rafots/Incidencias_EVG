@@ -29,26 +29,31 @@ $(document).ready(function(){
         $("#cuerpo").load("misanotaciones.php");
     });
 
-    $('#easy').on("click",function(e){
+    $('#sancion').on("click", function(e){
+        e.preventDefault();
+        $("#cuerpo").load("formNewSancion.php");
+    });
+
+    $('#visualizarSancion').on("click", function(){
+        e.preventDefault();
+        $("#cuerpo").load("listSancionesMod.php");
+    });
+
+    $('#botonBuscar').on("click",function(e){
         e.preventDefault();
 
-        var date = $('#alumm').find('tbody tr td:first').html();
-        var parametros = {
-            "idIncidencia" : date
-        };
+        var nombre = $("#alumno").val();
         //make the ajax call
         $.ajax({
-            url: '../consultas/consultarIncidenciaIndividual.php',
-            type: 'GET',
-            data: parametros,
-            success: function(parametros) {
+            type:"GET",
+            url: '../consultas/incidenciasAlumno.php?nombre='+nombre,
+            success: function(data) {
                 e.preventDefault();
-                $('#contenidoAlum').empty();
-                $('#contenidoAlum').append(parametros);
-
+                $('#formularioBuscar').html(data);
             }
         });
 
     });
 
 });
+

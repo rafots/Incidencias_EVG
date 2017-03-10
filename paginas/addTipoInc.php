@@ -20,6 +20,7 @@
                         require "../consultas/listadoTipoInc.php";
             echo'     
                 </div>
+                <hr/>
                 <div>
                     <h4>Añadir tipo de incidencia</h4>
                     <form method="post" action="../consultas/altaTipoIncidencia.php">

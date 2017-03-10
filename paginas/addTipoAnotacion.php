@@ -13,11 +13,12 @@
 
         echo '
             </div>
+            <hr/>
             <div>
                 <h4>Añadir tipo de anotacion</h4>
                 <form method="post" action="../consultas/conAltaTipoAnotacion.php">
                     <label>Nombre del tipo de anotacion</label>
-                    <input type="text" name="nombreTipo" class="form-control" id="exampleInputName2"/>
+                    <input type="text" name="nombreTipo" required="required" class="form-control" id="exampleInputName2"/>
                     <!--<label>Etapa</label>-->
                     
                     <input type="submit" name="enviar" value="Añadir tipo de incidencia" class="btn btn-primary buttons-separator">

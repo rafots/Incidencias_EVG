@@ -45,6 +45,8 @@ echo'
                 {
                 echo '<a class=" btn btn-primary btn-success " href="coordinador.php">C</a>';
                 }
+                echo '<br/>';
+                echo $_SESSION['nombre'];
                 echo '
             </div>
         </div>
@@ -94,7 +96,7 @@ echo'
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Ver Incidencias</a>
+                                            <a href="#" id="verInc">Ver Incidencias</a>
                                         </td>
                                     </tr>
                                     <tr>

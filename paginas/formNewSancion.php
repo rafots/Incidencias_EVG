@@ -11,22 +11,64 @@ if(!isset($_SESSION['usuario']))
     header('Location: iniciarSesion.php');
 else{
 
+    echo '<script type="text/javascript" src="../sources/comun.js"></script>';
+
     require '../procedimientos/procedimientos.php';
 
     $obj = new procedimientos();
     $obj->conectar();
+
+    echo '
+    
+        <form class="form-horizontal" name="formAddSancion" id="formAddSancion" method="post" action="../consultas/addSancion.php">
+
+                    <div class="form-group">
+                        <label for="student" class="col-md-3 control-label">Alumno</label>
+                        <div class="col-sm-8">
+                            <select id="student" name="student" class="form-control">
+    
+    ';
+    /*
+     * Extraigo todos los alumnos de la etapa del coordinador
+     */
+
+    if($_SESSION["activa"]=='c'){
+
+        $sql_student = "SELECT alumnos.nia AS nia, alumnos.nombreCompleto AS alumno
+        FROM alumnos INNER JOIN secciones ON alumnos.idSeccion = secciones.idSeccion
+        INNER JOIN etapas ON secciones.codEtapa = etapas.codEtapa
+        WHERE etapas.codEtapa = '".$_SESSION["codEtapa"]."'";
+
+    }else{
+
+        $sql_student = "SELECT alumnos.nia AS nia, alumnos.nombreCompleto AS alumno
+        FROM alumnos INNER JOIN secciones ON alumnos.idSeccion = secciones.idSeccion
+        WHERE secciones.idSeccion = '".$_SESSION["idSeccion"]."'";
+
+    }
+
+    $obj->consultas($sql_student);
+
+    if($obj->numFilas() > 0){
+
+        while($row = $obj->devolverFilas()){
+
+            echo '<option value="'.$row["nia"].'"> '.$row["alumno"].' </option>';
+
+        }
+
+    }
     
     echo '
-        
-        <form class="form-horizontal" method="post" action="../consultas/addSancion.php">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-12">
+                </select>
+            </div>
+        </div>
+        <form class="form-horizontal" name="formAddSancion" id="formAddSancion" method="post" action="../consultas/addSancion.php">
 
-                            <div class="form-group">
-                                <label for="sanction-type" class="col-md-4 control-label">Tipo de sanción</label>
-                                <div class="col-sm-8">
-                                    <select id="sanction-type" name="sanction-type" class="form-control">
-                                        <option selected="selected" value=""> Elige un tipo de sanción </option>';
+                    <div class="form-group">
+                        <label for="sanction-type" class="col-md-3 control-label">Tipo de sanción</label>
+                        <div class="col-sm-8">
+                            <select id="sanction-type" name="sanction-type" class="form-control">';
 
     /*
      * Extraigo los datos de tipo sancion y lo cargo en un select
@@ -50,10 +92,9 @@ else{
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="reason-type" class="col-md-4 control-label">Motivo</label>
+                                <label for="reason-type" class="col-md-3 control-label">Motivo</label>
                                 <div class="col-sm-8">
-                                    <select id="reason-type" name="reason-type" class="form-control">
-                                        <option selected="selected"> Elige un motivo </option>';
+                                    <select id="reason-type" name="reason-type" class="form-control">';
 
     /*
      * Extraigo los datos de motivo y lo cargo en un select
@@ -71,44 +112,42 @@ else{
         }
 
     }
-
-
-
-    echo '                                </select>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-md-6 col-sm-12">
-
-                            <div class="form-group">
-                                <label for="initial-date" class="col-md-4 control-label">Fecha de inicio</label>
-                                <div class="col-sm-8">
-                                    <input type="date" class="form-control" name="initial-date" id="initial-date" placeholder="Fecha de inicio"/>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="end-date" class="col-md-4 control-label">Fecha de fin</label>
-                                <div class="col-sm-8">
-                                    <input type="date" class="form-control" name="end-date" id="end-date" placeholder="Fecha de fin" rel="txtTooltip" title="Texto" data-toggle="tooltip" data-placement="top"/>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <textarea class="form-control" rows="5" name="observations" placeholder="Observaciones de la sanción"></textarea>
-                    
-                    <input type="submit" class="btn btn-success" name="new-sanction" value="Crear sanción" />
-
-                </form>
-        
-    ';
-
     $obj->cerrarConexion();
 
+
+    echo '            </select>
+            </div>
+        </div>';
 }
 
 
 ?>
+
+        <div class="form-group">
+            <label for="initial-date" class="col-md-3 control-label">Fecha de inicio</label>
+            <div class="col-sm-8">
+                <input type="date" class="form-control" name="initial-date" id="initial-date"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="end-date" class="col-md-3 control-label">Fecha de fin</label>
+            <div class="col-sm-8">
+                <input type="date" class="form-control" name="end-date" id="end-date"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="end-date" class="col-md-3 control-label">Observaciones</label>
+            <div class="col-sm-8">
+                <textarea class="form-control" rows="5" name="observations" id="observations" placeholder="Observaciones de la sanción"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-8">
+                <input type="submit" class="btn btn-success" name="new-sanction" value="Crear sanción" />
+            </div>
+        </div>
+
+    </form>

@@ -8,6 +8,10 @@ $(document).ready(function(){
         e.preventDefault();
         $("#cuerpo").load("aulaConvivenciaCoord.php");
     });
+    $('#parteDisciplinario').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("parteDisciplinario.php");
+    });
     $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').focus()
     })
@@ -40,7 +44,7 @@ $(document).ready(function(){
         };
         //make the ajax call
         $.ajax({
-            url: '../paginas/buscarIncidencia.php',
+            url: '../consultas/consultarIncidenciaIndividual.php',
             type: 'GET',
             data: parametros,
             success: function(parametros) {
@@ -127,4 +131,28 @@ $(document).ready(function(){
     });
 
 
+    $('#desplegable1').on("change",function(e){
+        e.preventDefault();
+
+        var selectedValue = this.value;
+        var parametros = {
+            "idSeccion" : selectedValue
+        };
+        //make the ajax call
+        $.ajax({
+            url: '../consultas/consultascrear.php',
+            type: 'GET',
+            data: parametros,
+            success: function(parametros) {
+                $('#desplegable2').remove();
+                $('#easy2').append(parametros);
+                console.log('entra');
+
+            }
+        });
+
+    });
+        $('#cerrarModal').on("click",function(e){
+            $('#contenidoAlum').empty();
+        });
 });

@@ -11,4 +11,9 @@ $(document).ready(function(){
         e.preventDefault();
         $("#cuerpo").load("anotaciones.php");
     });
+
+    $('#verInc').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("verIncidencias.php");
+    });
 });

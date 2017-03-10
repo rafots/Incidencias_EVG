@@ -206,7 +206,7 @@ if(isset($_SESSION['coordinador']))
                 echo '<div>';
                 echo '<label>Nombre de tipo de sancion</label>';
                 echo '<input type="hidden" name="cod" value="'.$_GET["codAntiguo"].'" id="ocultar">';
-                echo '<input type="text" name="texto" value="'.$_GET["nombreAntiguo"].'">';
+                echo '<input type="text" name="texto" required="required" value="'.$_GET["nombreAntiguo"].'">';
                 echo '</div>';
                 echo '<div>';
                 echo '<input type="submit" value="Modificar tipo de sancion">';

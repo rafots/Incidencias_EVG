@@ -4,20 +4,37 @@
 
 
 $(document).ready(function(){
-
+    
     $('#initial-date').on("change",function(){
 
-        var texto_fecha_inicial = this.value;
-        console.log(texto_fecha_inicial);
+        var initialDt = this.value;
 
-        $('#end-date').val(texto_fecha_inicial);
+        $('#end-date').val(initialDt);
 
     });
 
-    $('#end-date').on("blur",function(){
+    $('#end-date').on("change",function(){
 
-        var fecha_fin = this.value;
-        var fecha_inicio = $('#initial-date');
+        var initialDt = document.getElementById("initial-date").value;
+        var endDt = this.value;
+
+        if((new Date(initialDt).getTime() > new Date(endDt).getTime()) || this.value == ''){
+
+            this.value = initialDt;
+
+        }
+
+    });
+
+    $('#formAddSancion').on("submit",function(){
+
+        var initialDt = document.forms['formAddSancion']['initial-date'].value;
+        if(initialDt == '')
+            return false;
+        
+        var description = document.forms['formAddSancion']['observations'].value;
+        if(description == '')
+            return false;
 
     });
 

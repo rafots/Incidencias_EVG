@@ -15,13 +15,22 @@
                     <td></td>
                 </tr>
                 <tr>";
-                while($fila = $conexion->devolverFilas()){echo "
+                while($fila = $conexion->devolverFilas()){
+                    if($fila["leidaT"] == 1){echo"
+                    <td class='text-center success'>".$fila["nombreCompleto"]."</td>
+                    <td class='text-center success'>".$fila["nombreINC"]."</td>
+                    <td class='text-center success'>".$fila["nombrePROF"]."</td>
+                    <td><button type='button' class='btn btn-success btn-xs' data-toggle='modal' data-target='#Modal_".$fila["idIncidencia"]."'>
+                        <span class='glyphicon glyphicon-eye-open'></span></button></td>
+                </tr>";
+                    }else{echo "
                     <td class='text-center'>".$fila["nombreCompleto"]."</td>
                     <td class='text-center'>".$fila["nombreINC"]."</td>
                     <td class='text-center'>".$fila["nombrePROF"]."</td>
                     <td><button type='button' class='btn btn-success btn-xs' data-toggle='modal' data-target='#Modal_".$fila["idIncidencia"]."'>
                         <span class='glyphicon glyphicon-eye-open'></span></button></td>
-                </tr>
+                </tr>";
+                    }echo"
                     
                     <!-- Modal -->
                     <div class='modal fade' id='Modal_".$fila["idIncidencia"]."' tabindex='-1' role='dialog' aria-labelledby='Modal_Label_".$fila["idIncidencia"]."'>
@@ -29,7 +38,7 @@
                             <div class='modal-content'>
                                 <div class='modal-header'>
                                     <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-                                    <h4 class='modal-title' id='Modal_Label_".$fila["idIncidencia"]."'>Modal title</h4>
+                                    <h4 class='modal-title' id='Modal_Label_".$fila["idIncidencia"]."'>Incidencia de ".$fila["nombreCompleto"]."</h4>
                                 </div>
                                 <div class='modal-body'>";echo "
                                     <form class='form-horizontal'>

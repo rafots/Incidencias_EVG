@@ -37,6 +37,21 @@ $(document).ready(function(){
         $("#cuerpo").load("listSanccionesAulaConv.php");
     })
 
+    $('#create_sanction').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("formNewSancion.php");
+    })
+
+    $('#view_sanction').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("listSancionesMod.php");
+    })
+
+    $('#acum_partes_edu').on("click",function(e){
+        e.preventDefault();
+        $("#cuerpo").load("partesEducativosCoord.php");
+    })
+
 });
 
 
