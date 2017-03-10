@@ -77,90 +77,13 @@ else {
             echo '<td>' . $row['tipoSancion'] . '</td>';
             echo '<td>' . $row['fecha_inicio'] . '</td>';
             echo '<td>' . $row['fecha_fin'] . '</td>';
-            echo '<td><button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#Modal_'.$row["idSancion"].'">
-                        <span class="glyphicon glyphicon-eye-open"></span></button></td>';
+            echo '<td><a class="btn btn-success btn-xs" id="modSanc-'.$row['idSancion'].'"><span class="glyphicon glyphicon-eye-open"></span></a></td>';
             echo '</tr>';
         }
         echo '</tbody>';
         echo '</table>';
 
-        /*
-         *
-         * -------------- MODAL ----------------
-         *
-         */
-
-        echo"
-                    
-                    <div class='modal fade' id='Modal_".$row["idSancion"]."' tabindex='-1' role='dialog' aria-labelledby='Modal_Label_".$row["idSancion"]."'>
-                        <div class='modal-dialog' role='document'>
-                            <div class='modal-content'>
-                                <div class='modal-header'>
-                                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-                                    <h4 class='modal-title' id='Modal_Label_".$row["idSancion"]."'>Incidencia de ".$row["idSancion"]."</h4>
-                                </div>
-                                <div class='modal-body'>";echo "
-                                    <form class='form-horizontal'>
-                                        <div class='form-group'>
-                                            <label for='alumno' class='col-md-3 control-label'>Alumno:</label>
-                                                <div class='col-lg-12'>
-                                                    <input type='text' class='form-control' id='alumno' value='" . $row["alumno"] . "' disabled>
-                                                </div>
-                                        </div>
-                                        <div class='form-group'>
-                                            <label for='alumno' class='col-lg-12 control-label'>Tipo de incidencia:</label>
-                                                <div class='col-lg-12'>
-                                                    <input type='text' class='form-control' id='alumno' value='" . $row["tipoSancion"] . "' disabled>
-                                                </div>
-                                        </div>
-                                        <div class='form-group'>
-                                            <label for='alumno' class='col-md-12 control-label'>Profesor:</label>
-                                                <div class='col-lg-12'>
-                                                    <input type='text' class='form-control' id='alumno' value='" . $row["nombrePROF"] . "' disabled>
-                                                </div>
-                                        </div>
-                                        <div class='form-group'>
-                                            <label for='alumno' class='col-md-12 control-label'>Asignatura:</label>
-                                                <div class='col-lg-12'>
-                                                    <input type='text' class='form-control' id='alumno' value='" . $row["codAsignatura"] . "' disabled>
-                                                </div>
-                                        </div>
-                                        <div class='form-group'>
-                                            <label for='alumno' class='col-md-12 control-label'>Fecha:</label>
-                                                <div class='col-lg-12'>
-                                                    <input type='text' class='form-control' id='alumno' value='" . $fila["fecha_ocurrencia"] . "' disabled>
-                                                </div>
-                                        </div>
-                                        <div class='form-group'>
-                                            <label for='alumno' class='col-md-12 control-label'>Hora:</label>
-                                                <div class='col-lg-12'>
-                                                    <input type='text' class='form-control' id='alumno' value='" . $row["nombreHora"] . "' disabled>
-                                                </div>
-                                        </div>
-                                        <div class='form-group'>
-                                            <label for='descripcion' class='col-md-12 control-label'>Descripcion:</label>
-                                                <div class='col-lg-12'>
-                                                    <textarea class='form-control' rows='5' id='descripcion' disabled>";
-                                                    echo $row["descripcion"];echo "
-                                                    </textarea>
-                                                </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class='modal-footer'>
-                                    <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
-                                    <a class='btn btn-default' href='leerIncidencia.php?codigo=".$fila["idIncidencia"]."'>Marcar como leida</a>
-                                    <a class='btn btn-default' href='archivarIncidencia.php?codigo=".$fila["idIncidencia"]."'>Archivar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>";
-
-        /*
-         *
-         * -------------- /MODAL ----------------
-         *
-         */
+        
 
     }else{
         echo '<h1><small>Actualmente no hay sanciones</small></h1>';

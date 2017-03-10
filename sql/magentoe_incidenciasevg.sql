@@ -10,6 +10,9 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
+CREATE DATABASE magentoe_incidenciasevg;
+USE magentoe_incidenciasevg;
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -79,7 +82,7 @@ INSERT INTO `alumnos` (`nia`, `nombreCompleto`, `telefono`, `sexo`, `idSeccion`,
 --
 
 CREATE TABLE `anotaciones` (
-  `numAnotacion` smallint(5) UNSIGNED AUTO_INCREMENT NOT NULL,
+  `numAnotacion` smallint(5) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   `tipoAnotacion` tinyint(4) NOT NULL,
   `nia` char(7) NOT NULL,
   `hora_Registro` datetime NOT NULL,
@@ -294,7 +297,8 @@ INSERT INTO `profesores_seccion` (`profesor`, `idSeccion`) VALUES
 
 CREATE TABLE `sanciones` (
   `idSancion` smallint(5) UNSIGNED NOT NULL,
-  `idIncidencia` smallint(5) UNSIGNED NOT NULL,
+  `idIncidencia` smallint(5) UNSIGNED NULL,
+  `nia` char(7) NULL,
   `tipoSancion` tinyint(3) UNSIGNED NOT NULL,
   `fecha_inicio` date NOT NULL,
   `fecha_fin` date DEFAULT NULL,
@@ -306,9 +310,9 @@ CREATE TABLE `sanciones` (
 -- Volcado de datos para la tabla `sanciones`
 --
 
-INSERT INTO `sanciones` (`idSancion`, `idIncidencia`, `tipoSancion`, `fecha_inicio`, `fecha_fin`, `observacion`, `idMotivo`) VALUES
-(1, 1, 2, '2017-03-07', NULL, 'El alumno lleva varios días faltando, me he visto obligado a ', 5),
-(2, 5, 2, '2017-03-08', '2017-03-09', 'El alumno ha sido expulsado por agresión', 3);
+INSERT INTO `sanciones` (`idSancion`, `idIncidencia`, `nia`, `tipoSancion`, `fecha_inicio`, `fecha_fin`, `observacion`, `idMotivo`) VALUES
+(1, 1, '17FG76', 2, '2017-03-07', '2017-03-07', 'El alumno lleva varios días faltando, me he visto obligado a ', 5),
+(2, 5, '17FG564', 2, '2017-03-10', '2017-03-11', 'El alumno ha sido expulsado por agresión', 3);
 
 -- --------------------------------------------------------
 
@@ -437,7 +441,7 @@ ALTER TABLE `alumnos`
 -- Indices de la tabla `anotaciones`
 --
 ALTER TABLE `anotaciones`
-  ADD PRIMARY KEY (`numAnotacion`),
+  /*ADD PRIMARY KEY (`numAnotacion`),*/
   ADD KEY `anotaciones_1` (`tipoAnotacion`),
   ADD KEY `anotaciones_2` (`nia`);
 
@@ -497,7 +501,8 @@ ALTER TABLE `sanciones`
   ADD PRIMARY KEY (`idSancion`),
   ADD KEY `fk_incidencias_sanciones` (`idIncidencia`),
   ADD KEY `fk_tipo_sancion_sanciones` (`tipoSancion`),
-  ADD KEY `fk_motivo_sancion` (`idMotivo`);
+  ADD KEY `fk_motivo_sancion` (`idMotivo`),
+  ADD KEY `fk_alumno_sancion` (`nia`);
 
 --
 -- Indices de la tabla `secciones`
@@ -603,7 +608,8 @@ ALTER TABLE `profesores_seccion`
 ALTER TABLE `sanciones`
   ADD CONSTRAINT `fk_incidencias_sanciones` FOREIGN KEY (`idIncidencia`) REFERENCES `incidencias` (`idIncidencia`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_motivo_sancion` FOREIGN KEY (`idMotivo`) REFERENCES `motivo` (`idMotivo`),
-  ADD CONSTRAINT `fk_tipo_sancion_sanciones` FOREIGN KEY (`tipoSancion`) REFERENCES `tipo_sancion` (`tipoSancion`);
+  ADD CONSTRAINT `fk_tipo_sancion_sanciones` FOREIGN KEY (`tipoSancion`) REFERENCES `tipo_sancion` (`tipoSancion`),
+  ADD CONSTRAINT `fk_alumno_sanciones` FOREIGN KEY (`nia`) REFERENCES `alumnos` (`nia`);
 
 --
 -- Filtros para la tabla `secciones`
