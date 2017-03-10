@@ -120,7 +120,7 @@ if(isset($_SESSION['coordinador']))
                                 echo'         
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Acumulacion partes educativos</a>
+                                            <a id="acum_partes_edu">Acumulacion partes educativos</a>
                                         </td>
                                     </tr>
 
@@ -167,6 +167,11 @@ if(isset($_SESSION['coordinador']))
                         <div id="collapseThree" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <table class="table">
+                                    <tr>
+                                        <td>
+                                            <a id="view_sanction">Ver sanciones</a>
+                                        </td>
+                                    </tr>
                                     <tr>
                                         <td>
                                             <a id="create_sanction">Crear sanción</a>

@@ -25,12 +25,13 @@ else {
 
     $today = date("Y-m-d");
 
-    $sql = "SELECT sanciones.idSancion AS 'ID', alumnos.nombreCompleto AS 'Alumno', profesores.nombre AS 'Profesor', incidencias.codAsignatura AS 'Asignatura'
+    $sql = "SELECT sanciones.* , alumnos.nombreCompleto AS 'Alumno', motivo.motivo AS 'n_motivo'
         FROM sanciones INNER JOIN incidencias ON sanciones.idIncidencia = incidencias.idIncidencia
-        INNER JOIN alumnos ON alumnos.nia = incidencias.nia
-        INNER JOIN profesores ON profesores.idUsuario = incidencias.usuario
-        INNER JOIN tipo_incidencias ON incidencias.idTipo = tipo_incidencias.idTipo
-        WHERE incidencias.idHora = 9 AND tipo_incidencias.codEtapa = '".$_SESSION["codEtapa"]."' AND sanciones.fecha_inicio = '".$today."'";
+        INNER JOIN alumnos ON alumnos.nia = sanciones.nia
+        INNER JOIN secciones ON secciones.idSeccion = alumnos.idSeccion
+        INNER JOIN horas ON horas.idHora = incidencias.idHora
+        INNER JOIN motivo ON motivo.idMotivo = sanciones.idMotivo
+        WHERE incidencias.idHora = 9 AND secciones.codEtapa = '".$_SESSION["codEtapa"]."' AND sanciones.fecha_inicio = '".$today."'";
 
     $obj->consultas($sql);
 
@@ -41,8 +42,8 @@ else {
             <thead>
                 <tr>
                     <th>Alumno</th>
-                    <th>Profesor</th>
-                    <th>Asignatura</th>
+                    <th>Motivo</th>
+                    <th>Fecha</th>
                     <th></th>
                 </tr>
             </thead>
@@ -52,9 +53,9 @@ else {
         while ($row = $obj->devolverFilas()) {
             echo '<tr>';
             echo '<td>' . $row['Alumno'] . '</td>';
-            echo '<td>' . $row['Profesor'] . '</td>';
-            echo '<td>' . $row['Asignatura'] . '</td>';
-            echo '<td><a class="btn btn-success" href="#"><span class="glyphicon glyphicon-eye-open"></span></a></td>';
+            echo '<td>' . $row['n_motivo'] . '</td>';
+            echo '<td>' . $row['fecha_inicio'] . '</td>';
+            echo '<td><a class="btn btn-success btn-xs" href="#"><span class="glyphicon glyphicon-eye-open"></span></a></td>';
             echo '</tr>';
         }
         echo '</tbody>';
