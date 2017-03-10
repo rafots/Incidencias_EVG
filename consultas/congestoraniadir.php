@@ -1,4 +1,6 @@
 <?php
+echo'<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="../sources/ajaxGestor.js" type="text/javascript"></script>';
 require_once "../procedimientos/procedimientos.php";
 $objeto = new procedimientos();
 $objeto->conectar();
@@ -6,13 +8,14 @@ $consulta=" Select * from etapas";
 $objeto->consultas($consulta);
 echo'<label>Nombre de la seccion</label>
 <input type="text" name="name">
-<br/><br/>
+
 <label>Id de la Seccion</label>
 <input type="text" name="idSecc">
-<br/><br/>';
-echo' <select id="sanction-type" name="sanction-type" class="form-control">
+<br/>';
+echo'<label>Etapa</label>';
+echo' <select id="sanction-type" name="sanction-type" >
       <option selected="selected"> Elige una Etapa </option>';
-echo'<br/><br/>';
+
 while($fila=$objeto->devolverFilas()){
     echo'<option value="'.$fila["codEtapa"].'">'.$fila["nombre"].'</option>';
 }
@@ -20,11 +23,13 @@ while($fila=$objeto->devolverFilas()){
 
 $consulta1="Select * from profesores where tutor='0' ";
 $objeto->consultas($consulta1);
-echo'<br/><br/>';
-echo' <select id="sanction-type" name="sanction-type" class="form-control">
+echo'<label>Profesor</label>';
+echo' <select id="sanction-type" name="sanction-type" >
       <option selected="selected"> Elige un profesor </option>';
 while($fila=$objeto->devolverFilas()){
     echo'<option value="'.$fila["idUsuario"].'">'.$fila["nombre"].'</option>';
 }
-echo'</select>';
+echo'</select>
+<button  type="button" id="aniadirSeccion2" class="btn btn-success">Añadir</button>';
+
 ?>
