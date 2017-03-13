@@ -33,6 +33,9 @@ echo '<script type="text/javascript" src="../sources/ajax.js"></script>';
             echo '<option value="'.$fila["seccionid"].'">'.$fila["seccionid"].'</option>';
         }
         echo'</select>
+
+        <div class="form-group" id="alumnos">      
+        </div>
         <br><br>
         <label>Tipo al que pertenece</label>';
         require_once "../consultas/consultatipoanot.php";
@@ -46,7 +49,11 @@ echo '<script type="text/javascript" src="../sources/ajax.js"></script>';
         <label>Habilitar Profesores</label>
         <input type="checkbox" name="profesores">
         </div>
-        <input class="btn btn-success" type="submit" name="boton" value="Crear anotacion">';
+        <input class="btn btn-success" type="submit" name="boton" value="Crear anotacion">
+
+        <div class="form-group text-right">
+            <input type="hidden" name="submit" value="Buscar" class="btn btn-success" id="botonBuscar">
+        </div>';
     }
     ?>
 
