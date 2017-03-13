@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d578d95-4bd8-491a-8a20-89d7a2bda1b8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel/usuarios.xlsx" afterPath="$PROJECT_DIR$/excel/usuarios.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel/asignarCoordinador.php" afterPath="$PROJECT_DIR$/excel/asignarCoordinador.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel/asignarTutor.php" afterPath="$PROJECT_DIR$/excel/asignarTutor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel/importarSecciones.php" afterPath="$PROJECT_DIR$/excel/importarSecciones.php" />
     </list>
     <ignored path="Incidencias_EVG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +47,7 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="secciones" />
+        <option name="myItemId" value="etapas" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -57,13 +58,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="asignarCoordinador.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="asignarCoordinador.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/excel/asignarCoordinador.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+            <state relative-caret-position="374">
+              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
               <folding>
-                <marker date="1489426648116" expanded="true" signature="266:347" ph="UPDATE profe... " />
+                <marker date="1489434845277" expanded="true" signature="300:381" ph="UPDATE profe... " />
+                <marker date="1489434845277" expanded="true" signature="448:512" ph="SELECT idUsu... profesores" />
+                <marker date="1489434845277" expanded="true" signature="622:708" ph="UPDATE etapa... " />
               </folding>
             </state>
           </provider>
@@ -82,18 +85,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="asignarTutor.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="asignarTutor.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/excel/asignarTutor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="357">
+              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding>
-                <marker date="1489431630184" expanded="true" signature="268:295" ph="UPDATE secci... " />
-                <marker date="1489431630184" expanded="true" signature="268:304" ph="UPDATE profe... " />
-                <marker date="1489431630184" expanded="true" signature="268:325" ph="UPDATE profe... " />
-                <marker date="1489431630184" expanded="true" signature="268:340" ph="UPDATE profe... " />
-                <marker date="1489431630184" expanded="true" signature="268:369" ph="UPDATE profe... " />
-                <marker date="1489431630184" expanded="true" signature="268:381" ph="UPDATE profe... " />
+                <marker date="1489434695234" expanded="true" signature="300:375" ph="UPDATE profe... " />
+                <marker date="1489434695234" expanded="true" signature="442:491" ph="SELECT idUsu... profesores" />
+                <marker date="1489434695234" expanded="true" signature="442:506" ph="SELECT idUsu... profesores" />
+                <marker date="1489434695234" expanded="true" signature="616:643" ph="UPDATE secci... " />
+                <marker date="1489434695234" expanded="true" signature="616:685" ph="UPDATE secci... " />
+                <marker date="1489434695234" expanded="true" signature="616:700" ph="UPDATE secci... " />
+                <marker date="1489434695234" expanded="true" signature="616:797" ph="UPDATE secci... " />
               </folding>
             </state>
           </provider>
@@ -109,12 +113,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="magentoe_incidenciasevg.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql/magentoe_incidenciasevg.sql">
+      <file leaf-file-name="importarSecciones.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/excel/importarSecciones.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="386" column="41" lean-forward="true" selection-start-line="386" selection-start-column="41" selection-end-line="386" selection-end-column="41" />
-              <folding />
+            <state relative-caret-position="323">
+              <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+              <folding>
+                <marker date="1489434334200" expanded="true" signature="359:397" ph="INSERT INTO secciones... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="importarAlumnos.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/excel/importarAlumnos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+              <folding>
+                <marker date="1489426648094" expanded="true" signature="379:419" ph="INSERT INTO alumnos... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -186,15 +204,15 @@
         <option value="$PROJECT_DIR$/paginas/cerrarSesionGestor.php" />
         <option value="$PROJECT_DIR$/paginas/gestor.php" />
         <option value="$PROJECT_DIR$/consultas/aniadirSeccion2.php" />
-        <option value="$PROJECT_DIR$/excel/importarSecciones.php" />
         <option value="$PROJECT_DIR$/excel/importarAlumnos.php" />
         <option value="$PROJECT_DIR$/procedimientos/procedimientos.php" />
         <option value="$PROJECT_DIR$/excel/asignarSeccion.php" />
-        <option value="$PROJECT_DIR$/excel/asignarCoordinador.php" />
         <option value="$PROJECT_DIR$/sql/script.sql" />
         <option value="$PROJECT_DIR$/excel/import_users.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/91753ece-5cc6-44a8-89ee-d87639ff2629/console.sql" />
+        <option value="$PROJECT_DIR$/excel/importarSecciones.php" />
         <option value="$PROJECT_DIR$/excel/asignarTutor.php" />
+        <option value="$PROJECT_DIR$/excel/asignarCoordinador.php" />
       </list>
     </option>
   </component>
@@ -477,7 +495,7 @@
       <workItem from="1489110839706" duration="574000" />
       <workItem from="1489133933885" duration="572000" />
       <workItem from="1489137948074" duration="154000" />
-      <workItem from="1489421509615" duration="10212000" />
+      <workItem from="1489421509615" duration="13095000" />
     </task>
     <task id="LOCAL-00002" summary="UPDATE FILES index.html, bootstrap.css, comun.css, script.sql&#10;ADD FILES import_users.php, usuarios.xlsx, logotipo.png, menu_estructure.html">
       <created>1488051390265</created>
@@ -668,11 +686,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489431380388</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="UPDATE: modificacion de los excel y las importaciones 2">
+      <created>1489432012054</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1489432012054</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187191000" />
+    <option name="totallyTimeSpent" value="190074000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -687,12 +712,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Database Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.49573562" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.49573562" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24520256" sideWeight="0.73146296" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5042644" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24702059" sideWeight="0.15938166" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11886994" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24702059" sideWeight="0.84381664" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24702059" sideWeight="0.8406183" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25716332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -765,7 +790,8 @@
     <MESSAGE value="ADD: mantenimiento gestor etapas" />
     <MESSAGE value="ADD: casi aniadir secciones" />
     <MESSAGE value="UPDATE: modificacion de los excel y las importaciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: modificacion de los excel y las importaciones" />
+    <MESSAGE value="UPDATE: modificacion de los excel y las importaciones 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: modificacion de los excel y las importaciones 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1045,27 +1071,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/excel/importarAlumnos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding>
-            <marker date="1489426648094" expanded="true" signature="379:419" ph="INSERT INTO alumnos... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/excel/importarSecciones.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="39" lean-forward="false" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
-          <folding>
-            <marker date="1489426648125" expanded="true" signature="359:397" ph="INSERT INTO secciones... " />
-            <marker date="1489426648125" expanded="true" signature="415:469" ph="UPDATE profe... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/procedimientos/procedimientos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1114,16 +1119,6 @@
             <marker date="1489109159126" expanded="true" signature="530:686" ph="..." />
             <marker date="1489109159126" expanded="true" signature="719:889" ph="..." />
             <marker date="1489109159126" expanded="true" signature="1109:1224" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/excel/asignarCoordinador.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-          <folding>
-            <marker date="1489426648116" expanded="true" signature="266:347" ph="UPDATE profe... " />
           </folding>
         </state>
       </provider>
@@ -1178,14 +1173,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql/script.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="178" column="43" lean-forward="true" selection-start-line="178" selection-start-column="43" selection-end-line="178" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/excel/asignarSeccion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -1213,17 +1200,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sql/script.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="178" column="43" lean-forward="true" selection-start-line="178" selection-start-column="43" selection-end-line="178" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/excel/importarAlumnos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+          <folding>
+            <marker date="1489426648094" expanded="true" signature="379:419" ph="INSERT INTO alumnos... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/excel/asignarTutor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="357">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
-            <marker date="1489431630184" expanded="true" signature="268:295" ph="UPDATE secci... " />
-            <marker date="1489431630184" expanded="true" signature="268:304" ph="UPDATE profe... " />
-            <marker date="1489431630184" expanded="true" signature="268:325" ph="UPDATE profe... " />
-            <marker date="1489431630184" expanded="true" signature="268:340" ph="UPDATE profe... " />
-            <marker date="1489431630184" expanded="true" signature="268:369" ph="UPDATE profe... " />
-            <marker date="1489431630184" expanded="true" signature="268:381" ph="UPDATE profe... " />
+            <marker date="1489434695234" expanded="true" signature="300:375" ph="UPDATE profe... " />
+            <marker date="1489434695234" expanded="true" signature="442:491" ph="SELECT idUsu... profesores" />
+            <marker date="1489434695234" expanded="true" signature="442:506" ph="SELECT idUsu... profesores" />
+            <marker date="1489434695234" expanded="true" signature="616:643" ph="UPDATE secci... " />
+            <marker date="1489434695234" expanded="true" signature="616:685" ph="UPDATE secci... " />
+            <marker date="1489434695234" expanded="true" signature="616:700" ph="UPDATE secci... " />
+            <marker date="1489434695234" expanded="true" signature="616:797" ph="UPDATE secci... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/excel/importarSecciones.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          <folding>
+            <marker date="1489434334200" expanded="true" signature="359:397" ph="INSERT INTO secciones... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/excel/asignarCoordinador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding>
+            <marker date="1489434845277" expanded="true" signature="300:381" ph="UPDATE profe... " />
+            <marker date="1489434845277" expanded="true" signature="448:512" ph="SELECT idUsu... profesores" />
+            <marker date="1489434845277" expanded="true" signature="622:708" ph="UPDATE etapa... " />
           </folding>
         </state>
       </provider>

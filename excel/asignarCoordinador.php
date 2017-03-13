@@ -2,15 +2,24 @@
 require_once "simplexlsx.class.php";
 require_once "../procedimientos/procedimientos.php";
 
-$xlsx = new SimpleXLSX("Etapas.xlsx");
+$xlsx = new SimpleXLSX("usuarios.xlsx");
 $tabla = $xlsx->rows();
 
 $conexion = new procedimientos();
 $conexion->conectar();
 
 foreach($tabla as $indice){
-    $selectProf = "UPDATE profesores SET coordinador=1 WHERE profesores.idUsuario = '".$indice[2]."'";
-    $conexion->consultas($selectProf);
+    if($indice[3] != NULL){
+        $updateProf = "UPDATE profesores SET coordinador=TRUE WHERE profesores.nombre = '".$indice[1]."' ";
+        $conexion->consultas($updateProf);
+
+        $idProf = "SELECT idUsuario FROM profesores WHERE nombre = '".$indice[1]."' ";
+        $conexion->consultas($idProf);
+        $fila = $conexion->devolverFilas();
+
+        $updateSec = "UPDATE etapas SET coordinador=".$fila["idUsuario"]." WHERE codEtapa = '".$indice[3]."' ";
+        $conexion->consultas($updateSec);
+    }
 }
 
 if($conexion->filasAfectadas()){
