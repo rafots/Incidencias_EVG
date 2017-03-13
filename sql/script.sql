@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS profesores(
 CREATE TABLE IF NOT EXISTS etapas(
   codEtapa CHAR(5) PRIMARY KEY,
   nombre VARCHAR(30) NOT NULL,
-  coordinador TINYINT UNSIGNED NOT NULL,
+  coordinador TINYINT UNSIGNED DEFAULT NULL,
   CONSTRAINT fk_etapas_profesores FOREIGN KEY (coordinador) REFERENCES profesores(idUsuario)
 );
 
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS etapas(
 CREATE TABLE IF NOT EXISTS secciones(
   idSeccion CHAR(6) NOT NULL PRIMARY KEY,
   nombre VARCHAR(60) NOT NULL,
-  tutor TINYINT UNSIGNED NOT NULL,
+  tutor TINYINT UNSIGNED DEFAULT NULL,
   codEtapa CHAR(5) NOT NULL,
   CONSTRAINT fk_tutores_secciones FOREIGN KEY (tutor) REFERENCES profesores(idUsuario),
   CONSTRAINT fk_etapas_secciones FOREIGN KEY (codEtapa) REFERENCES etapas(codEtapa)
@@ -44,6 +44,7 @@ CREATE TABLE  IF NOT EXISTS alumnos(
   telefono VARCHAR(9) NOT NULL,
   sexo CHAR(1) NOT NULL,
   idSeccion CHAR(6) NOT NULL ,
+  numPartes tinyint(4) DEFAULT NULL,
   CONSTRAINT fk_secciones_alumnos  FOREIGN KEY (idSeccion) REFERENCES secciones(idSeccion)
 );
 
@@ -102,7 +103,7 @@ CREATE TABLE IF NOT EXISTS tipos_Anotaciones(
 
 /* TABLA 13-ANOTACIONES */
 CREATE TABLE IF NOT EXISTS anotaciones(
-  numAnotacion SMALLINT UNSIGNED PRIMARY KEY,
+  numAnotacion SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
   tipoAnotacion TINYINT NOT NULL,
   nia CHAR(7) NOT NULL ,
   hora_Registro DATETIME NOT NULL,
@@ -158,3 +159,21 @@ CREATE TABLE IF NOT EXISTS gestion(
   nombre VARCHAR(20) NOT NULL,
   pass VARCHAR(255) NOT NULL
 );
+
+INSERT INTO `etapas` (`codEtapa`, `nombre`, `coordinador`) VALUES
+  ('BAC', 'Bachillerato', NULL),
+  ('CFGM', 'Ciclo Formativo Grado Medio', NULL),
+  ('CFGS', 'Ciclo Formativo Grado Superior', NULL),
+  ('ESO', 'Educación Secundaria Obligator', NULL);
+
+
+INSERT INTO `tipo_incidencias` (`idTipo`, `nombre`, `gestiona`, `codEtapa`) VALUES
+  (1, 'Aula de convivencia', 'C', 'ESO'),
+  (2, 'Parte disciplinario', 'C', 'CFGS'),
+  (3, 'Apercibimiento escrito', 'C', 'CFGS'),
+  (4, 'No uniforme', 'T', 'BAC'),
+  (5, 'No uniforme', 'T', 'ESO'),
+  (6, 'Enfermedad', 'T', 'CFGS'),
+  (7, 'Enfermedad', 'T', 'ESO'),
+  (8, 'Expulsión al pasillo', 'T', 'ESO'),
+  (9, 'Expulsión al pasillo', 'T', 'CFGS');

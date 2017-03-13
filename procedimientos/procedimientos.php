@@ -1,12 +1,6 @@
 <?php
+require_once '../conexion/conexion.php';
 
-/**
- * Created by PhpStorm.
- * User: 2daw10
- * Date: 23/02/2017
- * Time: 8:58
- */
-require '../conexion/conexion.php';
 class procedimientos
 {
     private $conexion;
@@ -29,7 +23,7 @@ class procedimientos
 
     public function consultasPreparadas($query)
     {
-        return $this->conexion->prepare($query);
+        return $this->resultado = $this->conexion->prepare($query);
     }
 
     public function devolverFilas()
@@ -39,7 +33,7 @@ class procedimientos
 
     public function filasAfectadas()
     {
-        $this->conexion->affected_rows;
+        return $this->conexion->affected_rows;
     }
 
     public function errores()
