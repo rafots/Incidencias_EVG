@@ -2,7 +2,6 @@
 session_start();
 
     require '../procedimientos/procedimientos.php';
-
     $obj = new procedimientos();
     $obj->conectar();
     $query = "SELECT idUsuario,usuario,pass,profesor,gestor,tutor,coordinador FROM magentoe_incidenciasevg.profesores WHERE usuario = ?";
@@ -41,6 +40,7 @@ session_start();
         else
             if($coordinador == 1 && $tutor==0)
             {
+                $_SESSION['usuario']=$usuario;
                 $_SESSION['coordinador']=$coordinador;
                 $_SESSION['profesor']=$profesor;
                 $query = 'SELECT t1.codEtapa, t2.nombre, idSeccion FROM etapas t1 

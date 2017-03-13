@@ -18,6 +18,6 @@
 
     $obj->cerrarConexion();
 
-    header('Location: ../paginas/coordinador.php');
+   // header('Location: ../paginas/coordinador.php');
 
 ?>

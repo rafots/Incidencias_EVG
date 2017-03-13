@@ -19,14 +19,14 @@ echo '
             <td>Coordinador</td>
         </tr>
         <tr>';
-            while($fila = $conexion->devolverFilas()){echo '
+while($fila = $conexion->devolverFilas()){echo '
                 <td class="text-center">' . $fila["codEtapa"] . '</td>
                 <td class="text-center">' . $fila["nombreE"] . '</td>
                 <td class="text-center">' . $fila["nombrePROF"] . '</td>
                 <td><button type="button" class="btn btn-success" name="modificar" value="'.$fila["codEtapa"].'" id="modificar">Modificar</button></td>
                 <td><button type="button" class="btn btn-success" name="borrar" value="'.$fila["codEtapa"].'" id="borrar">Borrar</button></td>
         </tr>';
-            } echo'
+} echo'
     </table>
     
     <button type="button" class="btn btn-success" name="aniadir" id="aniadirEtapa">Añadir nueva</button>

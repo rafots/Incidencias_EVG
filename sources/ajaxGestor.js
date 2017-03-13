@@ -26,14 +26,15 @@ $(document).ready(function(){
 
     $("#modificar").on("click", function(e){
         e.preventDefault();
-
+        alert('entra');
         var codEtapa = $("#modificar").val();
         $.ajax({
             type:"GET",
             url: '../paginas/alterEtapa.php?codEtapa='+codEtapa,
             success: function(data) {
                 e.preventDefault();
-                $('#aniadir').html(data);
+                $('#aniadir').append(data);
+                console.log(data);
             }
         });
 
@@ -49,6 +50,7 @@ $(document).ready(function(){
             success: function(data) {
                 e.preventDefault();
                 $('#aniadir').html(data);
+
             }
         });
 

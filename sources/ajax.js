@@ -15,72 +15,6 @@ $(document).ready(function(){
     $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').focus()
     })
-    $('#clases').on("change",function(e){
-        e.preventDefault();
-
-        var selectedValue = this.value;
-        var parametros = {
-            "idSeccion" : selectedValue
-        };
-        //make the ajax call
-        $.ajax({
-            url: '../consultas/consultarAlumnos.php',
-            type: 'GET',
-            data: parametros,
-            success: function(parametros) {
-                $('#alumnos').remove();
-                $('#ajaxx').append(parametros);
-
-            }
-        });
-
-    });
-    $('#easy').on("click",function(e){
-        e.preventDefault();
-
-        var date = $('#alumm').find('tbody tr td:first').html();
-        var parametros = {
-            "idIncidencia" : date
-        };
-        //make the ajax call
-        $.ajax({
-            url: '../consultas/consultarIncidenciaIndividual.php',
-            type: 'GET',
-            data: parametros,
-            success: function(parametros) {
-                e.preventDefault();
-                $('#contenidoAlumm').remove();
-                $('#cuerpo').append(parametros);
-
-            }
-        });
-
-
-
-    });
-
-
-    $('#alumnos').on("change",function(e){
-        e.preventDefault();
-
-        var selectedValue = this.value;
-        var parametros = {
-            "nia" : selectedValue
-        };
-        //make the ajax call
-        $.ajax({
-            url: '../consultas/consultarIncidenciasAlumnos.php',
-            type: 'GET',
-            data: parametros,
-            success: function(parametros) {
-                $('#inciAlum').empty();
-                $('#contenidoAlumm').remove();
-                $('#inciAlum').append(parametros);
-
-            }
-        });
-
-    });
     $('#parteseducativos').on("click",function(e){
         e.preventDefault();
         $("#cuerpo").load("partesEducativosCoord.php");
@@ -102,7 +36,7 @@ $(document).ready(function(){
     });
     $('#consultaralumno').on("click",function(e){
         e.preventDefault();
-        $("#cuerpo").load("../consultas/consultarClases.php");
+        $("#cuerpo").load("../paginas/buscarIncidenciasAlumno.php");
     });
 
     $('#misanotaciones').on("click",function(e){
@@ -131,30 +65,4 @@ $(document).ready(function(){
     });
 
 
-
-    $('#desplegable1').on("change",function(e){
-        e.preventDefault();
-
-        var selectedValue = this.value;
-        var parametros = {
-            "seccion" : selectedValue
-        };
-        //make the ajax call
-        $.ajax({
-            url: "../consultas/recogealumno.php",
-            type: "GET",
-            data: parametros,
-            success: function(parametros) {
-                $('#desplegable2').empty();
-                $('#contenidoAlumm').remove();
-                $('#desplegable2').append(parametros);
-
-            }
-        });
-
-    });
-
-        $('#cerrarModal').on("click",function(e){
-            $('#contenidoAlum').empty();
-        });
 });

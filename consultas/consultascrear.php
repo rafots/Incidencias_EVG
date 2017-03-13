@@ -1,8 +1,6 @@
 <?php
 
 require_once "../procedimientos/procedimientos.php";
-echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>';
-echo '<script type="text/javascript" src="../sources/ajax.js"></script>';
 $obj = new procedimientos();
 $obj->conectar();
 
@@ -17,8 +15,8 @@ where tipoAnotacion= '".$_GET["idSeccion"]."'";
     if($obj->numFilas()>0){
         echo '<div class="row">';
         echo '<div class="col-md-12 text-center" id="desplegable2">';
-        echo '<div class="form-group">';
-        echo '<select class="form-control" >';
+        echo '<div class="form-group" >';
+        echo '<select class="form-control" id="selectSecciones">';
         echo '<option value>Seleccione una seccion</option>';
         while($fila = $obj->devolverFilas())
         {

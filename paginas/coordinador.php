@@ -228,13 +228,18 @@ if(isset($_SESSION['coordinador']))
                         </div>
                         
                     </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="cerrarSession.php"><span class="glyphicon glyphicon-log-out text-success"></span> Cerrar sesion</a>
+                            </h4>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-8 col-md-8 " id="cuerpo">
             ';
-                  if(isset($_GET["campovacio"])){
-                      echo '<p>ERROR: No puedes dejar el nombre en blanco</p>';
-                  }
+
             echo '                        
             </div>
         </div>
