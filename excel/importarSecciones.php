@@ -11,18 +11,16 @@ $objeto = new procedimientos();
 $objeto->conectar();
 
 //Recorremos las filas del documento Excel y las asignamos a variables
-$consulta="DELETE from secciones";
-$objeto->consultas($consulta);
-$stmt=$objeto->consultasPreparadas("INSERT INTO secciones VALUES (?,?,?,?)");
+$consulta="INSERT INTO secciones VALUES (?,?,?,?)";
+$stmt = $objeto->consultasPreparadas($consulta);
+
 $stmt->bind_param("ssis",$string1,$string2,$int1,$string3);
-
 foreach ($tabla as $indice => $valor){
-    $string1=$valor[0];
-    $string2=$valor[1];
-    $int1=$valor[2];
-    $string3=$valor[3];
+    $string1= $valor[0];
+    $string2= $valor[1];
+    $int1= $valor[2];
+    $string3= $valor[3];
     $stmt->execute();
-
 }
 
 $stmt->close();

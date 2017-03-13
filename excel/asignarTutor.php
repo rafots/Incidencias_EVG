@@ -9,9 +9,17 @@ $conexion = new procedimientos();
 $conexion->conectar();
 
 foreach($tabla as $indice){
-    $selectProf = "UPDATE profesores SET tutor=1 WHERE profesores.nombre = '".$indice[1]."' AND '".$indice[2]."' <> NULL";
-    echo $selectProf;
-    $conexion->consultas($selectProf);
+    if($indice[2] != NULL){
+        $updateProf = "UPDATE profesores SET tutor=TRUE WHERE profesores.nombre = '".$indice[1]."' ";
+        $conexion->consultas($updateProf);
+
+        $idProf = "SELECT idUsuario FROM profesores WHERE nombre = '".$indice[1]."' ";
+        $conexion->consultas($idProf);
+        $fila = $conexion->devolverFilas();
+
+        $updateSec = "UPDATE secciones SET tutor=".$fila["idUsuario"]." WHERE idSeccion = '".$indice[2]."' ";
+        $conexion->consultas($updateSec);
+    }
 
 }
 
