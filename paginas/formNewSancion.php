@@ -60,11 +60,9 @@ else{
     }
     
     echo '
-                </select>
-            </div>
-        </div>
-        <form class="form-horizontal" name="formAddSancion" id="formAddSancion" method="post" action="../consultas/addSancion.php">
-
+                            </select>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label for="sanction-type" class="col-md-3 control-label">Tipo de sanción</label>
                         <div class="col-sm-8">
@@ -126,21 +124,21 @@ else{
         <div class="form-group">
             <label for="initial-date" class="col-md-3 control-label">Fecha de inicio</label>
             <div class="col-sm-8">
-                <input type="date" class="form-control" name="initial-date" id="initial-date"/>
+                <input type="date" class="form-control" name="initial-date" id="initial-date" required/>
             </div>
         </div>
 
         <div class="form-group">
             <label for="end-date" class="col-md-3 control-label">Fecha de fin</label>
             <div class="col-sm-8">
-                <input type="date" class="form-control" name="end-date" id="end-date"/>
+                <input type="date" class="form-control" name="end-date" id="end-date" required/>
             </div>
         </div>
 
         <div class="form-group">
             <label for="end-date" class="col-md-3 control-label">Observaciones</label>
             <div class="col-sm-8">
-                <textarea class="form-control" rows="5" name="observations" id="observations" placeholder="Observaciones de la sanción"></textarea>
+                <textarea class="form-control" rows="5" name="observations" id="observations" placeholder="Observaciones de la sanción" required></textarea>
             </div>
         </div>
 

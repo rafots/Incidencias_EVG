@@ -88,7 +88,7 @@ if(isset($_SESSION['coordinador']))
                                     
                                     <tr>
                                         <td>
-                                            <a id="parteseducativos" id="parteDisciplinario">Partes educativos</a>
+                                            <a href="" id="parteseducativos" id="parteDisciplinario">Partes educativos</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -169,22 +169,22 @@ if(isset($_SESSION['coordinador']))
                                 <table class="table">
                                     <tr>
                                         <td>
-                                            <a id="view_sanction">Ver sanciones</a>
+                                            <a href="" id="view_sanction">Ver sanciones</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a id="create_sanction">Crear sanción</a>
+                                            <a href="" id="create_sanction">Crear sanción</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a id="sanc_ult_hora">7ª hora</a>
+                                            <a href="" id="sanc_ult_hora">7ª hora</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a id="sanc_aula_convivencia">Aula de convivencia</a> <span class="label label-info">5</span>
+                                            <a href="" id="sanc_aula_convivencia">Aula de convivencia</a> <span class="label label-info">5</span>
                                         </td>
                                     </tr>
                                     <tr>

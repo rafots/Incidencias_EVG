@@ -61,13 +61,11 @@ else {
             echo '<td>' . $row['Alumno'] . '</td>';
             echo '<td>' . $row['n_motivo'] . '</td>';
             echo '<td>' . $row['fecha_inicio'] . '</td>';
-            echo '<td><a class="btn btn-success btn-xs" href="#"><span class="glyphicon glyphicon-eye-open"></span></a></td>';
+            echo '<td><button class="btn btn-success btn-xs btn-mostrar-sancion" data-id-sancion="' .$row['idSancion'] . '"><i class="glyphicon glyphicon-eye-open"></i></button></td>';
             echo '</tr>';
         }
         echo '</tbody>';
         echo '</table>';
-
-
 
     }else{
         echo '<h1><small>Actualmente no hay sanciones de "Aula de convivencia" para el día de hoy</small></h1>';

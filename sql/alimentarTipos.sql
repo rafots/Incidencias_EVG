@@ -20,7 +20,8 @@ INSERT INTO `tipo_sancion` (`tipoSancion`, `nombre`) VALUES
   (2, 'Parte disciplinario'),
   (3, 'Aula de convivencia'),
   (4, 'Expulado del centro'),
-  (5, 'Trabajos comunitarios');
+  (5, 'Trabajos comunitarios'),
+(6, 'Séptima hora');
 
 /*Codigo SQL para alimentar tipo_sancion_incidencias*/
 
@@ -40,3 +41,15 @@ INSERT INTO `tipos_anotaciones` (`tipoAnotacion`, `nombre`, `codEtapa`) VALUES
   (5, 'Problemas con profesor','BAC'),
   (6, 'Problemas con profesor','ESO'),
   (7, 'Problemas con profesor','CFGS');
+
+INSERT INTO `horas` (`idHora`, `nombre`) VALUES
+  (1, '1 hora'),
+  (2, '2 hora'),
+  (3, '1 recreo'),
+  (4, '3 hora'),
+  (5, '4 hora'),
+  (6, '2 recreo'),
+  (7, '5 hora'),
+  (8, '6 hora'),
+  (9, '7 hora');
+

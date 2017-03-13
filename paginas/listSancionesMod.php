@@ -14,7 +14,7 @@ else {
 
     /*
      *
-     * Proceso para generar un listado de las sancciones de aula de convivencia
+     * Proceso para generar un listado de las sancciones
      *
      */
 
@@ -65,7 +65,7 @@ else {
                     <th>Tipo de sanción</th>
                     <th>Fecha inicio</th>
                     <th>Fecha fin</th>
-                    <th></th>
+                    <th colspan="2"></th>
                 </tr>
             </thead>
             <tbody>
@@ -77,7 +77,8 @@ else {
             echo '<td>' . $row['tipoSancion'] . '</td>';
             echo '<td>' . $row['fecha_inicio'] . '</td>';
             echo '<td>' . $row['fecha_fin'] . '</td>';
-            echo '<td><a class="btn btn-success btn-xs" id="modSanc-'.$row['idSancion'].'"><span class="glyphicon glyphicon-eye-open"></span></a></td>';
+            echo '<td><button class="btn btn-success btn-xs btn-ver-sancion" data-id-sancion="' .$row['idSancion'] . '"><i class="glyphicon glyphicon-eye-open"></i></button></td>';
+            echo '<td><button class="btn btn-success btn-xs btn-delete-sancion" data-id-sancion="' .$row['idSancion'] . '"><i class="glyphicon glyphicon-trash"></i></button></td>';
             echo '</tr>';
         }
         echo '</tbody>';

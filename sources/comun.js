@@ -25,7 +25,7 @@ $(document).ready(function(){
         }
 
     });
-
+/*
     $('#formAddSancion').on("submit",function(){
 
         var initialDt = document.forms['formAddSancion']['initial-date'].value;
@@ -35,7 +35,7 @@ $(document).ready(function(){
         var description = document.forms['formAddSancion']['observations'].value;
         if(description == '')
             return false;
-
+        
     });
-
+*/
 });
