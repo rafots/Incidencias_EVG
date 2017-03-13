@@ -38,7 +38,7 @@ class procedimientos
 
     public function errores()
     {
-        $this->conexion->error;
+        return $this->conexion->error;
     }
 
     public function cerrarConexion()

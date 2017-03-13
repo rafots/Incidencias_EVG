@@ -16,6 +16,6 @@ $modificar = "UPDATE etapas SET codEtapa='".$_POST["codEtapa"]."', nombre='".$_P
 $conexion->consultas($modificar);
 
 $modificarCoordinador = "UPDATE profesores SET coordinador=1 WHERE idUsuario = ".$idCoordinador."";
-$conexion->conectar($modificarCoordinador);
+$conexion->consultas($modificarCoordinador);
 
-header("Location: ../paginas/gestor.php");
+//header("Location: ../paginas/gestor.php");

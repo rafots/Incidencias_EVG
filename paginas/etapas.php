@@ -23,14 +23,15 @@ while($fila = $conexion->devolverFilas()){echo '
                 <td class="text-center">' . $fila["codEtapa"] . '</td>
                 <td class="text-center">' . $fila["nombreE"] . '</td>
                 <td class="text-center">' . $fila["nombrePROF"] . '</td>
-                <td><button type="button" class="btn btn-success" name="modificar" value="'.$fila["codEtapa"].'" id="modificar">Modificar</button></td>
-                <td><button type="button" class="btn btn-success" name="borrar" value="'.$fila["codEtapa"].'" id="borrar">Borrar</button></td>
+                <td><button type="button" class="btn btn-success btn-xs btn-modificar" data-id-etapa="'.$fila["codEtapa"].'">Modificar</button></td>
+                <td><button type="button" class="btn btn-success btn-xs btn-borrar" data-id-etapa="'.$fila["codEtapa"].'">Borrar</button></td>
         </tr>';
 } echo'
     </table>
     
     <button type="button" class="btn btn-success" name="aniadir" id="aniadirEtapa">Añadir nueva</button>
     <br/><br/>
+    
     <div id="aniadir">
     
     </div>
