@@ -9,7 +9,7 @@ $conexion = new procedimientos();
 $conexion->conectar();
 
 foreach($tabla as $indice){
-    $selectProf = "UPDATE profesores SET tutor=1 WHERE '".$indice[2]."' <> NULL AND nombre = '".$indice[1]."' ";
+    $selectProf = "UPDATE profesores SET tutor=1 WHERE profesores.nombre = '".$indice[1]."' AND '".$indice[2]."' <> NULL";
     echo $selectProf;
     $conexion->consultas($selectProf);
 
