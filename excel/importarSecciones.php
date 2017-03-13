@@ -11,11 +11,10 @@ $objeto = new procedimientos();
 $objeto->conectar();
 
 //Recorremos las filas del documento Excel y las asignamos a variables
-$consulta="INSERT INTO secciones VALUES (?,?,?,?)";
-$update_tut = "UPDATE profesores SET tutor = TRUE WHERE idUsuario = ?";
-
+$consulta="DELETE from secciones";
+$objeto->consultas($consulta);
+$stmt=$objeto->consultasPreparadas("INSERT INTO secciones VALUES (?,?,?,?)");
 $stmt->bind_param("ssis",$string1,$string2,$int1,$string3);
-$stmt_tut->bind_param("i",$tut);
 
 foreach ($tabla as $indice => $valor){
     $string1=$valor[0];
@@ -24,12 +23,9 @@ foreach ($tabla as $indice => $valor){
     $string3=$valor[3];
     $stmt->execute();
 
-    $tut=$valor[2];
-    $stmt_tut->execute();
 }
 
 $stmt->close();
-$stmt_tut->close();
 
 if($objeto->filasAfectadas()){
     echo "Se han importado los datos con exito";

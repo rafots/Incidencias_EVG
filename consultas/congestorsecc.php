@@ -18,7 +18,6 @@ echo ' <h4>Secciones</h4>';
            <th>Tutor</th>
            <th>Etapas</th>
            <th> </th>
-           <th> </th>
               </tr>';
         while ($fila = $objeto->devolverfilas()) {
             echo '<tr>';
@@ -27,7 +26,6 @@ echo ' <h4>Secciones</h4>';
             echo '<th>'.$fila["tutor"].'</th>';
             echo '<th>'.$fila["codEtapa"].'</th>';
             echo '<th><a href="../consultas/eliminarsecgestor.php?val='.$fila["idSeccion"].' ">Eliminar</a>';
-            echo '<th><a href="#">Modificar</a>';
             echo '<tr/>';
 }
 

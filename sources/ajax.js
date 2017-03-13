@@ -131,27 +131,29 @@ $(document).ready(function(){
     });
 
 
+
     $('#desplegable1').on("change",function(e){
         e.preventDefault();
 
         var selectedValue = this.value;
         var parametros = {
-            "idSeccion" : selectedValue
+            "seccion" : selectedValue
         };
         //make the ajax call
         $.ajax({
-            url: '../consultas/consultascrear.php',
-            type: 'GET',
+            url: "../consultas/recogealumno.php",
+            type: "GET",
             data: parametros,
             success: function(parametros) {
-                $('#desplegable2').remove();
-                $('#easy2').append(parametros);
-                console.log('entra');
+                $('#desplegable2').empty();
+                $('#contenidoAlumm').remove();
+                $('#desplegable2').append(parametros);
 
             }
         });
 
     });
+
         $('#cerrarModal').on("click",function(e){
             $('#contenidoAlum').empty();
         });

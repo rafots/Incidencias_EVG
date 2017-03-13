@@ -9,10 +9,19 @@ $conexion = new procedimientos();
 $conexion->conectar();
 
 foreach($tabla as $indice){
-    $selectProf = "UPDATE profesores SET tutor=1 WHERE '".$indice[2]."' <> NULL AND nombre = '".$indice[1]."' ";
-    echo $selectProf;
-    $conexion->consultas($selectProf);
+    if($indice !=NULL){
+        $selectProf = "UPDATE profesores SET tutor=1 WHERE nombre like '".$indice[1]."' ";
+        $conexion->consultas($selectProf);
+        $consulta2="select idUsuario from profesores where nombre like '".$indice[1]."'";
+        $conexion->consultas($consulta2);
+        $fila=$conexion->devolverFilas();
+        $consulta3= "UPDATE secciones set tutor='".$fila["idUsuario"]."' where idSeccion like  '".$indice[2]."'";
+        $conexion->consultas($consulta3);
 
+    }
+    echo "</br>".$selectProf;
+    echo "</br>".$consulta2;
+    echo "</br>".$consulta3;
 }
 
 if($conexion->filasAfectadas()){
