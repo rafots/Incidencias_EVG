@@ -5,7 +5,8 @@
     if(!isset($_SESSION["usuario"])){
         echo "Acceso prohibido";
     }else{
-        echo "
+        if($conexion->numFilas() > 0){
+            echo "
         <article class='col-md-12 articulo'>
             <table class='table table-striped'>
                 <tr>
@@ -15,22 +16,22 @@
                     <td></td>
                 </tr>
                 <tr>";
-                while($fila = $conexion->devolverFilas()){
-                    if($fila["leidaT"] == 1){echo"
+            while($fila = $conexion->devolverFilas()){
+                if($fila["leidaT"] == 1){echo"
                     <td class='text-center success'>".$fila["nombreCompleto"]."</td>
                     <td class='text-center success'>".$fila["nombreINC"]."</td>
                     <td class='text-center success'>".$fila["nombrePROF"]."</td>
                     <td><button type='button' class='btn btn-success btn-xs' data-toggle='modal' data-target='#Modal_".$fila["idIncidencia"]."'>
                         <span class='glyphicon glyphicon-eye-open'></span></button></td>
                 </tr>";
-                    }else{echo "
+                }else{echo "
                     <td class='text-center'>".$fila["nombreCompleto"]."</td>
                     <td class='text-center'>".$fila["nombreINC"]."</td>
                     <td class='text-center'>".$fila["nombrePROF"]."</td>
                     <td><button type='button' class='btn btn-success btn-xs' data-toggle='modal' data-target='#Modal_".$fila["idIncidencia"]."'>
                         <span class='glyphicon glyphicon-eye-open'></span></button></td>
                 </tr>";
-                    }echo"
+                }echo"
                     
                     <!-- Modal -->
                     <div class='modal fade' id='Modal_".$fila["idIncidencia"]."' tabindex='-1' role='dialog' aria-labelledby='Modal_Label_".$fila["idIncidencia"]."'>
@@ -82,7 +83,7 @@
                                             <label for='descripcion' class='col-md-12 control-label'>Descripcion:</label>
                                                 <div class='col-lg-12'>
                                                     <textarea class='form-control' rows='5' id='descripcion' disabled>";
-                                                        echo $fila["descripcion"];echo "
+                echo $fila["descripcion"];echo "
                                                     </textarea>
                                                 </div>
                                         </div>
@@ -96,10 +97,14 @@
                             </div>
                         </div>
                     </div>";
-                }
-        echo "
+            }
+            echo "
                 
              </table>
-        </article>
+        </article>";
+        }else{
+            echo "<h1><small>Actualmente no hay Incidencias</small></h1>";
+        }
+        echo "
     </body>";
     }

@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once "../procedimientos/procedimientos.php";
 
 $conexion = new Procedimientos();
