@@ -64,7 +64,7 @@ $(document).ready(function() {
         $("#cuerpo").load("crearanotaciones.php");
     });
 
-    $('#desplegable1').on("change",function(e){
+    $('#desplegable1').change(function(e){
         e.preventDefault();
         var seccion = $('#desplegable1').find(":selected").text();
         $.ajax({
@@ -78,7 +78,6 @@ $(document).ready(function() {
 
             }
         });
-
     });
 
     $('#botonBuscar').on("click", function (e) {

@@ -39,7 +39,7 @@ echo '<script type="text/javascript" src="../sources/ajax.js"></script>';
         <br><br>
         <label>Tipo al que pertenece</label>';
         require_once "../consultas/consultatipoanot.php";
-        echo '<select name="tipo" class="form-control" id="desplegable1">';
+        echo '<select name="tipo" class="form-control">';
         echo '<option value>Seleccione un tipo de anotacion</option>';
         while ($fila = $objeto->devolverfilas()) {
             echo '<option value="'.$fila["tipos"].'">'.$fila["nombre"].'</option>';
