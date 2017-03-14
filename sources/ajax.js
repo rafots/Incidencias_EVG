@@ -69,31 +69,33 @@ $(document).ready(function() {
         var seccion = $('#desplegable1').find(":selected").text();
         $.ajax({
             type:"GET",
-            url: '../consultas/recogealumno.php?idSeccion='+seccion,
+            url: '../consultas/recogealumno.php?seccion='+seccion,
             success: function(data) {
                 e.preventDefault();
                 $('#alumnos').empty();
                 $('#alumnos').append(data);
-                $('#botonBuscar').attr('type', 'submit');
+                console.log(data);
 
             }
         });
     });
 
-    $('#botonBuscar').on("click", function (e) {
+    $('#crearAnotacion').on("click", function (e) {
         e.preventDefault();
-
-        var nombre = $('#desplegable2').find(":selected").text();
         //make the ajax call
+        var params = {
+             tipo : $('select[name=desplegabletipo]').val(),
+             nia : $('select[name=desplegable2]').val(),
+        };
+
         $.ajax({
             type: "GET",
-            url: '../consultas/consulta.php?nombre=' + nombre,
+            url: '../consultas/consultascrear.php',
+            data: params,
             success: function (data) {
                 e.preventDefault();
-                $('#cuerpo').append('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>');
-                $('#cuerpo').append('<script type="text/javascript" src="../sources/ajaxCoordinador.js"></script>');
-                $('#cuerpo').html(data);
-                $('#cuerpo').append('<button id="volverBuscarAlumnos">Volver</button>');
+                console.log("Entra correctamente");
+                $('#cuerpo').append(data);
             }
         });
 

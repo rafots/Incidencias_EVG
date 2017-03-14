@@ -1,4 +1,5 @@
 <?php
+
 require_once "validaranotaciones.php";
 
 echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>';
@@ -39,7 +40,7 @@ echo '<script type="text/javascript" src="../sources/ajax.js"></script>';
         <br><br>
         <label>Tipo al que pertenece</label>';
         require_once "../consultas/consultatipoanot.php";
-        echo '<select name="tipo" class="form-control">';
+        echo '<select name="desplegabletipo" id="tipo" class="form-control">';
         echo '<option value>Seleccione un tipo de anotacion</option>';
         while ($fila = $objeto->devolverfilas()) {
             echo '<option value="'.$fila["tipos"].'">'.$fila["nombre"].'</option>';
@@ -47,13 +48,11 @@ echo '<script type="text/javascript" src="../sources/ajax.js"></script>';
         echo '</select>
         <div class="form-group">
         <label>Habilitar Profesores</label>
-        <input type="checkbox" name="profesores">
+        <input type="checkbox" name="profesores" id="profesores">
         </div>
-        <input class="btn btn-success" type="submit" name="boton" value="Crear anotacion">
+        <input class="btn btn-success" type="submit" name="boton" id="crearAnotacion" value="Crear anotacion">
 
-        <div class="form-group text-right">
-            <input type="hidden" name="submit" value="Buscar" class="btn btn-success" id="botonBuscar">
-        </div>';
+   ';
     }
     ?>
 

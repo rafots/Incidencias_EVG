@@ -60,6 +60,7 @@ if(isset($_SESSION['coordinador']))
         <!-- CUERPO DE LA PÁGINA -->
         
     <div class="container "  >
+    
         <div class="row " >
             <div class="col-sm-3 col-md-3 " >
                 <div class="panel-group " id="accordion" >
@@ -238,6 +239,7 @@ if(isset($_SESSION['coordinador']))
                 </div>
             </div>
             <div class="col-sm-8 col-md-8 " id="cuerpo">
+            Bienvenido al menú del coordinador
             ';
 
             echo '                        
