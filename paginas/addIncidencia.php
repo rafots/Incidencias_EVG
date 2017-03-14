@@ -19,7 +19,7 @@
         echo '</div>';
         echo '<div>';
         echo '<label>Asignatura</label>';
-        echo '<input type="text" name="asignatura" class="form-control" required="required"/>';
+        echo '<input type="text" name="asignatura" class="form-control"/>';
         echo '</div>';
         echo '<div>';
         echo '<label>Hora</label>';

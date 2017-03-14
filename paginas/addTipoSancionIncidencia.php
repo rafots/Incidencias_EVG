@@ -19,6 +19,7 @@
             </div>
             <hr/>
             <div>
+                <h4>Agrupar sancion con incidencias</h4>
                 <form method="post" action="../consultas/conAltaTipoSancionIncidencia.php">
                     <div>
                         <label>Selecciona el tipo de sancion</label>

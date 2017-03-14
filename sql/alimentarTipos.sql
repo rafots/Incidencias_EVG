@@ -1,5 +1,11 @@
 /*Codigo SQL para alimentar tipo_incidencias*/
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 INSERT INTO tipo_incidencias (`idTipo`, `nombre`, `gestiona`, `codEtapa`) VALUES (1, 'Aula de convivencia', 'C', 'ESO'),
   (2, 'Parte disciplinario', 'C', 'CFGS'),
   (3, 'Apercibimiento escrito', 'C', 'CFGS'),
