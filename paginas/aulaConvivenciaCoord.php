@@ -23,6 +23,12 @@ if(!isset($_SESSION["usuario"])){
         ON t5.idTipo = t1.idTipo
 	WHERE (t1.idTipo = 1 AND `archivadaC` = 0) AND fecha_ocurrencia <= CURRENT_DATE  ORDER BY leidaC ASC";
     $obj->consultas($query);
+
+}
+
+
+if($obj->numFilas() >0) {
+
     echo "
         <article class='col-md-12 articulo'>
             <table class='table table-striped'>
@@ -33,37 +39,37 @@ if(!isset($_SESSION["usuario"])){
                     <td></td>
                 </tr>
                 <tr>";
-}
 
-
-
-while($fila = $obj->devolverFilas())
-{
-    if($fila["leidaC"] == 1){echo"
-                    <td class='text-center success'>".$fila["nombreCompleto"]."</td>
-                    <td class='text-center success'>".$fila["nombreINC"]."</td>
-                    <td class='text-center success'>".$fila["profe"]."</td>
-                    <td><button type='button' class='btn btn-success btn-xs' data-toggle='modal' data-target='#Modal_".$fila["idIncidencia"]."'>
+    while ($fila = $obj->devolverFilas()) {
+        if ($fila["leidaC"] == 1) {
+            echo "
+                    <td class='text-center success'>" . $fila["nombreCompleto"] . "</td>
+                    <td class='text-center success'>" . $fila["nombreINC"] . "</td>
+                    <td class='text-center success'>" . $fila["profe"] . "</td>
+                    <td><button type='button' class='btn btn-success btn-xs' data-toggle='modal' data-target='#Modal_" . $fila["idIncidencia"] . "'>
                         <span class='glyphicon glyphicon-eye-open'></span></button></td>
                 </tr>";
-    }else{echo "
-                    <td class='text-center'>".$fila["nombreCompleto"]."</td>
-                    <td class='text-center'>".$fila["nombreINC"]."</td>
-                    <td class='text-center'>".$fila["profe"]."</td>
-                    <td><button type='button' class='btn btn-success btn-xs' data-toggle='modal' data-target='#Modal_".$fila["idIncidencia"]."'>
+        } else {
+            echo "
+                    <td class='text-center'>" . $fila["nombreCompleto"] . "</td>
+                    <td class='text-center'>" . $fila["nombreINC"] . "</td>
+                    <td class='text-center'>" . $fila["profe"] . "</td>
+                    <td><button type='button' class='btn btn-success btn-xs' data-toggle='modal' data-target='#Modal_" . $fila["idIncidencia"] . "'>
                         <span class='glyphicon glyphicon-eye-open'></span></button></td>
                 </tr>";
-    }echo"
+        }
+        echo "
                     
                     <!-- Modal -->
-                    <div class='modal fade' id='Modal_".$fila["idIncidencia"]."' tabindex='-1' role='dialog' aria-labelledby='Modal_Label_".$fila["idIncidencia"]."'>
+                    <div class='modal fade' id='Modal_" . $fila["idIncidencia"] . "' tabindex='-1' role='dialog' aria-labelledby='Modal_Label_" . $fila["idIncidencia"] . "'>
                         <div class='modal-dialog' role='document'>
                             <div class='modal-content'>
                                 <div class='modal-header'>
                                     <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-                                    <h4 class='modal-title' id='Modal_Label_".$fila["idIncidencia"]."'>Incidencia de ".$fila["nombreCompleto"]."</h4>
+                                    <h4 class='modal-title' id='Modal_Label_" . $fila["idIncidencia"] . "'>Incidencia de " . $fila["nombreCompleto"] . "</h4>
                                 </div>
-                                <div class='modal-body'>";echo "
+                                <div class='modal-body'>";
+        echo "
                                     <form class='form-horizontal'>
                                         <div class='form-group'>
                                             <label for='alumno' class='col-md-3 control-label'>Alumno:</label>
@@ -105,8 +111,8 @@ while($fila = $obj->devolverFilas())
                                             <label for='descripcion' class='col-md-12 control-label'>Descripcion:</label>
                                                 <div class='col-lg-12'>
                                                     <textarea class='form-control' rows='5' id='descripcion' disabled>";
-                                                            echo $fila["descripcion"];
-                                                            echo "
+        echo $fila["descripcion"];
+        echo "
                                                     </textarea>
                                                 </div>
                                         </div>
@@ -114,13 +120,20 @@ while($fila = $obj->devolverFilas())
                                 </div>
                                 <div class='modal-footer'>
                                     <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
-                                    <a class='btn btn-default' href='leerIncidenciaCoord.php?codigo=".$fila["idIncidencia"]."'>Marcar como leida</a>
-                                    <a class='btn btn-default' href='archivarIncidenciaCoord.php?codigo=".$fila["idIncidencia"]."'>Archivar</a>
+                                    <a class='btn btn-default' href='leerIncidenciaCoord.php?codigo=" . $fila["idIncidencia"] . "'>Marcar como leida</a>
+                                    <a class='btn btn-default' href='archivarIncidenciaCoord.php?codigo=" . $fila["idIncidencia"] . "'>Archivar</a>
                                 </div>
                             </div>
                         </div>
                     </div>";
+        echo '</table>';
+        echo '</div>';
+    }
 }
-echo '</table>';
-echo '</div>';
+
+else
+{
+    echo 'No hay aulas de convivencias en este instante';
+}
+
 $obj->cerrarConexion();
