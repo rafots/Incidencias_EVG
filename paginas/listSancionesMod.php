@@ -88,6 +88,7 @@ else {
 
     }else{
         echo '<h1><small>Actualmente no hay sanciones</small></h1>';
+        //echo $sql;
     }
 
 

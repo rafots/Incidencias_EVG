@@ -122,12 +122,12 @@ if(!isset($_SESSION["tutor"])){
                                 <table class="table">
                                     <tr>
                                         <td>
-                                            <a id="sancion">Poner sanción</a>
+                                            <a id="create_sanction">Poner sanción</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a id="visualizarSancion">Visualizar sanciones</a><span class="label label-info">5</span>
+                                            <a id="view_sanction">Visualizar sanciones</a><span class="label label-info">5</span>
                                         </td>
                                     </tr>
                                     <tr>
