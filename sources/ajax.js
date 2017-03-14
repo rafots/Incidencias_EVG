@@ -95,7 +95,9 @@ $(document).ready(function() {
             success: function (data) {
                 e.preventDefault();
                 console.log("Entra correctamente");
+                $('#alerta').hide();
                 $('#cuerpo').append(data);
+
             }
         });
 

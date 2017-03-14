@@ -34,7 +34,7 @@ echo '<script type="text/javascript" src="../sources/ajax.js"></script>';
             echo '<option value="'.$fila["seccionid"].'">'.$fila["seccionid"].'</option>';
         }
         echo'</select>
-
+        
         <div class="form-group" id="alumnos">      
         </div>
         <br><br>

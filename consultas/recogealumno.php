@@ -5,7 +5,7 @@ $objeto->conectar();
 $consulta="select * from alumnos WHERE idSeccion like '".$_GET["seccion"]."'";
 $objeto->consultas($consulta);
 
-
+echo '<label>Alumnos</label>';
 echo '<select name="desplegable2" class="form-control" id="desplegable2">';
 echo '<option value>Seleccione un alumno</option>';
     $query ="select * from alumnos WHERE idSeccion like '".$_GET["seccion"]."'";
@@ -14,5 +14,6 @@ echo '<option value>Seleccione un alumno</option>';
         echo '<option value="'.$fila["nia"].'">'.$fila["nombreCompleto"].'</option>';
     }
     echo '</select>';
+
 
 ?>

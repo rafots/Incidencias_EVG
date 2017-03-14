@@ -55,10 +55,10 @@ session_start();
                 $sentencia->execute();
                 $sentencia->bind_result($codEtapa, $nombre, $idSeccion);
                 $sentencia->fetch();
-                $_SESSION['codEtapa']=$codEtapa;
+               $_SESSION['codEtapa']=$codEtapa;
                 $_SESSION['idSeccion']=$idSeccion;
                 $_SESSION['nombre'] = $nombre;
-                header('Location: ../paginas/coordinador.php');
+                //header('Location: ../paginas/coordinador.php');
             }
             else
             if($tutor == 1)
