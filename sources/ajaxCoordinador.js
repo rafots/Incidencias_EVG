@@ -179,18 +179,3 @@ $(document).ready(function(){
     });
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

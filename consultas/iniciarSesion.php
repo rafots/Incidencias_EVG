@@ -65,11 +65,9 @@ session_start();
             {
                 $_SESSION['usuario']=$usuario;
                 $_SESSION['tutor']=$tutor;
-                $query = 'SELECT t1.codEtapa, t2.nombre, idSeccion FROM etapas t1 
-	                    INNER JOIN profesores t2 
-                            ON (t1.coordinador = t2.idUsuario)
-                            INNER JOIN secciones ON (secciones.tutor = t2.idUsuario)
-                        WHERE t2.idUsuario = ? ';
+                $query = 'SELECT secciones.codEtapa, profesores.nombre, secciones.idSeccion FROM profesores 
+                    INNER JOIN secciones ON secciones.tutor = profesores.idUsuario
+                    WHERE profesores.idUsuario = ? ';
 
                 $sentencia = $obj->consultasPreparadas($query);
                 $sentencia->bind_param('i',$_SESSION['idUsuario']);

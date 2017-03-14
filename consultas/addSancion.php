@@ -18,6 +18,10 @@
 
     $obj->cerrarConexion();
 
-   // header('Location: ../paginas/coordinador.php');
+    if($_SESSION["activa"]=='c'){
+        header('Location: ../paginas/coordinador.php');
+    }else{
+        header('Location: ../paginas/tutor.php');
+    }
 
 ?>
