@@ -13,7 +13,7 @@ if($fila_tabla=$conexion->devolverFilas())
     echo '<tbody>';
     echo '<tr>';
     echo '<td>'.$fila_tabla["nombre"].'</td>';
-    echo '<td><a href="alterTipoAnotacionForm.php?modificar=si&codAntiguo='.$fila_tabla["idHora"].'&nombreAntiguo='.$fila_tabla["hora"].'">Modificar</a></td>';
+    echo '<td><a href="alterHoraForm.php?modificar=si&codAntiguo='.$fila_tabla["idHora"].'&nombreAntiguo='.$fila_tabla["nombre"].'">Modificar</a></td>';
     echo '</tr>';
 
     if(!empty($fila_tabla))
@@ -22,7 +22,7 @@ if($fila_tabla=$conexion->devolverFilas())
         {
             echo '<tr>';
             echo '<td>'.$fila_tabla["nombre"].'</td>';
-            echo '<td><a href="alterTipoAnotacionForm.php?modificar=si&codAntiguo='.$fila_tabla["idHora"].'&nombreAntiguo='.$fila_tabla["hora"].'">Modificar</a></td>';
+            echo '<td><a href="alterHoraForm.php?modificar=si&codAntiguo='.$fila_tabla["idHora"].'&nombreAntiguo='.$fila_tabla["nombre"].'">Modificar</a></td>';
             echo '</tr>';
         }
     }
@@ -31,7 +31,7 @@ if($fila_tabla=$conexion->devolverFilas())
 }
 else
 {
-    echo '<p class="bg-danger">No hay tipos de anotaciones</p>';
+    echo '<p class="bg-danger">No hay horas</p>';
 }
 
 ?>

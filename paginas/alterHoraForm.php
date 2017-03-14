@@ -33,8 +33,8 @@ if(!isset($_SESSION['gestor'])){
                         <div id="title-cdi">GESTOR</div>
                     </div>
                     <div class="col-md-3 col-sm-3">';
-                        echo '<br/>';
-                        echo $_SESSION['nombre'];echo '
+    echo '<br/>';
+    echo $_SESSION['nombre'];echo '
                     </div>
                 </div>
             </header>
@@ -80,7 +80,19 @@ if(!isset($_SESSION['gestor'])){
             </div>
             
             <div class="col-sm-8 col-md-8" id="cuerpo">
-    
+                ';
+                echo '<div>';
+                echo '<form method="get" action="../consultas/conAlterHora.php">';
+                echo '<label>Nombre de tipo de anotacion</label>';
+                echo '<div>';
+                echo '<input type="hidden" name="cod" value="'.$_GET["codAntiguo"].'">';
+                echo '<input type="text" name="texto" value="'.$_GET["nombreAntiguo"].'" required="required">';
+                echo '</div>';
+                echo '<div>';
+                echo '<input type="submit" value="Modificar hora">';
+                echo '</div>';
+                echo '</div>';
+                echo'
             </div>
         </div>
     </div>

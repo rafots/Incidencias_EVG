@@ -8,6 +8,11 @@ $(document).ready(function(){
        $("#cuerpo").load("etapas.php");
    });
 
+   $("#horas").on("click",function(e){
+       e.preventDefault();
+       $("#cuerpo").load("gestionHoras.php");
+   });
+
     $("#aniadirEtapa").on("click", function(e){
         e.preventDefault();
         $("#aniadir").load("addEtapa.php");
