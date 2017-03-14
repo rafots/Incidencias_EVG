@@ -1,8 +1,7 @@
 <?php
     require "../procedimientos/procedimientos.php";
-    $conexion = new conexion();
-
-    $conectar= new mysqli ($conexion->getServer(),$conexion->getUser(),$conexion->getPass(),$conexion->getDb());
+    $conexion = new procedimientos();
+    $conexion->conectar();
     echo '<div>';
         echo '<h3>Añadir incidencia</h3>';
         echo '<form method="post" class="form-horizontal" action="../consultas/conAddIncidencia.php">';
