@@ -31,7 +31,7 @@ else {
         INNER JOIN secciones ON secciones.idSeccion = alumnos.idSeccion 
         INNER JOIN motivo ON motivo.idMotivo = sanciones.idMotivo 
         INNER JOIN tipo_sancion ON tipo_sancion.tipoSancion = sanciones.tipoSancion
-        WHERE sanciones.tipoSancion = 'Séptima hora' AND secciones.codEtapa = '".$_SESSION["codEtapa"]."' AND sanciones.fecha_inicio = '".$today."'";
+        WHERE tipo_sancion.nombre = 'Séptima hora' AND secciones.codEtapa = '".$_SESSION["codEtapa"]."' AND sanciones.fecha_inicio = '".$today."'";
 
     $obj->consultas($sql);
 
@@ -63,7 +63,7 @@ else {
 
     }else{
         echo '<h1><small>Actualmente no hay sanciones de "última hora" para el día de hoy</small></h1>';
-        //echo $sql;
+        echo $sql.'<br/>';
     }
 }
 

@@ -6,22 +6,31 @@
  * Time: 10:55
  */
 
-    require '../procedimientos/procedimientos.php';
+    session_start();
+    if(isset($_SESSION["usuario"])){
 
-    $obj = new procedimientos();
-    $obj->conectar();
+        require '../procedimientos/procedimientos.php';
 
-    $sql = "INSERT INTO sanciones (idIncidencia, nia, tipoSancion, fecha_inicio, fecha_fin, observacion, idMotivo)
+        $obj = new procedimientos();
+        $obj->conectar();
+
+        $sql = "INSERT INTO sanciones (idIncidencia, nia, tipoSancion, fecha_inicio, fecha_fin, observacion, idMotivo)
         VALUES (NULL , '".$_POST['student']."', ".$_POST['sanction-type'].", '".$_POST['initial-date']."', '".$_POST['end-date']."', '".$_POST['observations']."', ".$_POST['reason-type'].")";
-    echo $sql;
-    $obj->consultas($sql);
+        echo $sql;
+        $obj->consultas($sql);
 
-    $obj->cerrarConexion();
+        $obj->cerrarConexion();
 
-    if($_SESSION["activa"]=='c'){
-        header('Location: ../paginas/coordinador.php');
+
+        if($_SESSION["activa"]=='c'){
+            header('Location: ../paginas/coordinador.php');
+        }else{
+            header('Location: ../paginas/tutor.php');
+        }
+
     }else{
-        header('Location: ../paginas/tutor.php');
-    }
 
+        echo 'Acceso denegado';
+
+    }
 ?>
