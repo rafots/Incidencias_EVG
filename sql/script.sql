@@ -212,4 +212,9 @@ INSERT INTO `horas` (`idHora`, `nombre`) VALUES
   (8, '6 hora'),
   (9, '7 hora');
 
-
+INSERT INTO `motivo` (`idMotivo`, `motivo`) VALUES
+  (1, 'Acumulación de partes'),
+  (2, 'Parte grave'),
+  (3, 'Agresión'),
+  (4, 'Faltas de respeto'),
+  (5, 'Faltas de asistencia');

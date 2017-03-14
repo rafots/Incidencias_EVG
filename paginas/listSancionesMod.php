@@ -33,7 +33,6 @@ else {
         INNER JOIN secciones ON alumnos.idSeccion = secciones.idSeccion 
         WHERE secciones.codEtapa = '".$_SESSION["codEtapa"]."' 
         ORDER BY fecha_inicio";
-        
     }else{
 
         $sql = "SELECT sanciones.* , alumnos.nombreCompleto AS alumno, tipo_sancion.nombre AS tipoSancion FROM sanciones 
