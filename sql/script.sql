@@ -177,3 +177,26 @@ INSERT INTO `tipo_incidencias` (`idTipo`, `nombre`, `gestiona`, `codEtapa`) VALU
   (7, 'Enfermedad', 'T', 'ESO'),
   (8, 'Expulsión al pasillo', 'T', 'ESO'),
   (9, 'Expulsión al pasillo', 'T', 'CFGS');
+
+INSERT INTO `tipo_sancion` (`tipoSancion`, `nombre`) VALUES
+  (1, 'Biblioteca'),
+  (2, 'Aula de convivencia'),
+  (3, 'Expulado del centro'),
+  (4, 'Trabajos comunitarios'),
+  (5, 'Séptima hora');
+
+/*Codigo SQL para alimentar tipo_sancion_incidencias*/
+
+INSERT INTO `tipo_sancion_incidencias` (`tipoSancion`, `idTipo`) VALUES
+  (1, 2),
+  (3, 1);
+
+
+INSERT INTO `tipos_anotaciones` (`tipoAnotacion`, `nombre`, `codEtapa`) VALUES
+  (1, 'Expulsion', 'CFGS'),
+  (2, 'Agresión en el aula', 'ESO'),
+  (3, 'Agresión en el aula', 'CFGS'),
+  (4, 'Agresión en el aula','BAC'),
+  (5, 'Problemas con profesor','BAC'),
+  (6, 'Problemas con profesor','ESO'),
+  (7, 'Problemas con profesor','CFGS');

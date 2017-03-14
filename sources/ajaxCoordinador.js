@@ -90,22 +90,7 @@ $(document).ready(function(){
         });
 
     });
-    $('#secciones').on("change",function(e){
-        e.preventDefault();
-        var seccion = $('#secciones').find(":selected").text();
-        $.ajax({
-            type:"GET",
-            url: '../consultas/buscarAlumnoCoord2.php?idSeccion='+seccion,
-            success: function(data) {
-                e.preventDefault();
-                $('#divAlumnos').empty();
-                $('#divAlumnos').append(data);
-                $('#botonBuscar').attr('type', 'submit');
 
-            }
-        });
-
-    });
     $('#volverBuscarAlumnos').on("click",function(e){
         e.preventDefault();
         $("#cuerpo").load("../paginas/buscarIncidenciasAlumno.php");
@@ -179,3 +164,18 @@ $(document).ready(function(){
     });
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
