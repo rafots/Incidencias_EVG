@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d578d95-4bd8-491a-8a20-89d7a2bda1b8" name="Default" comment="UPDATE: SCRIPT Y MAS COSILLAS JEJE">
+    <list default="true" id="2d578d95-4bd8-491a-8a20-89d7a2bda1b8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paginas/aulaConvivenciaCoord.php" afterPath="$PROJECT_DIR$/paginas/aulaConvivenciaCoord.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/script.sql" afterPath="$PROJECT_DIR$/sql/script.sql" />
     </list>
     <ignored path="Incidencias_EVG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +42,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="aulaConvivenciaCoord.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="aulaConvivenciaCoord.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/paginas/aulaConvivenciaCoord.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="697">
@@ -77,11 +77,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="alimentarTipos.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sql/alimentarTipos.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ajaxCoordinador.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sources/ajaxCoordinador.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
+            <state relative-caret-position="328">
               <caret line="95" column="27" lean-forward="false" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sql/script.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="214" column="0" lean-forward="true" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -161,11 +181,11 @@
         <option value="$PROJECT_DIR$/consultas/buscarAlumnoCoord.php" />
         <option value="$PROJECT_DIR$/buscarAlumnoCoord2.php" />
         <option value="$PROJECT_DIR$/paginas/buscarIncidenciasAlumno.php" />
-        <option value="$PROJECT_DIR$/sql/script.sql" />
         <option value="$PROJECT_DIR$/sql/alimentarSecciones.sql" />
         <option value="$PROJECT_DIR$/sources/ajaxCoordinador.js" />
         <option value="$PROJECT_DIR$/consultas/buscarAlumnoCoord2.php" />
         <option value="$PROJECT_DIR$/paginas/aulaConvivenciaCoord.php" />
+        <option value="$PROJECT_DIR$/sql/script.sql" />
       </list>
     </option>
   </component>
@@ -609,7 +629,7 @@
       <workItem from="1489133933885" duration="572000" />
       <workItem from="1489137948074" duration="154000" />
       <workItem from="1489421509615" duration="13095000" />
-      <workItem from="1489435829462" duration="14999000" />
+      <workItem from="1489435829462" duration="15146000" />
     </task>
     <task id="LOCAL-00002" summary="UPDATE FILES index.html, bootstrap.css, comun.css, script.sql&#10;ADD FILES import_users.php, usuarios.xlsx, logotipo.png, menu_estructure.html">
       <created>1488051390265</created>
@@ -828,11 +848,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489450908663</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="UPDATE: Mensajes de vacío (Coordinador)">
+      <created>1489451113293</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1489451113293</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205073000" />
+    <option name="totallyTimeSpent" value="205220000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -901,7 +928,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="UPDATE: COORDINADOR" />
     <MESSAGE value="UPDATE: MENU COORDINADOR" />
     <MESSAGE value="UPDATE: INICIO DE SESION" />
     <MESSAGE value="ADD formulario y proceso para creación de usuario" />
@@ -926,7 +952,8 @@
     <MESSAGE value="UPDATE: AJAX MAXIMUM LEVEL" />
     <MESSAGE value="UPDATE: AUTOINCREMENT tabla Horas" />
     <MESSAGE value="UPDATE: SCRIPT Y MAS COSILLAS JEJE" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: SCRIPT Y MAS COSILLAS JEJE" />
+    <MESSAGE value="UPDATE: Mensajes de vacío (Coordinador)" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: Mensajes de vacío (Coordinador)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1435,14 +1462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql/alimentarTipos.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="42" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/consultas/iniciarSesion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1454,14 +1473,6 @@
             <marker date="1489450858298" expanded="true" signature="2969:3185" ph="SELECT t1.co... etapas" />
             <marker date="1489450858298" expanded="true" signature="3930:4228" ph="SELECT t1.co... etapas" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/script.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="191" column="4" lean-forward="true" selection-start-line="191" selection-start-column="4" selection-end-line="191" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1502,14 +1513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/ajaxCoordinador.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="95" column="27" lean-forward="false" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/paginas/aulaConvivenciaCoord.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -1540,6 +1543,30 @@
             <marker date="1489451091738" expanded="true" signature="6553:6672" ph="..." />
             <marker date="1489451091738" expanded="true" signature="7032:7490" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/alimentarTipos.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/ajaxCoordinador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="95" column="27" lean-forward="false" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/script.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="214" column="0" lean-forward="true" selection-start-line="214" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
