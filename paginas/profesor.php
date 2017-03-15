@@ -108,6 +108,13 @@ echo'
                                 </table>
                             </div>
                         </div>
+                        <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="cerrarSession.php"><span class="glyphicon glyphicon-log-out text-success"></span> Cerrar sesion</a>
+                            </h4>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>

@@ -12,7 +12,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel/import_users.php" afterPath="$PROJECT_DIR$/excel/import_users.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel/importarAlumnos.php" afterPath="$PROJECT_DIR$/excel/importarAlumnos.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel/importarSecciones.php" afterPath="$PROJECT_DIR$/excel/importarSecciones.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paginas/addIncidencia.php" afterPath="$PROJECT_DIR$/paginas/addIncidencia.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paginas/profesor.php" afterPath="$PROJECT_DIR$/paginas/profesor.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/procedimientos/procedimientos.php" afterPath="$PROJECT_DIR$/procedimientos/procedimientos.php" />
     </list>
@@ -575,7 +574,7 @@
       <workItem from="1489476366142" duration="43000" />
       <workItem from="1489476497653" duration="2705000" />
       <workItem from="1489483437143" duration="211000" />
-      <workItem from="1489608271991" duration="8794000" />
+      <workItem from="1489608271991" duration="8829000" />
     </task>
     <task id="LOCAL-00002" summary="UPDATE FILES index.html, bootstrap.css, comun.css, script.sql&#10;ADD FILES import_users.php, usuarios.xlsx, logotipo.png, menu_estructure.html">
       <created>1488051390265</created>
@@ -787,11 +786,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489483456220</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="ADD: Automatización importaciones">
+      <created>1489617331237</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1489617331237</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219240000" />
+    <option name="totallyTimeSpent" value="219275000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -881,7 +887,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ADD DISENIOS" />
     <MESSAGE value="UPDATE: COORDINADOR" />
     <MESSAGE value="UPDATE: MENU COORDINADOR" />
     <MESSAGE value="UPDATE: INICIO DE SESION" />
@@ -906,7 +911,8 @@
     <MESSAGE value="UPDATE: modificacion de los excel y las importaciones 2" />
     <MESSAGE value="UPDATE: rage ajax" />
     <MESSAGE value="UPDATE: cambios en alta incidencia" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: cambios en alta incidencia" />
+    <MESSAGE value="ADD: Automatización importaciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD: Automatización importaciones" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

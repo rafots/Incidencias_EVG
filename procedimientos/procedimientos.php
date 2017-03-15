@@ -3,22 +3,34 @@ require_once '../conexion/conexion.php';
 
 class procedimientos
 {
-    private $conexion;
-    private $resultado;
+    public $conexion;
+    public $resultado;
 
     public function conectar()
     {
         $obj = new conexion();
-        $this->conexion = new mysqli($obj->getServer(), $obj->getUser(), $obj->getPass(), $obj->getDb());
+        $this->conexion = new mysqli($obj->getServer(), $obj->getUser(), $obj->getPass(),$obj->getDb());
         $this->conexion->set_charset("UTF8");
         if ($this->conexion->connect_error) {
             $this->conexion->connect_error;
         }
     }
-
+    public function importarBD()
+    {
+        $obj = new conexion();
+        $this->conexion = new mysqli($obj->getServer(), $obj->getUser(), $obj->getPass());
+        $this->conexion->set_charset("UTF8");
+        if ($this->conexion->connect_error) {
+            $this->conexion->connect_error;
+        }
+    }
     public function consultas($query)
     {
         $this->resultado = $this->conexion->query($query);
+    }
+    public function multiConsultas($query)
+    {
+        $this->resultado = $this->conexion->multi_query($query);
     }
 
     public function consultasPreparadas($query)

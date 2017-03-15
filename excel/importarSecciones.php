@@ -30,6 +30,7 @@ $stmt->close();
 
 if($objeto->filasAfectadas()){
     echo "Se han importado los datos con exito";
+    header('Location: ../paginas/Importaciones.php');
 }else{
     echo "Error al importar los datos";
 }
