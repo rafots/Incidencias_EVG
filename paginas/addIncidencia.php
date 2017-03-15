@@ -2,6 +2,7 @@
     require "../procedimientos/procedimientos.php";
     $conexion = new procedimientos();
     $conexion->conectar();
+
     echo '<div>';
         echo '<h3>Añadir incidencia</h3>';
         echo '<form method="post" class="form-horizontal" action="../consultas/conAddIncidencia.php">';
