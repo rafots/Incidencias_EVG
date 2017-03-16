@@ -110,6 +110,7 @@ CREATE TABLE IF NOT EXISTS anotaciones(
   userCreacion CHAR(1) NOT NULL ,
   leida BOOLEAN NOT NULL DEFAULT FALSE ,
   verProfesores BOOLEAN NULL DEFAULT FALSE ,
+  Descripcion VARCHAR(300) NOT NULL,
   CONSTRAINT anotaciones_1 FOREIGN KEY (tipoAnotacion)
   REFERENCES tipos_Anotaciones (tipoAnotacion),
   CONSTRAINT anotaciones_2 FOREIGN KEY (nia) REFERENCES alumnos(nia) ON DELETE CASCADE ON UPDATE CASCADE
@@ -190,7 +191,6 @@ INSERT INTO `tipo_sancion` (`tipoSancion`, `nombre`) VALUES
 INSERT INTO `tipo_sancion_incidencias` (`tipoSancion`, `idTipo`) VALUES
   (1, 2),
   (3, 1);
-
 
 INSERT INTO `tipos_anotaciones` (`tipoAnotacion`, `nombre`, `codEtapa`) VALUES
   (1, 'Expulsion', 'CFGS'),

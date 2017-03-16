@@ -10,6 +10,7 @@ require_once '../procedimientos/procedimientos.php';
             on anotaciones.nia = alumnos.nia
             inner join  secciones
             on secciones.idSeccion = alumnos.idSeccion
-            WHERE verProfesores=1";
+            WHERE verProfesores=1 and secciones.idSeccion LIKE '".$_SESSION['idSeccion']."'";
         $objeto->consultas($consulta);
+        echo $consulta;
 ?>

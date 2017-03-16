@@ -96,6 +96,7 @@ $query .= "CREATE TABLE IF NOT EXISTS anotaciones(
   userCreacion CHAR(1) NOT NULL ,
   leida BOOLEAN NOT NULL DEFAULT FALSE ,
   verProfesores BOOLEAN NULL DEFAULT FALSE ,
+  descripcion varchar(300) NOT NULL,
   CONSTRAINT anotaciones_1 FOREIGN KEY (tipoAnotacion)
   REFERENCES tipos_Anotaciones (tipoAnotacion),
   CONSTRAINT anotaciones_2 FOREIGN KEY (nia) REFERENCES alumnos(nia) ON DELETE CASCADE ON UPDATE CASCADE

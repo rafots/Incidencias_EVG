@@ -37,7 +37,6 @@ echo '<script type="text/javascript" src="../sources/ajax.js"></script>';
         
         <div class="form-group" id="alumnos">      
         </div>
-        <br><br>
         <label>Tipo al que pertenece</label>';
         require_once "../consultas/consultatipoanot.php";
         echo '<select name="desplegabletipo" id="tipo" class="form-control">';
@@ -46,6 +45,14 @@ echo '<script type="text/javascript" src="../sources/ajax.js"></script>';
             echo '<option value="'.$fila["tipos"].'">'.$fila["nombre"].'</option>';
         }
         echo '</select>
+        <div class="form-group">
+            <br>
+            <label for="end-date" class="col-md-3 control-label">Observaciones</label>
+            <br><br>
+            <div class="col-sm-8">
+            <textarea class="form-control" rows="4" name="observaciones" id="observations" placeholder="Observaciones de la anotacion" required></textarea>
+        </div>
+        <br><br><br><br><br><br>
         <div class="form-group">
         <label>Habilitar Profesores</label>
         <input type="checkbox" name="profesores" id="profesores">

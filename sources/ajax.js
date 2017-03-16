@@ -83,13 +83,14 @@ $(document).ready(function() {
     $('#crearAnotacion').on("click", function (e) {
         e.preventDefault();
         //make the ajax call
-
         var profesores = $("#profesores").prop("checked");
 
         var params = {
-            tipo : $('select[name=desplegabletipo]').val(),
-            nia : $('select[name=desplegable2]').val(),
+             tipo : $('select[name=desplegabletipo]').val(),
+             nia : $('select[name=desplegable2]').val(),
+            observaciones : $('#observations').val(),
             profesores: profesores,
+
         };
 
         $.ajax({

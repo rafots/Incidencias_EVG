@@ -19,13 +19,14 @@ function visualizar($objeto){
         <tr>
            <th>Descripcion de la anotacion:</th>
            <th>Nombre del Alumno:</th>  
+           <th>Fecha</th>
            <th>Detalle</th>
         </tr>';
     while ($fila = $objeto->devolverfilas()) {
         echo '<tr>';
         echo '<th>' . $fila["tipoAnotaciones"] . '</th>';
         echo '<th>' . $fila["nombreCompleto"] . '</th>';
-
+        echo '<th>' . $fila["fecha"] . '</th>';
         echo" <th><button type='button' class='btn btn-success btn-xs' data-toggle='modal' data-target='#Modal_".$fila["numAnotacion"]."'>
                         <span class='glyphicon glyphicon-eye-open'></span></button></th>
                 </tr>
@@ -39,7 +40,7 @@ function visualizar($objeto){
                                     <h4 class='modal-title' id='Modal_Label_".$fila["numAnotacion"]."'>Detalles de las anotaciones</h4>
                                 </div>
                                 <div class='modal-body'>
-                                    <form class='form-horizontal'>
+                                    <form class='form-horizontal'> 
                                         <div class='form-group'>
                                             <label for='alumno' class='col-md-3 control-label'>Alumno:</label>
                                                 <div class='col-lg-12'>
@@ -62,6 +63,12 @@ function visualizar($objeto){
                                             <label for='alumno' class='col-md-12 control-label'>Nombre Curso:</label>
                                                 <div class='col-lg-12'>
                                                     <input type='text' class='form-control' id='alumno' value='" . $fila["nombre"] . "' disabled>
+                                                </div>
+                                        </div>
+                                        <div class='form-group'>
+                                            <label for='alumno' class='col-md-12 control-label'>Descripcion:</label>
+                                                <div class='col-lg-12'>
+                                                    <input type='text' class='form-control' id='alumno' value='" . $fila["descripcion"] . "' disabled>
                                                 </div>
                                         </div>
                                     </form>

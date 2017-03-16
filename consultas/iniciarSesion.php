@@ -85,14 +85,14 @@ session_start();
                 $_SESSION['usuario']=$usuario;
                 $_SESSION['profesor']=$profesor;
                 $query = 'SELECT t1.codEtapa, t4.nombre, t2.idSeccion 
-	FROM etapas t1 
-	       INNER JOIN secciones t2 
-              ON t1.codEtapa = t2.codEtapa
-           INNER JOIN profesores_seccion t3
-           		ON t2.idSeccion = t3.idSeccion
-           INNER JOIN profesores t4
-           		ON t3.profesor = t4.idUsuario
-                        WHERE t4.idUsuario = ? ';
+                    FROM etapas t1 
+                    INNER JOIN secciones t2 
+                          ON t1.codEtapa = t2.codEtapa
+                       INNER JOIN profesores_seccion t3
+                         ON t2.idSeccion = t3.idSeccion
+                       INNER JOIN profesores t4
+                         ON t3.profesor = t4.idUsuario
+                                    WHERE t4.idUsuario = ?';
 
                 $sentencia = $obj->consultasPreparadas($query);
                 $sentencia->bind_param('i',$_SESSION['idUsuario']);
