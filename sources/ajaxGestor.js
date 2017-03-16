@@ -36,7 +36,6 @@ $(document).ready(function(){
 
     $("#modificar").on("click", function(e){
         e.preventDefault();
-        alert('entra');
         var codEtapa = $("#modificar").val();
         $.ajax({
             type:"GET",

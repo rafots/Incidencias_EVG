@@ -110,7 +110,6 @@ $(document).ready(function() {
     $('#crearAnotacion2').on("click", function (e) {
         e.preventDefault();
         //make the ajax call
-        alert('hola');
         var profesores = $("#profesores").prop("checked");
         var params = {
             tipo : $('select[name=desplegabletipo]').val(),
