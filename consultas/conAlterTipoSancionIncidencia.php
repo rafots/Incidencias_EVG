@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require "../conexion/conexion.php";
+    require "../procedimientos/procedimientos.php";
     $conexion = new procedimientos();
     $conexion->conectar();
 

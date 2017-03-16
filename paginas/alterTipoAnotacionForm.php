@@ -2,7 +2,7 @@
 session_start();
 if(isset($_SESSION['coordinador']))
 {
-
+    $_SESSION["activa"]="c";
 
     echo'
 <!DOCTYPE html>
@@ -44,8 +44,12 @@ if(isset($_SESSION['coordinador']))
     if(isset($_SESSION['coordinador']))
     {
         echo '<a class=" btn btn-primary btn-success disabled">C</a>';
-        echo 'Coordinador de '.$_SESSION["codEtapa"].'';
+        //echo 'Coordinador de '.$_SESSION["codEtapa"].'';
     }
+    echo '<br/>';
+    echo $_SESSION['nombre'];
+    echo '<br/>';
+    echo 'Cordinador de '.$_SESSION["codEtapa"].'';
     echo ' 
                     
                 </div>
@@ -56,6 +60,7 @@ if(isset($_SESSION['coordinador']))
         <!-- CUERPO DE LA PÁGINA -->
         
     <div class="container "  >
+    
         <div class="row " >
             <div class="col-sm-3 col-md-3 " >
                 <div class="panel-group " id="accordion" >
@@ -84,14 +89,42 @@ if(isset($_SESSION['coordinador']))
                                     
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Partes educativos</a>
+                                            <a href="" id="parteseducativos" id="parteDisciplinario">Partes educativos</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Otras</a>
+                                            <a href="#" id="otras">Otras</a>
                                         </td>
                                     </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" >
+                            <h4 class="panel-title ">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive"><span class="glyphicon glyphicon-book text-success"></span>Consultas</a>
+                            </h4>
+                        </div>
+                        <div id="collapseFive" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <table class="table">
+                                ';
+    echo'
+                                    <tr>
+                                        <td>
+                                            <a id="consultaralumno">Por alumno</a>
+                                        </td>
+                                    </tr>';
+
+    echo'         
+                                    <tr>
+                                        <td>
+                                            <a id="acum_partes_edu">Acumulacion partes educativos</a>
+                                        </td>
+                                    </tr>
+
                                 </table>
                             </div>
                         </div>
@@ -137,12 +170,22 @@ if(isset($_SESSION['coordinador']))
                                 <table class="table">
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Poner sanción</a>
+                                            <a href="" id="view_sanction">Ver sanciones</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="http://www.jquery2dotnet.com">Visualizar sanciones</a> <span class="label label-info">5</span>
+                                            <a href="" id="create_sanction">Crear sanción</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="" id="sanc_ult_hora">7ª hora</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="" id="sanc_aula_convivencia">Aula de convivencia</a> <span class="label label-info">5</span>
                                         </td>
                                     </tr>
                                     <tr>
@@ -183,6 +226,14 @@ if(isset($_SESSION['coordinador']))
 
                                 </table>
                             </div>
+                        </div>
+                        
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="cerrarSession.php"><span class="glyphicon glyphicon-log-out text-success"></span> Cerrar sesion</a>
+                            </h4>
                         </div>
                     </div>
                 </div>
