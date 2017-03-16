@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d578d95-4bd8-491a-8a20-89d7a2bda1b8" name="Default" comment="UPDATE: cambios en alta incidencia">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/excel/eliminarAlumnos.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/paginas/Importaciones.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/paginas/importarBD.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+    <list default="true" id="2d578d95-4bd8-491a-8a20-89d7a2bda1b8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel/asignarCoordinador.php" afterPath="$PROJECT_DIR$/excel/asignarCoordinador.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel/asignarTutor.php" afterPath="$PROJECT_DIR$/excel/asignarTutor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel/import_users.php" afterPath="$PROJECT_DIR$/excel/import_users.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel/importarAlumnos.php" afterPath="$PROJECT_DIR$/excel/importarAlumnos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excel/importarSecciones.php" afterPath="$PROJECT_DIR$/excel/importarSecciones.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paginas/profesor.php" afterPath="$PROJECT_DIR$/paginas/profesor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/procedimientos/procedimientos.php" afterPath="$PROJECT_DIR$/procedimientos/procedimientos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultas/iniciarSesion.php" afterPath="$PROJECT_DIR$/consultas/iniciarSesion.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sql/script.sql" afterPath="$PROJECT_DIR$/sql/script.sql" />
     </list>
     <ignored path="Incidencias_EVG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,136 +43,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="importarBD.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/paginas/importarBD.php">
+      <file leaf-file-name="iniciarSesion.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/consultas/iniciarSesion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="101" column="2" lean-forward="false" selection-start-line="90" selection-start-column="11" selection-end-line="101" selection-end-column="2" />
+            <state relative-caret-position="340">
+              <caret line="94" column="46" lean-forward="false" selection-start-line="94" selection-start-column="46" selection-end-line="94" selection-end-column="46" />
               <folding>
-                <marker date="1489615601454" expanded="true" signature="307:755" ph="CREATE TABLE... IF" />
-                <marker date="1489615601454" expanded="true" signature="769:1006" ph="CREATE TABLE... etapas" />
-                <marker date="1489615601454" expanded="true" signature="1020:1372" ph="CREATE TABLE... secciones" />
-                <marker date="1489615601454" expanded="true" signature="1387:1708" ph="CREATE TABLE... alumnos" />
-                <marker date="1489615601454" expanded="true" signature="1723:2039" ph="CREATE TABLE... profesores_seccion" />
-                <marker date="1489615601454" expanded="true" signature="2054:2313" ph="CREATE TABLE... tipo_Incidencias" />
-                <marker date="1489615601454" expanded="true" signature="2328:2447" ph="CREATE TABLE... horas" />
-                <marker date="1489615601454" expanded="true" signature="2462:3393" ph="CREATE TABLE... incidencias" />
-                <marker date="1489615601454" expanded="true" signature="3408:3637" ph="CREATE TABLE... tipos_Anotaciones" />
-                <marker date="1489615601454" expanded="true" signature="3652:4176" ph="CREATE TABLE... anotaciones" />
-                <marker date="1489615601454" expanded="true" signature="4191:4316" ph="CREATE TABLE... tipo_sancion" />
-                <marker date="1489615601454" expanded="true" signature="4331:4453" ph="CREATE TABLE... motivo" />
-                <marker date="1489615601454" expanded="true" signature="4468:5180" ph="CREATE TABLE... sanciones" />
-                <marker date="1489615601454" expanded="true" signature="5196:5571" ph="CREATE TABLE... tipo_sancion_incidencias" />
-                <marker date="1489615601454" expanded="true" signature="5587:5726" ph="CREATE TABLE... gestion" />
-                <marker date="1489615601454" expanded="true" signature="5742:5991" ph="INSERT INTO `etapas`... " />
-                <marker date="1489615601454" expanded="true" signature="6007:6441" ph="INSERT INTO `tipo_incidencias`... " />
-                <marker date="1489615601454" expanded="true" signature="6457:6651" ph="INSERT INTO `tipo_sancion`... " />
-                <marker date="1489615601454" expanded="true" signature="6667:6757" ph="INSERT INTO `tipo_sancion_incidencias`... " />
-                <marker date="1489615601454" expanded="true" signature="6773:7107" ph="INSERT INTO `tipos_anotaciones`... " />
-                <marker date="1489615601454" expanded="true" signature="7123:7326" ph="INSERT INTO `horas`... " />
-                <marker date="1489615601454" expanded="true" signature="7342:7523" ph="INSERT INTO `motivo`... " />
+                <marker date="1489621527628" expanded="true" signature="145:266" ph="SELECT idUsu... profesores" />
+                <marker date="1489621527628" expanded="true" signature="783:1081" ph="SELECT t1.co... etapas" />
+                <marker date="1489621527628" expanded="true" signature="1934:2232" ph="SELECT t1.co... etapas" />
+                <marker date="1489621527628" expanded="true" signature="2970:3186" ph="SELECT secci... profesores" />
+                <marker date="1489621527628" expanded="true" signature="3931:4282" ph="SELECT t1.co... etapas" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="eliminarAlumnos.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/excel/eliminarAlumnos.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="15" lean-forward="false" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-              <folding>
-                <marker date="1489616647254" expanded="true" signature="231:250" ph="DELETE FROM " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Importaciones.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/paginas/Importaciones.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="70" column="67" lean-forward="false" selection-start-line="70" selection-start-column="67" selection-end-line="70" selection-end-column="67" />
-              <folding>
-                <marker date="1489616690442" expanded="true" signature="32:1030" ph="..." />
-                <marker date="1489616690442" expanded="true" signature="39:589" ph="..." />
-                <marker date="1489616690442" expanded="true" signature="596:1030" ph="..." />
-                <marker date="1489616690442" expanded="true" signature="626:1030" ph="..." />
-                <marker date="1489616690442" expanded="true" signature="661:1030" ph="..." />
-                <marker date="1489616690442" expanded="true" signature="714:1030" ph="..." />
-                <marker date="1489616690442" expanded="true" signature="758:865" ph="..." />
-                <marker date="1489616690442" expanded="true" signature="909:984" ph="..." />
-                <marker date="1489616690442" expanded="true" signature="1028:1030" ph="..." />
-                <marker date="1489616690442" expanded="true" signature="1174:1328" ph="..." />
-                <marker date="1489616690442" expanded="true" signature="1174:2743" ph="..." />
-                <marker date="1489616690442" expanded="true" signature="1174:2787" ph="..." />
-                <marker date="1489616690442" expanded="true" signature="1203:1328" ph="..." />
-                <marker date="1489616690442" expanded="true" signature="1327:1328" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="import_users.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/excel/import_users.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="60" column="4" lean-forward="false" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="53" />
-              <folding>
-                <marker date="1489614921740" expanded="true" signature="1096:1170" ph="INSERT INTO profesores... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="importarAlumnos.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/excel/importarAlumnos.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="29" column="53" lean-forward="false" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
-              <folding>
-                <marker date="1489615317426" expanded="true" signature="379:419" ph="INSERT INTO alumnos... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profesor.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/paginas/profesor.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sql/script.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3417">
-              <caret line="210" column="16" lean-forward="true" selection-start-line="210" selection-start-column="16" selection-end-line="210" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="procedimientos.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/procedimientos/procedimientos.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="20" column="88" lean-forward="false" selection-start-line="20" selection-start-column="88" selection-end-line="20" selection-end-column="88" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="conexion.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conexion/conexion.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-340">
-              <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -231,11 +104,9 @@
         <option value="$PROJECT_DIR$/paginas/gestor.php" />
         <option value="$PROJECT_DIR$/consultas/aniadirSeccion2.php" />
         <option value="$PROJECT_DIR$/excel/asignarSeccion.php" />
-        <option value="$PROJECT_DIR$/sql/script.sql" />
         <option value="$PROJECT_DIR$/paginas/coordinador.php" />
         <option value="$PROJECT_DIR$/paginas/leerIncidenciaCoord.php" />
         <option value="$PROJECT_DIR$/paginas/archivarIncidenciaCoord.php" />
-        <option value="$PROJECT_DIR$/consultas/iniciarSesion.php" />
         <option value="$PROJECT_DIR$/paginas/aulaConvivenciaCoord.php" />
         <option value="$PROJECT_DIR$/paginas/partesEducativosCoord.php" />
         <option value="$PROJECT_DIR$/consultas/buscarAlumno.php" />
@@ -266,6 +137,8 @@
         <option value="$PROJECT_DIR$/paginas/importarBD.php" />
         <option value="$PROJECT_DIR$/excel/eliminarAlumnos.php" />
         <option value="$PROJECT_DIR$/paginas/Importaciones.php" />
+        <option value="$PROJECT_DIR$/sql/script.sql" />
+        <option value="$PROJECT_DIR$/consultas/iniciarSesion.php" />
       </list>
     </option>
   </component>
@@ -460,6 +333,118 @@
       <recent name="C:\Proyectos\Incidencias_EVG\imagenes" />
     </key>
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/dataSources.local.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/consultas/consultascrear.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/sources/ajax.js</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
@@ -574,7 +559,7 @@
       <workItem from="1489476366142" duration="43000" />
       <workItem from="1489476497653" duration="2705000" />
       <workItem from="1489483437143" duration="211000" />
-      <workItem from="1489608271991" duration="8829000" />
+      <workItem from="1489608271991" duration="12890000" />
     </task>
     <task id="LOCAL-00002" summary="UPDATE FILES index.html, bootstrap.css, comun.css, script.sql&#10;ADD FILES import_users.php, usuarios.xlsx, logotipo.png, menu_estructure.html">
       <created>1488051390265</created>
@@ -793,11 +778,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489617331237</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="ADD: Automatizacion importaciones">
+      <created>1489617370241</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1489617370241</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219275000" />
+    <option name="totallyTimeSpent" value="223336000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -812,7 +804,7 @@
     <frame x="-7" y="0" width="1932" height="1047" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26442307" sideWeight="0.73146296" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26442307" sideWeight="0.73146296" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2487725" sideWeight="0.1709531" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.118003026" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -887,7 +879,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="UPDATE: COORDINADOR" />
     <MESSAGE value="UPDATE: MENU COORDINADOR" />
     <MESSAGE value="UPDATE: INICIO DE SESION" />
     <MESSAGE value="ADD formulario y proceso para creación de usuario" />
@@ -912,7 +903,8 @@
     <MESSAGE value="UPDATE: rage ajax" />
     <MESSAGE value="UPDATE: cambios en alta incidencia" />
     <MESSAGE value="ADD: Automatización importaciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD: Automatización importaciones" />
+    <MESSAGE value="ADD: Automatizacion importaciones" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD: Automatizacion importaciones" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1019,14 +1011,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="19" column="70" lean-forward="false" selection-start-line="18" selection-start-column="69" selection-end-line="19" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consultas/iniciarSesion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-629">
-          <caret line="42" column="46" lean-forward="false" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1299,14 +1283,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sql/script.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3417">
-          <caret line="210" column="16" lean-forward="true" selection-start-line="210" selection-start-column="16" selection-end-line="210" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/paginas/importarBD.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
@@ -1341,9 +1317,31 @@
     <entry file="file://$PROJECT_DIR$/excel/eliminarAlumnos.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="15" lean-forward="false" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
           <folding>
             <marker date="1489616647254" expanded="true" signature="231:250" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/script.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="53" column="28" lean-forward="false" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultas/iniciarSesion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="94" column="46" lean-forward="false" selection-start-line="94" selection-start-column="46" selection-end-line="94" selection-end-column="46" />
+          <folding>
+            <marker date="1489621527628" expanded="true" signature="145:266" ph="SELECT idUsu... profesores" />
+            <marker date="1489621527628" expanded="true" signature="783:1081" ph="SELECT t1.co... etapas" />
+            <marker date="1489621527628" expanded="true" signature="1934:2232" ph="SELECT t1.co... etapas" />
+            <marker date="1489621527628" expanded="true" signature="2970:3186" ph="SELECT secci... profesores" />
+            <marker date="1489621527628" expanded="true" signature="3931:4282" ph="SELECT t1.co... etapas" />
           </folding>
         </state>
       </provider>

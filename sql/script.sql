@@ -50,8 +50,8 @@ CREATE TABLE  IF NOT EXISTS alumnos(
 
 /*TABLA 5 - PROFESORES-SECCION*/
 CREATE TABLE IF NOT EXISTS profesores_seccion(
-  profesor TINYINT UNSIGNED,
   idSeccion CHAR(5),
+  profesor TINYINT UNSIGNED,
   PRIMARY KEY (profesor,idSeccion),
   CONSTRAINT fk_profesor_prof_secc FOREIGN KEY (profesor) REFERENCES profesores(idUsuario),
   CONSTRAINT fk_seccion_prof_secc FOREIGN KEY (idSeccion) REFERENCES secciones(idSeccion)
