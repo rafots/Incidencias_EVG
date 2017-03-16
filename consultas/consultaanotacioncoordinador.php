@@ -7,7 +7,6 @@ require_once '../procedimientos/procedimientos.php';
   inner join tipos_Anotaciones on anotaciones.tipoAnotacion=tipos_anotaciones.tipoAnotacion
   inner JOIN alumnos on anotaciones.nia = alumnos.nia
   inner join secciones on secciones.idSeccion = alumnos.idSeccion
-WHERE  secciones.idSeccion LIKE '".$_SESSION['idSeccion']."'";
+WHERE  secciones.idSeccion LIKE '".$_SESSION['idSeccion']."' and leida=1";
         $objeto->consultas($consulta);
-
 ?>
