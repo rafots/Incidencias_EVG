@@ -6,11 +6,12 @@
     echo '<div>';
         echo '<h3>Añadir incidencia</h3>';
         echo '<form method="post" class="form-horizontal" action="../consultas/conAddIncidencia.php">';
-        echo '<div>';
+        echo '<div id="div_alumno">';
         echo '<label>Alumno</label>';
-        echo '<select name="nia" class="form-control" id="sel1" required="required">';
-        require "../consultas/addIncidencia/listadoAlumno.php";
+        echo '<select name="seccion" class="form-control" id="id_sec" required="required">';
+        require '../consultas/addIncidencia/listadoSecciones.php';
         echo '</select>';
+
         echo '</div>';
         echo '<div>';
         echo '<label>Tipo de incidencia</label>';
