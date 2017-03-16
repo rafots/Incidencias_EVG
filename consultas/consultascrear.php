@@ -5,7 +5,7 @@ $obj = new procedimientos();
 $obj->conectar();
 if(isset($_GET["nia"]) && (isset($_GET["tipo"] )))
     {
-        $consultacrearanot = "Insert into anotaciones VALUES ('DEFAULT','" . $_GET["tipo"] . "','" . $_GET["nia"] . "','" .date("Y-m-d H"). "','" . $_SESSION["activa"] . "', " . 0 . ",NULL)";
+        $consultacrearanot = "Insert into anotaciones VALUES ('DEFAULT','" . $_GET["tipo"] . "','" . $_GET["nia"] . "','" .date("Y-m-d H"). "','" . $_SESSION["activa"] . "', " . 0 . ",".$_GET["profesores"].")";
         $obj->consultas($consultacrearanot);
         if($obj->filasAfectadas() > 0)
         {
