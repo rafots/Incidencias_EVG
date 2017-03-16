@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d578d95-4bd8-491a-8a20-89d7a2bda1b8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/consultas/addIncidencia/listadoSecciones.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/consultas/addIncidencia/listadoAlumno.php" afterPath="$PROJECT_DIR$/consultas/listadoAlumno.php" />
+    <list default="true" id="2d578d95-4bd8-491a-8a20-89d7a2bda1b8" name="Default" comment="UPDATE: cambi">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultas/addIncidencia/listadoTipoInc.php" afterPath="$PROJECT_DIR$/consultas/addIncidencia/listadoTipoInc.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paginas/addIncidencia.php" afterPath="$PROJECT_DIR$/paginas/addIncidencia.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sources/ajaxProfesor.js" afterPath="$PROJECT_DIR$/sources/ajaxProfesor.js" />
     </list>
@@ -49,10 +46,10 @@
       <file leaf-file-name="addIncidencia.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/paginas/addIncidencia.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="25" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="12" selection-end-column="25" />
+            <state relative-caret-position="255">
+              <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
               <folding>
-                <marker date="1489659053002" expanded="true" signature="323:525" ph="..." />
+                <marker date="1489660852831" expanded="true" signature="323:526" ph="..." />
               </folding>
             </state>
           </provider>
@@ -61,7 +58,7 @@
       <file leaf-file-name="ajaxTutor.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sources/ajaxTutor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
+            <state relative-caret-position="-595">
               <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
@@ -83,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajaxProfesor.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ajaxProfesor.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sources/ajaxProfesor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            <state relative-caret-position="391">
+              <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -105,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listadoAlumno.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="listadoAlumno.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/consultas/listadoAlumno.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="88" lean-forward="false" selection-start-line="20" selection-start-column="88" selection-end-line="20" selection-end-column="88" />
+            <state relative-caret-position="425">
+              <caret line="25" column="2" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
               <folding>
                 <marker date="1489659897306" expanded="true" signature="146:207" ph="SELECT * FRO... alumnos" />
               </folding>
@@ -243,9 +240,9 @@
         <option value="$PROJECT_DIR$/consultas/addIncidencia/listadoTipoInc.php" />
         <option value="$PROJECT_DIR$/procedimientos/procedimientos.php" />
         <option value="$PROJECT_DIR$/consultas/addIncidencia/listadoAlumno.php" />
+        <option value="$PROJECT_DIR$/consultas/listadoAlumno.php" />
         <option value="$PROJECT_DIR$/paginas/addIncidencia.php" />
         <option value="$PROJECT_DIR$/sources/ajaxProfesor.js" />
-        <option value="$PROJECT_DIR$/consultas/listadoAlumno.php" />
       </list>
     </option>
   </component>
@@ -575,7 +572,7 @@
       <workItem from="1489483437143" duration="211000" />
       <workItem from="1489608271991" duration="12890000" />
       <workItem from="1489623087353" duration="6561000" />
-      <workItem from="1489649614961" duration="10325000" />
+      <workItem from="1489649614961" duration="11684000" />
     </task>
     <task id="LOCAL-00002" summary="UPDATE FILES index.html, bootstrap.css, comun.css, script.sql&#10;ADD FILES import_users.php, usuarios.xlsx, logotipo.png, menu_estructure.html">
       <created>1488051390265</created>
@@ -815,11 +812,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489653624044</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="UPDATE: Alta de incidencias adaptado a AJAX">
+      <created>1489660001710</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1489660001710</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="240222000" />
+    <option name="totallyTimeSpent" value="241581000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -909,7 +913,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ADD formulario y proceso para creación de usuario" />
     <MESSAGE value="ADD formNewSancion" />
     <MESSAGE value="UPDATE: Campo añadido a la tabla tipo_incidencias en el script de SQL" />
     <MESSAGE value="UPDATE: Gestion de tipos de incidencias, adaptado a AJAX y ya gestiona quien gestiona cada tipo de incidencia" />
@@ -934,7 +937,8 @@
     <MESSAGE value="ADD: Automatizacion importaciones" />
     <MESSAGE value="UPDATE anotaciones en general" />
     <MESSAGE value="UPDATE: Conexiones cambiadas en mis procesos" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: Conexiones cambiadas en mis procesos" />
+    <MESSAGE value="UPDATE: Alta de incidencias adaptado a AJAX" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: Alta de incidencias adaptado a AJAX" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1500,18 +1504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consultas/conAddIncidencia.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="85" lean-forward="false" selection-start-line="30" selection-start-column="82" selection-end-line="30" selection-end-column="85" />
-          <folding>
-            <marker date="1489649586827" expanded="true" signature="316:389" ph="SELECT idUsu... profesores" />
-            <marker date="1489649586827" expanded="true" signature="501:568" ph="SELECT * FRO... tipo_incidencias" />
-            <marker date="1489649586827" expanded="true" signature="1202:1481" ph="INSERT INTO incidencias... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/consultas/addIncidencia/listadoHoras.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1522,11 +1514,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/ajaxTutor.js">
+    <entry file="file://$PROJECT_DIR$/consultas/addIncidencia/listadoSecciones.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding>
+            <marker date="1489654814077" expanded="true" signature="21:44" ph="SELECT * FRO... secciones" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultas/listadoAlumno.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="2" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+          <folding>
+            <marker date="1489659897306" expanded="true" signature="146:207" ph="SELECT * FRO... alumnos" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1543,20 +1547,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sources/ajaxProfesor.js">
+    <entry file="file://$PROJECT_DIR$/consultas/conAddIncidencia.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consultas/addIncidencia/listadoSecciones.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+        <state relative-caret-position="510">
+          <caret line="30" column="85" lean-forward="false" selection-start-line="30" selection-start-column="82" selection-end-line="30" selection-end-column="85" />
           <folding>
-            <marker date="1489654814077" expanded="true" signature="21:44" ph="SELECT * FRO... secciones" />
+            <marker date="1489649586827" expanded="true" signature="316:389" ph="SELECT idUsu... profesores" />
+            <marker date="1489649586827" expanded="true" signature="501:568" ph="SELECT * FRO... tipo_incidencias" />
+            <marker date="1489649586827" expanded="true" signature="1202:1481" ph="INSERT INTO incidencias... " />
           </folding>
         </state>
       </provider>
@@ -1569,23 +1567,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sources/ajaxTutor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-595">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/paginas/addIncidencia.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="25" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="12" selection-end-column="25" />
+        <state relative-caret-position="255">
+          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
           <folding>
-            <marker date="1489659053002" expanded="true" signature="323:525" ph="..." />
+            <marker date="1489660852831" expanded="true" signature="323:526" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/consultas/listadoAlumno.php">
+    <entry file="file://$PROJECT_DIR$/sources/ajaxProfesor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="88" lean-forward="false" selection-start-line="20" selection-start-column="88" selection-end-line="20" selection-end-column="88" />
-          <folding>
-            <marker date="1489659897306" expanded="true" signature="146:207" ph="SELECT * FRO... alumnos" />
-          </folding>
+        <state relative-caret-position="391">
+          <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>

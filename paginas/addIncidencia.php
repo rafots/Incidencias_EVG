@@ -7,10 +7,13 @@
         echo '<h3>Añadir incidencia</h3>';
         echo '<form method="post" class="form-horizontal" action="../consultas/conAddIncidencia.php">';
         echo '<div id="div_alumno">';
-        echo '<label>Alumno</label>';
+        echo '<label>Seccion</label>';
         echo '<select name="seccion" class="form-control" id="id_sec" required="required">';
         require '../consultas/addIncidencia/listadoSecciones.php';
         echo '</select>';
+
+        echo '</div>';
+        echo '<div id="div_alumno2">';
 
         echo '</div>';
         echo '<div>';
@@ -25,7 +28,7 @@
         echo '</div>';
         echo '<div>';
         echo '<label>Fecha de la incidencia</label>';
-        echo '<input type="date" name="fecha_incidencia" required="required" value="'.date("Y-m-d").'"/>';
+        echo '<input type="date" name="fecha_incidencia" class="form-control" required="required" value="'.date("Y-m-d").'"/>';
         echo '</div>';
         echo '<div>';
         echo '<label>Hora</label>';

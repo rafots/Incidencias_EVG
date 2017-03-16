@@ -12,7 +12,6 @@ $(document).ready(function(){
 
     $('body').on('change', '#id_sec', function(){
         alert("entra");
-
         var val_sec = this.value;
         alert(val_sec);
         $.ajax({
@@ -22,8 +21,9 @@ $(document).ready(function(){
             'dataType':'text',
             success:function(response){
                 alert("AJAX funciona");
+                $("#div_alumno2:has(select)").html("");
 
-                $('#div_alumno').html(response);
+                $("#div_alumno2").append(response);
             }
         })
     });
