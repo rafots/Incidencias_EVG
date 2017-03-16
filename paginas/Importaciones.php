@@ -38,10 +38,10 @@
 
     <div class="container "  >
         <div class="row " >
-            <div class="col-sm-3 col-md-3 " >
+            <div class="col-sm-3 col-md-3" >
 
             </div>
-            <div class="col-sm-8 col-md-8 " id="cuerpo">
+            <div class="col-sm-8 col-md-8 pre-scrollable" id="cuerpo">
                 <div class="col-md-12 col-sm-12 text-center">
                     <h3>Importar Base de datos</h3>
                     <a href="importarBD.php">Importar</a>

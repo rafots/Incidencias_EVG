@@ -24,7 +24,7 @@ echo '<script type="text/javascript" src="../sources/ajax.js"></script>';
         echo '<div class="form-group">
                                  
              </div>
-             <div class="form-group">
+        <div class="form-group ">
              <label>Seccion</label>';
         echo '<select name="tipo" class="form-control" id="desplegable1">';
         echo '<option value>Seleccione una seccion</option>';

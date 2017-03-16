@@ -146,7 +146,7 @@ if(!isset($_SESSION["tutor"])){
                     </div>
                 </div>
             </div>
-            <div class="col-sm-8 col-md-8" id="cuerpo">
+            <div class="col-sm-8 col-md-8 pre-scrollable" id="cuerpo">
     
             </div>
         </div>

@@ -112,7 +112,7 @@ echo'
                     </div>
                 </div>
             </div>
-            <div class="col-sm-8 col-md-8 " id="cuerpo">
+            <div class="col-sm-8 col-md-8 pre-scrollable" id="cuerpo">
                 ';
                 echo '<div>';
                 if(isset($_GET["alta_inc"]) && $_GET["alta_inc"]=="si")
