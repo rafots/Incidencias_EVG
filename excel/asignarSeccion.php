@@ -14,7 +14,7 @@ $obj->conectar();
 *
 */
 foreach($tabla as $indice){
-    $extractUser = "SELECT * FROM profesores WHERE nombre = '".$indice[0]."'";
+    $extractUser = "SELECT * FROM profesores WHERE nombre = '".$indice[1]."'";
     $sql = "INSERT INTO profesores_seccion VALUES (?, ?)";
 
     // extraigo el codigo del profesor
@@ -22,15 +22,14 @@ foreach($tabla as $indice){
     $row = $obj->devolverFilas();
 
     $stmt = $obj->consultasPreparadas($sql);
-    $stmt->bind_param("is", $user, $section);
+    $stmt->bind_param("si", $section, $user);
 
+    $section = $indice[0];
     $user = $row['idUsuario'];
-    $section = $indice[1];
 
     $stmt->execute();
     $stmt->close();
 }
-$obj->cerrarConexion();
 
 if($obj->filasAfectadas()){
     echo "Se han importado los datos con exito";
@@ -39,4 +38,5 @@ if($obj->filasAfectadas()){
     echo "Error al importar los datos";
 }
 
+$obj->cerrarConexion();
 ?>

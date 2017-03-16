@@ -28,6 +28,11 @@ $(document).ready(function(){
         $("#aniadirsec").load("../consultas/aniadirSeccion.php");
     });
 
+    $("#nuevoAlumno").on("click", function(e){
+       e.preventDefault();
+       $("#cuerpo").load("aniadirNuevoAlumno.php");
+    });
+
 
     $("#modificar").on("click", function(e){
         e.preventDefault();

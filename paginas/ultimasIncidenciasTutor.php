@@ -18,16 +18,16 @@
                 <tr>";
             while($fila = $conexion->devolverFilas()){
                 if($fila["leidaT"] == 1){echo"
-                    <td class='text-center success'>".$fila["nombreCompleto"]."</td>
-                    <td class='text-center success'>".$fila["nombreINC"]."</td>
-                    <td class='text-center success'>".$fila["nombrePROF"]."</td>
+                    <td class='text-center'>".$fila["nombreCompleto"]."</td>
+                    <td class='text-center'>".$fila["nombreINC"]."</td>
+                    <td class='text-center'>".$fila["nombrePROF"]."</td>
                     <td><button type='button' class='btn btn-success btn-xs' data-toggle='modal' data-target='#Modal_".$fila["idIncidencia"]."'>
                         <span class='glyphicon glyphicon-eye-open'></span></button></td>
                 </tr>";
                 }else{echo "
-                    <td class='text-center'>".$fila["nombreCompleto"]."</td>
-                    <td class='text-center'>".$fila["nombreINC"]."</td>
-                    <td class='text-center'>".$fila["nombrePROF"]."</td>
+                    <td class='text-center success'>".$fila["nombreCompleto"]."</td>
+                    <td class='text-center success'>".$fila["nombreINC"]."</td>
+                    <td class='text-center success'>".$fila["nombrePROF"]."</td>
                     <td><button type='button' class='btn btn-success btn-xs' data-toggle='modal' data-target='#Modal_".$fila["idIncidencia"]."'>
                         <span class='glyphicon glyphicon-eye-open'></span></button></td>
                 </tr>";

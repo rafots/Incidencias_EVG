@@ -19,47 +19,57 @@ $anotacionesAlumno = "SELECT alumnos.nombreCompleto, tipos_anotaciones.nombre, h
   INNER JOIN tipos_anotaciones ON (anotaciones.tipoAnotacion = tipos_anotaciones.tipoAnotacion)
   INNER JOIN alumnos ON (anotaciones.nia = alumnos.nia) WHERE alumnos.nombreCompleto = '".$_GET["nombre"]."'";
 
-echo "INCIDENCIAS";
-$conexion->consultas($incidenciasAlumno);echo"
-    <table class='table table-striped' id='alumn'>
-        <tr>
-            <td>Alumno</td>
-            <td>Tipo incidencia</td>
-            <td>Profesor</td>
-            <td>Fecha</td>
-        </tr>
-        <tr>";
-    while($fila = $conexion->devolverFilas()){
-        echo "<td>".$fila["nombreAlumno"]."</td>
-            <td>".$fila["nombreAlumno"]."</td>
-            <td>".$fila["nombreProfesor"]."</td>
-            <td>".$fila["fechaIncidencia"]."</td>";
-    }echo"
-        </tr>
-    </table>";
+    echo '<p class="bg-success">INCIDENCIAS</p>';
+    $conexion->consultas($incidenciasAlumno);
+    if($conexion->filasAfectadas()){echo"
+        <table class='table table-striped table-responsive' id='alumn'>
+            <tr>
+                <td>Alumno</td>
+                <td>Tipo incidencia</td>
+                <td>Profesor</td>
+                <td>Fecha</td>
+            </tr>
+            <tr>";
+        while($fila = $conexion->devolverFilas()){
+            echo "<td>".$fila["nombreAlumno"]."</td>
+                <td>".$fila["nombreAlumno"]."</td>
+                <td>".$fila["nombreProfesor"]."</td>
+                <td>".$fila["fechaIncidencia"]."</td>";
+        }echo"
+            </tr>
+        </table>";
+    }else{
+        echo "No hay incidencias para este alumno <br/>";
+    }
 
-    echo "SANCIONES";
-    $conexion->consultas($sancionesAlumnos);echo"
-    <table class='table table-striped' id='alumn'>
-        <tr>
-            <td>Alumno</td>
-            <td>Sancion</td>
-            <td>Fecha Inicio</td>
-            <td>Fecha Fin</td>
-        </tr>
-        <tr>";
-    while($fila = $conexion->devolverFilas()){
-        echo "<td>".$fila["nombreCompleto"]."</td>
-            <td>".$fila["nombreSancion"]."</td>
-            <td>".$fila["fecha_inicio"]."</td>
-            <td>".$fila["fecha_fin"]."</td>";
-    }echo"
-        </tr>
-    </table>";
 
-    echo "ANOTACIONES";
-    $conexion->consultas($anotacionesAlumno);echo"
-    <table class='table table-striped' id='alumn'>
+    echo '<p class="bg-success">SANCIONES</p>';
+    $conexion->consultas($sancionesAlumnos);
+    if($conexion->filasAfectadas()){echo"
+        <table class='table table-striped table-responsive' id='alumn'>
+            <tr>
+                <td>Alumno</td>
+                <td>Sancion</td>
+                <td>Fecha Inicio</td>
+                <td>Fecha Fin</td>
+            </tr>
+            <tr>";
+        while($fila = $conexion->devolverFilas()){
+            echo "<td>".$fila["nombreCompleto"]."</td>
+                <td>".$fila["nombreSancion"]."</td>
+                <td>".$fila["fecha_inicio"]."</td>
+                <td>".$fila["fecha_fin"]."</td>";
+        }echo"
+            </tr>
+        </table>";
+    }else{
+        echo "No hay sanciones de este alumno";
+    }
+
+    echo '<p class="bg-success">ANOTACIONES</p>';
+    $conexion->consultas($anotacionesAlumno);
+    if($conexion->filasAfectadas()){echo"
+        <table class='table table-striped table-responsive' id='alumn'>
         <tr>
             <td>Alumno</td>
             <td>Anotacion</td>
@@ -69,9 +79,13 @@ $conexion->consultas($incidenciasAlumno);echo"
     while($fila = $conexion->devolverFilas()){
         echo "<td>".$fila["nombreCompleto"]."</td>
             <td>".$fila["nombre"]."</td>
-            <td>".$fila["hora_Registro"]."</td>";
+            <td>".$fila["hora_Registro"]."</td>
+        </tr>";
     }echo"
-        </tr>
     </table>";
+    }else{
+        echo "No hay anotaciones para este alumno";
+    }
+
 
 

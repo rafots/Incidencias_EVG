@@ -48,6 +48,16 @@ if(!isset($_SESSION['gestor'])){
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
+                                <a data-toggle="collapse" id="nuevoAlumno" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-user text-success"></span> Nuevo Alumno</a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                           
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
                                 <a data-toggle="collapse" id="secciongestor" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-book text-success"></span> Secciones</a>
                             </h4>
                         </div>
@@ -58,7 +68,7 @@ if(!isset($_SESSION['gestor'])){
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" id="horas"><span class="glyphicon glyphicon-pencil text-success"></span> Horas</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" id="horas"><span class="fa fa-clock-o text-success"></span> Horas</a>
                             </h4>
                         </div>
                     </div>

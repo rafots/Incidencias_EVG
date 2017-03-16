@@ -29,8 +29,6 @@ if(!isset($_SESSION["usuario"])){
     </article>";
 
 echo "
-    </div>
-</div>
 </body>";
 }
 

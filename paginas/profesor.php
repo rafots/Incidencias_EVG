@@ -63,7 +63,7 @@ echo'
                         <div class="panel-heading" >
                             <h4 class="panel-title ">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                <span class="glyphicon glyphicon-book text-success"></span>Incidencias</a>
+                                <span class="glyphicon glyphicon-book text-success"></span> Incidencias</a>
                             </h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in">
@@ -83,7 +83,7 @@ echo'
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-folder-open text-success">
-                            </span>Gestiones</a>
+                            </span> Gestiones</a>
                             </h4>
                         </div>
                         <div id="collapseFour" class="panel-collapse collapse">
@@ -99,12 +99,6 @@ echo'
                                             <a href="#" id="verInc">Ver Incidencias</a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="http://www.jquery2dotnet.com">Cerrar Sesión</a>
-                                        </td>
-                                    </tr> 
-
                                 </table>
                             </div>
                         </div>
