@@ -1,8 +1,8 @@
 <?php
     session_start();
     require '../procedimientos/procedimientos.php';
-    $conexion = new conexion();
-    $conectar = new mysqli($conexion->getServer(),$conexion->getUser(),$conexion->getPass(),$conexion->getDb());
+    $conexion = new procedimientos();
+    $conexion->conectar();
     echo '
             <h3>Tipos de sanciones</h3>
                 <div>

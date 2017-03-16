@@ -1,11 +1,11 @@
 <?php
     $consulta="SELECT idUsuario from profesores WHERE usuario='".$_SESSION["usuario"]."'";
-    $resultado=$conectar->query($consulta);
-    $fila=$resultado->fetch_array();
+    $conexion->consultas($consulta);
+    $fila=$conexion->devolverFilas();
 
     $consulta_etapa="SELECT codEtapa FROM etapas where coordinador=".$fila["idUsuario"].";";
-    $resultado_etapa=$conectar->query($consulta_etapa);
-    $fila_etapa=$resultado_etapa->fetch_array();
+    $conexion->consultas($consulta_etapa);
+    $fila_etapa=$conexion->devolverFilas();
 
     $consulta="SELECT tipo_sancion_incidencias.tipoSancion, tipo_sancion.nombre AS SANCION, tipo_sancion_incidencias.idTipo, tipo_incidencias.nombre AS INCIDENCIA
                         FROM tipo_sancion_incidencias
@@ -15,9 +15,9 @@
                         ON tipo_sancion.tipoSancion=tipo_sancion_incidencias.tipoSancion
                         WHERE tipo_incidencias.codEtapa='".$fila_etapa["codEtapa"]."'";
 
-    $resultado=$conectar->query($consulta);
+    $conexion->consultas($consulta);
 
-    if($fila_tabla=$resultado->fetch_array())
+    if($fila_tabla=$conexion->devolverFilas())
     {
 
         echo '<table class="table table-striped">';
@@ -37,7 +37,7 @@
 
         if(!empty($fila_tabla))
         {
-            while($fila_tabla=$resultado->fetch_array())
+            while($fila_tabla=$conexion->devolverFilas())
             {
                 echo '<tr>';
                 echo '<td>'.$fila_tabla["SANCION"].'</td>';

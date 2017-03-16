@@ -1,5 +1,4 @@
 <?php
-    session_start();
     $consulta="SELECT idUsuario from profesores WHERE usuario='".$_SESSION["usuario"]."'";
     $conexion->consultas($consulta);
     $fila=$conexion->devolverFilas();

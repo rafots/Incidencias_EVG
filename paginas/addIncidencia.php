@@ -23,14 +23,14 @@
         echo '<input type="text" name="asignatura" class="form-control"/>';
         echo '</div>';
         echo '<div>';
+        echo '<label>Fecha de la incidencia</label>';
+        echo '<input type="date" name="fecha_incidencia" required="required" value="'.date("Y-m-d").'"/>';
+        echo '</div>';
+        echo '<div>';
         echo '<label>Hora</label>';
         echo '<select name="hora" class="form-control" id="sel1" required="required">';
         require "../consultas/addIncidencia/listadoHoras.php";
         echo '</select>';
-        echo '</div>';
-        echo '<div>';
-        echo '<label>Fecha de la incidencia</label>';
-        echo '<input type="date" name="fecha_incidencia" required="required" value="'.date("Y-m-d").'"/>';
         echo '</div>';
         echo '<div>';
         echo '<label>Descripción de la incidencia</label>';

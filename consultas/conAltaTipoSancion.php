@@ -1,31 +1,30 @@
 <?php
     session_start();
-    require '../conexion/conexion.php';
+    require '../procedimientos/procedimientos.php';
     if($_POST["nombreTipo"]==""){
         header("Location: ../paginas/coordinador.php?campovacio=si");
     }
     else
     {
-        $conexion = new conexion();
-        $conectar = new mysqli($conexion->getServer(),$conexion->getUser(),$conexion->getPass(),$conexion->getDb());
-        $consulta_alta_tipo_sancion="INSERT INTO tipo_sancion VALUES (?,?)";
-        $stmt=$conectar->prepare($consulta_alta_tipo_sancion);
+        $conexion = new procedimientos();
+        $conexion->conectar();
+
         $consulta_tipo_sancion="SELECT tipoSancion FROM tipo_sancion";
-        $resultado_tipos=$conectar->query($consulta_tipo_sancion);
+        $conexion->consultas($consulta_tipo_sancion);
         $cp=1;
-        if($fila_tipos2=$resultado_tipos->fetch_array())
+        if($fila_tipos2=$conexion->devolverFilas())
         {
-            while($fila_tipos2=$resultado_tipos->fetch_array()){
+            while($fila_tipos2=$conexion->devolverFilas()){
                 $cp++;
             }
             $cp++;
-            $stmt->bind_param('is',$cp,$_POST["nombreTipo"]);
+            $consulta_alta_tipo_sancion="INSERT INTO tipo_sancion VALUES (".$cp.",'".$_POST["nombreTipo"]."')";
         }
         else
         {
-            $stmt->bind_param('is',$cp,$_POST["nombreTipo"]);
+            $consulta_alta_tipo_sancion="INSERT INTO tipo_sancion VALUES (".$cp.",'".$_POST["nombreTipo"]."')";
         }
-        $stmt->execute();
+        $conexion->consultas($consulta_alta_tipo_sancion);
         header("Location: ../paginas/coordinador.php");
     }
 

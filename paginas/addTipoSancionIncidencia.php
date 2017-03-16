@@ -1,8 +1,8 @@
 <?php
     session_start();
     require '../procedimientos/procedimientos.php';
-    $conexion = new conexion();
-    $conectar = new mysqli($conexion->getServer(),$conexion->getUser(),$conexion->getPass(),$conexion->getDb());
+    $conexion = new procedimientos();
+    $conexion->conectar();
     if(!isset($_SESSION['coordinador']) || $_SESSION['coordinador']!=1) {
         echo 'Acceso prohibido';
 
