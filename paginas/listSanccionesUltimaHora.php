@@ -63,7 +63,7 @@ else {
 
     }else{
         echo '<h1><small>Actualmente no hay sanciones de "última hora" para el día de hoy</small></h1>';
-        echo $sql.'<br/>';
+        //echo $sql.'<br/>';
     }
 }
 

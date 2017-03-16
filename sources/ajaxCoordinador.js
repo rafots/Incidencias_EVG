@@ -42,7 +42,7 @@ $(document).ready(function(){
 
     $('#create_sanction').on("click",function(e){
         e.preventDefault();
-        $("#cuerpo").load("formNewSancion.php");
+        $("#cuerpo").load("formNewSancionCoor.php");
     });
 
     $('#view_sanction').on("click",function(e){
@@ -161,6 +161,26 @@ $(document).ready(function(){
             _tr.removeClass('hide');
             console.error('Error -> %o', error);
         });
+    });
+
+    $('#extractSection').on("change",function(e){
+        e.preventDefault();
+        var seccion = $('#extractSection').find(":selected").val();
+        console.log(seccion);
+        $.ajax({
+            type:"POST",
+            url: '../consultas/extraerAlumnos.php',
+            data: {"idSeccion":seccion},
+            success: function(data) {
+                console.log('entra');
+                e.preventDefault();
+                $('#extractAlumnosSecc').empty();
+                $('#extractAlumnosSecc').append(data);
+                //$('#botonBuscar').attr('type', 'submit');
+
+            }
+        });
+
     });
 
 });
