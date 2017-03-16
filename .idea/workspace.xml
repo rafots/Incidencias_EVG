@@ -4,11 +4,6 @@
     <list default="true" id="2d578d95-4bd8-491a-8a20-89d7a2bda1b8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultas/consultaanotacionprofesor.php" afterPath="$PROJECT_DIR$/consultas/consultaanotacionprofesor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paginas/Importaciones.php" afterPath="$PROJECT_DIR$/paginas/Importaciones.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paginas/coordinador.php" afterPath="$PROJECT_DIR$/paginas/coordinador.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paginas/crearanotaciones.php" afterPath="$PROJECT_DIR$/paginas/crearanotaciones.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paginas/profesor.php" afterPath="$PROJECT_DIR$/paginas/profesor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paginas/tutor.php" afterPath="$PROJECT_DIR$/paginas/tutor.php" />
     </list>
     <ignored path="Incidencias_EVG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,7 +45,7 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="anotaciones" />
+        <option name="myItemId" value="tipos_anotaciones" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -126,38 +121,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crearanotaciones.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/paginas/crearanotaciones.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="47" />
-              <folding>
-                <marker date="1489706836258" expanded="true" signature="610:664" ph="..." />
-                <marker date="1489706836258" expanded="true" signature="698:734" ph="..." />
-                <marker date="1489706836258" expanded="true" signature="1104:1125" ph="..." />
-                <marker date="1489706836258" expanded="true" signature="1582:2220" ph="..." />
-                <marker date="1489706836258" expanded="true" signature="1742:1913" ph="..." />
-                <marker date="1489706836258" expanded="true" signature="1979:2104" ph="..." />
-                <marker date="1489706836258" expanded="true" signature="2318:2348" ph="..." />
-                <marker date="1489706836258" expanded="true" signature="3086:3725" ph="..." />
-                <marker date="1489706836258" expanded="true" signature="3246:3417" ph="..." />
-                <marker date="1489706836258" expanded="true" signature="3483:3608" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="consultaanotacionprofesor.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/consultas/consultaanotacionprofesor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="81" lean-forward="false" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
+            <state relative-caret-position="85">
+              <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
               <folding>
-                <marker date="1489706836218" expanded="true" signature="148:764" ph="Select anota... *" />
-                <marker date="1489706836218" expanded="true" signature="148:793" ph="Select anota... *" />
-                <marker date="1489706836218" expanded="true" signature="148:820" ph="Select tipos... anotaciones" />
-                <marker date="1489706836218" expanded="true" signature="148:840" ph="Select tipos... *" />
-                <marker date="1489706836218" expanded="true" signature="409:443" ph="SELECT * FRO... anotaciones" />
+                <marker date="1489707068046" expanded="true" signature="148:757" ph="Select anota... *" />
+                <marker date="1489707068046" expanded="true" signature="148:786" ph="Select anota... *" />
+                <marker date="1489707068046" expanded="true" signature="148:813" ph="Select tipos... anotaciones" />
+                <marker date="1489707068046" expanded="true" signature="148:833" ph="Select tipos... *" />
+                <marker date="1489707068046" expanded="true" signature="402:436" ph="SELECT * FRO... anotaciones" />
               </folding>
             </state>
           </provider>
@@ -425,16 +399,6 @@
                 <marker date="1489706836292" expanded="true" signature="6893:7068" ph="..." />
                 <marker date="1489706836292" expanded="true" signature="7239:7263" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Importaciones.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/paginas/Importaciones.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -932,7 +896,7 @@
       <workItem from="1489670658864" duration="2757000" />
       <workItem from="1489675103337" duration="117000" />
       <workItem from="1489688078749" duration="5890000" />
-      <workItem from="1489702940784" duration="3904000" />
+      <workItem from="1489702940784" duration="4140000" />
     </task>
     <task id="LOCAL-00002" summary="UPDATE FILES index.html, bootstrap.css, comun.css, script.sql&#10;ADD FILES import_users.php, usuarios.xlsx, logotipo.png, menu_estructure.html">
       <created>1488051390265</created>
@@ -1200,11 +1164,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489693678521</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="UPDATE anotaciones the last retoque">
+      <created>1489706898902</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1489706898902</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250763000" />
+    <option name="totallyTimeSpent" value="250999000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1217,7 +1188,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3633388" sideWeight="0.7389985" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28668684" sideWeight="0.73146296" order="0" side_tool="false" content_ui="combo" />
@@ -1226,7 +1197,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16717096" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4140753" sideWeight="0.8290469" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4140753" sideWeight="0.8290469" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25716332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.022913257" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1294,7 +1265,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="UPDATE: Gestion de tipos de incidencias, adaptado a AJAX y ya gestiona quien gestiona cada tipo de incidencia" />
     <MESSAGE value="UPDATE: Menú coordinador mejorado" />
     <MESSAGE value="UPDATE: ajax" />
     <MESSAGE value="UPDATE: añadida base de datos (con datos jeje)" />
@@ -1319,7 +1289,8 @@
     <MESSAGE value="UPDATE anotaciones acordeon" />
     <MESSAGE value="UPDATE anotaciones modal" />
     <MESSAGE value="UPDATE anotaciones limit 10" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE anotaciones limit 10" />
+    <MESSAGE value="UPDATE anotaciones the last retoque" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE anotaciones the last retoque" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1328,7 +1299,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/consultas/addIncidencia/listadoAlumno.php" />
     <entry file="file://$PROJECT_DIR$/paginas/addIncidencia.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -2001,19 +1971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/cc26edd9/91753ece-5cc6-44a8-89ee-d87639ff2629/magentoe_incidenciasevg.anotaciones">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/91753ece-5cc6-44a8-89ee-d87639ff2629/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2069,16 +2026,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="dbDummy://dbtable:/cc26edd9/91753ece-5cc6-44a8-89ee-d87639ff2629/magentoe_incidenciasevg.tipos_anotaciones">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/cc26edd9/91753ece-5cc6-44a8-89ee-d87639ff2629/magentoe_incidenciasevg.anotaciones">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/consultas/consultaanotacionprofesor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="81" lean-forward="false" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
+        <state relative-caret-position="85">
+          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
           <folding>
-            <marker date="1489706836218" expanded="true" signature="148:764" ph="Select anota... *" />
-            <marker date="1489706836218" expanded="true" signature="148:793" ph="Select anota... *" />
-            <marker date="1489706836218" expanded="true" signature="148:820" ph="Select tipos... anotaciones" />
-            <marker date="1489706836218" expanded="true" signature="148:840" ph="Select tipos... *" />
-            <marker date="1489706836218" expanded="true" signature="409:443" ph="SELECT * FRO... anotaciones" />
+            <marker date="1489707068046" expanded="true" signature="148:757" ph="Select anota... *" />
+            <marker date="1489707068046" expanded="true" signature="148:786" ph="Select anota... *" />
+            <marker date="1489707068046" expanded="true" signature="148:813" ph="Select tipos... anotaciones" />
+            <marker date="1489707068046" expanded="true" signature="148:833" ph="Select tipos... *" />
+            <marker date="1489707068046" expanded="true" signature="402:436" ph="SELECT * FRO... anotaciones" />
           </folding>
         </state>
       </provider>
