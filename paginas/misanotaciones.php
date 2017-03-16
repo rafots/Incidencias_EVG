@@ -81,7 +81,6 @@ function visualizar($objeto){
                                 </div>
                                 <div class='modal-footer'>
                                     <button type='button' class='btn btn-default' data-dismiss='modal'>Cerrar</button>
-                                    <a class='btn btn-default' href='marcarleida.php?anot=".$fila["numAnotacion"]."'>Marcar como leida</a>
 
                                 </div>
                             </div>

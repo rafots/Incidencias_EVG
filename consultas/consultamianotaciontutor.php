@@ -10,6 +10,6 @@ from anotaciones inner join tipos_Anotaciones
     on anotaciones.nia = alumnos.nia
   inner join  secciones
     on secciones.idSeccion = alumnos.idSeccion
-WHERE anotaciones.usercreacion like 't' AND leida='0'";
+WHERE anotaciones.usercreacion like 't'";
     $objeto->consultas($consulta);
 ?>
