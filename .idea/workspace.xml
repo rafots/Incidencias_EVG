@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d578d95-4bd8-491a-8a20-89d7a2bda1b8" name="Default" comment="UPDATE: cambi">
+    <list default="true" id="2d578d95-4bd8-491a-8a20-89d7a2bda1b8" name="Default" comment="UPDATE: Arreglos en ajax">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/paginas/addIncidencia.php" afterPath="$PROJECT_DIR$/paginas/addIncidencia.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sources/ajaxProfesor.js" afterPath="$PROJECT_DIR$/sources/ajaxProfesor.js" />
     </list>
     <ignored path="Incidencias_EVG.iws" />
@@ -83,8 +82,8 @@
       <file leaf-file-name="ajaxProfesor.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sources/ajaxProfesor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+            <state relative-caret-position="221">
+              <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -572,7 +571,7 @@
       <workItem from="1489483437143" duration="211000" />
       <workItem from="1489608271991" duration="12890000" />
       <workItem from="1489623087353" duration="6561000" />
-      <workItem from="1489649614961" duration="11684000" />
+      <workItem from="1489649614961" duration="11788000" />
     </task>
     <task id="LOCAL-00002" summary="UPDATE FILES index.html, bootstrap.css, comun.css, script.sql&#10;ADD FILES import_users.php, usuarios.xlsx, logotipo.png, menu_estructure.html">
       <created>1488051390265</created>
@@ -819,11 +818,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489660001710</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="UPDATE: Arreglos en ajax">
+      <created>1489661353201</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1489661353201</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241581000" />
+    <option name="totallyTimeSpent" value="241685000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -913,7 +919,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ADD formNewSancion" />
     <MESSAGE value="UPDATE: Campo añadido a la tabla tipo_incidencias en el script de SQL" />
     <MESSAGE value="UPDATE: Gestion de tipos de incidencias, adaptado a AJAX y ya gestiona quien gestiona cada tipo de incidencia" />
     <MESSAGE value="UPDATE: Menú coordinador mejorado" />
@@ -938,7 +943,8 @@
     <MESSAGE value="UPDATE anotaciones en general" />
     <MESSAGE value="UPDATE: Conexiones cambiadas en mis procesos" />
     <MESSAGE value="UPDATE: Alta de incidencias adaptado a AJAX" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: Alta de incidencias adaptado a AJAX" />
+    <MESSAGE value="UPDATE: Arreglos en ajax" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: Arreglos en ajax" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1587,8 +1593,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/ajaxProfesor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="31" lean-forward="false" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        <state relative-caret-position="221">
+          <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
           <folding />
         </state>
       </provider>

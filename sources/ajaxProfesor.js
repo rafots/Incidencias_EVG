@@ -11,16 +11,13 @@ $(document).ready(function(){
 
 
     $('body').on('change', '#id_sec', function(){
-        alert("entra");
         var val_sec = this.value;
-        alert(val_sec);
         $.ajax({
             'data':{"seccion":val_sec},
             'type': 'POST',
             'url': '../consultas/listadoAlumno.php',
             'dataType':'text',
             success:function(response){
-                alert("AJAX funciona");
                 $("#div_alumno2:has(select)").html("");
 
                 $("#div_alumno2").append(response);
