@@ -84,13 +84,39 @@ $(document).ready(function() {
         e.preventDefault();
         //make the ajax call
         var profesores = $("#profesores").prop("checked");
-        alert($("#profesores").prop("checked"));
-        alert($('#observations').val());
         var params = {
              tipo : $('select[name=desplegabletipo]').val(),
              nia : $('select[name=desplegable2]').val(),
              observaciones : $('#observations').val(),
              profesores: profesores,
+
+        };
+
+        $.ajax({
+            type: "GET",
+            url: '../consultas/consultascrear.php',
+            data: params,
+            success: function (data) {
+                e.preventDefault();
+                console.log("Entra correctamente");
+                $('#alerta').hide();
+                $('#cuerpo').append(data);
+
+            }
+        });
+
+    });
+
+    $('#crearAnotacion2').on("click", function (e) {
+        e.preventDefault();
+        //make the ajax call
+        alert('hola');
+        var profesores = $("#profesores").prop("checked");
+        var params = {
+            tipo : $('select[name=desplegabletipo]').val(),
+            nia : $('select[name=nia]').val(),
+            observaciones : $('#observations').val(),
+            profesores: profesores,
 
         };
 
