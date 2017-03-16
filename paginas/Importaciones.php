@@ -59,6 +59,10 @@
                     <a href="../excel/importarSecciones.php">Importar</a>
                 </div>
                 <div class="col-md-12 col-sm-12 text-center">
+                    <h3>Asignar Secciones</h3>
+                    <a href="../excel/asignarSeccion.php">Importar</a>
+                </div>
+                <div class="col-md-12 col-sm-12 text-center">
                     <h3>Asignar Tutores</h3>
                     <a href="../excel/asignarTutor.php">Asignar</a>
                 </div>
