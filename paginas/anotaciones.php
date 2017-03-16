@@ -27,12 +27,15 @@ echo '<script src="../sources/ajax.js" type="text/javascript"></script>';
         echo '<tr>
            <th>Descripcion de la anotacion:</th>
            <th>Nombre del Alumno:</th>  
+           <th>Fecha:</th>  
            <th>Detalle</th>
         </tr>';
         while ($fila = $objeto->devolverfilas()) {
             echo '<tr>';
             echo '<th>' . $fila["tipoAnotaciones"] . '</th>';
             echo '<th>' . $fila["nombreCompleto"] . '</th>';
+            echo '<th>' . $fila["fecha"]. '</th>';
+
 
            echo" <th><button type='button' class='btn btn-success btn-xs' data-toggle='modal' data-target='#Modal_".$fila["numAnotacion"]."'>
                         <span class='glyphicon glyphicon-eye-open'></span></button></th>
@@ -49,7 +52,13 @@ echo '<script src="../sources/ajax.js" type="text/javascript"></script>';
                                 <div class='modal-body'>
                                     <form class='form-horizontal'>
                                         <div class='form-group'>
-                                            <label for='alumno' class='col-md-3 control-label'>Alumno:</label>
+                                            <label for='alumno' class='col-md-3 control-label'>Fecha:</label>
+                                                <div class='col-lg-12'>
+                                                    <input type='text' class='form-control' id='alumno' value='" . $fila["fecha"] . "' disabled>
+                                                </div>
+                                        </div>
+                                        <div class='form-group'>
+                                            <label for='alumno' class='col-lg-12 control-label'>Alumno:</label>
                                                 <div class='col-lg-12'>
                                                     <input type='text' class='form-control' id='alumno' value='" . $fila["nombreCompleto"] . "' disabled>
                                                 </div>
@@ -70,6 +79,12 @@ echo '<script src="../sources/ajax.js" type="text/javascript"></script>';
                                             <label for='alumno' class='col-md-12 control-label'>Nombre Curso:</label>
                                                 <div class='col-lg-12'>
                                                     <input type='text' class='form-control' id='alumno' value='" . $fila["nombre"] . "' disabled>
+                                                </div>
+                                        </div>
+                                        <div class='form-group'>
+                                            <label for='alumno' class='col-md-12 control-label'>Descripcion:</label>
+                                                <div class='col-lg-12'>
+                                                    <input type='text' class='form-control' id='alumno' value='" . $fila["descripcion"] . "' disabled>
                                                 </div>
                                         </div>
                                     </form>

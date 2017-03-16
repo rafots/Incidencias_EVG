@@ -84,12 +84,13 @@ $(document).ready(function() {
         e.preventDefault();
         //make the ajax call
         var profesores = $("#profesores").prop("checked");
-
+        alert($("#profesores").prop("checked"));
+        alert($('#observations').val());
         var params = {
              tipo : $('select[name=desplegabletipo]').val(),
              nia : $('select[name=desplegable2]').val(),
-            observaciones : $('#observations').val(),
-            profesores: profesores,
+             observaciones : $('#observations').val(),
+             profesores: profesores,
 
         };
 

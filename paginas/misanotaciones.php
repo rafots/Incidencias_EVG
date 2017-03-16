@@ -40,9 +40,15 @@ function visualizar($objeto){
                                     <h4 class='modal-title' id='Modal_Label_".$fila["numAnotacion"]."'>Detalles de las anotaciones</h4>
                                 </div>
                                 <div class='modal-body'>
-                                    <form class='form-horizontal'> 
+                                    <form class='form-horizontal'>
                                         <div class='form-group'>
-                                            <label for='alumno' class='col-md-3 control-label'>Alumno:</label>
+                                            <label for='alumno' class='col-md-3 control-label'>Fecha:</label>
+                                                <div class='col-lg-12'>
+                                                    <input type='text' class='form-control' id='alumno' value='" . $fila["fecha"] . "' disabled>
+                                                </div>
+                                        </div>
+                                        <div class='form-group'>
+                                            <label for='alumno' class='col-lg-12 control-label'>Alumno:</label>
                                                 <div class='col-lg-12'>
                                                     <input type='text' class='form-control' id='alumno' value='" . $fila["nombreCompleto"] . "' disabled>
                                                 </div>
@@ -75,13 +81,14 @@ function visualizar($objeto){
                                 </div>
                                 <div class='modal-footer'>
                                     <button type='button' class='btn btn-default' data-dismiss='modal'>Cerrar</button>
-                                    <a class='btn btn-default' href='eliminaranotaciones.php?anot=".$fila["numAnotacion"]."'>Eliminar</a>
+                                    <a class='btn btn-default' href='marcarleida.php?anot=".$fila["numAnotacion"]."'>Marcar como leida</a>
+
                                 </div>
                             </div>
                         </div>
                     </div>";
-    }
-    echo '</table>';
+                }
+        echo '</table>';
 }
 
 ?>

@@ -3,7 +3,7 @@ session_start();
 require_once "../procedimientos/procedimientos.php";
 $obj = new procedimientos();
 $obj->conectar();
-if(isset($_GET["nia"]) && (isset($_GET["tipo"] )))
+if(isset($_GET["nia"]) && isset($_GET["tipo"])  && isset($_GET["profesores"]) && isset($_GET["observaciones"]) )
     {
         $consultacrearanot = "Insert into anotaciones VALUES ('DEFAULT','" . $_GET["tipo"] . "','" . $_GET["nia"] . "','" .date("Y-m-d H"). "','" . $_SESSION["activa"] . "', " . 0 . ",".$_GET["profesores"].",'".$_GET["observaciones"]."')";
         $obj->consultas($consultacrearanot);
