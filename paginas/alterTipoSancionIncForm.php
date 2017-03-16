@@ -193,7 +193,7 @@ if(isset($_SESSION['coordinador']))
             <div class="col-sm-8 col-md-8 " id="cuerpo">
                ';
                 echo '<h3>Cambiar tipo de sancion y incidencia</h3>
-                <form method="get" action="../consultas/conAlterTipoSancionIncidencia.php">
+                <form method="get" class="form-horizontal" action="../consultas/conAlterTipoSancionIncidencia.php">
                     <div>
                     ';
                             echo '<input type="hidden" name="sancionAnt" value="'.$_GET["sancionAnt"].'"/>';
@@ -201,7 +201,7 @@ if(isset($_SESSION['coordinador']))
                        echo '
                         <div>
                         <label>Para la incidencia, asignarle este tipo de sancion...</label>
-                        <select name="tipoSancionNuevo">
+                        <select class="form-control" name="tipoSancionNuevo">
                         ';
                             $consulta="SELECT idUsuario from profesores WHERE usuario='".$_SESSION["usuario"]."'";
                             $resultado=$conectar->query($consulta);
@@ -222,7 +222,7 @@ if(isset($_SESSION['coordinador']))
                         </div>
                         <div>
                             <label>Para esta sancion, asignarle el siguiente tipo de Incidencia...</label>
-                            <select name="tipoIncidenciaNuevo">
+                            <select class="form-control" name="tipoIncidenciaNuevo">
                             ';
                                 $consulta_tipo_s="SELECT * FROM tipo_sancion";
                                 $resultado_tipo_s=$conectar->query($consulta_tipo_s);
@@ -235,7 +235,7 @@ if(isset($_SESSION['coordinador']))
                             </select>
                         </div>
                         <div>
-                            <input type="submit" value="modificar">
+                            <input type="submit" class="btn btn-primary buttons-separator" value="Modificar"/>
                         </div>
                         </form>
                         ';

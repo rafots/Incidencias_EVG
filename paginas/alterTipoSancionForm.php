@@ -190,15 +190,16 @@ if(isset($_SESSION['coordinador']))
             <div class="col-sm-8 col-md-8 " id="cuerpo">
                ';
                 echo '<div>';
-                echo '<form method="get" action="../consultas/conAlterTipoSancion.php">';
+                echo '<h3>Modificar tipo de sancion</h3>';
+                echo '<form method="get" class="form-horizontal" action="../consultas/conAlterTipoSancion.php">';
 
                 echo '<div>';
                 echo '<label>Nombre de tipo de sancion</label>';
                 echo '<input type="hidden" name="cod" value="'.$_GET["codAntiguo"].'" id="ocultar">';
-                echo '<input type="text" name="texto" required="required" value="'.$_GET["nombreAntiguo"].'">';
+                echo '<input type="text" name="texto" class="form-control" required="required" value="'.$_GET["nombreAntiguo"].'">';
                 echo '</div>';
                 echo '<div>';
-                echo '<input type="submit" value="Modificar tipo de sancion">';
+                echo '<input type="submit" class="btn btn-primary buttons-separator" value="Modificar tipo de sancion">';
                 echo '</div>';
                 echo '</div>';
     echo'

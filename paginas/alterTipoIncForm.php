@@ -190,28 +190,37 @@ if(isset($_SESSION['coordinador']))
             </div>
             <div class="col-sm-8 col-md-8 " id="cuerpo">
                 <div>
-                    <form method="get" action="../consultas/conAlterTipoIncidencia.php">
-                    <input type="hidden" name="cod" value="'.$_GET["codAntiguo"].'">
+                    <h3>Modificar tipo de incidencia</h3>
+                    <form method="get" class="form-horizontal"  action="../consultas/conAlterTipoIncidencia.php">
+                    <input type="hidden" class="form-control" name="cod" value="'.$_GET["codAntiguo"].'">
                     <div>
                        <label>Nombre de tipo de incidencia</label>
                        
-                       <input type="text" name="texto" required="required" value="'.$_GET["nombreAntiguo"].'">
+                       <input type="text" name="texto" class="form-control" required="required" value="'.$_GET["nombreAntiguo"].'">
                     </div>
                          <div>
                              <label>¿Quien gestiona esta incidencia?</label>';
 
                             if($_GET["gestionaAnt"]=="T"){
+                                echo '<div>';
                                 echo '<input type="radio" name="gestiona" value="T" checked="checked" class="checkbox-inline"/>Tutor';
+                                echo '</div>';
+                                echo '<div>';
                                 echo '<input type="radio" name="gestiona" value="C" class="checkbox-inline"/>Coordinador';
+                                echo '</div>';
                             }
                             else
                             {
+                                echo '<div>';
                                 echo '<input type="radio" name="gestiona" value="T" class="checkbox-inline"/>Tutor';
+                                echo '</div>';
+                                echo '<div>';
                                 echo '<input type="radio" name="gestiona" value="C" checked="checked" class="checkbox-inline"/>Coordinador';
+                                echo '</div>';
                             }
                              echo' 
                              <div>
-                                <input type="submit" value="Modificar tipo de incidencia"/>
+                                <input type="submit" class="btn btn-primary buttons-separator" value="Modificar tipo de incidencia"/>
                              </div>
                          </div>
                      </div>

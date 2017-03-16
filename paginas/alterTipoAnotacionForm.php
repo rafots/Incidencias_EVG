@@ -190,14 +190,15 @@ if(isset($_SESSION['coordinador']))
             <div class="col-sm-8 col-md-8 " id="cuerpo">
                ';
                 echo '<div>';
-                echo '<form method="get" action="../consultas/conAlterTipoAnotacion.php">';
-                echo '<label>Nombre de tipo de anotacion</label>';
+                echo '<h3>Modificar tipo de anotacion</h3>';
+                echo '<form method="get" class="form-horizontal" action="../consultas/conAlterTipoAnotacion.php">';
+                echo '<label>Nombre del tipo de anotacion</label>';
                 echo '<div>';
                 echo '<input type="hidden" name="cod" value="'.$_GET["codAntiguo"].'">';
-                echo '<input type="text" name="texto" value="'.$_GET["nombreAntiguo"].'" required="required">';
+                echo '<input type="text" name="texto" class="form-control" value="'.$_GET["nombreAntiguo"].'" required="required">';
                 echo '</div>';
                 echo '<div>';
-                echo '<input type="submit" value="Modificar tipo de anotacion">';
+                echo '<input type="submit" class="btn btn-primary buttons-separator" value="Modificar tipo de anotacion">';
                 echo '</div>';
                 echo '</div>';
                 echo'

@@ -41,7 +41,7 @@
         echo '<textarea name="descripcion" required="required" class="form-control"/>';
         echo '</div>';
         echo '<div>';
-        echo '<input type="submit" value="Enviar incidencia" class="buttons-separator"/>';
+        echo '<input type="submit" value="Enviar incidencia" class="btn btn-primary buttons-separator"/>';
         echo '</div>';
         echo '</form>';
     echo '</div>';
