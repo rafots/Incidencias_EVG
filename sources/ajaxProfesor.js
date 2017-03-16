@@ -18,9 +18,10 @@ $(document).ready(function(){
             'url': '../consultas/listadoAlumno.php',
             'dataType':'text',
             success:function(response){
-                $("#div_alumno2:has(select)").html("");
-
+                $("#div_alumno2:has(*)").html("");
                 $("#div_alumno2").append(response);
+
+
             }
         })
     });

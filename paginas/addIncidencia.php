@@ -17,12 +17,6 @@
 
         echo '</div>';
         echo '<div>';
-        echo '<label>Tipo de incidencia</label>';
-        echo '<select name="tipo_inc" class="form-control" id="sel1" required="required">';
-        require "../consultas/addIncidencia/listadoTipoInc.php";
-        echo '</select>';
-        echo '</div>';
-        echo '<div>';
         echo '<label>Asignatura</label>';
         echo '<input type="text" name="asignatura" class="form-control"/>';
         echo '</div>';
