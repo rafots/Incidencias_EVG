@@ -22,13 +22,15 @@ echo '<script src="../sources/ajax.js" type="text/javascript"></script>';
     function visualizar($objeto)
     {
         if($_SESSION["activa"]=='c' || $_SESSION["activa"]=='t'){
-            echo '<label   data-toggle="collapse" data-target="#demo1">Anotaciones leidas</label>
-            <label type="text"  data-toggle="collapse" data-target="#demo2">Anotaciones no leidas</label>';
+            echo '<label class="btn btn-toolbar bg-primary" data-toggle="collapse" data-target="#demo1">Anotaciones leidas </label>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <label class="btn btn-toolbar bg-primary" type="text"  data-toggle="collapse" data-target="#demo2"> Anotaciones no leidas</label>';
         }else{
-            echo '<label   data-toggle="collapse" data-target="#demo1">Anotaciones</label>';
+            echo '<label class="btn btn-toolbar bg-primary"  data-toggle="collapse" data-target="#demo1">Anotaciones</label>';
         }
 
-        echo'<div id="demo1" class="collapse">';
+        echo'
+        <div id="demo1" class="collapse"><br>';
         echo '<table class="table table-bordered">';
         echo '<tr>
            <th>Descripcion de la anotacion:</th>
@@ -104,7 +106,7 @@ echo '<script src="../sources/ajax.js" type="text/javascript"></script>';
                     </div>";
         }
         echo '</table>';
-        echo '</div>
+        echo '</div><br>
         <div id="demo2" class="collapse">';
         if($_SESSION["activa"]=='c' || $_SESSION["activa"]=='t'){
             if($_SESSION["activa"]=='c'){
