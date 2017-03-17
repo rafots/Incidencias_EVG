@@ -114,12 +114,7 @@ echo'
             </div>
             <div class="col-sm-8 col-md-8 pre-scrollable" id="cuerpo">
                 ';
-                echo '<div>';
-                if(isset($_GET["alta_inc"]) && $_GET["alta_inc"]=="si")
-                {
-                    echo '<p>Se ha registrado la incidencia con exito.</p>';
-                }
-                echo '</div>';
+
                 echo '
             </div>
 

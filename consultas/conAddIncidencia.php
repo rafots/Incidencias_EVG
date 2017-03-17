@@ -30,5 +30,5 @@
     }
     $consulta_add_incidencia="INSERT INTO incidencias VALUES (DEFAULT, '".$_POST["nia"]."', ".$_POST["tipo_inc"].", ".$fila_usuario["idUsuario"].", '".$_POST["asignatura"]."', ".$_POST["hora"].", '".$_POST["fecha_incidencia"]."', NOW(), '".$_POST["descripcion"]."', '".$VT."', '".$AT."', '".$VC."', '".$AC."');";
     $conexion->consultas($consulta_add_incidencia);
-    header("Location: ../paginas/profesor.php?alta_inc=si");
+    header("Location: ../paginas/profesor.php");
 ?>

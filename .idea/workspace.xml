@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2d578d95-4bd8-491a-8a20-89d7a2bda1b8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultas/consultaanotacionprofesor.php" afterPath="$PROJECT_DIR$/consultas/consultaanotacionprofesor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/consultas/conAddIncidencia.php" afterPath="$PROJECT_DIR$/consultas/conAddIncidencia.php" />
     </list>
     <ignored path="Incidencias_EVG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,7 +66,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="consultaanotacionprofesor.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="consultaanotacionprofesor.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/consultas/consultaanotacionprofesor.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -79,12 +79,75 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profesor.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="addIncidencia.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/paginas/addIncidencia.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="84" lean-forward="false" selection-start-line="7" selection-start-column="84" selection-end-line="7" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conAddIncidencia.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/consultas/conAddIncidencia.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="32" column="45" lean-forward="false" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+              <folding>
+                <marker date="1489736720629" expanded="true" signature="316:389" ph="SELECT idUsu... profesores" />
+                <marker date="1489736720629" expanded="true" signature="501:568" ph="SELECT * FRO... tipo_incidencias" />
+                <marker date="1489736720629" expanded="true" signature="1202:1481" ph="INSERT INTO incidencias... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profesor.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/paginas/profesor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1938">
-              <caret line="114" column="56" lean-forward="false" selection-start-line="114" selection-start-column="56" selection-end-line="114" selection-end-column="56" />
-              <folding />
+            <state relative-caret-position="181">
+              <caret line="116" column="4" lean-forward="false" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="4" />
+              <folding>
+                <marker date="1489736720594" expanded="true" signature="125:1265" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="132:800" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="807:1265" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="837:1265" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="872:1265" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="925:1265" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="969:1076" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="1120:1204" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="1248:1265" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="2022:5025" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="2051:5025" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="2097:4937" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="2156:4918" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="2211:3183" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="2263:2595" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="2318:2564" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="2422:2530" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="2677:3156" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="2730:3125" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="2784:3090" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="2825:3047" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="2870:3005" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="3265:4895" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="3317:3649" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="3370:3618" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="3475:3584" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="3534:3570" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="3729:4472" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="3782:4441" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="3836:4406" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="3877:4103" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="3922:4061" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="4144:4365" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="4189:4323" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="4530:4868" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="4582:4841" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="4635:4810" ph="..." />
+                <marker date="1489736720594" expanded="true" signature="5008:5025" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -159,7 +222,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/paginas/gestor.php" />
         <option value="$PROJECT_DIR$/consultas/aniadirSeccion2.php" />
         <option value="$PROJECT_DIR$/excel/asignarSeccion.php" />
         <option value="$PROJECT_DIR$/paginas/leerIncidenciaCoord.php" />
@@ -208,8 +270,9 @@
         <option value="$PROJECT_DIR$/paginas/coordinador.php" />
         <option value="$PROJECT_DIR$/paginas/tutor.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/91753ece-5cc6-44a8-89ee-d87639ff2629/console.sql" />
-        <option value="$PROJECT_DIR$/paginas/profesor.php" />
         <option value="$PROJECT_DIR$/consultas/consultaanotacionprofesor.php" />
+        <option value="$PROJECT_DIR$/consultas/conAddIncidencia.php" />
+        <option value="$PROJECT_DIR$/paginas/profesor.php" />
       </list>
     </option>
   </component>
@@ -244,7 +307,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -358,6 +420,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -508,7 +571,8 @@
       <workItem from="1489675103337" duration="117000" />
       <workItem from="1489688078749" duration="5890000" />
       <workItem from="1489702940784" duration="4140000" />
-      <workItem from="1489708222037" duration="2000" />
+      <workItem from="1489708222037" duration="404000" />
+      <workItem from="1489731963205" duration="1574000" />
     </task>
     <task id="LOCAL-00002" summary="UPDATE FILES index.html, bootstrap.css, comun.css, script.sql&#10;ADD FILES import_users.php, usuarios.xlsx, logotipo.png, menu_estructure.html">
       <created>1488051390265</created>
@@ -783,11 +847,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489706898902</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="UPDATE: Alta incidencias">
+      <created>1489708294355</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1489708294355</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="251001000" />
+    <option name="totallyTimeSpent" value="252977000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -800,12 +871,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28997868" sideWeight="0.73146296" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29317698" sideWeight="0.73146296" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3666121" sideWeight="0.26100153" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16684435" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16684435" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41386783" sideWeight="0.8290469" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25716332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.022913257" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -877,7 +948,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="UPDATE: Menú coordinador mejorado" />
     <MESSAGE value="UPDATE: ajax" />
     <MESSAGE value="UPDATE: añadida base de datos (con datos jeje)" />
     <MESSAGE value="UPDATE: AJAX 8.0" />
@@ -902,7 +972,8 @@
     <MESSAGE value="UPDATE anotaciones modal" />
     <MESSAGE value="UPDATE anotaciones limit 10" />
     <MESSAGE value="UPDATE anotaciones the last retoque" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE anotaciones the last retoque" />
+    <MESSAGE value="UPDATE: Alta incidencias" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE: Alta incidencias" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -911,14 +982,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/paginas/addIncidencia.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/excel/importarSecciones.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
@@ -1039,14 +1102,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/consultas/buscarProfesor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/consultas/conAddIncidencia.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1262,14 +1317,6 @@
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/91753ece-5cc6-44a8-89ee-d87639ff2629/console.sql" />
-    <entry file="file://$PROJECT_DIR$/paginas/profesor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
-          <caret line="114" column="56" lean-forward="false" selection-start-line="114" selection-start-column="56" selection-end-line="114" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/cc26edd9/91753ece-5cc6-44a8-89ee-d87639ff2629/magentoe_incidenciasevg.tipos_anotaciones" />
     <entry file="dbDummy://dbtable:/cc26edd9/91753ece-5cc6-44a8-89ee-d87639ff2629/magentoe_incidenciasevg.anotaciones" />
     <entry file="file://$PROJECT_DIR$/consultas/consultaanotacionprofesor.php">
@@ -1279,6 +1326,73 @@
           <folding>
             <marker date="1489708061843" expanded="true" signature="148:833" ph="Select tipos... *" />
             <marker date="1489708061843" expanded="true" signature="402:436" ph="SELECT * FRO... anotaciones" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paginas/addIncidencia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="84" lean-forward="false" selection-start-line="7" selection-start-column="84" selection-end-line="7" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/consultas/conAddIncidencia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="32" column="45" lean-forward="false" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+          <folding>
+            <marker date="1489736720629" expanded="true" signature="316:389" ph="SELECT idUsu... profesores" />
+            <marker date="1489736720629" expanded="true" signature="501:568" ph="SELECT * FRO... tipo_incidencias" />
+            <marker date="1489736720629" expanded="true" signature="1202:1481" ph="INSERT INTO incidencias... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/paginas/profesor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="116" column="4" lean-forward="false" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="4" />
+          <folding>
+            <marker date="1489736720594" expanded="true" signature="125:1265" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="132:800" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="807:1265" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="837:1265" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="872:1265" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="925:1265" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="969:1076" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="1120:1204" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="1248:1265" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="2022:5025" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="2051:5025" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="2097:4937" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="2156:4918" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="2211:3183" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="2263:2595" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="2318:2564" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="2422:2530" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="2677:3156" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="2730:3125" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="2784:3090" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="2825:3047" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="2870:3005" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="3265:4895" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="3317:3649" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="3370:3618" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="3475:3584" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="3534:3570" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="3729:4472" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="3782:4441" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="3836:4406" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="3877:4103" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="3922:4061" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="4144:4365" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="4189:4323" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="4530:4868" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="4582:4841" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="4635:4810" ph="..." />
+            <marker date="1489736720594" expanded="true" signature="5008:5025" ph="..." />
           </folding>
         </state>
       </provider>
